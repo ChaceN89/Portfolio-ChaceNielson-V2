@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import ImageComponent from '../resuableComponents/ImageComponent';
 import '../../styles/Hero.css'; 
 
 function Hero() {
@@ -9,13 +10,13 @@ function Hero() {
       x: 0,
     },
     animate: {
-      x: "-220%",
+      x: "-2000%",
       transition: {
         repeat: Infinity,
-        repeatType: "loop",
-        duration: 20,
+        repeatType: "mirror",
+        duration: 180,
         ease: "linear",
-        delay: 2,
+        delay: 0,
       },
     },
   };
@@ -28,8 +29,16 @@ function Hero() {
         initial="initial"
         animate="animate"
       >
-        Code. Create. Innovate. {"  "}
+        &nbsp;&nbsp; Code. Create. Innovate. Code. Create. Innovate. Code. Create. Innovate. Code. Create. Innovate. Code. Create. Innovate. Code. Create. Innovate. Code. Create. Innovate. Code. Create. Innovate.
       </motion.div>
+
+      <ImageComponent
+      
+      />
+      <div className="scrollIcon absolute bottom-4 left-1/2 transform -translate-x-1/2">
+        <img src={`${process.env.PUBLIC_URL}/logos/scroll.png`} alt="Scroll" className="w-8 h-8" />
+      </div> 
+
 
       {/* Other content remains commented out for now */}
       {/* <div className="absolute inset-0 z-0 text-white">

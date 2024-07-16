@@ -3,31 +3,13 @@
   @apply overflow-hidden relative
 }
 .sliding-text-container {
-  @apply absolute text-[30vh] 
-  text-secondary font-bold opacity-15
-  -bottom-10
+  @apply absolute 
+  text-[15vh] md:text-[25vh] lg:text-[35vh] 
+  -bottom-4 md:-bottom-6 lg:-bottom-10 
+  text-secondary font-bold opacity-10
   whitespace-nowrap
   max-w-screen-2xl;
 }
 
 
 
-
-.imageContainer img {
-  object-fit: cover;
-}
-
-.scrollIcon img {
-  width: 2rem;
-  height: 2rem;
-  animation: bounce 2s infinite;
-}
-
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
