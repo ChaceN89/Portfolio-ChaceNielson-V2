@@ -57,7 +57,7 @@ const ImageComponent = ({ src, alt, className, onError = null, blurHash='L%O:@Sj
         src={src} 
         alt={alt} 
         onError={onError} 
-      />∆
+      />
     </>
   );
 };

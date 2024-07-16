@@ -16,24 +16,24 @@ function Home() {
   return (
     <div>
       <Navbar />
-      <div id="Home">
-        <Hero />
+      <section id="Home">
+        <Hero/>
         <CallToAction />
         <Line/>
-      </div>
-      <div id='AboutMe'>
+      </section>
+      <section id='AboutMe'>
         <AboutMe />
         <MySkills/>
         <Line/>
         <Experience/>
-      </div>
-      <div id='Projects'>
+      </section>
+      <section id='Projects'>
         <ProjectSection/>
         <Line/>
-      </div>
-      <div id='ContactMe'>
+      </section>
+      <section id='ContactMe'>
         <ContactForm/>
-      </div>
+      </section>
 
       <Footer />
 

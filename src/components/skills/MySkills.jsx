@@ -4,7 +4,7 @@ import Skill from './Skill'
 
 function MySkills() {
   return (
-    <div className='border-2 border-white p-4 m-10' >
+    <div className='border-2 border-white p-4 ' >
       <div className='flex w-full justify-center gap-4'>
 
         <Skill label={"ReactJS"} icon={<FaReact color={"lightblue"} size={65}/>} />

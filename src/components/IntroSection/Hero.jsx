@@ -1,44 +1,54 @@
 import React from 'react';
-import IntroImages from './IntroImages';
 import IntroText from './IntroText';
 import MediaLinks from '../resuableComponents/MediaLinks';
 import { motion } from 'framer-motion';
 import '../../styles/Hero.css'; // Import the CSS file for other styles
+import ImageComponent from '../resuableComponents/ImageComponent';
 
 const textVariants = {
   hidden: { x: -100, opacity: 0 },
   visible: { x: 0, opacity: 1, transition: { duration: 1 } }
 };
 
-const imageVariants = {
-  hidden: { width: 0 },
-  visible: { width: '50%', transition: { duration: 1 } }
+const imageRevealVariants = {
+  hidden: { clipPath: 'inset(0 100% 0 0)' },
+  visible: { clipPath: 'inset(0 0% 0 0)', transition: { duration: 1 } }
 };
 
 function Hero() {
   return (
-    <div 
-      id="Home" 
-      className='container mx-auto flex flex-col md:flex-row justify-center items-center h-screen'
-    >
-      <div 
+    <div className="relative flex flex-row border-2 border-white min-h-screen">
+      <motion.div
         className="relative z-10 flex flex-col justify-center items-start w-1/2 p-4"
+        initial="hidden"
+        animate="visible"
+        variants={textVariants}
       >
         <IntroText />
 
-        <div className='flex justify-start w-full mt-4'>
+        <div className="flex justify-start w-full mt-4">
           <MediaLinks />
         </div>
-        
-        <div className='mt-4'>
-          <button className='animated-border-button border-t border-b border-white p-2'>Lets Work Together</button>
-        </div>
-      </div>
 
-      <div className="relative z-10 flex justify-end items-center"
+        <div className="mt-4">
+          <button className="animated-border-button border-t border-b border-white p-2">
+            Let's Work Together
+          </button>
+        </div>
+      </motion.div>
+
+      <motion.div
+        className="relative w-1/2 flex justify-center items-center"
+        initial="hidden"
+        animate="visible"
+        variants={imageRevealVariants}
       >
-        <img src={process.env.PUBLIC_URL + '/logos/mountain_portrait.jpg'} alt="Mountain Portrait" className="h-full object-cover" />
-      </div>
+        <ImageComponent
+          className="w-full h-full"
+          src={process.env.PUBLIC_URL + '/logos/mountain_portrait.jpg'}
+          alt="Mountain Portrait"
+        />
+      </motion.div>
     </div>
   );
 }
