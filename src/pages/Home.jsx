@@ -17,26 +17,26 @@ function Home() {
   return (
     <div>
       <Navbar />
-      <div className='nav-area mt-12' id="Home">
+      <div className='mt-12' id="Home">
         <Hero/>
         <CallToAction />
         <Line/>
       </div>
       <ColorBoxes/>
 
-      <div className='nav-area' id='AboutMe'>
+      <div id='AboutMe'>
         <AboutMe />
         <MySkills/>
         <Line/>
         <Experience/>
       </div>
 
-      <div className='nav-area' id='Projects'>
+      <div id='Projects'>
         <ProjectSection/>
         <Line/>
       </div>
       
-      <div className='nav-area' id='ContactMe'>
+      <div id='ContactMe'>
         <ContactForm/>
       </div>
       <Footer />

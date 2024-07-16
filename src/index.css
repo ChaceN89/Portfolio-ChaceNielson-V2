@@ -8,22 +8,22 @@ html{
   @apply bg-primary text-secondary font-montserrat;
 }
 
+
 /* the frosted glass background look */
 .frosted-glass {
   @apply bg-white bg-opacity-10 backdrop-blur-xl shadow-lg;
 }
 
-/* sections for navigation and for section hight with the nav-area - section-wrapper */
-.nav-area{
-  @apply container mx-auto ;
+/* section wrappers - height is only the heigh and the default is hieght and the container for width*/
+.section-wrapper-height {
+  min-height: calc(100vh - 4rem );
+  @apply border-2 border-pink-700
+}
+
+.section-wrapper{
+  @apply container mx-auto section-wrapper-height ;
   
 }
-.section-wrapper {
-  min-height: calc(100vh - 4rem );
-  @apply container mx-auto bg-lime-300; 
-}
-
-
 
 /* headers */
 h1{
