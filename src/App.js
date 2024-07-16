@@ -21,14 +21,9 @@ import { AnimatePresence, motion } from 'framer-motion';
 import emailjs from 'emailjs-com';
 import { initializeGA } from "./googleAnalytics/analytics";
 
-// Initialize EmailJS with the user ID from environment variables and // Initialize Google Analytics
+// Initialize EmailJS with the user ID from environment variables and Initialize Google Analytics
 emailjs.init(process.env.REACT_APP_EMAILJS_USER_ID);
 initializeGA();
-
-// LocationProvider Component to wrap children with AnimatePresence
-function LocationProvider({ children }) {
-  return <AnimatePresence mode='wait'>{children}</AnimatePresence>;
-}
 
 // Define animation variants for route transitions with fade-in and fade-out
 const routeVariants = {
@@ -63,6 +58,7 @@ function RoutesWithAnimation() {
         <Route path="/Gallery" element={<AnimationWrapper><Gallery /></AnimationWrapper>} />
         <Route path="/Thanks" element={<AnimationWrapper><ContactThanks /></AnimationWrapper>} />
         <Route path="*" element={<Navigate to="/" replace />} />
+        <Route path="/:type/:id" element={<AnimationWrapper><InfoModal /></AnimationWrapper>} />
       </Routes>
 
       {background && (
@@ -80,9 +76,9 @@ function App() {
     <Router>
       <TailwindBreakPoints/>
       <AnalyticsTracker/>
-      <LocationProvider>
+      <AnimatePresence mode='wait'>
         <RoutesWithAnimation />
-      </LocationProvider>
+      </AnimatePresence>
     </Router>
   );
 }

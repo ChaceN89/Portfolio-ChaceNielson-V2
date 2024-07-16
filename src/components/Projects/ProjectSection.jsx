@@ -1,31 +1,27 @@
 import React from 'react'
 import { Link, useLocation } from 'react-router-dom';
-
-
+import ProjectCard from './ProjectCard';
 
 function ProjectSection() {
-
-
   const location = useLocation();
-
 
   return (
     <div 
       id="Projects"
       className='border-2 border-white p-4 m-10'
     >
-    projects
-    <ul>
-      <li>
-        <Link className='hover:text-red-700 hover:underline' to="/project/testProject" state={{ background: location }}>Test Project</Link>
-      </li>
-      {/* Add more project links here */}
-      <div className='h-44'> height </div>
-      <div className='h-44'> height </div>
-      <div className='h-44'> height </div>
-    </ul>
-  </div>
+      <div className='grid grid-cols-3 gap-4'>
+        <ProjectCard name='Glas Gecko Game Website' description='This is a project' image='https://picsum.photos/450/300' link='https://glassgeckogames.netlify.app/'/>
+        <ProjectCard name='Test project 2' description='This is a project' image='https://picsum.photos/450/300' link='https://glassgeckogames.netlify.app/'/>
+        <ProjectCard name='Test project 3' description='This is a project' image='https://picsum.photos/450/300' link='https://glassgeckogames.netlify.app/'/>
+        <ProjectCard name='Test project 4' description='This is a project' image='https://picsum.photos/450/300' link='https://glassgeckogames.netlify.app/'/>
+        <ProjectCard name='Test project 5' description='This is a project' image='https://picsum.photos/450/300' link='https://glassgeckogames.netlify.app/'/>
+        <ProjectCard name='Test project 6' description='This is a project' image='https://picsum.photos/450/300' link='https://glassgeckogames.netlify.app/'/>
+        <ProjectCard name='Test project 7' description='This is a project' image='https://picsum.photos/450/300' link='https://glassgeckogames.netlify.app/'/>
+        <ProjectCard name='Test project 8' description='This is a project' image='https://picsum.photos/450/300' link='https://glassgeckogames.netlify.app/'/>
+      </div>
+    </div>
   )
 }
 
-export default ProjectSection
+export default ProjectSection;

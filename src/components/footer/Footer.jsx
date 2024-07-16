@@ -3,7 +3,6 @@
  * Contains Avatar image, link back to top with My Name, and list of links to see my other stuff
  */
 import React from 'react'
-import { Link } from 'react-scroll';
 import LogoLink from '../navbar/LogoLink';
 
 import MediaLinks from '../resuableComponents/MediaLinks';
