@@ -1,10 +1,21 @@
+/**
+ * Footer component at the bottom of the page
+ * Contains Avatar image, link back to top with My Name, and list of links to see my other stuff
+ */
 import React from 'react'
+import { Link } from 'react-scroll';
+import LogoLink from '../navbar/LogoLink';
+
+import MediaLinks from '../resuableComponents/MediaLinks';
 
 function Footer() {
   return (
-    <div className='border-2 border-white p-4 m-10'>
-      Footer
-    </div>
+    <footer className=" frosted-glass flex">
+      <div className='container mx-auto w-full flex justify-between items-center py-4'>
+        <LogoLink/>
+        <MediaLinks/>
+      </div>
+    </footer>
   )
 }
 

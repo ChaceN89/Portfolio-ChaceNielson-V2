@@ -3,7 +3,9 @@ import SectionHeader from '../resuableComponents/SectionHeader'
 
 function AboutMe() {
   return (
-    <div className='border-2 border-white p-4 m-10'>
+    <div 
+      id="AboutMe"
+      className='border-2 border-white p-4 m-10'>
       <SectionHeader title='About Me'  />
       <div>
         about me parallax section 

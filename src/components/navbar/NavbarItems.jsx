@@ -24,21 +24,26 @@
 import React from 'react';
 import LinkItem from './LinkItem';
 
+
 const NavbarItems = ({ toggleMenu, textSize }) => {
   return (
     <ul className={`text-primary ${textSize} space-y-4 md:space-y-0 md:space-x-4 text-center md:text-left md:flex`}>
       <li>
-        <LinkItem to="/" onClick={toggleMenu}>Home</LinkItem>
+        <LinkItem to="Home" onClick={toggleMenu}>Intro</LinkItem>
       </li>
       <li>
-        <LinkItem to="/about" onClick={toggleMenu}>About Us</LinkItem>
+        <LinkItem to="AboutMe" onClick={toggleMenu}>About Me</LinkItem>
       </li>
       <li>
-        <LinkItem to="/news" onClick={toggleMenu}>News</LinkItem>
+        <LinkItem to="Projects" onClick={toggleMenu}>Projects</LinkItem>
       </li>
       <li>
-        <LinkItem to="/contact" onClick={toggleMenu}>Contact Us</LinkItem>
+        <LinkItem to="ContactMe" onClick={toggleMenu}>Contact Me</LinkItem>
       </li>
+      <li>
+        <LinkItem to="/Gallery" onClick={toggleMenu} routerLink={true}>Photos</LinkItem>
+      </li>
+
     </ul>
   );
 };

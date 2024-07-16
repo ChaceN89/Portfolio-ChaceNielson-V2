@@ -15,18 +15,13 @@ function Home() {
       <Navbar />
       <Intro />
       <Line/>
-      <AboutMe/>
+      <AboutMe />
       <Line/>
       <ProjectSection/>
+
       <Line/>
       <ContactForm/>
-      <div className='border-2 border-white p-4 m-10'>
-        <div className='h-96'>large boxes to simular scrolling</div>
-        <div className='h-96'>large boxes to simular scrolling</div>
-        <div className='h-96'>large boxes to simular scrolling</div>
-        <div className='h-96'>large boxes to simular scrolling</div>
-        <div className='h-96'>large boxes to simular scrolling</div>
-      </div>
+
       <Footer />
 
       

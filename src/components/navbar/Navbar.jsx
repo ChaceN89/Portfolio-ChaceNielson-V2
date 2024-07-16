@@ -26,7 +26,6 @@ import React, { useState } from 'react';
 import NavbarItems from './NavbarItems';
 import LogoLink from './LogoLink';
 import { FaBars, FaTimes } from 'react-icons/fa';
-import '../../styles/Navbar.css'; // Import the CSS file here
 
 function Navbar() {
   const [isHamburgerNavOpen, setIsHamburgerNavOpen] = useState(false);
@@ -43,10 +42,8 @@ function Navbar() {
   };
 
   return (
-    <nav className="bg-secondary p-2 ">
-      <div className="container mx-auto flex justify-between items-center">
-        <LogoLink />
-
+    <nav className="bg-secondary p-2 fixed top-0 left-0 w-full z-50">
+      <div className="container mx-auto flex justify-end md:justify-center items-center">
         <div className="hidden md:flex">
           <NavbarItems textSize="text-lg" />
         </div>

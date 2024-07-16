@@ -4,6 +4,9 @@ import Gallery from './pages/Gallery';
 import ContactThanks from './pages/ContactThanks';
 import InfoModal from './pages/InfoModal';
 
+// Styles
+import './styles/Backgrounds.css'
+
 // other components
 import AnalyticsTracker from './googleAnalytics/AnalyticsTracker';
 

@@ -29,13 +29,13 @@ import { Link } from 'react-router-dom';
 
 function LogoLink() {
   return (
-    <Link to="/" className='flex gap-2 items-center text-primary'>
+    <Link to="Home" className='flex gap-2 items-center text-primary'>
       <img 
-        className="w-12 md:w-16 object-contain" 
-        src={process.env.PUBLIC_URL + '/logos/Glass_Gecko_Games_Icon_clear.png'} 
+        className="w-12 md:w-16 object-contain rounded-full" 
+        src={process.env.PUBLIC_URL + '/logos/japan_portrait.jpg'} 
         alt="Logo" 
       />
-      <h1 className="text-xl">Glass Gecko Games</h1>
+      <h1 className="text-xl text-secondary">Chace Nielson</h1>
     </Link>
   )
 }
