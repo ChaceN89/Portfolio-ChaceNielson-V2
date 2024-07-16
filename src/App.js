@@ -2,6 +2,7 @@
 import Home from './pages/Home';
 import Gallery from './pages/Gallery';
 import ContactThanks from './pages/ContactThanks';
+import InfoModal from './pages/InfoModal';
 
 // other components
 import AnalyticsTracker from './googleAnalytics/AnalyticsTracker';
@@ -50,21 +51,30 @@ function AnimationWrapper({ children }) {
 // RoutesWithAnimation Component to handle route animations
 function RoutesWithAnimation() {
   const location = useLocation();
+  const background = location.state && location.state.background;
 
   return (
-    <Routes location={location} key={location.pathname}>
-      <Route path="/" element={<AnimationWrapper><Home /></AnimationWrapper>} />
-      <Route path="/Gallery" element={<AnimationWrapper><Gallery /></AnimationWrapper>} />
-      <Route path="/Thanks" element={<AnimationWrapper><ContactThanks /></AnimationWrapper>} />
-      <Route path="*" element={<Navigate to="/" replace />} />
-    </Routes>
+    <>
+      <Routes location={background || location}>
+        <Route path="/" element={<AnimationWrapper><Home /></AnimationWrapper>} />
+        <Route path="/Gallery" element={<AnimationWrapper><Gallery /></AnimationWrapper>} />
+        <Route path="/Thanks" element={<AnimationWrapper><ContactThanks /></AnimationWrapper>} />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+
+      {background && (
+        <Routes>
+          <Route path="/:type/:id" element={<InfoModal />} />
+        </Routes>
+      )}
+    </>
   );
 }
 
 // main return for the application 
 function App() {
   return (
-    <Router >
+    <Router>
       <TailwindBreakPoints/>
       <AnalyticsTracker/>
       <LocationProvider>
