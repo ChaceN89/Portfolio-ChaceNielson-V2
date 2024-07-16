@@ -40,20 +40,20 @@ const ImageComponent = ({ src, alt, className, onError = null, blurHash='L%O:@Sj
   
   return (
     <>
-      {!imageLoaded  && (
+      {!imageLoaded && (
         <Blurhash
-        hash={blurHash}
-        width="100%"
-        height="100%"
-        resolutionX={32}
-        resolutionY={32}
-        punch={1}
+          hash={blurHash}
+          width="100%"
+          height="100%"
+          resolutionX={32}
+          resolutionY={32}
+          punch={1}
         />
       )}
       <img 
         onLoad={() => setImageLoaded(true)}
         style={{ display: imageLoaded ? 'block' : 'none' }}
-        className={`${className} w-full h-full object-cover`}
+        className={`${className} object-cover`}
         src={src} 
         alt={alt} 
         onError={onError} 

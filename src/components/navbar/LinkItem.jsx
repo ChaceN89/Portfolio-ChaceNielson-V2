@@ -42,6 +42,7 @@
 import React from 'react';
 import { Link as ScrollLink } from 'react-scroll';
 import { NavLink } from 'react-router-dom';
+import { globals } from '../../googleAnalytics/globals';
 
 const LinkItem = ({ to, children, onClick, routerLink = false }) => {
   return routerLink ? (
@@ -62,8 +63,8 @@ const LinkItem = ({ to, children, onClick, routerLink = false }) => {
       to={to}
       spy={true}
       smooth={true}
-      offset={-70}  // Adjust this offset based on your fixed navbar height
-      duration={1500}
+      offset={globals.ScrollLink.offset}  // Adjust this offset based on your fixed navbar height
+      duration={globals.ScrollLink.duration}
       className="px-4 py-2 transition-all hover:text-accent duration-300 cursor-pointer"
       activeClass="bg-primary text-secondary rounded-3xl"
       onClick={onClick}

@@ -22,7 +22,6 @@ html{
 
 .section-wrapper{
   @apply container mx-auto section-wrapper-height ;
-  
 }
 
 /* headers */

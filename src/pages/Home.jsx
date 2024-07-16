@@ -17,28 +17,32 @@ function Home() {
   return (
     <div>
       <Navbar />
-      <div className='mt-12' id="Home">
-        <Hero/>
-        <CallToAction />
-        <Line/>
-      </div>
-      <ColorBoxes/>
 
-      <div id='AboutMe'>
-        <AboutMe />
-        <MySkills/>
-        <Line/>
-        <Experience/>
-      </div>
+      <main className='mt-12'>
+        <div  id="Home">
+          <Hero/>
+          <CallToAction />
+          <Line/>
+        </div>
+        <ColorBoxes/>
 
-      <div id='Projects'>
-        <ProjectSection/>
-        <Line/>
-      </div>
-      
-      <div id='ContactMe'>
-        <ContactForm/>
-      </div>
+        <div id='AboutMe'>
+          <AboutMe />
+          <MySkills/>
+          <Line/>
+          <Experience/>
+        </div>
+
+        <div id='Projects'>
+          <ProjectSection/>
+          <Line/>
+        </div>
+        
+        <div id='ContactMe'>
+          <ContactForm/>
+        </div>
+      </main>
+
       <Footer />
           
       <Outlet />
