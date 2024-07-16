@@ -6,7 +6,7 @@ function AboutMe() {
   return (
     <section 
       id="AboutMe"
-      className='componentArea border-white p-4 '>
+      className='section-wrapper  border-white p-4 '>
       <SectionHeader title='About Me' />
       <div>
         about me parallax section - very simple just showing the buttlet points 

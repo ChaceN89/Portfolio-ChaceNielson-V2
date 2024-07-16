@@ -4,11 +4,11 @@
 
 
 
-.navArea{
+.nav-area{
   @apply container mx-auto ;
   
 }
-.componentArea {
+.section-wrapper {
   min-height: calc(100vh - 4rem );
   @apply container mx-auto bg-lime-300; 
 }

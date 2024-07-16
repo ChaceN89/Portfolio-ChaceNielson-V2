@@ -2,7 +2,7 @@ import React from 'react'
 
 function Experience() {
   return (
-    <section className='componentArea border-2 border-white p-4' >
+    <section className='section-wrapper  border-2 border-white p-4' >
       <div className='w-full text-center'>Experience</div>
       <div className='flex w-full justify-around'>
 

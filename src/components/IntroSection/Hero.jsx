@@ -17,7 +17,7 @@ const imageRevealVariants = {
 
 function Hero() {
   return (
-    <section className="componentArea border-2 border-secondary">
+    <section className="section-wrapper border-2 border-secondary">
         Hero
 
       {/* <motion.div
