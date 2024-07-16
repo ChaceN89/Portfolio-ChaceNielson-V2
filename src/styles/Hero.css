@@ -1,4 +1,29 @@
-/* Hero.css
-.h-screen-minus-100 {
-  height: calc(100vh - 100px);
-} */
+/* Hero.css */
+.slidingTextContainer {
+  position: absolute;
+  font-size: 50vh;
+  bottom: -120px;
+  white-space: nowrap;
+  color: #ffffff09;
+  width: 50%;
+  font-weight: bold;
+}
+
+.imageContainer img {
+  object-fit: cover;
+}
+
+.scrollIcon img {
+  width: 2rem;
+  height: 2rem;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
