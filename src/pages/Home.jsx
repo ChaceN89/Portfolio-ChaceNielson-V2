@@ -16,19 +16,24 @@ function Home() {
   return (
     <div>
       <Navbar />
-      <Hero />
-      <CallToAction />
-
-      <Line/>
-      <AboutMe />
-      <MySkills/>
-      <Experience/>
-
-      <Line/>
-      <ProjectSection/>
-
-      <Line/>
-      <ContactForm/>
+      <div id="Home">
+        <Hero />
+        <CallToAction />
+        <Line/>
+      </div>
+      <div id='AboutMe'>
+        <AboutMe />
+        <MySkills/>
+        <Line/>
+        <Experience/>
+      </div>
+      <div id='Projects'>
+        <ProjectSection/>
+        <Line/>
+      </div>
+      <div id='ContactMe'>
+        <ContactForm/>
+      </div>
 
       <Footer />
 

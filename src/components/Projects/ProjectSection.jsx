@@ -1,15 +1,10 @@
 import React from 'react'
-import { Link, useLocation } from 'react-router-dom';
 import ProjectCard from './ProjectCard';
 
 function ProjectSection() {
-  const location = useLocation();
 
   return (
-    <div 
-      id="Projects"
-      className='border-2 border-white p-4 m-10'
-    >
+    <div className='border-2 border-white p-4 m-10'>
       <div className='grid grid-cols-3 gap-4'>
         <ProjectCard name='Glas Gecko Game Website' description='This is a project' image='https://picsum.photos/450/300' link='https://glassgeckogames.netlify.app/'/>
         <ProjectCard name='Test project 2' description='This is a project' image='https://picsum.photos/450/300' link='https://glassgeckogames.netlify.app/'/>

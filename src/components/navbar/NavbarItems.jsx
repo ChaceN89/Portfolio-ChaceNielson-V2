@@ -24,12 +24,11 @@
 import React from 'react';
 import LinkItem from './LinkItem';
 
-
 const NavbarItems = ({ toggleMenu, textSize }) => {
   return (
     <ul className={`text-primary ${textSize} space-y-4 md:space-y-0 md:space-x-4 text-center md:text-left md:flex`}>
       <li>
-        <LinkItem to="Home" onClick={toggleMenu}>Intro</LinkItem>
+        <LinkItem to="Home" onClick={toggleMenu}>Home</LinkItem>
       </li>
       <li>
         <LinkItem to="AboutMe" onClick={toggleMenu}>About Me</LinkItem>
@@ -43,7 +42,6 @@ const NavbarItems = ({ toggleMenu, textSize }) => {
       <li>
         <LinkItem to="/Gallery" onClick={toggleMenu} routerLink={true}>Photos</LinkItem>
       </li>
-
     </ul>
   );
 };

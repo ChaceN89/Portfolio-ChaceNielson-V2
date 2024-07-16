@@ -1,3 +1,4 @@
-.frosted-glass{
+.frosted-glass {
   @apply bg-white bg-opacity-10 backdrop-blur-xl shadow-lg;
 }
+

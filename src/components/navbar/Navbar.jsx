@@ -24,7 +24,6 @@
 
 import React, { useState } from 'react';
 import NavbarItems from './NavbarItems';
-import LogoLink from './LogoLink';
 import { FaBars, FaTimes } from 'react-icons/fa';
 
 function Navbar() {
