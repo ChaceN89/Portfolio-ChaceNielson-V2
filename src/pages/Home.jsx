@@ -10,33 +10,37 @@ import Line from '../components/resuableComponents/Line';
 import CallToAction from '../components/action/CallToAction';
 import MySkills from '../components/skills/MySkills';
 import Experience from '../components/experience/Experience';
+import ColorBoxes from '../testingComponents/ColorBoxes';
 
 function Home() {
-  
+
   return (
     <div>
       <Navbar />
-      <section id="Home">
+      <div className='navArea mt-12' id="Home">
         <Hero/>
         <CallToAction />
         <Line/>
-      </section>
-      <section id='AboutMe'>
+      </div>
+      <ColorBoxes/>
+
+      <div className='navArea' id='AboutMe'>
         <AboutMe />
         <MySkills/>
         <Line/>
         <Experience/>
-      </section>
-      <section id='Projects'>
+      </div>
+
+      <div className='navArea' id='Projects'>
         <ProjectSection/>
         <Line/>
-      </section>
-      <section id='ContactMe'>
+      </div>
+      
+      <div className='navArea' id='ContactMe'>
         <ContactForm/>
-      </section>
-
+      </div>
       <Footer />
-
+          
       <Outlet />
     </div>
   );

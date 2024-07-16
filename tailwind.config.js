@@ -5,10 +5,13 @@ module.exports = {
     extend: {
       colors: {
         primary: '#181616', // dark near black
-
-        secondary: '#fff', // white
+        'primary-dark': '#0D0D0D', // darker near black
         
-        accent: '#CBD5E1', // lighter color
+        secondary: '#fff', // white
+        'secondary-dark': '#e0e0e0', // light near white
+        
+        accent: '#CC5500', // lighter color
+        'accent-dark': '#993D00', // darker color
       },
       fontFamily: {
         'open-sans': ['Open Sans', 'sans-serif'],

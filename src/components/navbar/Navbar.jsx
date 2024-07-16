@@ -47,7 +47,7 @@ function Navbar() {
           <NavbarItems textSize="text-lg" />
         </div>
 
-        <button onClick={toggleMenu} className="text-primary block md:hidden z-20">
+        <button onClick={toggleMenu} className="text-primary block md:hidden z-50">
           {isHamburgerNavOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
         </button>
 

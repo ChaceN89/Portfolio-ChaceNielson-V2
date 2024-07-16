@@ -2,7 +2,7 @@ import React from 'react'
 
 function Experience() {
   return (
-    <div className='border-2 border-white p-4' >
+    <section className='componentArea border-2 border-white p-4' >
       <div className='w-full text-center'>Experience</div>
       <div className='flex w-full justify-around'>
 
@@ -15,7 +15,7 @@ function Experience() {
           Changable section that changes with clicking on the experience list 
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

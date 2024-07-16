@@ -17,8 +17,10 @@ const imageRevealVariants = {
 
 function Hero() {
   return (
-    <div className="relative flex flex-row border-2 border-white min-h-screen">
-      <motion.div
+    <section className="componentArea border-2 border-secondary">
+        Hero
+
+      {/* <motion.div
         className="relative z-10 flex flex-col justify-center items-start w-1/2 p-4"
         initial="hidden"
         animate="visible"
@@ -48,8 +50,8 @@ function Hero() {
           src={process.env.PUBLIC_URL + '/logos/mountain_portrait.jpg'}
           alt="Mountain Portrait"
         />
-      </motion.div>
-    </div>
+      </motion.div> */}
+    </section>
   );
 }
 

@@ -4,9 +4,9 @@ import { FaGuitar } from 'react-icons/fa'
 
 function AboutMe() {
   return (
-    <div 
+    <section 
       id="AboutMe"
-      className='border-2 border-white p-4 '>
+      className='componentArea border-white p-4 '>
       <SectionHeader title='About Me' />
       <div>
         about me parallax section - very simple just showing the buttlet points 
@@ -29,7 +29,7 @@ function AboutMe() {
         <li className='flex gap-2'>- <FaGuitar/> hiking/backpacking</li>
         <li className='flex gap-2'>- <FaGuitar/> Climbing rock and ice</li>
       </ol>
-    </div>
+    </section>
   )
 }
 

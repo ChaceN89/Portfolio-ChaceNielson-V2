@@ -3,17 +3,33 @@
 @tailwind utilities;
 
 
-section{
-  @apply container mx-auto px-4 py-8;
+
+.navArea{
+  @apply container mx-auto ;
+  
+}
+.componentArea {
+  min-height: calc(100vh - 4rem );
+  @apply container mx-auto bg-lime-300; 
 }
 
-/* main color of text and the background */
-html {
-  color: rgb(255, 255, 255);
-  background-repeat: no-repeat;
-  height: 100%;
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
-  background-color:#181616;
+
+html{
+  @apply bg-primary text-secondary font-montserrat;
+}
+
+h1{
+  @apply text-7xl font-bold font-mangold;
+}
+
+h2{
+  @apply text-4xl ;
+}
+
+h3{
+  @apply text-2xl ;
+}
+
+h4{
+  @apply text-lg ;
 }
