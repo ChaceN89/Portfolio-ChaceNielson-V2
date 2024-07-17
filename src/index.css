@@ -12,6 +12,11 @@ html{
   @apply bg-primary text-secondary font-montserrat;
 }
 
+/* the padding for all text */
+.text-padding{
+  @apply p-4;
+
+}
 
 /* the frosted glass background look */
 .frosted-glass {

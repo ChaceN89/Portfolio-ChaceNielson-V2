@@ -1,12 +1,12 @@
 import React from 'react'
 import ImageComponent from '../resuableComponents/ImageComponent'
 
-function HeroImg() {
+function SmallImg() {
   return (
-    <div className="img-container">
+    <div className='small-img'>
       <ImageComponent src={`${process.env.PUBLIC_URL}/logos/chace2.png`} alt="Hero" className="h-full w-full object-cover " />
     </div>
   )
 }
 
-export default HeroImg
+export default SmallImg

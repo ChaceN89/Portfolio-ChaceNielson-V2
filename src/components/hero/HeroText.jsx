@@ -1,7 +1,8 @@
 import React from 'react';
-import { Link as ScrollLink } from 'react-scroll';
-import { globals } from '../../globals';
+
 import Button from '../resuableComponents/Button';
+import { homePageData } from '../../data/homePageData';
+import SmallImg from './SmallImg';
 
 function HeroText() {
   const textVariants = {
@@ -27,45 +28,24 @@ function HeroText() {
     },
   };
 
-
-  return(
-    <div className='border-2 border-red-600
-    2xl:w-3/5
-    '>
-      <h3 className='hover:bg-red-400'>Hi my name is</h3>
-      <h1>CHACE NIELSON</h1>
-      <div> I am a software developer with a passion for music and the outdoors. I have a background in engineering and have worked on a variety of projects from web design to unity games. I am always looking for new challenges and opportunities to learn.</div>
-
-      <div className="buttons flex justify-center md:justify-start">
-
-        <Button to="Projects" className="additional-class" >My Projects</Button>
-        <Button to="ContactMe" className="additional-class" >Let's Work Together</Button>   
-      </div>
-
-    </div>
-  )
-
-
-
   return (
-    <div className="flex flex-col justify-center gap-1 p-4 border-4 border-pink-800 w-3/5 z-5">
-        <h3 className='hover:bg-red-400'>Hi my name is</h3>
-        <h1>CHACE NIELSON</h1>
-        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut aliquam exercitationem commodi excepturi neque minus.</h3>
-        <div className="buttons flex justify-center md:justify-start">
-          <ScrollLink 
-            to="Projects"
-            spy={true}
-            smooth={true}
-            offset={globals.ScrollLink.offset} 
-            duration={globals.ScrollLink.duration}
-            className="p-5 border border-white rounded-lg bg-transparent text-white mr-5 hover:cursor-pointer font-light"
-          >
-            My Projects</ScrollLink>
-          <button className="p-5 border border-white rounded-lg bg-transparent text-white cursor-pointer font-light">Let's work Together</button>
+    <div className="text-container text-padding">
+      <div className="flex flex-col gap-2 col-span-2 z-10">
+        <h3 className="hero-text">{homePageData.top}</h3>
+        <h1 className="hero-text">{homePageData.name}</h1>
+        <div className="hero-text">{homePageData.description}</div>
+        <div className="text-buttons">
+          {homePageData.buttons.map((button) => (
+            <Button to={button.id} className="additional-class" key={button.id}>
+              {button.name}
+            </Button>
+          ))}
         </div>
+        <SmallImg />
       </div>
-  )
+    </div>
+  );
 }
+
 
 export default HeroText
