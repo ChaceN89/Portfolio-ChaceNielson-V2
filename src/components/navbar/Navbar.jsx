@@ -10,7 +10,7 @@
  * @requires react-icons/fa
  * @requires ./NavbarItems
  * @requires ./LogoLink
- * @requires ../../styles/Navbar.css
+ * @requires .Navbar.css
  * 
  * @see {@link https://reactjs.org/docs/getting-started.html|React Documentation}
  * @see {@link https://react-icons.github.io/react-icons/|React Icons Documentation}
@@ -25,6 +25,7 @@
 import React, { useState } from 'react';
 import NavbarItems from './NavbarItems';
 import { FaBars, FaTimes } from 'react-icons/fa';
+import "./Navbar.css";
 
 function Navbar() {
   const [isHamburgerNavOpen, setIsHamburgerNavOpen] = useState(false);
@@ -41,18 +42,18 @@ function Navbar() {
   };
 
   return (
-    <nav className="bg-secondary p-2 fixed top-0 left-0 w-full z-50">
+    <nav className="bg-secondary p-2 fixed top-0 left-0 w-full z-40">
       <div className="container mx-auto flex justify-end md:justify-center items-center">
         <div className="hidden md:flex">
           <NavbarItems textSize="text-lg" />
         </div>
 
-        <button onClick={toggleMenu} className="text-primary block md:hidden z-50">
+        <button onClick={toggleMenu} className="text-primary block md:hidden z-50 hover:text-accent">
           {isHamburgerNavOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
         </button>
 
         {isHamburgerNavOpen && (
-          <div className={`fixed md:hidden top-0 left-0 z-10 w-full h-full bg-secondary bg-opacity-90 flex justify-center items-center transition-opacity duration-300 ${animateMenu ? 'opacity-100 fade-in' : 'opacity-0 fade-out'}`}>
+          <div className={`fixed md:hidden top-0 left-0 z-45 w-full h-full bg-secondary bg-opacity-90 flex justify-center items-center transition-opacity duration-300 ${animateMenu ? 'opacity-100 fade-in' : 'opacity-0 fade-out'}`}>
             <NavbarItems toggleMenu={toggleMenu} textSize="text-2xl" />
           </div>
         )}

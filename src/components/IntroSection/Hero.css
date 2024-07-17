@@ -1,0 +1,15 @@
+/* Hero.css */
+.hero{
+  @apply overflow-hidden relative
+}
+.sliding-text-container {
+  @apply absolute 
+  text-[10vh] md:text-[15vh] lg:text-[25vh] 
+  -bottom-4 md:-bottom-6 lg:-bottom-10 
+  text-secondary font-bold opacity-10
+  z-0
+  whitespace-nowrap
+  max-w-screen-2xl;
+}
+
+

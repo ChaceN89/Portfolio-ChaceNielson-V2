@@ -21,11 +21,13 @@ module.exports = {
         'nunito': ['Nunito', 'sans-serif'],
         'chalkduster': ['Chalkduster', 'cursive'],
         'wingdings': ['Wingdings', 'cursive'], 
-        'mangold': ['Mangold', 'sans-serif'], // If available
-        'techead': ['Techead', 'sans-serif'], // If available
-        'sharung': ['Sharung', 'sans-serif'], // If available
-        'baddest': ['Baddest', 'sans-serif'], // If available
-        'mageri': ['Mageri', 'sans-serif'], // If available
+        'mangold': ['Mangold', 'sans-serif'],
+        'techead': ['Techead', 'sans-serif'],
+        'sharung': ['Sharung', 'sans-serif'],
+        'baddest': ['Baddest', 'sans-serif'],
+        'mageri': ['Mageri', 'sans-serif'],
+        'poppins': ['Poppins', 'sans-serif'], 
+        'bebas-neue': ['Bebas Neue', 'sans-serif'], 
       },
       fontSize: {
         medium: '0.950rem',
@@ -59,6 +61,13 @@ module.exports = {
         '158': '64rem',
         '164': '68rem',
         '170': '72rem',
+      },
+      zIndex: {
+        '5': '5',
+        '15': '15',
+        '25': '25',
+        '35': '35',
+        '45': '45',
       },
     },
   },
