@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link as ScrollLink } from 'react-scroll';
-import { globals } from '../../googleAnalytics/globals';
+import { globals } from '../../globals';
+import Button from '../resuableComponents/Button';
 
 function HeroText() {
   const textVariants = {
@@ -35,7 +36,11 @@ function HeroText() {
       <h1>CHACE NIELSON</h1>
       <div> I am a software developer with a passion for music and the outdoors. I have a background in engineering and have worked on a variety of projects from web design to unity games. I am always looking for new challenges and opportunities to learn.</div>
 
+      <div className="buttons flex justify-center md:justify-start">
 
+        <Button to="Projects" className="additional-class" >My Projects</Button>
+        <Button to="ContactMe" className="additional-class" >Let's Work Together</Button>   
+      </div>
 
     </div>
   )

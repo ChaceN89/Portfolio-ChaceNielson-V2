@@ -1,7 +1,9 @@
 /* Hero.css */
+
 .hero{
   @apply overflow-hidden relative
 }
+
 .sliding-text-container {
   @apply absolute 
   text-[10vh] md:text-[15vh] lg:text-[25vh] 

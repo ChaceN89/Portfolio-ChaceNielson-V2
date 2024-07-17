@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion';
-import { globals } from '../../googleAnalytics/globals';
+import { globals } from '../../globals';
 import { Link as ScrollLink } from 'react-scroll';
 import ImageComponent from '../resuableComponents/ImageComponent';
 
@@ -18,13 +18,13 @@ function ScrollWheel() {
     },
   };
   return (
-    <div className="w-full h-full flex justify-center items-end absolute inset-0 z-35 opacity-80">
+    <div className="w-full h-full flex justify-center items-end absolute inset-0 z-10 opacity-80">
     <motion.div
       className="mb-4"
       {...bounceProps}
     >
       <ScrollLink
-        className="hover:cursor-pointer"
+        className="hover:cursor-pointer "
         to="CallToAction"
         spy={true}
         smooth={true}
@@ -34,7 +34,7 @@ function ScrollWheel() {
         <ImageComponent
           src={`${process.env.PUBLIC_URL}/logos/scroll.png`}
           alt="Scroll"
-          className="h-7 sm:h-10 md:h-12 lg:h-14 xl:h-16"
+          className="h-7 sm:h-10 md:h-12 lg:h-14 xl:h-16 hover:scale-110"
         />
       </ScrollLink>
     </motion.div>
