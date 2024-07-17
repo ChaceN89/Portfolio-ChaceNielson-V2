@@ -1,14 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import ImageComponent from '../resuableComponents/ImageComponent';
-import '../../styles/Hero.css'; 
+import '../../styles/Hero.css';
 import { Link as ScrollLink } from 'react-scroll';
-
 import { globals } from '../../googleAnalytics/globals';
 
-
 function Hero() {
-
   const sliderVariants = {
     initial: {
       x: 0,
@@ -44,7 +41,7 @@ function Hero() {
         variants={sliderVariants}
         initial="initial"
         animate="animate"
-        >
+      >
         &nbsp;&nbsp; Code. Create. Innovate. Code. Create. Innovate. Code. Create. Innovate. Code. Create. Innovate. Code. Create. Innovate. Code. Create. Innovate. Code. Create. Innovate. Code. Create. Innovate.
       </motion.div>
 
@@ -71,25 +68,9 @@ function Hero() {
       </div>
 
 
- 
-
-
-      {/* Other content remains commented out for now */}
-      {/* <div className="absolute inset-0 z-0 text-white">
-        <motion.div
-          className="absolute "
-          // initial={{ x: '-100%' }}
-          // animate={{ x: '100%' }}
-          // transition={{ duration: 10, repeat: Infinity, ease: 'linear' }}
-        >
-          Code. Create. Innovate.
-        </motion.div>
-      </div> */}
-
-      {/* <div className="wrapper max-w-[1366px] h-full mx-auto flex items-center">
-        
-        <div className="textContainer w-1/2 flex flex-col justify-center gap-10 p-4">
-          <h2>Welcome</h2>
+      <div className="grid grid-cols-2 h-full">
+        <div className="flex flex-col justify-center gap-10 p-4 ">
+          <h3>Hi my name is</h3>
           <h1>CHACE NIELSON</h1>
           <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut aliquam exercitationem commodi excepturi neque minus.</h3>
           <div className="buttons flex justify-center md:justify-start">
@@ -97,30 +78,13 @@ function Hero() {
             <button className="p-5 border border-white rounded-lg bg-transparent text-white cursor-pointer font-light">Let's work Together</button>
           </div>
         </div>
-
-
-        <div >
-          <ImageComponent
-            src={`${process.env.PUBLIC_URL}/logos/chace1.png`}
-            alt="Hero"
-            className="w-full h-full object-cover"
-          />
+        <div className="flex items-end h-full">
+          <ImageComponent src={`${process.env.PUBLIC_URL}/logos/chace2.png`} alt="Hero" className="w-full max-h-3/4 object-contain" />
         </div>
-
-        <div className="imageContainer relative w-1/2 h-full">
-          <motion.img
-            src={`${process.env.PUBLIC_URL}/logos/chace1.png`}
-            alt="Hero"
-            className="w-full h-full object-cover"
- 
-          />
-        </div>
-
       </div>
 
-      <div className="scrollIcon absolute bottom-4 left-1/2 transform -translate-x-1/2">
-        <img src={`${process.env.PUBLIC_URL}/logos/scroll.png`} alt="Scroll" className="w-8 h-8" />
-      </div> */}
+
+
 
     </section>
   );
