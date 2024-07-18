@@ -48,8 +48,8 @@ function Navbar() {
           <NavbarItems textSize="text-lg" />
         </div>
 
-        <button onClick={toggleMenu} className="text-primary block md:hidden z-50 hover:text-accent">
-          {isHamburgerNavOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+        <button onClick={toggleMenu} className="text-primary  md:hidden z-50 hover:text-accent flex gap-1">
+          {isHamburgerNavOpen ? <FaTimes size={24} /> : <><span className='font-bold'>Menu</span> <FaBars size={24} /> </>}
         </button>
 
         {isHamburgerNavOpen && (

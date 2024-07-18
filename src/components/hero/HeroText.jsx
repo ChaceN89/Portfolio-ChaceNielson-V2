@@ -28,14 +28,14 @@ function HeroText() {
   };
 
   return (
-    <div className="text-container text-padding">
-      <div className="flex flex-col gap-2 col-span-2 z-10">
+    <div className="text-container ">
+      <div>
         <h3>{homePageData.top}</h3>
-        <h1>{homePageData.name}</h1>
-        <div>{homePageData.description}</div>
+        <h1 className='pb-2'>{homePageData.name}</h1>
+        <div className='pb-4'>{homePageData.description}</div>
         <div className="text-buttons">
           {homePageData.buttons.map((button) => (
-            <Button to={button.id} className="additional-class" key={button.id}>
+            <Button to={button.id} key={button.id}>
               {button.name}
             </Button>
           ))}

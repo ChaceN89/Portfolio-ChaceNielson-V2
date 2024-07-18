@@ -2,15 +2,17 @@
 
 .hero {
   @apply overflow-hidden 
-  relative flex items-center justify-center
-  ;
+  relative flex items-center justify-center;
 }
 
 .sliding-text-container {
   @apply absolute 
+
+  /* size */
   text-[10vh] md:text-[15vh] lg:text-[25vh] 
   -bottom-4 md:-bottom-6 lg:-bottom-10 
-  text-secondary font-bold opacity-10
+
+  text-secondary font-bold opacity-100
   z-0
   whitespace-nowrap
   max-w-screen-2xl;
@@ -18,24 +20,23 @@
 
 .img-container {
   @apply h-full absolute top-0 right-0 z-5  
-   mx-auto hidden lg:block
-   size-auto
-   ;
+   hidden md:block;
 }
 
 .text-container{
   @apply container mx-auto 
   grid 
-  grid-cols-4 text-left
-  pb-20
-
-  ;
+  grid-cols-2 text-left
+  pb-20;
 }
+.text-container > div{
+  @apply flex flex-col  col-span-2 md:col-span-1 z-10 
+    px-2
+   bg-primary rounded-full 
+   border-white md:border-r-2 border-opacity-20 bg-opacity-80 ;
+}
+
 .text-buttons{
   @apply flex justify-center space-x-4
-  lg:justify-start lg:space-x-4
-  ;
+  lg:justify-start lg:space-x-4;
 }
-
-
-
