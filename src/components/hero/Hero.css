@@ -3,7 +3,7 @@
 .hero {
   @apply overflow-hidden 
   relative flex items-center justify-center
-  bg-primary-dark;
+  bg-primary;
 }
 
 .sliding-text-container {
@@ -33,7 +33,7 @@
 .text-container > div{
   @apply flex flex-col  col-span-2 md:col-span-1 z-10 
     px-2
-   bg-primary-dark 
+   bg-primary 
    rounded-full
    border-white md:border-r-2 border-opacity-20 bg-opacity-80 ;
 }

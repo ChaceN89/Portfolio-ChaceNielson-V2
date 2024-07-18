@@ -2,6 +2,8 @@ https://github.com/safak/animated-portfolio/blob/completed/src/components/hero/h
 Reference repo
 
 
+https://www.cleanpng.com/png-mountain-clip-art-mountain-logo-1273809/download-png.html
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
