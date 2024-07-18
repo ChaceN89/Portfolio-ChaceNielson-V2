@@ -19,14 +19,15 @@
 .img-container {
   @apply h-full absolute top-0 right-0 z-5  
    mx-auto hidden lg:block
+   size-auto
    ;
 }
 
 .text-container{
   @apply container mx-auto 
   grid 
-  grid-cols-2 text-center
-  xl:grid-cols-4 xl:text-left
+  grid-cols-4 text-left
+  pb-20
 
   ;
 }
@@ -37,12 +38,4 @@
 }
 
 
-.small-img{
-  @apply    mx-auto block lg:hidden
-
-}
-
-.hero-text{
-  
-}
 

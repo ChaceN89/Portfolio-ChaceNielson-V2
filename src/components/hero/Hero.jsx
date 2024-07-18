@@ -5,7 +5,6 @@ import SlidingText from './SlidingText';
 import ScrollWheel from './ScrollWheel';
 import HeroImg from './HeroImg';
 import HeroText from './HeroText';
-import SmallImg from './SmallImg';
 
 function Hero() {
 

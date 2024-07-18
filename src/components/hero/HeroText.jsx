@@ -2,7 +2,6 @@ import React from 'react';
 
 import Button from '../resuableComponents/Button';
 import { homePageData } from '../../data/homePageData';
-import SmallImg from './SmallImg';
 
 function HeroText() {
   const textVariants = {
@@ -31,9 +30,9 @@ function HeroText() {
   return (
     <div className="text-container text-padding">
       <div className="flex flex-col gap-2 col-span-2 z-10">
-        <h3 className="hero-text">{homePageData.top}</h3>
-        <h1 className="hero-text">{homePageData.name}</h1>
-        <div className="hero-text">{homePageData.description}</div>
+        <h3>{homePageData.top}</h3>
+        <h1>{homePageData.name}</h1>
+        <div>{homePageData.description}</div>
         <div className="text-buttons">
           {homePageData.buttons.map((button) => (
             <Button to={button.id} className="additional-class" key={button.id}>
@@ -41,7 +40,6 @@ function HeroText() {
             </Button>
           ))}
         </div>
-        <SmallImg />
       </div>
     </div>
   );

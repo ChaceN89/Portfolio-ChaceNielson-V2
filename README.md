@@ -1,3 +1,7 @@
+https://github.com/safak/animated-portfolio/blob/completed/src/components/hero/hero.scss
+Reference repo
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

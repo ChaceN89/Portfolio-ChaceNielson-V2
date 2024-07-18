@@ -6,7 +6,7 @@ function AboutMe() {
   return (
     <section 
       id="AboutMe"
-      className='section-wrapper  border-white p-4 '>
+      className='section-wrapper  border-white p-4'>
       <SectionHeader title='About Me' />
       <div>
         about me parallax section - very simple just showing the buttlet points 
@@ -19,6 +19,9 @@ function AboutMe() {
           </div>  
           <FaGuitar/>
         </li>
+        <li className='flex gap-2'>-  <FaGuitar/> React</li>
+        <li className='flex gap-2'>-  <FaGuitar/> Unity</li>
+        <li className='flex gap-2'>-  <FaGuitar/> Python</li>
         <li className='flex gap-2'>- Engineering <FaGuitar/></li>
         <li className='flex gap-2'>- Web design  <FaGuitar/></li>
         <li className='flex gap-2'>- Unity games  <FaGuitar/></li>
