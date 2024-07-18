@@ -26,13 +26,14 @@
  */
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ImageComponent from '../resuableComponents/ImageComponent';
 
 function LogoLink() {
   return (
     <Link to="Home" className='flex gap-2 items-center text-primary'>
-      <img 
+      <ImageComponent 
         className="w-12 md:w-16 object-contain rounded-full" 
-        src={process.env.PUBLIC_URL + '/logos/japan_portrait.jpg'} 
+        src={process.env.PUBLIC_URL + '/jpg-portraits/japan-portrait-trim.jpg'} 
         alt="Logo" 
       />
       <h1 className="text-xl text-secondary">Chace Nielson</h1>

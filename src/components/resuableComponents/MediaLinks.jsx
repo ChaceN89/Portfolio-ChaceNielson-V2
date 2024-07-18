@@ -1,5 +1,6 @@
 import React from 'react';
 import { BsGithub, BsLinkedin, BsInstagram, BsYoutube } from 'react-icons/bs';
+import ImageComponent from './ImageComponent';
 
 function MediaLinks({ size = 25 }) {
   return (
@@ -9,9 +10,9 @@ function MediaLinks({ size = 25 }) {
       <MediaLink link={"https://www.instagram.com/chacenielson/"}><BsInstagram size={size} /></MediaLink>
       <MediaLink link={"https://www.youtube.com/channel/UCXcMrM3Vk3TpXu3crQ6Yakg/videos"}><BsYoutube size={size+4} /></MediaLink>
       <MediaLink link={"https://glassgeckogames.netlify.app/"}>
-        <img
-          style={{ width: size+6, height: size+6 }}
-          src={process.env.PUBLIC_URL + '/logos/Glass_Gecko_Games_Icon_clear.png'}
+        <ImageComponent
+          className={`w-10`}
+          src={process.env.PUBLIC_URL + '/png-icons/glass-gecko-games-icon-clear.png'}
           alt="Logo"
         />
       </MediaLink>

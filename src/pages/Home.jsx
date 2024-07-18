@@ -22,7 +22,6 @@ function Home() {
         <div  id="Home">
           <Hero/>
           <CallToAction />
-          <Line/>
         </div>
         <ColorBoxes/>
 

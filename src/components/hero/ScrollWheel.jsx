@@ -1,9 +1,8 @@
-import React from 'react'
+import React from 'react';
 import { motion } from 'framer-motion';
 import { globals } from '../../globals';
 import { Link as ScrollLink } from 'react-scroll';
 import ImageComponent from '../resuableComponents/ImageComponent';
-
 
 function ScrollWheel() {
   const bounceProps = {
@@ -17,29 +16,36 @@ function ScrollWheel() {
       ease: 'easeInOut', // Easing function
     },
   };
+
+  const fadeInProps = {
+    initial: { opacity: 0 },
+    animate: { opacity: 1 },
+    transition: { delay: 2, duration: 1 }, // 2-second delay and 1-second fade-in duration
+  };
+
   return (
-    <div className="w-full h-full flex justify-center items-end absolute inset-0 z-10 opacity-80">
-    <motion.div
-      className="mb-4"
-      {...bounceProps}
+    <motion.div 
+      className="w-full h-full flex justify-center items-end absolute inset-0 z-10 opacity-80"
+      {...fadeInProps}
     >
-      <ScrollLink
-        className="hover:cursor-pointer "
-        to="CallToAction"
-        spy={true}
-        smooth={true}
-        offset={globals.ScrollLink.offset} 
-        duration={globals.ScrollLink.duration}
-      >
-        <ImageComponent
-          src={`${process.env.PUBLIC_URL}/logos/scroll.png`}
-          alt="Scroll"
-          className="h-12  lg:h-14 xl:h-16 hover:scale-110"
-        />
-      </ScrollLink>
+      <motion.div className="mb-4" {...bounceProps}>
+        <ScrollLink
+          className="hover:cursor-pointer"
+          to="CallToAction"
+          spy={true}
+          smooth={true}
+          offset={globals.ScrollLink.offset}
+          duration={globals.ScrollLink.duration}
+        >
+          <ImageComponent
+            src={`${process.env.PUBLIC_URL}/png-icons/scroll.png`}
+            alt="Scroll"
+            className="h-12 lg:h-14 xl:h-16 hover:scale-110"
+          />
+        </ScrollLink>
+      </motion.div>
     </motion.div>
-  </div>
-  )
+  );
 }
 
-export default ScrollWheel
+export default ScrollWheel;

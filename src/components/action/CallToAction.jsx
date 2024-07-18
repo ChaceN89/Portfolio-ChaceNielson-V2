@@ -12,7 +12,7 @@ function CallToAction() {
       id="CallToAction"
       className='section-wrapper-height overflow-hidden relative flex items-center justify-center px-6'
       style={{
-        backgroundImage: `url(${process.env.PUBLIC_URL}/logos/range-b&w2-trim.png)`,
+        backgroundImage: `url(${process.env.PUBLIC_URL}/png-backgrounds/range-b&w2-trim.png)`,
         backgroundSize: 'contain', // This makes the background image smaller
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
@@ -20,12 +20,13 @@ function CallToAction() {
       }}
     >
 
-      {/* add parallax effect here */}
+      {/*  parallax effect here */}
       <motion.div 
         className='border-2 border-white bg-primary text-secondary bg-opacity-90 rounded-lg flex h-full items-center'
         style={{ y }}
-      >        <ImageComponent 
-          src="/logos/chace3.png"
+      >        
+        <ImageComponent 
+          src="/png-portraits/chace-3.png"
           alt="Range Logo"
           className="h-56 md:h-96"
         />
