@@ -32,17 +32,17 @@ function HeroText() {
 
   return (
     <motion.div
-      className="text-container z-10 px-2"
+      className="text-container"
       variants={textVariants}
       initial="initial"
       animate="animate"
       style={{ y }}
     >
       <motion.div variants={textVariants}>
-        <motion.h3 variants={textVariants}>{homePageData.top}</motion.h3>
-        <motion.h1 variants={textVariants} className="pb-2">{homePageData.name}</motion.h1>
-        <motion.div variants={textVariants} className="pb-4">{homePageData.description}</motion.div>
-        <motion.div variants={textVariants} className="text-buttons">
+        <motion.h3 variants={textVariants} className='pl-2'>{homePageData.top}</motion.h3>
+        <motion.h1 variants={textVariants} className="pb-2 pl-2">{homePageData.name}</motion.h1>
+        <motion.div variants={textVariants} className="pb-4 pl-2">{homePageData.description}</motion.div>
+        <motion.div variants={textVariants} className="text-buttons pl-2">
           {homePageData.buttons.map((button) => (
             <motion.div key={button.id} variants={textVariants}>
               <Button to={button.id}>
