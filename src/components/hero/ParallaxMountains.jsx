@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import ImageComponent from '../resuableComponents/ImageComponent';
+import ImageComponent from '../common/layout/ImageComponent';
 
 function ParallaxMountains() {
   const { scrollY } = useScroll();
@@ -11,7 +11,7 @@ function ParallaxMountains() {
   const y2 = useTransform(scrollY, [0, 500], [0, 160]); 
 
   return (
-    <div className="w-full h-full flex justify-center items-end absolute inset-0 z-0 opacity-15">
+    <div className="w-full h-full flex justify-center items-end absolute inset-0 z-0 opacity-5">
       <motion.div className="w-full absolute z-5" style={{ y: y1 }}>
         <ImageComponent
           src={`${process.env.PUBLIC_URL}/png-backgrounds/mountains-back.png`}

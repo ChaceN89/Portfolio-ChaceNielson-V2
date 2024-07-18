@@ -26,7 +26,7 @@
  */
 import React from 'react';
 import { Link } from 'react-router-dom';
-import ImageComponent from '../resuableComponents/ImageComponent';
+import ImageComponent from '../common/layout/ImageComponent';
 
 function LogoLink() {
   return (

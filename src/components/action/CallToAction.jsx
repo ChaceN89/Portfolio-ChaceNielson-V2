@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import ImageComponent from '../resuableComponents/ImageComponent';
-import Button from '../resuableComponents/Button';
+import ImageComponent from '../common/layout/ImageComponent';
+import Button from '../common/uiElements/Button';
 
 const parallaxConfig = {
   scrollRange: [0, 500, 1000],

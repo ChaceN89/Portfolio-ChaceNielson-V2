@@ -6,7 +6,7 @@ import AboutMe from '../components/aboutMe/AboutMe';
 import Footer from '../components/footer/Footer';
 import ContactForm from '../components/contactMe/ContactForm';
 import ProjectSection from '../components/Projects/ProjectSection';
-import Line from '../components/resuableComponents/Line';
+import Line from '../components/common/uiElements/Line';
 import CallToAction from '../components/action/CallToAction';
 import MySkills from '../components/skills/MySkills';
 import Experience from '../components/experience/Experience';

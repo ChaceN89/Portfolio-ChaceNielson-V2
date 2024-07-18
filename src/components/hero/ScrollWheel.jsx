@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { globals } from '../../globals';
 import { Link as ScrollLink } from 'react-scroll';
-import ImageComponent from '../resuableComponents/ImageComponent';
+import ImageComponent from '../common/layout/ImageComponent';
 
 function ScrollWheel() {
   const bounceProps = {

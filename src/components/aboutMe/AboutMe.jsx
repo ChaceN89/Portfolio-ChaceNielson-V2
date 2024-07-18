@@ -1,5 +1,5 @@
 import React from 'react'
-import SectionHeader from '../resuableComponents/SectionHeader'
+import SectionHeader from '../common/uiElements/SectionHeader'
 import { FaGuitar } from 'react-icons/fa'
 
 function AboutMe() {

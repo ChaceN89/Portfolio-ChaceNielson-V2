@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import Button from '../resuableComponents/Button';
+import Button from '../common/uiElements/Button';
 import { homePageData } from '../../data/homePageData';
 
 const textVariants = {
