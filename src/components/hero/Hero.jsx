@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './Hero.css';
-import SlidingText from './SlidingText';
+import ParallaxMountains from './ParallaxMountains';
 import ScrollWheel from './ScrollWheel';
 import HeroImg from './HeroImg';
 import HeroText from './HeroText';
@@ -9,8 +9,8 @@ import HeroText from './HeroText';
 function Hero() {
 
   return (
-    <section className="hero section-wrapper-height ">
-      <SlidingText />
+    <section className="hero section-wrapper-height">
+      <ParallaxMountains />
       <ScrollWheel />
       <HeroText />
       <HeroImg />

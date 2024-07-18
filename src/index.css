@@ -9,7 +9,7 @@
 
 /* overall Css for all html */
 html{
-  @apply bg-primary px-2 text-secondary font-montserrat;
+  @apply bg-primary text-secondary font-montserrat;
 }
 
 /* the frosted glass background look */

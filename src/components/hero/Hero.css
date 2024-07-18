@@ -2,7 +2,8 @@
 
 .hero {
   @apply overflow-hidden 
-  relative flex items-center justify-center;
+  relative flex items-center justify-center
+  bg-primary-dark;
 }
 
 .sliding-text-container {
@@ -15,11 +16,11 @@
   text-secondary font-bold opacity-100
   z-0
   whitespace-nowrap
-  max-w-screen-2xl;
+  max-w-screen-2xl
 }
 
 .img-container {
-  @apply h-full absolute top-0 right-0 z-5  
+  @apply h-full absolute top-0 right-0 z-0  
    hidden md:block;
 }
 
@@ -32,7 +33,8 @@
 .text-container > div{
   @apply flex flex-col  col-span-2 md:col-span-1 z-10 
     px-2
-   bg-primary rounded-full 
+   bg-primary-dark 
+   rounded-full
    border-white md:border-r-2 border-opacity-20 bg-opacity-80 ;
 }
 

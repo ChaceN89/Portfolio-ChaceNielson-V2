@@ -34,7 +34,7 @@ function ScrollWheel() {
         <ImageComponent
           src={`${process.env.PUBLIC_URL}/logos/scroll.png`}
           alt="Scroll"
-          className="h-7 sm:h-10 md:h-12 lg:h-14 xl:h-16 hover:scale-110"
+          className="h-12  lg:h-14 xl:h-16 hover:scale-110"
         />
       </ScrollLink>
     </motion.div>
