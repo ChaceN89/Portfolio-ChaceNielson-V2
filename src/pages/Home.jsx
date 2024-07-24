@@ -25,7 +25,7 @@ function Home() {
       <main>
         <div id='Home' className='mt-12'>
           <Hero/>
-          <div className='container mx-auto bg-pink-300 h-40'>Text </div>
+          <CallToAction />
 
         </div>
       </main>

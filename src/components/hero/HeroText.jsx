@@ -28,7 +28,7 @@ const textVariants = {
 
 function HeroText() {
   const { scrollY } = useScroll();
-  const y = useTransform(scrollY, [0, 500], [0, 100]);
+  const y = useTransform(scrollY, [0, 500], [0, 140]);
 
   return (
     <motion.div
@@ -40,9 +40,9 @@ function HeroText() {
     >
       <motion.div variants={textVariants}>
         <motion.h3 variants={textVariants} className='pl-2'>{homePageData.top}</motion.h3>
-        <motion.h1 variants={textVariants} className="pb-2 pl-2">{homePageData.name}</motion.h1>
-        <motion.div variants={textVariants} className="pb-4 pl-2">{homePageData.description}</motion.div>
-        <motion.div variants={textVariants} className="text-buttons pl-2">
+        <motion.h1 variants={textVariants} className="pb-2">{homePageData.name}</motion.h1>
+        <motion.div variants={textVariants} className="pb-4">{homePageData.description}</motion.div>
+        <motion.div variants={textVariants} className="text-buttons">
           {homePageData.buttons.map((button) => (
             <motion.div key={button.id} variants={textVariants}>
               <Button to={button.id}>

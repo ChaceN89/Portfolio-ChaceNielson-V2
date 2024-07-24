@@ -28,7 +28,7 @@ function MediaLinks() {
   ];
 
   return (
-    <div className="flex justify-center space-x-2 relative">
+    <div className="grid grid-cols-2 gap-0.5 sm:flex justify-center space-x-0.5 relative">
       {mediaLinks.map((link) => (
         <a
           key={link.name}
@@ -41,7 +41,7 @@ function MediaLinks() {
           onMouseLeave={() => setHoveredLink(null)}
         >
           <div className="flex items-center justify-center 
-            w-12 h-12 rounded-full 
+            w-10 h-10 rounded-full 
             bg-primary  hover:bg-accent text-secondary hover:text-primary 
             transition duration-300"
           >

@@ -71,7 +71,7 @@ const ButtonContent = ({ children }) => (
 );
 
 function Button({ to, onClick, children, className, ...rest }) {
-  const buttonClass = `relative inline-block p-px font-semibold leading-6 text-secondary no-underline bg-primary shadow-2xl cursor-pointer group rounded-xl shadow-primary-dark border-2 border-opacity-45 border-secondary ${className}`;
+  const buttonClass = `relative inline-block p-0.5 font-semibold leading-6 text-secondary no-underline bg-primary shadow-2xl cursor-pointer group rounded-xl shadow-primary-dark border-2 border-opacity-45 border-secondary ${className}`;
 
   return to ? (
     <ScrollLink
