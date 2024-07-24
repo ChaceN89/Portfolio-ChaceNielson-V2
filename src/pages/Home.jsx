@@ -17,6 +17,8 @@ import ColorBoxes from '../testingComponents/ColorBoxes';
 
 import ImageComponent from '../components/common/layout/ImageComponent';
 
+import BlurTests from '../testingComponents/ParallaxTest';
+
 function Home() {
 
   return (
@@ -25,11 +27,13 @@ function Home() {
       <main>
         <div id='Home' className='mt-12'>
           <Hero/>
-          <CallToAction />
-          <Hero/>
-          <CallToAction />
-          <Hero/>
-          <CallToAction />
+          {/* <CallToAction /> */}
+          <BlurTests num={1}/>
+          <div className='h-4 bg-black w-full'></div>
+          <BlurTests num={2}/>
+          <div className='h-4 bg-black w-full'></div>
+          <BlurTests num={3}/>
+
 
         </div>
       </main>
