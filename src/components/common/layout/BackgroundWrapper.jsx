@@ -4,7 +4,6 @@ function BackgroundWrapper({
   id = '', // id for the element
   className = '', // additional classes
   src = '', // path to the background image
-  ref=null, // reference to the element
   lowResSrc = '', // path to the low resolution background image
   backgroundSize = "cover", // options are auto, cover, contain, initial, inherit
   backgroundPosition = "center", // options are center, top, right, bottom, left, top right, top left, bottom right, bottom left, initial, inherit
@@ -26,7 +25,6 @@ function BackgroundWrapper({
 
   return (
     <div
-      ref={ref}
       id={id}
       className={`${className} relative`}
       style={{
