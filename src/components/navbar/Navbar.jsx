@@ -43,7 +43,7 @@ function Navbar() {
   };
 
   return (
-    <nav className="bg-secondary bg-opacity-25 p-2 fixed top-0 left-0 w-full z-40">
+    <nav className="bg-secondary bg-opacity-15 p-2 fixed top-0 left-0 w-full z-40">
       <div className="container mx-auto flex justify-between md:justify-center items-center">
         <div className="text-left flex justify-start md:hidden">
           <LogoLink />
