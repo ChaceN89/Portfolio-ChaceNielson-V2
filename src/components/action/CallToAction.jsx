@@ -2,6 +2,7 @@ import React from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import ImageComponent from '../common/layout/ImageComponent';
 import Button from '../common/uiElements/Button';
+import BackgroundWrapper from '../common/layout/BackgroundWrapper';
 
 const parallaxConfig = {
   scrollRange: [0, 500, 1000],
@@ -13,16 +14,15 @@ function CallToAction() {
   const y = useTransform(scrollY, parallaxConfig.scrollRange, parallaxConfig.translateYRange);
 
   return (
-    <section 
+    <BackgroundWrapper
       id="CallToAction"
-      className='section-wrapper-height overflow-hidden relative flex items-center justify-center px-6'
-      style={{
-        backgroundImage: `url(${process.env.PUBLIC_URL}/png-backgrounds/range-b&w2-trim.png)`,
-        backgroundSize: 'contain', // This makes the background image smaller
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        backgroundAttachment: 'fixed', // This makes the background image stay fixed
-      }}
+      className="section-wrapper-height overflow-hidden relative flex items-center justify-center px-6"
+      src={process.env.PUBLIC_URL + "/png-backgrounds/detailed/range-b&w2-trim.png"}
+      lowResSrc={process.env.PUBLIC_URL + "/png-backgrounds/detailed/range-b&w2-trim-small.png"}
+      backgroundSize='contain'
+      backgroundPosition='center'
+      backgroundRepeat='no-repeat'
+      backgroundAttachment='fixed'
     >
       <motion.div 
         className='border-2 border-white bg-primary text-secondary bg-opacity-90 rounded-lg flex items-center justify-center z-10'
@@ -50,7 +50,7 @@ function CallToAction() {
           absolute component
         </div>
       </div> 
-    </section>
+    </BackgroundWrapper>
   );
 }
 
