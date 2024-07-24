@@ -12,17 +12,11 @@ html{
   @apply bg-primary text-secondary font-montserrat;
 }
 
-/* the frosted glass background look */
-.frosted-glass {
-  @apply bg-white bg-opacity-10 backdrop-blur-xl shadow-lg;
-}
 
 /* section wrappers - height is only the heigh and the default is hieght and the container for width*/
 .section-wrapper-height {
   min-height: calc(100vh - 3rem );
-
 }
-
 .section-wrapper{
   @apply container mx-auto section-wrapper-height ;
 }

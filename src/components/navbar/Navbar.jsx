@@ -24,6 +24,7 @@
 
 import React, { useState } from 'react';
 import NavbarItems from './NavbarItems';
+import LogoLink from './LogoLink';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import "./Navbar.css";
 
@@ -43,7 +44,11 @@ function Navbar() {
 
   return (
     <nav className="bg-secondary bg-opacity-25 p-2 fixed top-0 left-0 w-full z-40">
-      <div className="container mx-auto flex justify-end md:justify-center items-center">
+      <div className="container mx-auto flex justify-between md:justify-center items-center">
+        <div className="text-left flex justify-start md:hidden">
+          <LogoLink />
+        </div>
+
         <div className="hidden md:flex">
           <NavbarItems textSize="text-lg" />
         </div>

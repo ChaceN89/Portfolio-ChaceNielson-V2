@@ -10,9 +10,11 @@ function Hero() {
 
   return (
     <section className="hero section-wrapper-height">
+      {/* relative components */}
+      <HeroText />
+      {/* absolute components */}
       <ParallaxMountains />
       <ScrollWheel />
-      <HeroText />
       <HeroImg />
     </section>
   );

@@ -8,8 +8,8 @@ import MediaLinks from '../common/uiElements/MediaLinks';
 
 function Footer() {
   return (
-    <footer className=" frosted-glass flex">
-      <div className='container mx-auto w-full flex justify-between items-center py-4'>
+    <footer className=" bg-opacity-0 flex relative bottom-0">
+      <div className='container mx-auto w-full flex flex-col md:flex-row justify-between items-center py-4'>
         <LogoLink/>
         <MediaLinks/>
       </div>
