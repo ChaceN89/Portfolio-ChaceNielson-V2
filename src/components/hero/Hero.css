@@ -29,5 +29,5 @@
   .text-buttons{
     @apply flex justify-center space-x-2 
     text-sm md:text-base
-    lg:justify-center lg:space-x-4;
+    lg:justify-start lg:space-x-4;
   }
