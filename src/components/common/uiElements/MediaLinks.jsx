@@ -1,30 +1,59 @@
-import React from 'react';
-import { BsGithub, BsLinkedin, BsInstagram, BsYoutube } from 'react-icons/bs';
-import ImageComponent from '../layout/ImageComponent';
+import React, { useState, useEffect } from 'react';
+import { FaYoutube, FaInstagram, FaLinkedin, FaGithub } from 'react-icons/fa';
+import { BsYoutube, BsInstagram, BsLinkedin, BsGithub } from 'react-icons/bs';
 
-function MediaLinks({ size = 25 }) {
+
+const Tooltip = ({ text }) => (
+  <div className="absolute z-10 p-1 text-sm text-primary bg-secondary rounded  bottom-full mb-2">
+    {text}
+  </div>
+);
+
+function MediaLinks() {
+  const [hoveredLink, setHoveredLink] = useState(null);
+  const [showTooltip, setShowTooltip] = useState(false);
+
+  useEffect(() => {
+    if (hoveredLink) {
+      const timer = setTimeout(() => setShowTooltip(true), 1500);
+      return () => clearTimeout(timer);
+    }
+    setShowTooltip(false);
+  }, [hoveredLink]);
+
+  const mediaLinks = [
+    { name: "GitHub", icon: BsGithub, link: "https://github.com/ChaceN89" },
+    { name: "YouTube", icon: BsYoutube, link: "https://www.youtube.com/@chacenielson5413" },
+    { name: "Instagram", icon: BsInstagram, link: "https://www.instagram.com/chacenielson" },
+    { name: "LinkedIn", icon: BsLinkedin, link: "https://www.linkedin.com/in/chace-nielson" }
+  ];
+
   return (
-    <div className='flex justify-between items-center' >
-      <MediaLink link={"https://github.com/ChaceN89"}><BsGithub size={size} /></MediaLink>
-      <MediaLink link={"https://www.linkedin.com/in/chace-nielson"}><BsLinkedin size={size} /></MediaLink>
-      <MediaLink link={"https://www.instagram.com/chacenielson/"}><BsInstagram size={size} /></MediaLink>
-      <MediaLink link={"https://www.youtube.com/channel/UCXcMrM3Vk3TpXu3crQ6Yakg/videos"}><BsYoutube size={size+4} /></MediaLink>
-      <MediaLink link={"https://glassgeckogames.netlify.app/"}>
-        <ImageComponent
-          className={`w-10`}
-          src={process.env.PUBLIC_URL + '/png-icons/glass-gecko-games-icon-clear.png'}
-          alt="Logo"
-        />
-      </MediaLink>
+    <div className="flex justify-center space-x-2 relative">
+      {mediaLinks.map((link) => (
+        <a
+          key={link.name}
+          href={link.link}
+          className= "relative"
+          aria-label={link.name}
+          target="_blank"
+          rel="noopener noreferrer"
+          onMouseEnter={() => setHoveredLink(link.name)}
+          onMouseLeave={() => setHoveredLink(null)}
+        >
+          <div className="flex items-center justify-center 
+            w-12 h-12 rounded-full 
+            bg-primary  hover:bg-accent text-secondary hover:text-primary 
+            transition duration-300"
+          >
+            <link.icon size={28} className="" />
+          </div>
+          {showTooltip && hoveredLink === link.name && (
+            <Tooltip text={link.name} />
+          )}
+        </a>
+      ))}
     </div>
-  );
-}
-
-function MediaLink({ link, children }) {
-  return (
-    <a href={link} target="_blank" rel="noreferrer" className='text-2xl text-white p-1'>
-      {children}
-    </a>
   );
 }
 

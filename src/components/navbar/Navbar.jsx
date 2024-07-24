@@ -42,7 +42,7 @@ function Navbar() {
   };
 
   return (
-    <nav className="bg-secondary p-2 fixed top-0 left-0 w-full z-40">
+    <nav className="bg-secondary bg-opacity-25 p-2 fixed top-0 left-0 w-full z-40">
       <div className="container mx-auto flex justify-end md:justify-center items-center">
         <div className="hidden md:flex">
           <NavbarItems textSize="text-lg" />
