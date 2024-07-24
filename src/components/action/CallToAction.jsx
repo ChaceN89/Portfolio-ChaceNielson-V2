@@ -4,9 +4,17 @@ import ImageComponent from '../common/layout/ImageComponent';
 import Button from '../common/uiElements/Button';
 import BackgroundWrapper from '../common/layout/BackgroundWrapper';
 
+const scrollStart = 0;
+const scrollMiddle = window.innerHeight;
+const scrollEnd = 2 * window.innerHeight;
+
+const translateStart = -300; // Move up by 300 pixels at the start
+const translateMiddle = 0; // No movement in the middle
+const translateEnd = 300; // Move down by 300 pixels at the end
+
 const parallaxConfig = {
-  scrollRange: [0, 500, 1000],
-  translateYRange: [-100, 0, 100],
+  scrollRange: [scrollStart, scrollMiddle, scrollEnd],
+  translateYRange: [translateStart, translateMiddle, translateEnd],
 };
 
 function CallToAction() {

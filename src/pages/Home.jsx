@@ -26,6 +26,10 @@ function Home() {
         <div id='Home' className='mt-12'>
           <Hero/>
           <CallToAction />
+          <Hero/>
+          <CallToAction />
+          <Hero/>
+          <CallToAction />
 
         </div>
       </main>
