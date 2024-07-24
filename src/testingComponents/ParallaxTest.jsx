@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import BackgroundWrapper from '../components/common/layout/BackgroundWrapper';
 
@@ -34,15 +34,18 @@ const parallaxConfigThird = {
 };
 
 function ParallaxTest({ num }) {
-  const { scrollY } = useScroll();
+  const scrollRef = useRef(null)
+  const { scrollY } = useScroll({ container: scrollRef });
   const yFirst = useTransform(scrollY, parallaxConfigFirst.scrollRange, parallaxConfigFirst.translateYRange);
   const ySecond = useTransform(scrollY, parallaxConfigSecond.scrollRange, parallaxConfigSecond.translateYRange);
   const yThird = useTransform(scrollY, parallaxConfigThird.scrollRange, parallaxConfigThird.translateYRange);
 
+
+
   return (
     <BackgroundWrapper
       src={process.env.PUBLIC_URL + "/png-backgrounds/detailed/range-b&w5-trim.png"}
-
+      ref={scrollRef}
       className="section-wrapper-height overflow-hidden relative items-center justify-center px-6 grid grid-cols-4 gap-2"
     >
       <div className="absolute inset-0 grid grid-cols-12 grid-rows-12 gap-2 z-0">
@@ -57,6 +60,7 @@ function ParallaxTest({ num }) {
       <motion.div 
         className="flex items-center justify-center border-2 border-red-200 p-2 z-10 text-white bg-black"
         style={{ y: yFirst }}
+
       >
         <ol>
           <li>Component num: 1</li>
@@ -69,6 +73,7 @@ function ParallaxTest({ num }) {
       <motion.div 
         className="flex items-center justify-center border-2 border-red-200 p-2 z-10 text-white bg-black"
         style={{ y: ySecond }}
+
       >
         <ol>
           <li>Component num: 1</li>
@@ -94,7 +99,7 @@ function ParallaxTest({ num }) {
         <ol>
           <li>Component num: {num}</li>
           <li>----</li>
-          <li>----</li>
+          <li>--Static--</li>
           <li>----</li>
         </ol>   
       </div>

@@ -25,12 +25,15 @@
 import React, { useState } from 'react';
 import NavbarItems from './NavbarItems';
 import LogoLink from './LogoLink';
+import { motion, useScroll } from 'framer-motion';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import "./Navbar.css";
 
 function Navbar() {
   const [isHamburgerNavOpen, setIsHamburgerNavOpen] = useState(false);
   const [animateMenu, setAnimateMenu] = useState(false);
+
+  const { scrollYProgress } = useScroll();
 
   const toggleMenu = () => {
     if (!isHamburgerNavOpen) {
@@ -44,6 +47,12 @@ function Navbar() {
 
   return (
     <nav className="bg-secondary bg-opacity-15 p-2 fixed top-0 left-0 w-full z-40">
+      <motion.div 
+        className='fixed top-0 left-0 h-1 bg-primary z-50' 
+        style={{ scaleX: scrollYProgress }}
+        transition={{ type: 'spring', stiffness: 100 }}
+      />
+
       <div className="container mx-auto flex justify-between md:justify-center items-center">
         <div className="text-left flex justify-start md:hidden">
           <LogoLink />
@@ -53,7 +62,7 @@ function Navbar() {
           <NavbarItems textSize="text-lg" />
         </div>
 
-        <button onClick={toggleMenu} className="text-primary  md:hidden z-50 hover:text-accent flex gap-1">
+        <button onClick={toggleMenu} className="text-primary md:hidden z-50 hover:text-accent flex gap-1">
           {isHamburgerNavOpen ? <FaTimes size={24} /> : <><span className='font-bold'>Menu</span> <FaBars size={24} /> </>}
         </button>
 

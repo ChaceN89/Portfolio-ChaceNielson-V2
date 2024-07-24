@@ -27,14 +27,11 @@ function Home() {
       <main>
         <div id='Home' className='mt-12'>
           <Hero/>
-          {/* <CallToAction /> */}
           <ParallaxTest num={1}/>
           <div className='h-4 bg-black w-full'></div>
           <ParallaxTest num={2}/>
           <div className='h-4 bg-black w-full'></div>
           <ParallaxTest num={3}/>
-
-
         </div>
       </main>
 
