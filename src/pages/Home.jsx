@@ -29,9 +29,9 @@ function Home() {
           <Hero/>
           <div>
             <ParallaxTest num={1} scrollStart={0} scrollEnd={window.innerHeight * 2} />
-            <div className="h-4 bg-black w-full"></div>
+            <div className="h-4 bg-accent w-full"/>
             <ParallaxTest num={2} scrollStart={window.innerHeight} scrollEnd={window.innerHeight * 3} />
-            <div className="h-4 bg-black w-full"></div>
+            <div className="h-4 bg-black w-full"/>
             <ParallaxTest num={3} scrollStart={window.innerHeight * 2} scrollEnd={window.innerHeight * 4} />
           </div>
         </div>

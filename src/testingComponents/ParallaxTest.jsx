@@ -41,10 +41,11 @@ function ParallaxTest({ num, scrollStart, scrollEnd }) {
 
   return (
     <BackgroundWrapper
-    id='CallToAction'
+      id='CallToAction'
+      className="section-wrapper-height overflow-hidden relative items-center justify-center px-6 grid grid-cols-4 gap-2"
       src={process.env.PUBLIC_URL + "/png-backgrounds/detailed/range-b&w5-trim.png"}
       ref={scrollRef}
-      className="section-wrapper-height overflow-hidden relative items-center justify-center px-6 grid grid-cols-4 gap-2"
+      bgOpacity='35'
     >
       <div className="absolute inset-0 grid grid-cols-12 grid-rows-12 gap-2 z-0">
         {Array.from({ length: 12 * 12 }).map((_, i) => (

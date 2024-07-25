@@ -10,7 +10,7 @@ function BackgroundWrapper({
   backgroundRepeat = "no-repeat", // options are repeat, no-repeat, repeat-x, repeat-y, initial, inherit
   backgroundAttachment = "fixed", // options are fixed, scroll, local, initial, inherit
   scale = 1, // scale factor for the background image
-  bgOpacity = "100", // opacity of the background image (uses tailwind so it should be a number between 0 and 100  by multiples of 5)
+  bgOpacity = 100, // opacity of the background image (uses tailwind so it should be a number between 0 and 100 by multiples of 5)
   children // child elements to be rendered inside the wrapper
 }) {
   const [highResLoaded, setHighResLoaded] = useState(false);
@@ -35,23 +35,25 @@ function BackgroundWrapper({
       }}
     >
       <div
-        className={`absolute top-0 left-0 w-full h-full ${highResLoaded ? 'hidden' :`visible opacity-${bgOpacity}` }`}
+        className={`absolute top-0 left-0 w-full h-full transition-opacity duration-500 ease-in-out`}
         style={{
           backgroundImage: `url(${lowResSrc})`,
           backgroundSize: scaledBackgroundSize,
           backgroundPosition: backgroundPosition,
           backgroundRepeat: backgroundRepeat,
           backgroundAttachment: backgroundAttachment,
+          opacity: highResLoaded ? 0 : bgOpacity / 100,
         }}
       />
       <div
-        className={`absolute top-0 left-0 w-full h-full transition-opacity duration-500 ease-in-out ${highResLoaded ? `opacity-${bgOpacity}` : 'opacity-0'}`}
+        className={`absolute top-0 left-0 w-full h-full transition-opacity duration-500 ease-in-out`}
         style={{
           backgroundImage: `url(${src})`,
           backgroundSize: scaledBackgroundSize,
           backgroundPosition: backgroundPosition,
           backgroundRepeat: backgroundRepeat,
           backgroundAttachment: backgroundAttachment,
+          opacity: highResLoaded ? bgOpacity / 100 : 0,
         }}
       />
       {children}
