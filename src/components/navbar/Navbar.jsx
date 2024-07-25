@@ -46,14 +46,14 @@ function Navbar() {
   };
 
   return (
-    <nav className="bg-secondary bg-opacity-25 py-2 fixed top-0 left-0 w-full z-40 flex-col">
+    <nav className="bg-secondary bg-opacity-100  fixed top-0 left-0 w-full z-40 flex-col">
       <motion.div 
-        className='w-full h-1 bg-secondary -mt-2 mb-2' 
+        className='w-full h-2 bg-primary' 
         style={{ scaleX: scrollYProgress }}
         transition={{ type: 'spring', stiffness: 100 }}
       />
 
-      <div className="container mx-auto flex justify-between md:justify-center items-center">
+      <div className="container mx-auto flex justify-between md:justify-center items-center p-2">
         <div className="text-left flex justify-start md:hidden">
           <LogoLink />
         </div>

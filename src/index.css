@@ -13,6 +13,7 @@ html{
 }
 
 
+
 /* section wrappers - height is only the heigh and the default is hieght and the container for width*/
 .section-wrapper-height {
   min-height: calc(100vh - 3rem );
@@ -37,3 +38,13 @@ h3{
 h4{
   @apply text-lg ;
 }
+
+
+/* scrollbar styles */
+/* Style the scrollbar track */
+::-webkit-scrollbar {
+  width: 0px; /* Adjust the width of the scrollbar */
+  height: 0px; /* Adjust the height of the scrollbar */
+}
+
+
