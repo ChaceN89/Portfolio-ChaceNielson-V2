@@ -1,7 +1,7 @@
 import React from 'react';
 import ImageComponent from '../common/layout/ImageComponent';
 import MyButton from '../common/uiElements/MyButton';
-import { callToActionData } from '../../data/callToAction';
+import { callToActionData } from '../../data/callToActionData';
 
 function InnerCallToAction() {
   return (

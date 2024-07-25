@@ -1,12 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { BsYoutube, BsInstagram, BsLinkedin, BsGithub } from 'react-icons/bs';
+import Tooltip from './Tooltip';
 
-
-const Tooltip = ({ text }) => (
-  <div className="absolute z-10 p-1 text-sm text-primary bg-secondary rounded  bottom-full mb-2">
-    {text}
-  </div>
-);
 
 function MediaLinks() {
   const [hoveredLink, setHoveredLink] = useState(null);
