@@ -1,10 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { globals } from '../../globals';
+import { globals } from '../../../globals';
 import { Link as ScrollLink } from 'react-scroll';
-import ImageComponent from '../common/layout/ImageComponent';
+import ImageComponent from '../layout/ImageComponent';
 
-function ScrollWheel() {
+function ScrollWheel({to="CallToAction"}) {
   const bounceProps = {
     initial: { y: 0 }, // Initial position in the middle of the screen
     animate: { y: [0, -20, 0] }, // Keyframes for the bouncing effect
@@ -31,7 +31,7 @@ function ScrollWheel() {
       <motion.div className="mb-4" {...bounceProps}>
         <ScrollLink
           className="hover:cursor-pointer"
-          to="CallToAction"
+          to={to}
           spy={true}
           smooth={true}
           offset={globals.ScrollLink.offset}

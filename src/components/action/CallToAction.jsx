@@ -1,24 +1,28 @@
 import React from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import ImageComponent from '../common/layout/ImageComponent';
-import Button from '../common/uiElements/Button';
 import BackgroundWrapper from '../common/layout/BackgroundWrapper';
+import InnerCallToAction from './InnerCallToAction';
+import ScrollWheel from '../common/uiElements/ScrollWheel';
 
-const scrollStart = 0;
-const scrollMiddle = window.innerHeight;
-const scrollEnd = 2 * window.innerHeight;
+// Define the scroll ranges and translation values for the parallax effect
+const scrollStart = 0; // Start of the scroll range (0 pixels from the top of this section)
+const scrollMiddle = window.innerHeight; // Middle of the scroll range (1x the window height)
+const scrollEnd = 2 * window.innerHeight; // End of the scroll range (2x the window height)
 
-const translateStart = -300; // Move up by 300 pixels at the start
+// Define the translation values for the parallax effect
+const translateStart = -100; // Move up by 300 pixels at the start
 const translateMiddle = 0; // No movement in the middle
-const translateEnd = 300; // Move down by 300 pixels at the end
+const translateEnd = 100; // Move down by 300 pixels at the end
 
+// Configure the parallax effect with scroll ranges and translation values
 const parallaxConfig = {
   scrollRange: [scrollStart, scrollMiddle, scrollEnd],
   translateYRange: [translateStart, translateMiddle, translateEnd],
 };
 
 function CallToAction() {
-  const { scrollY } = useScroll();
+  const { scrollY } = useScroll(); // Get the current scroll position
+  // Map the scroll position to the translation values using useTransform
   const y = useTransform(scrollY, parallaxConfig.scrollRange, parallaxConfig.translateYRange);
 
   return (
@@ -31,33 +35,15 @@ function CallToAction() {
       backgroundPosition='center'
       backgroundRepeat='no-repeat'
       backgroundAttachment='fixed'
+      bgOpacity={40}
     >
+      {/* Parallax container with motion.div */}
       <motion.div 
-        className='border-2 border-white bg-primary text-secondary bg-opacity-90 rounded-lg flex items-center justify-center z-10'
-        style={{ y }}
+        style={{ y }} // Apply the parallax effect to this element
       >
-        <ImageComponent 
-          src="/png-portraits/chace-3.png"
-          alt="Range Logo"
-          className="h-56 md:h-96"
-        />
-
-        <div className='p-4 flex flex-col justify-center text-left max-w-md'>
-          <h2>Ready to Bring Your Vision to Life?</h2>
-          <h4 className='mt-2'>Every <span className='text-accent'>Great Journey</span> begins with a single step. Let's tackle your next big project together and reach new heights. Whether it's an ambitious idea or a creative challenge, I'm here to help you conquer it.</h4>
-          <div className='mt-6'>
-            <Button to="ContactMe" smooth={true} duration={1000}>
-              Message Me
-            </Button>
-          </div>
-        </div>
+        <InnerCallToAction />
       </motion.div>
-
-      <div className="w-full h-full flex justify-center items-end absolute inset-0 z-0 opacity-20">
-        <div className="w-full absolute z-5">
-          absolute component
-        </div>
-      </div> 
+      <ScrollWheel to="AboutMe" />
     </BackgroundWrapper>
   );
 }

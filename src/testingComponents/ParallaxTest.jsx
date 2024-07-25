@@ -132,6 +132,12 @@ function ParallaxTest({ num, scrollStart, scrollEnd }) {
           <li>----</li>
         </ol>
       </div>
+
+      <div className="w-full h-full flex justify-center items-end absolute inset-0 z-0 opacity-20">
+        <div className="w-full absolute z-5">
+          absolute component
+        </div>
+      </div> 
     </BackgroundWrapper>
   );
 }

@@ -51,11 +51,11 @@ import { globals } from '../../../globals';
 
 const ButtonContent = ({ children }) => (
   <>
-    <span className="absolute inset-0 overflow-hidden rounded-xl">
+    <span className="absolute inset-0 overflow-hidden rounded-xl z-50">
       <span className="absolute inset-0 rounded-xl bg-[image:radial-gradient(75%_100%_at_50%_0%,rgba(204,85,0,0.6)_0%,rgba(204,85,0,0)_75%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100">
       </span>
     </span>
-    <div className="relative z-10 flex items-center px-6 py-3 space-x-2 rounded-xl bg-primary-dark/50 ring-1 ring-secondary/10 ">
+    <div className="relative z-50 flex items-center px-6 py-3 space-x-2 rounded-xl bg-primary-dark/50 ring-1 ring-secondary/10 ">
       <span>{children}</span>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"
         data-slot="icon" className="w-6 h-6">
