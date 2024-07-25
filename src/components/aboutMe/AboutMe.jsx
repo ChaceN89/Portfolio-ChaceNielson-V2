@@ -10,6 +10,8 @@ import SkillSections from './SkillSections';
 function AboutMe() {
   return (
     <section id="AboutMe" className='section-wrapper'>
+      <h1>Technical Skills</h1>
+
       <SkillSections techSkills={techSkills}/>
       <hr />
       <Interests interests={interests} />
