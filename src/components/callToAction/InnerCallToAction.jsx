@@ -13,7 +13,7 @@ function InnerCallToAction() {
           src={callToActionData.img}
           lowResSrc={callToActionData.lowResImg}
           alt="Call to Action Logo"
-          className="object-contain w-56 h-72" // Adjust width and height as needed
+          className="object-contain w-40 h-56 md:w-56 md:h-72" // Adjust width and height as needed
         /> 
       </div>
       <div className="col-span-2 flex flex-col h-full justify-center items-start p-4">

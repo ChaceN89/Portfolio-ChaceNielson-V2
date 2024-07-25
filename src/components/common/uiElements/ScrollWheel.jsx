@@ -25,7 +25,7 @@ function ScrollWheel({to="CallToAction"}) {
 
   return (
     <motion.div 
-      className="w-full h-full flex justify-center items-end absolute inset-0 z-0 opacity-80"
+      className="w-full h-full flex justify-center items-end absolute inset-0 z-5 opacity-80"
       {...fadeInProps}
     >
       <motion.div className="mb-4" {...bounceProps}>

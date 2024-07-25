@@ -1,42 +1,33 @@
 import React from 'react';
 import Tooltip from '../common/uiElements/Tooltip';
+import SkillsBox from './SkillsBox';
 
 function SkillSections({ techSkills }) {
-  const size = 40;
 
   return (
-    <div className="space">
-      {techSkills.map((skill, index) => (
-        <div key={index} className="flex flex-col space-y-2">
-          <div>
-            <h3>{skill.name}</h3>
-            <p>{skill.description}</p>
+    <div className="space-y-8 px-10">
+      {techSkills.map((category, index) => (
+        <div key={index} className="grid grid-cols-5 gap-x-8">
+          <div className='col-span-3'>
+            <h3 className="font-bold">{category.name}</h3>
+            <p className="text-sm text-secondary text-opacity-60">{category.description}</p>
+
           </div>
-          <div className="flex space-x-1">
-            {skill.topSkills.map((topSkill, idx) => (
-              <div key={idx}>
-                {topSkill.icon ? (
-                  <topSkill.icon size={size} color={topSkill.color} />
-                ) : (
-                  <img
-                    width={size}
-                    height={size}
-                    src={process.env.PUBLIC_URL + '/svg-icons/' + topSkill.SVG_path}
-                    alt={topSkill.name}
-                  />
-                )}
-              </div>
-            ))}
+          <div className="col-span-2 lg:col-span-2">
+            <SkillsBox category={category} />
+
           </div>
-          <Tooltip 
-            openDuration={100} 
-            className="max-w-56"
-            text={skill.minorSkills.join(", ")}
-          >
-            <div className="mt-2 p-1 bg-blue-500 text-white rounded">
-              =more
-            </div>
-          </Tooltip>
+          <div className='col-span-5'>
+            <Tooltip 
+              openDuration={100} 
+              className=""
+              text={category.minorSkills.join(", ")}
+            >
+                <p className="text-sm text-accent hover:text-accent-dark cursor-pointer">
+                  More technologies I've worked with
+                </p>
+            </Tooltip>
+          </div>
         </div>
       ))}
     </div>

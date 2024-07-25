@@ -5,6 +5,8 @@ import { AiOutlineGithub } from "react-icons/ai";
 import { DiPostgresql } from "react-icons/di";
 import { ImGit } from "react-icons/im";
 import { SiFastapi, SiTailwindcss, SiJavascript} from "react-icons/si";
+import { MdOutlineAnimation } from "react-icons/md";
+
  
 export const techSkills = [
   { // Web Design 
@@ -54,6 +56,7 @@ export const techSkills = [
       { name:"Unity", icon:FaUnity, color: "white" },
       { name:"Blender", SVG_path:"blender.svg" },
       { name:"C#", SVG_path:"c-sharp.svg" },
+      { name:"Animation", icon:MdOutlineAnimation, color: "white" },
     ],
     minorSkills: [
       "Game Design", "Animation", "Game Physics", 
