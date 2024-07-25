@@ -46,9 +46,9 @@ function Navbar() {
   };
 
   return (
-    <nav className="bg-secondary bg-opacity-15 p-2 fixed top-0 left-0 w-full z-40">
+    <nav className="bg-secondary bg-opacity-25 py-2 fixed top-0 left-0 w-full z-40 flex-col">
       <motion.div 
-        className='fixed top-0 left-0 h-1 bg-primary z-50' 
+        className='w-full h-1 bg-secondary -mt-2 mb-2' 
         style={{ scaleX: scrollYProgress }}
         transition={{ type: 'spring', stiffness: 100 }}
       />
