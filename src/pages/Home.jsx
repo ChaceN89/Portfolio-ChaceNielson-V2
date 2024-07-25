@@ -5,7 +5,7 @@ import { Outlet } from 'react-router-dom';
 import Hero from '../components/hero/Hero';
 import CallToAction from '../components/callToAction/CallToAction';
 import AboutMe from '../components/aboutMe/AboutMe';
-import Experience from '../components/experience/Experience';
+import JobExperience from '../components/jobExperience/JobExperience';
 import ProjectSection from '../components/Projects/ProjectSection';
 import ContactForm from '../components/contactMe/ContactForm';
 import Footer from '../components/footer/Footer';
@@ -22,7 +22,7 @@ function Home() {
         </div>
         <div id='AboutMe'>
           <AboutMe />
-          <Experience/>
+          <JobExperience/>
         </div>
         <div id='Projects'>
           <ProjectSection/>

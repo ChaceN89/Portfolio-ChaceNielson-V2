@@ -1,6 +1,6 @@
 import React from 'react'
 
-function ExperienceDetails({ experience }) {
+function JobDetails({ experience }) {
   if (!experience) return null
 
   const {
@@ -88,4 +88,4 @@ function ExperienceDetails({ experience }) {
   )
 }
 
-export default ExperienceDetails
+export default JobDetails

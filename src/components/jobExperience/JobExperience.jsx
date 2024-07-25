@@ -1,8 +1,8 @@
 import React, {useState} from 'react'
 import { experienceData } from '../../data/experienceData'
-import ExperienceDetails from './ExperienceDetails'
+import JobDetails from './JobDetails'
 
-function Experience() {
+function JobExperience() {
 
   const [experienceID, setExperienceID] = useState(0)
 
@@ -25,13 +25,13 @@ function Experience() {
           ))}
         </div>
         <div className='col-span-2'>
-          <ExperienceDetails experience={experienceData[experienceID]} />
+          <JobDetails experience={experienceData[experienceID]} />
         </div>
       </div>
     </section>
   )
 }
 
-export default Experience
+export default JobExperience
 
 
