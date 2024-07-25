@@ -35,7 +35,7 @@ function BackgroundWrapper({
       }}
     >
       <div
-        className={`absolute top-0 left-0 w-full h-full transition-opacity duration-500 ease-in-out`}
+        className="absolute top-0 left-0 w-full h-full z-0 transition-opacity duration-500 ease-in-out"
         style={{
           backgroundImage: `url(${lowResSrc})`,
           backgroundSize: scaledBackgroundSize,
@@ -46,7 +46,7 @@ function BackgroundWrapper({
         }}
       />
       <div
-        className={`absolute top-0 left-0 w-full h-full transition-opacity duration-500 ease-in-out`}
+        className="absolute top-0 left-0 w-full h-full z-0 transition-opacity duration-500 ease-in-out"
         style={{
           backgroundImage: `url(${src})`,
           backgroundSize: scaledBackgroundSize,
@@ -56,7 +56,9 @@ function BackgroundWrapper({
           opacity: highResLoaded ? bgOpacity / 100 : 0,
         }}
       />
-      {children}
+      <div className="relative z-10">
+        {children}
+      </div>
     </div>
   );
 }
