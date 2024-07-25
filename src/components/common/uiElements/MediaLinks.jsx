@@ -25,7 +25,7 @@ function MediaLinks() {
               bg-primary hover:bg-accent text-secondary hover:text-primary 
               transition duration-300"
             >
-              <link.icon size={28} className="" />
+              <link.icon size={24} className="" />
             </div>
           </a>
         </Tooltip>

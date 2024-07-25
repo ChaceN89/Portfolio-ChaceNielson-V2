@@ -28,10 +28,14 @@ function SkillSections({ techSkills }) {
               </div>
             ))}
           </div>
-          <Tooltip text={skill.extraSkills.join(", ")}>
-            <button className="mt-2 p-1 bg-blue-500 text-white rounded">
+          <Tooltip 
+            openDuration={100} 
+            className="max-w-56"
+            text={skill.extraSkills.join(", ")}
+          >
+            <div className="mt-2 p-1 bg-blue-500 text-white rounded">
               Learn more
-            </button>
+            </div>
           </Tooltip>
         </div>
       ))}
