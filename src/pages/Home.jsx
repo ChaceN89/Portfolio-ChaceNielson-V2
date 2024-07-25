@@ -27,11 +27,13 @@ function Home() {
       <main>
         <div id='Home' className='mt-12'>
           <Hero/>
-          <ParallaxTest num={1}/>
-          <div className='h-4 bg-black w-full'></div>
-          <ParallaxTest num={2}/>
-          <div className='h-4 bg-black w-full'></div>
-          <ParallaxTest num={3}/>
+          <div>
+            <ParallaxTest num={1} scrollStart={0} scrollEnd={window.innerHeight * 2} />
+            <div className="h-4 bg-black w-full"></div>
+            <ParallaxTest num={2} scrollStart={window.innerHeight} scrollEnd={window.innerHeight * 3} />
+            <div className="h-4 bg-black w-full"></div>
+            <ParallaxTest num={3} scrollStart={window.innerHeight * 2} scrollEnd={window.innerHeight * 4} />
+          </div>
         </div>
       </main>
 
