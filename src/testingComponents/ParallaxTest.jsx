@@ -1,10 +1,23 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { motion, useTransform, useScroll } from 'framer-motion';
 import BackgroundWrapper from '../components/common/layout/BackgroundWrapper';
 
 function ParallaxTest({ num, scrollStart, scrollEnd }) {
   const scrollRef = useRef(null);
   const { scrollY } = useScroll({ container: scrollRef });
+
+  const [currentScroll, setCurrentScroll] = useState(0);
+
+  useEffect(() => {
+    const updateScroll = () => {
+      setCurrentScroll(window.scrollY);
+    };
+
+    window.addEventListener('scroll', updateScroll);
+    return () => {
+      window.removeEventListener('scroll', updateScroll);
+    };
+  }, []);
 
   const scrollMiddle = (scrollStart + scrollEnd) / 2;
 
@@ -62,6 +75,12 @@ function ParallaxTest({ num, scrollStart, scrollEnd }) {
           <li>translateStartFirst: {translateStartFirst}</li>
           <li>translateMiddleFirst: {translateMiddleFirst}</li>
           <li>translateEndFirst: {translateEndFirst}</li>
+          <li>Current Scroll: {currentScroll}</li>
+          <li>scrollY: {scrollY.get()}</li>
+          <li>yFirst: {yFirst.get()}</li>
+          <li>scrollStart: {scrollStart}</li>
+          <li>scrollMiddle: {scrollMiddle}</li>
+          <li>scrollEnd: {scrollEnd}</li>
         </ol>
       </motion.div>
 
@@ -74,6 +93,12 @@ function ParallaxTest({ num, scrollStart, scrollEnd }) {
           <li>translateStartSecond: {translateStartSecond}</li>
           <li>translateMiddleSecond: {translateMiddleSecond}</li>
           <li>translateEndSecond: {translateEndSecond}</li>
+          <li>Current Scroll: {currentScroll}</li>
+          <li>scrollY: {scrollY.get()}</li>
+          <li>ySecond: {ySecond.get()}</li>
+          <li>scrollStart: {scrollStart}</li>
+          <li>scrollMiddle: {scrollMiddle}</li>
+          <li>scrollEnd: {scrollEnd}</li>
         </ol>
       </motion.div>
 
@@ -86,12 +111,22 @@ function ParallaxTest({ num, scrollStart, scrollEnd }) {
           <li>translateStartThird: {translateStartThird}</li>
           <li>translateMiddleThird: {translateMiddleThird}</li>
           <li>translateEndThird: {translateEndThird}</li>
+          <li>Current Scroll: {currentScroll}</li>
+          <li>scrollY: {scrollY.get()}</li>
+          <li>yThird: {yThird.get()}</li>
+          <li>scrollStart: {scrollStart}</li>
+          <li>scrollMiddle: {scrollMiddle}</li>
+          <li>scrollEnd: {scrollEnd}</li>
         </ol>
       </motion.div>
 
       <div className="flex items-center justify-center border-2 border-red-200 p-2 z-10 text-white bg-black">
         <ol>
           <li>Component num: {num}</li>
+          <li>Current Scroll: {currentScroll}</li>
+          <li>scrollStart: {scrollStart}</li>
+          <li>scrollMiddle: {scrollMiddle}</li>
+          <li>scrollEnd: {scrollEnd}</li>
           <li>----</li>
           <li>--Static--</li>
           <li>----</li>
