@@ -80,12 +80,13 @@
  */
 import React, {useEffect} from 'react';
 import { useLocation } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+import { Link as ScrollLink } from 'react-scroll';
 import ImageComponent from '../common/layout/ImageComponent';
+import { globals } from '../../globals';
 
 import './LogoLink.css';
 
-function LogoLink({ size = "large" }) {
+function LogoLink({ size = "large",  }) {
   const location = useLocation();
 
   useEffect(() => {
@@ -110,7 +111,14 @@ function LogoLink({ size = "large" }) {
   const currentSize = sizes[size];
 
   return (
-    <Link to="/" className='logo-link flex gap-0 items-center text-primary'>
+    <ScrollLink 
+      to="Home"      
+      spy={true}
+      smooth={true} 
+      duration={globals.ScrollLink.duration}
+      offset={globals.ScrollLink.offset}  // Adjust this offset based on your fixed navbar height
+      className='logo-link flex gap-0 items-center text-primary hover:cursor-pointer'
+    >
       <div 
         className={`w-full h-full flex-shrink-0 ${currentSize.logoClass}`} 
         style={currentSize.container} // Set a constant height and width for the logo container
@@ -124,7 +132,7 @@ function LogoLink({ size = "large" }) {
         />
       </div>
       <h1 className={`text-nowrap titleFont underline-effect ${currentSize.textClass}`}> CHACE NIELSON </h1>
-    </Link>
+    </ScrollLink>
   );
 }
 
