@@ -1,18 +1,31 @@
-import React from 'react'
+import React, {useState} from 'react'
+import { experienceData } from '../../data/experienceData'
+import ExperienceDetails from './ExperienceDetails'
 
 function Experience() {
-  return (
-    <section className='section-wrapper  border-2 border-white p-4' >
-      <div className='w-full text-center'>Experience</div>
-      <div className='flex w-full justify-around'>
 
-        <ol>
-          <li>- Glass gecko games </li>
-          <li>- Alberta Tomorrow </li>
-          <li>- Geothermal </li>
-        </ol>
-        <div className='h-full border-2 border-white p-20'>
-          Changable section that changes with clicking on the experience list 
+  const [experienceID, setExperienceID] = useState(0)
+
+  return (
+    <section className='section-wrapper pb-10' >
+      <hr />
+
+      <h2 className='py-10'>Experience</h2>
+      <div className='grid grid-cols-3 gap-2'>
+
+        <div className='flex flex-col space-y-2'>
+          {experienceData.map((experience, index) => (
+            <button 
+            key={index} 
+            onClick={() => setExperienceID(index)}
+            className={`p-4 rounded-lg border-2 transition-colors duration-300 ${experienceID === index ? 'bg-black text-white' : 'bg-white text-black hover:bg-black hover:text-white'}`}
+            >
+              {experience.name}
+            </button>
+          ))}
+        </div>
+        <div className='col-span-2'>
+          <ExperienceDetails experience={experienceData[experienceID]} />
         </div>
       </div>
     </section>
