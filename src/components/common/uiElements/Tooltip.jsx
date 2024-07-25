@@ -13,7 +13,7 @@ const Tooltip = ({ text, openDuration=1000, className="", children }) => {
     } else {
       setShowTooltip(false);
     }
-  }, [hovered]);
+  }, [hovered, openDuration]);
 
   useEffect(() => {
     if (showTooltip && tooltipRef.current) {

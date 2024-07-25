@@ -16,7 +16,7 @@ export const techSkills = [
       { name:"TailwindCSS", icon:SiTailwindcss, color: "#38BDF9" },
       { name:"Node.js", icon:FaNode, color: "#68A063" },
     ],
-    extraSkills: [
+    minorSkills: [
       "Vue", "AWS", "Netlify", "Vercel", "TypeScript", "Chart.js", "Redux", "HTML5", "CSS", "Framer Motion",
     ]
   },
@@ -29,7 +29,7 @@ export const techSkills = [
       { name:"FastAPI", icon:SiFastapi, color: "yellow" },
       { name:"PostgreSQL", icon:DiPostgresql, color: "white" },
     ],
-    extraSkills: [
+    minorSkills: [
       "Plotly Dash", "Streamlit", "Django",
       "MongoDB", "MySQL", "SQLite", "Docker", "REST API", 
     ]
@@ -43,7 +43,7 @@ export const techSkills = [
       { name:"Java", SVG_path:"java.svg" },
       { name:"C++", SVG_path:"c-plus-plus.svg" },
     ],
-    extraSkills: [
+    minorSkills: [
       "Jupyter Notebook", "Hadoop", "Apache Spark", "VS Code", "CI/CD"
     ]
   },
@@ -55,7 +55,7 @@ export const techSkills = [
       { name:"Blender", SVG_path:"blender.svg" },
       { name:"C#", SVG_path:"c-sharp.svg" },
     ],
-    extraSkills: [
+    minorSkills: [
       "Game Design", "Animation", "Game Physics", 
     ]
   },

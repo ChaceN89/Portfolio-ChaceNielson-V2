@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Tooltip from '../common/uiElements/Tooltip';
 
 function SkillSections({ techSkills }) {
@@ -31,10 +31,10 @@ function SkillSections({ techSkills }) {
           <Tooltip 
             openDuration={100} 
             className="max-w-56"
-            text={skill.extraSkills.join(", ")}
+            text={skill.minorSkills.join(", ")}
           >
             <div className="mt-2 p-1 bg-blue-500 text-white rounded">
-              Learn more
+              =more
             </div>
           </Tooltip>
         </div>
