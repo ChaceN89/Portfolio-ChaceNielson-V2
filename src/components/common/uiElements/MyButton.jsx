@@ -1,11 +1,11 @@
 /**
- * @file Button.jsx
- * @module Button
+ * @file MyButton.jsx
+ * @module MyButton
  * @desc Reusable Button component that can function either as a ScrollLink or a standard button with an onClick event.
  * The component conditionally renders based on the presence of the 'to' prop. If 'to' is provided, it renders a ScrollLink;
  * otherwise, it renders a standard button element. The styling is consistent using the 'buttonStyle' class from the CSS file.
  * 
- * @component Button
+ * @component MyButton
  * 
  * @requires react
  * @requires react-scroll
@@ -23,20 +23,20 @@
  * 
  * @example
  * // As a ScrollLink:
- * <Button
+ * <MyButton
  *   to="Projects"
  *   className="additional-class"
  * >
  *   My Projects
- * </Button>
+ * </MyButton>
  * 
  * // As a standard button:
- * <Button
+ * <MyButton
  *   onClick={() => console.log('Button clicked!')}
  *   className="additional-class"
  * >
  *   Click Me
- * </Button>
+ * </MyButton>
  * 
  * @returns {JSX.Element} The rendered Button component.
  * 
@@ -70,7 +70,7 @@ const ButtonContent = ({ children }) => (
   </>
 );
 
-function Button({ to, onClick, children, className, ...rest }) {
+function MyButton({ to, onClick, children, className, ...rest }) {
   const buttonClass = `relative inline-block p-0.5 font-semibold leading-6 text-secondary no-underline bg-primary shadow-2xl cursor-pointer group rounded-xl shadow-primary-dark border-2 border-opacity-45 border-secondary ${className}`;
 
   return to ? (
@@ -96,4 +96,4 @@ function Button({ to, onClick, children, className, ...rest }) {
   );
 }
 
-export default Button;
+export default MyButton;

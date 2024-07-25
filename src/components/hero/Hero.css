@@ -28,6 +28,6 @@
   /* buttons within the hero text */
   .text-buttons{
     @apply flex justify-center space-x-2 
-    text-sm md:text-base
+    text-sm md:text-base z-50
     lg:justify-start lg:space-x-4;
   }

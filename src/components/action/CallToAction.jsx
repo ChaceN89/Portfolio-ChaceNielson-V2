@@ -39,6 +39,7 @@ function CallToAction() {
     >
       {/* Parallax container with motion.div */}
       <motion.div 
+        className='z-10'
         style={{ y }} // Apply the parallax effect to this element
       >
         <InnerCallToAction />

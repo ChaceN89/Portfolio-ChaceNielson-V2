@@ -1,12 +1,12 @@
 import React from 'react';
 import ImageComponent from '../common/layout/ImageComponent';
-import Button from '../common/uiElements/Button';
+import MyButton from '../common/uiElements/MyButton';
 import { callToActionData } from '../../data/callToAction';
 
 function InnerCallToAction() {
   return (
     <div className="border-2 border-secondary text-secondary bg-primary bg-opacity-65 rounded-xl w-full h-full
-      grid grid-cols-1 md:grid-cols-3 px-4  max-w-sm sm:max-w-md md:max-w-3xl 
+      grid grid-cols-1 md:grid-cols-3 px-4  max-w-sm sm:max-w-md md:max-w-3xl z-10
     ">
       <div className="col-span-1 flex items-center justify-center">
         <ImageComponent
@@ -19,11 +19,11 @@ function InnerCallToAction() {
       <div className="col-span-2 flex flex-col h-full justify-center items-start p-4">
         <h2>{callToActionData.top}</h2>
         <h4 className="mt-2">{callToActionData.bottom}</h4>
-        <div className="mt-6 flex justify-start md:justify-start space-x-">
+        <div className="mt-6 flex justify-start md:justify-start space-x-2 z-50">
           {callToActionData.buttons.map((button) => (
-            <Button key={button.id} to={button.id}>
+            <MyButton key={button.id} to={button.id}>
               {button.name}
-            </Button>
+            </MyButton>
           ))}
         </div>
       </div>

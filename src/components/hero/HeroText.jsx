@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import Button from '../common/uiElements/Button';
+import MyButton from '../common/uiElements/MyButton';
 import { homePageData } from '../../data/homePageData';
 
 const textVariants = {
@@ -45,9 +45,9 @@ function HeroText() {
         <motion.div variants={textVariants} className="text-buttons">
           {homePageData.buttons.map((button) => (
             <motion.div key={button.id} variants={textVariants}>
-              <Button to={button.id}>
+              <MyButton to={button.id}>
                 {button.name}
-              </Button>
+              </MyButton>
             </motion.div>
           ))}
         </motion.div>

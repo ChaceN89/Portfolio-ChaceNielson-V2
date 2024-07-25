@@ -4,15 +4,16 @@ import { Outlet } from 'react-router-dom';
 
 import Hero from '../components/hero/Hero';
 import CallToAction from '../components/action/CallToAction';
+import AboutMe from '../components/aboutMe/AboutMe';
 import Footer from '../components/footer/Footer';
 
-import AboutMe from '../components/aboutMe/AboutMe';
 import ContactForm from '../components/contactMe/ContactForm';
 import ProjectSection from '../components/Projects/ProjectSection';
 import Line from '../components/common/uiElements/Line';
 import MySkills from '../components/skills/MySkills';
 import Experience from '../components/experience/Experience';
 import ColorBoxes from '../testingComponents/ColorBoxes';
+
 
 
 import ParallaxTest from '../testingComponents/ParallaxTest';
@@ -27,7 +28,7 @@ function Home() {
           <Hero/>
           <CallToAction />
         </div>
-        <div id='AboutMe' className='mt-12'>
+        <div id='AboutMe'>
           <AboutMe />
         </div>
         <div>
