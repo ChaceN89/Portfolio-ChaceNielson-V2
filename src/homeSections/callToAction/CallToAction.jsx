@@ -3,7 +3,6 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import BackgroundWrapper from '../../wrappers/BackgroundWrapper';
 import InnerCallToAction from './InnerCallToAction';
 import ScrollWheel from '../../components/uiElements/ScrollWheel';
-import ReturnToTop from '../../components/uiElements/ReturnToTop';
 
 // Define the scroll ranges and translation values for the parallax effect
 const scrollStart = 0; // Start of the scroll range (0 pixels from the top of this section)
