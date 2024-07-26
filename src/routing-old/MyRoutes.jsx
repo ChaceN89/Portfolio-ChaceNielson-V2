@@ -1,15 +1,15 @@
 import React from 'react';
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
-import Home from '../pages/Home';
-import Photos from '../pages/Photos';
-import ContactThanks from '../pages/ContactThanks';
+import Home from '../pages-old/Home';
+import Photos from '../pages-old/Photos';
+import ContactThanks from '../pages-old/ContactThanks';
 import Layout from './Layout';
 import ModalLayout from './ModalLayout';
-import SlideTransition from './SlideTransition';
+import SlideTransition from '../routing/SlideTransition';
 import ModalTransition from './ModalTransition';
 
-import ProjectModal from '../pages/ProjectModal';
-import SkillsModal from '../pages/SkillsModal';
+import ProjectModal from '../pages-old/ProjectModal';
+import SkillsModal from '../pages-old/SkillsModal';
 
 const MyRoutes = () => {
   const location = useLocation();

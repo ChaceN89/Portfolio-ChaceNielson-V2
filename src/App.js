@@ -6,10 +6,10 @@ import './App.css';
 
 import { Outlet } from 'react-router-dom';
 
-import ModalTransition from './routing/ModalTransition';
+import ModalTransition from './routing-old/ModalTransition';
 import SlideTransition from './routing/SlideTransition';
 
-import BackgroundWrapper from './components/common/layout/BackgroundWrapper';
+import BackgroundWrapper from './components-old/common/layout/BackgroundWrapper';
 
 import { Link } from 'react-router-dom';
 
