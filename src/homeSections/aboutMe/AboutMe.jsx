@@ -12,7 +12,7 @@ function AboutMe() {
   return (
     <BackgroundWrapper 
       id="AboutMe" 
-      className='section-wrapper-height'
+      className='min-h-section-height'
       src={process.env.PUBLIC_URL + "/png-backgrounds/overlays/scratch-2.png"}
       bgOpacity={20}
     >

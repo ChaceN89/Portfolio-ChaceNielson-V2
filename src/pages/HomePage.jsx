@@ -5,6 +5,7 @@ import CallToAction from '../homeSections/callToAction/CallToAction';
 import AboutMe from '../homeSections/aboutMe/AboutMe';
 import JobExperience from '../homeSections/jobExperience/JobExperience';
 import ProjectSection from '../homeSections/projects/ProjectSection';
+import ContactForm from '../homeSections/contactForm/ContactForm';
 
 import ReturnToTop from '../components/uiElements/ReturnToTop';
 
@@ -22,6 +23,9 @@ const HomePage = () => {
       </div>
       <div id='Projects'>
         <ProjectSection />
+      </div>
+      <div id='ContactMe'>
+        <ContactForm />
       </div>
 
       <ReturnToTop />

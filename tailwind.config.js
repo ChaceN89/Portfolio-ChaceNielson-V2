@@ -47,6 +47,9 @@ module.exports = {
         '164': '68rem',
         '170': '72rem',
       },
+      minHeight: {
+        'section-height': 'calc(100vh - 4rem)',
+      },
       height: {
         'section-height': 'calc(100vh - 4rem)',
         '102': '28rem',
