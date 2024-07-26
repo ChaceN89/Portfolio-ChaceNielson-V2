@@ -47,8 +47,6 @@ import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 
 // animations
 import SlideTransition from "./SlideTransition";
-import { AnimatePresence } from "framer-motion";
-
 
 // layouts
 import Layout from "./Layout";
@@ -67,16 +65,7 @@ import ProjectModal from "../pages/ProjectModal";
 const AppRoutes = () => {
   const location = useLocation();
 
-  const disableScroll = () => {
-    document.body.style.overflow = 'hidden';
-  };
-  
-  const enableScroll = () => {
-    document.body.style.overflow = '';
-  };
-
   return (
-
       <Routes location={location} key={location.key}>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />

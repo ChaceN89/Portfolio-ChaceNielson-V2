@@ -1,6 +1,5 @@
 import React from 'react';
 import SkillsBox from './SkillsBox';
-import Tooltip from '../../components/uiElements/Tooltip';
 import { Link } from 'react-router-dom';
 function SkillSections({ techSkills }) {
 
