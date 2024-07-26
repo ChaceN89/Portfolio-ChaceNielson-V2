@@ -1,18 +1,29 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation, useNavigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation, useNavigate, useParams } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
+import { Navigate } from 'react-router-dom';
 import './App.css';
 
 import { Outlet } from 'react-router-dom';
 
+import ModalTransition from './routing/ModalTransition';
+import SlideTransition from './routing/SlideTransition';
+
+import { Link } from 'react-router-dom';
+
 // HomePage Component
 const HomePage = () => {
   return (
-    <div>
-      <h1>Home Page</h1>
-      <a href="/skills/Backend">Open Backend Skills</a>
-      <a href="/skills/WebDesign">Open WebDev Skills</a>
-      <a href="/project/GeoPredict">Open GeoPredict</a>
+    <div className='space-x-4'>
+      <div className='flex space-x-3'>
+        <h1>Home Page</h1>
+        <a className='hover:text-accent' href="/skills/Backend">Open Backend Skills</a>
+        <a className='hover:text-accent' href="/skills/WebDesign">Open WebDev Skills</a>
+        <a className='hover:text-accent' href="/project/GeoPredict">Open GeoPredict</a>
+      </div>
+
+      <Link className='hover:text-accent' to="/photos">Open Photos</Link>
+      <Link className='hover:text-accent' to="/thanks">Open Thanks</Link>
 
     </div>
   );
@@ -20,42 +31,51 @@ const HomePage = () => {
 
 const PhotoPage = () => {
   return (
-    <div>
-      <h1>Photo Page</h1>
-      <a href="/project/VoiceRecognition">Open VoiceRecognition</a>
-      <a href="/project/GeoPredict">Open GeoPredict</a>
+    <div className='space-x-4'>
+      <div className='flex space-x-3'>
+        
+        <h1>Photo Page</h1>
+        <a className='hover:text-accent' href="/project/VoiceRecognition">Open VoiceRecognition</a>
+        <a className='hover:text-accent' href="/project/GeoPredict">Open GeoPredict</a>
+      
+      </div>
+      <Link className='hover:text-accent' to="/">Open Home</Link>
     </div>
   );
 };
 
 const ThanksPage = () => {
   return (
-    <div>
+    <div className='space-x-4'>
       <h1>Thanks Page</h1>
-      <a href="/modal">Open Modal</a>
+      <Link className='hover:text-accent' to="/">Open Home</Link>
+
     </div>
   );
 };
 
 const ProjectModal = () => {
+  const { id } = useParams();
+
   return (
     <div>
-      <h1>ProjectModal</h1>
+      <h1>Project: {id}</h1>
     </div>
   );
 };
 
-
 const SkillsModal = () => {
+  const { id } = useParams();
+
   return (
     <div>
-      <h1>SkillsModal</h1>
+      <h1>Skills: {id}</h1>
     </div>
   );
-}
+};
 
 // ModalPage Component
-const ModalPage = () => {
+const ModalLayout = () => {
   const navigate = useNavigate();
 
   const closeModal = () => {
@@ -67,18 +87,18 @@ const ModalPage = () => {
   };
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      className="modal"
-      onClick={closeModal}
-    >
-      <div className="modal-content text-black" onClick={(e) => e.stopPropagation()}>
-        <h1>Modal Content</h1>
-        <button onClick={closeModal}>Close Modal</button>
+      <div
+        className="modal"
+        onClick={closeModal}
+      >
+    <ModalTransition>
+
+        <div className="modal-content text-black" onClick={(e) => e.stopPropagation()}>
+          <Outlet />
+          <button onClick={closeModal}>Close Modal</button>
+        </div>
+    </ModalTransition>
       </div>
-    </motion.div>
   );
 };
 
@@ -96,8 +116,6 @@ const Layout = () => {
 };
 
 
-
-
 // App Component
 const App = () => {
   const location = useLocation();
@@ -106,11 +124,17 @@ const App = () => {
     <AnimatePresence mode="wait">
       {/* poplayout or sync for animations on pages */}
       <Routes location={location} key={location.key}>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/photos" element={<PhotoPage />} />
-        <Route path="/thanks" element={<ThanksPage />} />
-        <Route path="/skills/:id" element={<ModalPage />} />
-        <Route path="/project/:id" element={<ModalPage />} />
+        <Route path="/" element={<Layout />}>
+          <Route index element={<SlideTransition><HomePage /></SlideTransition>} />
+          <Route path="/photos" element={<SlideTransition><PhotoPage /></SlideTransition>} />
+          <Route path="/thanks" element={<SlideTransition><ThanksPage /></SlideTransition>} />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Route>
+
+        <Route path="/" element={<ModalLayout />}>
+          <Route path="/skills/:id" element={<SkillsModal />} />
+          <Route path="/project/:id" element={<ProjectModal />} />
+        </Route>
       </Routes>
     </AnimatePresence>
   );
