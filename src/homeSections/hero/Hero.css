@@ -1,5 +1,7 @@
 /* Hero.css */
-
+.hero{
+  @apply overflow-hidden w-full relative flex items-center justify-start h-section-height
+}
 
 /* the hero img */
 .hero-img-wrapper {

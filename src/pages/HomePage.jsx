@@ -10,9 +10,7 @@ const HomePage = () => {
         <Hero/>
         <CallToAction />
       </div>
-
     </>
-
   );
 };
 

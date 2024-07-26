@@ -19,12 +19,10 @@ html{
 
 
 /* section wrappers - height is only the heigh and the default is hieght and the container for width*/
-.section-wrapper-height {
+.section-height {
   min-height: calc(100vh - 4rem );
 }
-.section-wrapper{
-  @apply container mx-auto section-wrapper-height ;
-}
+
 
 /* headers */
 h1{

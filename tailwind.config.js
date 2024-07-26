@@ -48,6 +48,7 @@ module.exports = {
         '170': '72rem',
       },
       height: {
+        'section-height': 'calc(100vh - 4rem)',
         '102': '28rem',
         '108': '32rem',
         '111': '33rem',

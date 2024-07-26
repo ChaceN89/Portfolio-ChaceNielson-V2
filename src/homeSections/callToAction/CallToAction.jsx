@@ -3,6 +3,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import BackgroundWrapper from '../../wrappers/BackgroundWrapper';
 import InnerCallToAction from './InnerCallToAction';
 import ScrollWheel from '../../components/uiElements/ScrollWheel';
+import ReturnToTop from '../../components/uiElements/ReturnToTop';
 
 // Define the scroll ranges and translation values for the parallax effect
 const scrollStart = 0; // Start of the scroll range (0 pixels from the top of this section)
@@ -28,7 +29,7 @@ function CallToAction() {
   return (
     <BackgroundWrapper
       id="CallToAction"
-      className="section-wrapper-height overflow-hidden relative flex items-center justify-center px-6"
+      className="h-section-height overflow-hidden relative flex items-center justify-center px-6"
       src={process.env.PUBLIC_URL + "/png-backgrounds/detailed/range-b&w2-trim.png"}
       lowResSrc={process.env.PUBLIC_URL + "/png-backgrounds/detailed/range-b&w2-trim-small.png"}
       backgroundSize='contain'
@@ -48,13 +49,8 @@ function CallToAction() {
       {/* ScrollWheel positioned absolutely within BackgroundWrapper */}
       <ScrollWheel to="AboutMe" />
 
-      {/*Second  Absolute component in lower left to test position for a future button */}
-      <div className="w-full h-full flex justify-center items-end absolute inset-0 z-0 opacity-20">
-        <div className="w-full absolute z-5">
-          absolute component in lower left
-        </div>
-      </div> 
 
+      <ReturnToTop />
       
     </BackgroundWrapper>
   );
