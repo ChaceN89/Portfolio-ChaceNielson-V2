@@ -28,7 +28,7 @@ const ModalLayout = () => {
         bgOpacity={80}
       >
         <SlideTransition enter='right' exit='right' translationDist={400} >
-          <div className="modal-content text-black" onClick={(e) => e.stopPropagation()}>
+          <div className="modal-content text-black mx-20" onClick={(e) => e.stopPropagation()}>
             <Outlet />  
             <button className="bg-primary border-2 border-primary text-secondary hover:text-primary hover:bg-secondary rounded-2xl p-2.5" onClick={closeModal}>Close Modal</button>
           </div>
