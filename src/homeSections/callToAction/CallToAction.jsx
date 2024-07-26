@@ -4,6 +4,8 @@ import BackgroundWrapper from '../../wrappers/BackgroundWrapper';
 import InnerCallToAction from './InnerCallToAction';
 import ScrollWheel from '../../components/uiElements/ScrollWheel';
 
+import SlideTransition from '../../routing/SlideTransition';
+
 // Define the scroll ranges and translation values for the parallax effect
 const scrollStart = 0; // Start of the scroll range (0 pixels from the top of this section)
 const scrollMiddle = window.innerHeight; // Middle of the scroll range (1x the window height)
@@ -33,17 +35,15 @@ function CallToAction() {
       lowResSrc={process.env.PUBLIC_URL + "/png-backgrounds/detailed/range-b&w2-trim-small.png"}
       bgOpacity={40}
     >
-      {/* Parallax container with motion.div */}
       <motion.div 
         className='z-10'
         style={{ y }} // Apply the parallax effect to this element
       >
-        <InnerCallToAction />
+        <SlideTransition>
+          <InnerCallToAction />
+        </SlideTransition>
       </motion.div>
-
-      {/* ScrollWheel positioned absolutely within BackgroundWrapper */}
       <ScrollWheel to="AboutMe" />
-      
     </BackgroundWrapper>
   );
 }

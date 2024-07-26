@@ -19,7 +19,7 @@ function SkillSections({ techSkills }) {
           </div>
           <div className='col-span-5'>
             <Link 
-            to={"/skills/"+category.id}
+              to={"/skills/"+category.id}
               className="text-sm text-accent hover:text-accent-dark cursor-pointer"
               >
               View all {category.name} skills

@@ -1,5 +1,5 @@
 import BackgroundWrapper from "../wrappers/BackgroundWrapper";
-import { Link } from "react-router-dom";
+import ScrollToTop from "../routing/ScrollToTop";
 
 const PhotoPage = () => {
   return (
@@ -10,6 +10,7 @@ const PhotoPage = () => {
       bgOpacity={75}
       backgroundAttachment='scroll'
     >
+      <ScrollToTop />
         
       <h1 className="container mx-auto pl-10 pt-32">My Photos </h1>
 

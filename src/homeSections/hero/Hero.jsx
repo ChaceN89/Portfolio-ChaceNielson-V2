@@ -6,15 +6,20 @@ import ScrollWheel from '../../components/uiElements/ScrollWheel'
 import HeroImg from './HeroImg';
 import HeroText from './HeroText';
 
+import FadeTransition from '../../routing/FadeTransition';
+
 function Hero() {
 
   return (
-    <section className="hero">
-      <HeroText />
-      <ParallaxMountains />
-      <ScrollWheel to="CallToAction" />
-      <HeroImg />
-    </section>
+    <FadeTransition>
+      <section className="hero">
+
+        <HeroText />
+        <ParallaxMountains />
+        <ScrollWheel to="CallToAction" />
+        <HeroImg />
+      </section>
+    </FadeTransition>
   );
 }
 
