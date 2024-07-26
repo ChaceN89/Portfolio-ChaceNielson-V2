@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import NavbarItems from './NavbarItems';
 import LogoLink from '../logo/LogoLink';
-import { motion, useScroll } from 'framer-motion';
+import { motion, useScroll, useSpring, useTransform } from 'framer-motion';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import "./Navbar.css";
 
@@ -9,7 +9,13 @@ function Navbar() {
   const [isHamburgerNavOpen, setIsHamburgerNavOpen] = useState(false);
   const [animateMenu, setAnimateMenu] = useState(false);
 
+  // Create a spring animation for the scroll progress
   const { scrollYProgress } = useScroll();
+  const springScrollYProgress = useSpring(scrollYProgress, {
+    stiffness: 300,
+    damping: 30,
+    mass: 1
+  });
 
   const toggleMenu = () => {
     if (!isHamburgerNavOpen) {
@@ -25,8 +31,7 @@ function Navbar() {
     <nav className="bg-secondary pb-1 fixed top-0 w-full z-45">
       <motion.div 
         className='w-full h-1 bg-accent origin-left z-40'
-        style={{ scaleX: scrollYProgress }}
-        transition={{ type: 'spring', stiffness: 100 }}
+        style={{ scaleX: springScrollYProgress }}
       />
       <div className="container mx-auto flex justify-between md:justify-center items-center p-2">
         <div className="text-left flex justify-start md:hidden">
