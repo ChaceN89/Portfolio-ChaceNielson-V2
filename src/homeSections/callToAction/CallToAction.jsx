@@ -29,7 +29,7 @@ function CallToAction() {
   return (
     <BackgroundWrapper
       id="CallToAction"
-      className="h-section-height overflow-hidden relative flex items-center justify-center px-6"
+      className="h-section-height relative flex items-center justify-center px-6"
       src={process.env.PUBLIC_URL + "/png-backgrounds/detailed/range-b&w2-trim.png"}
       lowResSrc={process.env.PUBLIC_URL + "/png-backgrounds/detailed/range-b&w2-trim-small.png"}
       bgOpacity={40}
@@ -44,13 +44,9 @@ function CallToAction() {
 
       {/* ScrollWheel positioned absolutely within BackgroundWrapper */}
       <ScrollWheel to="AboutMe" />
-
-
-      <ReturnToTop />
       
     </BackgroundWrapper>
   );
 }
 
 export default CallToAction;
-

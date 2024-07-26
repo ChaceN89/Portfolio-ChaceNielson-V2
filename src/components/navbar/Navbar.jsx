@@ -39,7 +39,7 @@ function Navbar() {
           {isHamburgerNavOpen ? <FaTimes size={24} /> : <><span className='font-bold'>Menu</span> <FaBars size={24} /> </>}
         </button>
         {isHamburgerNavOpen && (
-          <div className={`fixed md:hidden top-0 left-0 z-50 w-full h-full bg-secondary bg-opacity-90 flex justify-center items-center transition-opacity duration-300 ${animateMenu ? 'opacity-100 fade-in' : 'opacity-0 fade-out'}`}>
+          <div className={`fixed md:hidden top-0 left-0 z-50 w-full h-full bg-secondary bg-opacity-95 flex justify-center items-center transition-opacity duration-300 ${animateMenu ? 'opacity-100 fade-in' : 'opacity-0 fade-out'}`}>
             <NavbarItems toggleMenu={toggleMenu} textSize="text-2xl" />
           </div>
         )}

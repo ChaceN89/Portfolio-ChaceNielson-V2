@@ -1,3 +1,5 @@
+import React, { useState, useEffect } from 'react';
+
 /**
  * @file BackgroundWrapper.jsx
  * @module BackgroundWrapper
@@ -50,20 +52,18 @@
  * @updated 2024-07-26
  */
 
-import React, { useState, useEffect } from 'react';
-
 function BackgroundWrapper({
-  id = '', // id for the element
-  className = '', // additional classes
-  src = '', // path to the background image
-  lowResSrc = '', // path to the low resolution background image
-  backgroundSize = "contain", // options are auto, cover, contain, initial, inherit
-  backgroundPosition = "center", // options are center, top, right, bottom, left, top right, top left, bottom right, bottom left, initial, inherit
-  backgroundRepeat = "no-repeat", // options are repeat, no-repeat, repeat-x, repeat-y, initial, inherit
-  backgroundAttachment = "fixed", // options are fixed, scroll, local, initial, inherit
-  scale = 1, // scale factor for the background image
-  bgOpacity = 100, // opacity of the background image (uses tailwind so it should be a number between 0 and 100 by multiples of 5)
-  children // child elements to be rendered inside the wrapper
+  id = '',
+  className = '',
+  src = '',
+  lowResSrc = '',
+  backgroundSize = "contain",
+  backgroundPosition = "center",
+  backgroundRepeat = "no-repeat",
+  backgroundAttachment = "fixed",
+  scale = 1,
+  bgOpacity = 100,
+  children
 }) {
   const [highResLoaded, setHighResLoaded] = useState(false);
 
@@ -76,9 +76,9 @@ function BackgroundWrapper({
   const scaledBackgroundSize = `${100 * scale}%`;
 
   return (
-    <div
+    <div 
       id={id}
-      className="relative w-full h-full z-0"
+      className={`${className} relative`}
       style={{
         backgroundSize: backgroundSize,
         backgroundPosition: backgroundPosition,
@@ -88,7 +88,7 @@ function BackgroundWrapper({
     >
       {/* Low resolution background image */}
       <div
-        className="absolute top-0 left-0 w-full h-full z-0 transition-opacity duration-500 ease-in-out"
+        className="absolute top-0 left-0 w-full h-full transition-opacity duration-500 ease-in-out"
         style={{
           backgroundImage: `url(${lowResSrc})`,
           backgroundSize: scaledBackgroundSize,
@@ -96,11 +96,12 @@ function BackgroundWrapper({
           backgroundRepeat: backgroundRepeat,
           backgroundAttachment: backgroundAttachment,
           opacity: highResLoaded ? 0 : bgOpacity / 100,
+          zIndex: 0,
         }}
       />
       {/* High resolution background image */}
       <div
-        className="absolute top-0 left-0 w-full h-full z-0 transition-opacity duration-500 ease-in-out"
+        className="absolute top-0 left-0 w-full h-full transition-opacity duration-500 ease-in-out"
         style={{
           backgroundImage: `url(${src})`,
           backgroundSize: scaledBackgroundSize,
@@ -108,10 +109,11 @@ function BackgroundWrapper({
           backgroundRepeat: backgroundRepeat,
           backgroundAttachment: backgroundAttachment,
           opacity: highResLoaded ? bgOpacity / 100 : 0,
+          zIndex: 0,
         }}
       />
       {/* Content wrapper */}
-      <div className={`${className} relative`}>
+      <div className={`${className} relative z-10`}>
         {children}
       </div>
     </div>

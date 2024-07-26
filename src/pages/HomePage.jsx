@@ -3,6 +3,8 @@
 import Hero from '../homeSections/hero/Hero';
 import CallToAction from '../homeSections/callToAction/CallToAction';
 
+import ReturnToTop from '../components/uiElements/ReturnToTop';
+
 import { Link } from 'react-router-dom';
 
 const HomePage = () => {
@@ -17,6 +19,9 @@ const HomePage = () => {
         </div>
         <CallToAction />
       </div>
+
+            {/* ReturnToTop button positioned absolutely within BackgroundWrapper */}
+            <ReturnToTop />
     </>
   );
 };

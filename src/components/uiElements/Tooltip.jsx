@@ -52,7 +52,7 @@ const Tooltip = ({ text, openDuration=1000, className="", children }) => {
       {showTooltip && (
         <div
           ref={tooltipRef}
-          className={`absolute z-10 p-1 text-sm text-primary bg-secondary border-2 border-primary rounded ${className}`}
+          className={`absolute z-10 p-1 text-sm text-primary bg-secondary border-2 border-primary rounded w-fit whitespace-nowrap ${className}`}
           style={{ ...tooltipStyle, bottom: '100%', marginBottom: '2px' }}
         >
           {text}

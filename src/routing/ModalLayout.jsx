@@ -25,11 +25,11 @@ const ModalLayout = () => {
         className="modal"
         onClick={closeModal}
         src={process.env.PUBLIC_URL + "/png-backgrounds/detailed/range-b&w2-trim.png"}
-        // bgOpacity={100}
+        bgOpacity={80}
       >
         <SlideTransition enter='right' exit='right' translationDist={400} >
           <div className="modal-content text-black" onClick={(e) => e.stopPropagation()}>
-            <Outlet />  {/* Modal content outlet */}
+            <Outlet />  
             <button onClick={closeModal}>Close Modal</button>
           </div>
         </SlideTransition>
