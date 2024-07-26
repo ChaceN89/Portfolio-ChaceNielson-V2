@@ -131,7 +131,7 @@ const ModalLayout = () => {
         backgroundAttachment='fixed'
         bgOpacity={20}
       >
-        <SlideTransition enter='right' exit='right'>
+        <SlideTransition enter='right' exit='right' translationDist={400} >
           <div className="modal-content text-black" onClick={(e) => e.stopPropagation()}>
             <Outlet />  {/* Modal content outlet */}
             <button onClick={closeModal}>Close Modal</button>
@@ -174,12 +174,11 @@ const App = () => {
           <Route path="*" element={<Navigate to="/" replace />} />
           
           {/* Modal Routes */}
-          <Route path="skills" element={<ModalLayout />}>
-            <Route path=":id" element={<SkillsModal />} />
+          <Route path="" element={<ModalLayout />}>
+            <Route path="skills/:id" element={<SkillsModal />} />
+            <Route path="project/:id" element={<ProjectModal />} />
           </Route>
-          <Route path="project" element={<ModalLayout />}>
-            <Route path=":id" element={<ProjectModal />} />
-          </Route>
+
         </Route>
       </Routes>
     </AnimatePresence>
