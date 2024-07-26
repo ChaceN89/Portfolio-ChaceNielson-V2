@@ -1,8 +1,5 @@
 /* Hero.css */
-.hero {
-  @apply overflow-hidden w-full
-  relative flex items-center justify-start;
-}
+
 
 /* the hero img */
 .hero-img-wrapper {

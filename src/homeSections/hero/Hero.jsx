@@ -9,13 +9,14 @@ import HeroText from './HeroText';
 function Hero() {
 
   return (
-    <section className="hero section-wrapper-height">
+    <section className="overflow-hidden w-full relative flex items-center justify-start section-wrapper-height">
       {/* relative components */}
-      {/* <HeroText /> */}
+      <HeroText />
       {/* absolute components */}
-      {/* <ParallaxMountains />
-      <ScrollWheel />
-      <HeroImg /> */}
+      <ParallaxMountains />
+      <ScrollWheel to="CallToAction" />
+
+      <HeroImg />
     </section>
   );
 }
