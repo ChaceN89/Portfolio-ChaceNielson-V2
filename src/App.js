@@ -105,17 +105,15 @@ const SkillsModal = () => {
   );
 };
 
-// ModalPage Component
 const ModalLayout = () => {
   const navigate = useNavigate();
-  // console.log('history', window.history);
-  const location = useLocation()
-  // console.log('location', location);
-
+  const location = useLocation();
 
   const closeModal = () => {
     if (window.history.state && window.history.state.idx > 0) {
       navigate(-1);
+    } else if (location.state?.backgroundLocation) {
+      navigate(location.state.backgroundLocation.pathname);
     } else {
       navigate('/');
     }
@@ -123,7 +121,6 @@ const ModalLayout = () => {
 
   return (
     <AnimatedWrapper>
-
       <BackgroundWrapper
         className="modal"
         onClick={closeModal}
@@ -136,14 +133,15 @@ const ModalLayout = () => {
       >
         <ModalTransition>
           <div className="modal-content text-black" onClick={(e) => e.stopPropagation()}>
-            <Outlet />
+            <Outlet />  {/* Modal content outlet */}
             <button onClick={closeModal}>Close Modal</button>
           </div>
-          </ModalTransition>
+        </ModalTransition>
       </BackgroundWrapper>
     </AnimatedWrapper>
   );
 };
+
 
 
 const Layout = () => {
@@ -157,30 +155,31 @@ const Layout = () => {
       <main className="pt-14">
         <Outlet />
       </main>
-      <footer ><h1>footer</h1></footer>
+      <footer><h1>footer</h1></footer>
     </div>
   );
 };
-
 
 // App Component
 const App = () => {
   const location = useLocation();
 
   return (
-    <AnimatePresence mode="wait">
-      {/* poplayout or sync for animations on pages */}
+    <AnimatePresence mode="sync">
       <Routes location={location} key={location.key}>
         <Route path="/" element={<Layout />}>
           <Route index element={<SlideTransition><HomePage /></SlideTransition>} />
           <Route path="/photos" element={<SlideTransition><PhotoPage /></SlideTransition>} />
           <Route path="/thanks" element={<SlideTransition><ThanksPage /></SlideTransition>} />
           <Route path="*" element={<Navigate to="/" replace />} />
-        </Route>
-
-        <Route path="/" element={<ModalLayout />}>
-          <Route path="/skills/:id" element={<SkillsModal />} />
-          <Route path="/project/:id" element={<ProjectModal />} />
+          
+          {/* Modal Routes */}
+          <Route path="skills" element={<ModalLayout />}>
+            <Route path=":id" element={<SkillsModal />} />
+          </Route>
+          <Route path="project" element={<ModalLayout />}>
+            <Route path=":id" element={<ProjectModal />} />
+          </Route>
         </Route>
       </Routes>
     </AnimatePresence>
