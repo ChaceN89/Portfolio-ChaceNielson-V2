@@ -4,7 +4,7 @@ import Hero from '../homeSections/hero/Hero';
 import CallToAction from '../homeSections/callToAction/CallToAction';
 import AboutMe from '../homeSections/aboutMe/AboutMe';
 import JobExperience from '../homeSections/jobExperience/JobExperience';
-import ProjectSection from '../homeSections/projects/ProjectSection';
+import ProjectSection from '../homeSections/projectSection/ProjectSection';
 import ContactForm from '../homeSections/contactForm/ContactForm';
 
 import ReturnToTop from '../components/uiElements/ReturnToTop';
