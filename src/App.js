@@ -131,12 +131,12 @@ const ModalLayout = () => {
         backgroundAttachment='fixed'
         bgOpacity={20}
       >
-        <ModalTransition>
+        <SlideTransition enter='right' exit='right'>
           <div className="modal-content text-black" onClick={(e) => e.stopPropagation()}>
             <Outlet />  {/* Modal content outlet */}
             <button onClick={closeModal}>Close Modal</button>
           </div>
-        </ModalTransition>
+        </SlideTransition>
       </BackgroundWrapper>
     </AnimatedWrapper>
   );
@@ -165,7 +165,7 @@ const App = () => {
   const location = useLocation();
 
   return (
-    <AnimatePresence mode="sync">
+    <AnimatePresence mode="wait">
       <Routes location={location} key={location.key}>
         <Route path="/" element={<Layout />}>
           <Route index element={<SlideTransition><HomePage /></SlideTransition>} />
