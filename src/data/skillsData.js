@@ -10,6 +10,7 @@ import { MdOutlineAnimation } from "react-icons/md";
  
 export const techSkills = [
   { // Web Design 
+    id: "web-design",
     name: "Web Design", 
     description: "I have been designing web applications for 2 years. My main frontend stack includes React, JavaScript, and TailwindCSS.", 
     topSkills: [
@@ -23,6 +24,7 @@ export const techSkills = [
     ]
   },
   { // Backend Design 
+    id: "backend-design",
     name: "Backend Design", 
     description: "I have been designing backend applications for 2 years. My main backend stack includes Python, FastAPI, and PostgreSQL.", 
     topSkills: [
@@ -37,6 +39,7 @@ export const techSkills = [
     ]
   },
   { // Engineering
+    id: "engineering",
     name: "Engineering", 
     description: "I hold a degree in Software Engineering from the University of Calgary.", 
     topSkills: [
@@ -50,6 +53,7 @@ export const techSkills = [
     ]
   },
   { // Game Design 
+    id: "game-design",
     name: "Game Design", 
     description: "I have worked with Unity and Blender to create 3D games and animations.", 
     topSkills: [

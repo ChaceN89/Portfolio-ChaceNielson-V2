@@ -1,7 +1,7 @@
 import React from 'react';
-import Tooltip from '../common/uiElements/Tooltip';
 import SkillsBox from './SkillsBox';
-
+import Tooltip from '../../components/uiElements/Tooltip';
+import { Link } from 'react-router-dom';
 function SkillSections({ techSkills }) {
 
   return (
@@ -18,15 +18,12 @@ function SkillSections({ techSkills }) {
 
           </div>
           <div className='col-span-5'>
-            <Tooltip 
-              openDuration={100} 
-              className=""
-              text={category.minorSkills.join(", ")}
-            >
-                <p className="text-sm text-accent hover:text-accent-dark cursor-pointer">
-                  More technologies I've worked with
-                </p>
-            </Tooltip>
+            <Link 
+            to={"/skills/"+category.id}
+              className="text-sm text-accent hover:text-accent-dark cursor-pointer"
+              >
+              View all {category.name} skills
+            </Link>
           </div>
         </div>
       ))}

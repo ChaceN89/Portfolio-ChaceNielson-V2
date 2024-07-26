@@ -6,18 +6,18 @@ const PhotoPage = () => {
 
     <BackgroundWrapper 
       className='space-x-4 h-screen'
-      src={process.env.PUBLIC_URL + "/png-backgrounds/detailed/range-b&w5-trim.png"}
+      src={process.env.PUBLIC_URL + "/png-backgrounds/detailed/range-b&w3-mountain.png"}
       bgOpacity={75}
+      backgroundAttachment='scroll'
     >
-      <div className='flex space-x-3'>
         
-        <h1>Photo Page</h1>
-        <Link className='hover:text-accent' to="/project/Project222">Open Project222 Poject</Link>
-      
-      </div>
-      <Link className='hover:text-accent' to="/">Open Home</Link>
-    </BackgroundWrapper>
+      <h1 className="container mx-auto pl-10 pt-32">My Photos </h1>
 
+      <div className="">
+        Gallery
+      </div>
+      
+    </BackgroundWrapper>
   );
 };
 

@@ -6,7 +6,7 @@ import { interests } from '../../data/interestsData';
 
 import Interests from './Interests';
 import SkillSections from './SkillSections';
-import BackgroundWrapper from '../common/layout/BackgroundWrapper';
+import BackgroundWrapper from '../../wrappers/BackgroundWrapper';
 
 function AboutMe() {
   return (

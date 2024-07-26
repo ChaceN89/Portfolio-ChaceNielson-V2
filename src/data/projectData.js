@@ -3,6 +3,7 @@
 export const projects = [
   {
     starred:true,
+    id:"geo-predict",
     name:"GEO Predict", 
     tag:"Full-Stack",
     description:"",

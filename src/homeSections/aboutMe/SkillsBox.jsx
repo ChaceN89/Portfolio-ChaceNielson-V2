@@ -1,6 +1,5 @@
 import React from 'react'
-import Tooltip from '../common/uiElements/Tooltip';
-
+import Tooltip from '../../components/uiElements/Tooltip';
 function SkillsBox({ category }) {
   const size = 60;
 
