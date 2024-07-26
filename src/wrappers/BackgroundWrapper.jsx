@@ -57,7 +57,7 @@ function BackgroundWrapper({
   className = '', // additional classes
   src = '', // path to the background image
   lowResSrc = '', // path to the low resolution background image
-  backgroundSize = "cover", // options are auto, cover, contain, initial, inherit
+  backgroundSize = "contain", // options are auto, cover, contain, initial, inherit
   backgroundPosition = "center", // options are center, top, right, bottom, left, top right, top left, bottom right, bottom left, initial, inherit
   backgroundRepeat = "no-repeat", // options are repeat, no-repeat, repeat-x, repeat-y, initial, inherit
   backgroundAttachment = "fixed", // options are fixed, scroll, local, initial, inherit

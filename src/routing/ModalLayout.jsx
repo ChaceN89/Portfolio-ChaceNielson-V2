@@ -24,12 +24,8 @@ const ModalLayout = () => {
       <BackgroundWrapper
         className="modal"
         onClick={closeModal}
-        src={process.env.PUBLIC_URL + "/png-backgrounds/overlays/scratch-2.png"}
-        backgroundSize='contain'
-        backgroundPosition='center'
-        backgroundRepeat='no-repeat'
-        backgroundAttachment='fixed'
-        bgOpacity={20}
+        src={process.env.PUBLIC_URL + "/png-backgrounds/detailed/range-b&w2-trim.png"}
+        // bgOpacity={100}
       >
         <SlideTransition enter='right' exit='right' translationDist={400} >
           <div className="modal-content text-black" onClick={(e) => e.stopPropagation()}>

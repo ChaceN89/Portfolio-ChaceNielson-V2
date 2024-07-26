@@ -47,7 +47,6 @@ import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 
 // animations
 import SlideTransition from "./SlideTransition";
-import { AnimatePresence } from "framer-motion";
 
 // layouts
 import Layout from "./Layout";
@@ -67,7 +66,6 @@ const AppRoutes = () => {
   const location = useLocation();
 
   return (
-    <AnimatePresence mode="wait">
       <Routes location={location} key={location.key}>
         <Route path="/" element={<Layout />}>
           <Route index element={<SlideTransition><HomePage /></SlideTransition>} />
@@ -83,7 +81,6 @@ const AppRoutes = () => {
 
         </Route>
       </Routes>
-    </AnimatePresence>
   );
 };
 

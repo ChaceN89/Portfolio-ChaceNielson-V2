@@ -32,10 +32,6 @@ function CallToAction() {
       className="h-section-height overflow-hidden relative flex items-center justify-center px-6"
       src={process.env.PUBLIC_URL + "/png-backgrounds/detailed/range-b&w2-trim.png"}
       lowResSrc={process.env.PUBLIC_URL + "/png-backgrounds/detailed/range-b&w2-trim-small.png"}
-      backgroundSize='contain'
-      backgroundPosition='center'
-      backgroundRepeat='no-repeat'
-      backgroundAttachment='fixed'
       bgOpacity={40}
     >
       {/* Parallax container with motion.div */}

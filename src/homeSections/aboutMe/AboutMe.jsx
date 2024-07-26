@@ -14,11 +14,6 @@ function AboutMe() {
       id="AboutMe" 
       className='section-wrapper-height'
       src={process.env.PUBLIC_URL + "/png-backgrounds/overlays/scratch-2.png"}
-      // lowResSrc={process.env.PUBLIC_URL + "/png-backgrounds/detailed/range-b&w2-trim-small.png"}
-      backgroundSize='contain'
-      backgroundPosition='center'
-      backgroundRepeat='no-repeat'
-      backgroundAttachment='fixed'
       bgOpacity={20}
     >
      <div className='section-wrapper z-50'>
