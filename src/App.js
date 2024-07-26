@@ -1,83 +1,55 @@
-// page components 
-import Home from './pages/Home';
-import Gallery from './pages/Gallery';
-import ContactThanks from './pages/ContactThanks';
-import InfoModal from './pages/InfoModal';
+/**
+ * @file AppWithRouter.jsx
+ * @module AppWithRouter
+ * @desc React component that wraps the application with a Router to handle routing and animations.
+ * This component imports necessary routes and styles, and sets up the Router for the application.
+ *
+ * @note This component is essential for enabling client-side routing within the application.
+ *
+ * @component AppWithRouter
+ * 
+ * @requires react
+ * @requires react-router-dom
+ * 
+ * @see {@link https://react.dev/ | React Documentation}
+ * @see {@link https://reactrouter.com/ | React Router Documentation}
+ * 
+ * @param none
+ * 
+ * @returns {JSX.Element} The App component wrapped in a Router.
+ * 
+ * @example
+ * // Example usage of AppWithRouter in an index.js file
+ * import React from 'react';
+ * import ReactDOM from 'react-dom';
+ * import AppWithRouter from './AppWithRouter';
+ * 
+ * ReactDOM.render(<AppWithRouter />, document.getElementById('root'));
+ * 
+ * @exports AppWithRouter
+ * 
+ * @author Chace Nielson
+ * @created 2024-07-26
+ * @updated 2024-07-26
+ */
 
-// other components
-import AnalyticsTracker from './googleAnalytics/AnalyticsTracker';
+import React from 'react';
 
-// testing Components 
-import TailwindBreakPoints from './testingComponents/TailwindBreakPoints';
+// Import BrowserRouter as Router
+import { BrowserRouter as Router} from 'react-router-dom';
 
-// Library functions
-import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
-import { AnimatePresence, motion } from 'framer-motion';
+// Import AppRoutes for routing and animations
+import AppRoutes from './routing/AppRoutes';
 
-// email js and google analytics 
-import emailjs from 'emailjs-com';
-import { initializeGA } from "./googleAnalytics/analytics";
+// Import Styles
+import './styles/Layout.css';
+import './styles/Modal.css';
 
-// Initialize EmailJS with the user ID from environment variables and Initialize Google Analytics
-emailjs.init(process.env.REACT_APP_EMAILJS_USER_ID);
-initializeGA();
+// Export App wrapped in Router
+const AppWithRouter = () => (
+  <Router>
+    <AppRoutes />
+  </Router>
+);
 
-// Define animation variants for route transitions with fade-in and fade-out
-const routeVariants = {
-  initial: { opacity: 0 },
-  final: { opacity: 1, transition: { duration: 0.5, ease: "easeInOut" } },
-  exit: { opacity: 0, transition: { duration: 0.5, ease: "easeInOut" } }
-};
-
-// PageWrapper Component for route animations
-function AnimationWrapper({ children }) {
-  return (
-    <motion.div
-      variants={routeVariants}
-      initial="initial"
-      animate="final"
-      exit="exit"
-    >
-      {children}
-    </motion.div>
-  );
-}
-
-// RoutesWithAnimation Component to handle route animations
-function RoutesWithAnimation() {
-  const location = useLocation();
-  const background = location.state && location.state.background;
-
-  return (
-    <>
-      <Routes location={background || location}>
-        <Route path="/" element={<AnimationWrapper><Home /></AnimationWrapper>} />
-        <Route path="/Gallery" element={<AnimationWrapper><Gallery /></AnimationWrapper>} />
-        <Route path="/Thanks" element={<AnimationWrapper><ContactThanks /></AnimationWrapper>} />
-        <Route path="*" element={<Navigate to="/" replace />} />
-        <Route path="/:type/:id" element={<AnimationWrapper><InfoModal /></AnimationWrapper>} />
-      </Routes>
-
-      {background && (
-        <Routes>
-          <Route path="/:type/:id" element={<InfoModal />} />
-        </Routes>
-      )}
-    </>
-  );
-}
-
-// main return for the application 
-function App() {
-  return (
-    <Router>
-      <TailwindBreakPoints/>
-      <AnalyticsTracker/>
-      <AnimatePresence mode='wait'>
-        <RoutesWithAnimation />
-      </AnimatePresence>
-    </Router>
-  );
-}
-
-export default App;
+export default AppWithRouter;

@@ -1,0 +1,32 @@
+/* Hero.css */
+.hero{
+  @apply overflow-hidden w-full relative flex items-center justify-start h-section-height
+}
+
+/* the hero img */
+.hero-img-wrapper {
+  @apply  hidden md:flex justify-end 
+  absolute bottom-0 right-0 
+  md:translate-x-52 lg:translate-x-32 xl:translate-x-10  2xl:mr-40
+  w-auto h-full;
+}
+.hero-img {
+  @apply h-full object-cover max-h-screen 
+}
+
+/* hero text */
+.text-container{
+  @apply mx-auto container 
+  grid grid-cols-1 md:grid-cols-2 
+  text-left pb-20 z-10;
+}
+  /* the actual alignment of the text */
+  .text-container > div{
+    @apply flex flex-col z-10 p-2
+  }
+  /* buttons within the hero text */
+  .text-buttons{
+    @apply flex justify-center space-x-2 
+    text-sm md:text-base z-50
+    lg:justify-start lg:space-x-4;
+  }

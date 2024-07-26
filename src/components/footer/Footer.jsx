@@ -3,8 +3,8 @@
  * Contains Avatar image, link back to top with My Name, and list of links to see my other stuff
  */
 import React from 'react'
-import LogoLink from '../navbar/LogoLink';
-import MediaLinks from '../common/uiElements/MediaLinks';
+import LogoLink from '../logo/LogoLink';
+import MediaLinks from '../uiElements/MediaLinks';
 
 function Footer() {
   return (

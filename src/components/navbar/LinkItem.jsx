@@ -42,7 +42,7 @@
 import React from 'react';
 import { Link as ScrollLink } from 'react-scroll';
 import { NavLink } from 'react-router-dom';
-import { globals } from '../../globals';
+import { globals } from '../../data/globals';
 
 const LinkItem = ({ to, children, onClick, routerLink = false }) => {
   return routerLink ? (
