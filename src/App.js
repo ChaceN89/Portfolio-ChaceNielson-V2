@@ -45,9 +45,14 @@ import AppRoutes from './routing/AppRoutes';
 import './styles/Layout.css';
 import './styles/Modal.css';
 
+import TailwindBreakPoints from './testingComponents/TailwindBreakPoints'
+import AnalyticsTracker from './googleAnalytics/AnalyticsTracker'
+
 // Export App wrapped in Router
 const AppWithRouter = () => (
   <Router>
+    <TailwindBreakPoints />
+    <AnalyticsTracker/>
     <AppRoutes />
   </Router>
 );

@@ -34,7 +34,7 @@
 import React, { useState, useEffect } from 'react';
 import { Blurhash } from 'react-blurhash';
 
-const ImageComponent = ({ src, alt, className, onError = null, blurHash = 'H2SigQ%M_3xu%Mt7xu?b%M~qof%MofM{ofM{Rjay', lowResSrc = null }) => {
+const ImageComponent = ({ src, alt, className, blurHash = 'H2SigQ%M_3xu%Mt7xu?b%M~qof%MofM{ofM{Rjay', lowResSrc = null }) => {
   const [imageLoaded, setImageLoaded] = useState(false);
   const [lowResLoaded, setLowResLoaded] = useState(false);
 
@@ -82,7 +82,6 @@ const ImageComponent = ({ src, alt, className, onError = null, blurHash = 'H2Sig
         alt={alt}
         onLoad={() => setImageLoaded(true)}
         style={{ display: imageLoaded ? 'block' : 'none' }}
-        onError={onError}
       />
     </>
   );

@@ -21,7 +21,7 @@ export const imageProcessor = {
   id: "image-processor",
   name: "Image Task Queue",
   tag: "Full-Stack",
-  Blurb: short,
+  blurb: short,
   description: long,
   blurhash: "",
   images: [

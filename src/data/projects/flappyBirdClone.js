@@ -19,7 +19,7 @@ export const flappyBirdClone = {
   id: "flappy-bird-clone",
   name: "Flappy Bird Clone",
   tag: "Game Development",
-  Blurb: short,
+  blurb: short,
   description: long,
   blurhash: "",
   images: [

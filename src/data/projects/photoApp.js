@@ -19,7 +19,7 @@ export const photoApp = {
   id: "photo-app",
   name: "Photo App",
   tag: "Full-Stack",
-  Blurb: short,
+  blurb: short,
   description: long,
   blurhash: "",
   images: [

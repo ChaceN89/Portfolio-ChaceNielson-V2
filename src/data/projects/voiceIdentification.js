@@ -20,7 +20,7 @@ export const voiceIdentification = {
   id: "voice-identification",
   name: "Voice Identification",
   tag: "Machine Learning",
-  Blurb: short,
+  blurb: short,
   description: long,
   blurhash: "qD9%h%tkNYo|WAofM{oeD$t7xubGt7RjWCRi_4V@M{jZRiogjZt7xVa}WYj[a}j[j[oJtSaeV@bFoJoffkkC^*flNHoMRkoeWBoe",
   images: [

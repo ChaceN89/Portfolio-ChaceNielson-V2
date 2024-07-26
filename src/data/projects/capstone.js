@@ -12,12 +12,11 @@ export const capstone = {
     id:"capstone", // id and folder name in the projects folder
     name:"Capstone",  
     tag:"Unity and Engineering",
-    Blurb: short, 
+    blurb: short, 
     description: long,
-    blurhash:"qD9%h%tkNYo|WAofM{oeD$t7xubGt7RjWCRi_4V@M{jZRiogjZt7xVa}WYj[a}j[j[oJtSaeV@bFoJoffkkC^*flNHoMRkoeWBoe",
     images:[
-      {src:"crossPlot.jpg", blurhash:"q2Hog|GOtj%4nAwQ$n$-=OnBr_kBX4XNkUbq+S#uVtNYXfXNNrSb*EPKSva3nAm@m@nADhaMxcs;NFR%ozoy:vr2srgJS[Xfkob="},
       {src:"highlight.jpg", blurhash:"qC9G,ZtkS0tRR%ogNFoe9Xt7xubFt7RjWVRj_4V@M{jZRjofays;xVa}WYj[bHj[j[oKkYaeada{oJofkCkC^*flRkoMRkoeWBs."},
+      {src:"crossPlot.jpg", blurhash:"q2Hog|GOtj%4nAwQ$n$-=OnBr_kBX4XNkUbq+S#uVtNYXfXNNrSb*EPKSva3nAm@m@nADhaMxcs;NFR%ozoy:vr2srgJS[Xfkob="},
       {src:"homePage.jpg", blurhash:"qANAxJD*9Z%LNGxvRixu00t7?bV@-;R*%LWB~WaxD%bIIUt6M|WCIVt6adR+Rjn~WYR+00WBxtogs;j=j]a#IAj[RjjFWBWqV@of"},
       {src:"login.jpg", blurhash:"q7Mtjn8^xU-oVrxsn#t6xtRia_odj?a_axj[9a?wNyIpo$R.bcWC-=x^a%RnWFj^j]WV^kDinN%2nOnhjExaxWMwsjxWs*n#jYoJ"},
     ],

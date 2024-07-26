@@ -20,7 +20,7 @@ export const portfolio = {
   id: "portfolio",
   name: "My Portfolio",
   tag: "Frontend",
-  Blurb: short,
+  blurb: short,
   description: long,
   blurhash: "",
   images: [

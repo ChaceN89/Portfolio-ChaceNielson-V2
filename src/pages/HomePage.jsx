@@ -13,6 +13,8 @@ import ReturnToTop from '../components/uiElements/ReturnToTop';
 const HomePage = () => {
   return (
     <>
+            <ProjectSection />
+
       <div id='Home'>
         <Hero/>
         <CallToAction />

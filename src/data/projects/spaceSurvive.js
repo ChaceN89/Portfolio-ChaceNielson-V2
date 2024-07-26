@@ -19,7 +19,7 @@ export const spaceSurvive = {
   id: "space-survive",
   name: "Space Survive",
   tag: "Game Development",
-  Blurb: short,
+  blurb: short,
   description: long,
   blurhash: "",
   images: [

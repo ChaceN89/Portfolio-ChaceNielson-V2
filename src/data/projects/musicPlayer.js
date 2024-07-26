@@ -21,7 +21,7 @@ export const musicPlayer = {
   id: "music-player",
   name: "Music Player",
   tag: "Frontend",
-  Blurb: short,
+  blurb: short,
   description: long,
   blurhash: "",
   images: [

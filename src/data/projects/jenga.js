@@ -19,7 +19,7 @@ export const jenga = {
   id: "jenga",
   name: "Jenga",
   tag: "Game Development",
-  Blurb: short,
+  blurb: short,
   description: long,
   blurhash: "",
   images: [

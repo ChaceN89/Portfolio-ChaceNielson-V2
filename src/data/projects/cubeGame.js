@@ -19,9 +19,8 @@ export const cubeGame = {
   id: "cube-game",
   name: "Cube Game",
   tag: "Game Development",
-  Blurb: short,
+  blurb: short,
   description: long,
-  blurhash: "",
   images: [
     { src: "cubeGame1.jpg", blurhash: "" },
     { src: "cubeGame2.jpg", blurhash: "" },

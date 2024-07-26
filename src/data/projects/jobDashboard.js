@@ -21,7 +21,7 @@ export const jobDashboard = {
   id: "job-dashboard",
   name: "Job Dashboard",
   tag: "Full-Stack",
-  Blurb: short,
+  blurb: short,
   description: long,
   blurhash: "",
   images: [

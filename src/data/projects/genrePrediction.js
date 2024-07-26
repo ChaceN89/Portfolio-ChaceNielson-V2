@@ -19,7 +19,7 @@ export const genrePrediction = {
   id: "genre-prediction",
   name: "Genre Prediction",
   tag: "Machine Learning",
-  Blurb: short,
+  blurb: short,
   description: long,
   blurhash: "",
   images: [
