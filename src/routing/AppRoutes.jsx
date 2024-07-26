@@ -7,6 +7,7 @@
  * The modal itself isn't animated within this file but within its own component.
  *
  * @note The `AnimatePresence` component ensures that only one page is visible at a time, enhancing the user experience with smooth transitions.
+ * @note The modals are separate pages with unique properties, each rendered within a `ModalLayout`.
  *
  * @component AppRoutes
  * 
@@ -17,8 +18,6 @@
  * @see {@link https://react.dev/ | React Documentation}
  * @see {@link https://reactrouter.com/ | React Router Documentation}
  * @see {@link https://www.framer.com/motion/ | Framer Motion Documentation}
- * 
- * @param none
  * 
  * @returns {JSX.Element} The routes for the application with animations and modal support.
  * 
@@ -38,7 +37,7 @@
  * 
  * @exports AppRoutes
  * 
- * @author Chace Nielson
+ * @autor Chace Nielson
  * @created 2024-07-26
  * @updated 2024-07-26
  */

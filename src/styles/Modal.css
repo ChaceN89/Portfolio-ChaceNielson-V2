@@ -1,3 +1,19 @@
+/**
+ * @file Modal.css
+ * @desc CSS styles for modal components. 
+ * This stylesheet provides styles for a modal overlay and its content.
+ * 
+ * @see {@link https://developer.mozilla.org/en-US/docs/Web/CSS | CSS Documentation}
+ * 
+ * @styles
+ * .modal - Covers the entire viewport with a semi-transparent background, centers its content using Flexbox.
+ * .modal-content - Styles the modal content with padding, border-radius, and box-shadow.
+ * 
+ * @author Chace Nielson
+ * @created 2024-07-26
+ * @updated 2024-07-26
+ */
+
 .modal {
   position: fixed;
   top: 0;

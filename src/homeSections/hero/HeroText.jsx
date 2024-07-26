@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { homePageData } from '../../data/homePageData';
+import { heroData } from '../../data/heroData';
 
 import MyButton from '../../components/uiElements/MyButton'
 
@@ -40,11 +40,11 @@ function HeroText() {
       style={{ y }}
     >
       <motion.div variants={textVariants}>
-        <motion.h3 variants={textVariants} className='pl-2'>{homePageData.top}</motion.h3>
-        <motion.h1 variants={textVariants} className="pb-2">{homePageData.name}</motion.h1>
-        <motion.div variants={textVariants} className="pb-4">{homePageData.description}</motion.div>
+        <motion.h3 variants={textVariants} className='pl-2'>{heroData.top}</motion.h3>
+        <motion.h1 variants={textVariants} className="pb-2">{heroData.name}</motion.h1>
+        <motion.div variants={textVariants} className="pb-4">{heroData.description}</motion.div>
         <motion.div variants={textVariants} className="text-buttons">
-          {homePageData.buttons.map((button) => (
+          {heroData.buttons.map((button) => (
             <motion.div key={button.id} variants={textVariants}>
               <MyButton to={button.id}>
                 {button.name}

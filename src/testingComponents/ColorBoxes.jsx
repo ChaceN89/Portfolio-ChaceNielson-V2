@@ -1,3 +1,27 @@
+/**
+ * @file ColorBoxes.jsx
+ * @module ColorBoxes
+ * @desc React component to display a palette of theme colors using Tailwind CSS classes.
+ * This component renders a set of color boxes to visually test the Tailwind theme colors.
+ *
+ * @component ColorBoxes
+ * 
+ * @requires react
+ * @requires tailwindcss
+ * 
+ * @see {@link https://reactjs.org/docs/getting-started.html | React Documentation}
+ * @see {@link https://tailwindcss.com/docs | Tailwind CSS Documentation}
+ * 
+ * @returns {JSX.Element} The rendered ColorBoxes component.
+ * 
+ * @example
+ * <ColorBoxes />
+ * 
+ * @author Chace Nielson
+ * @created 2024-07-26
+ * @updated 2024-07-26
+ */
+
 import React from 'react';
 
 const ColorBoxes = () => {
