@@ -26,7 +26,7 @@ function BackgroundWrapper({
   return (
     <div
       id={id}
-      className={`${className} relative`}
+      className="relative w-full h-full z-0"
       style={{
         backgroundSize: backgroundSize,
         backgroundPosition: backgroundPosition,
@@ -56,7 +56,7 @@ function BackgroundWrapper({
           opacity: highResLoaded ? bgOpacity / 100 : 0,
         }}
       />
-      <div className="relative z-10">
+      <div  className={`${className} relative`}>
         {children}
       </div>
     </div>

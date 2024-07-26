@@ -1,7 +1,7 @@
 import React from 'react';
-import ImageComponent from '../common/layout/ImageComponent';
-import MyButton from '../common/uiElements/MyButton';
 import { callToActionData } from '../../data/callToActionData';
+import MyButton from '../../components/uiElements/MyButton';
+import ImageComponent from '../../wrappers/ImageComponent';
 
 function InnerCallToAction() {
   return (
@@ -19,7 +19,7 @@ function InnerCallToAction() {
       <div className="col-span-2 flex flex-col h-full justify-center items-start p-4">
         <h2>{callToActionData.top}</h2>
         <h4 className="mt-2">{callToActionData.bottom}</h4>
-        <div className="mt-6 flex justify-start md:justify-start space-x-2 z-50">
+        <div className="mt-6 flex justify-start md:justify-start space-x-2 z-30">
           {callToActionData.buttons.map((button) => (
             <MyButton key={button.id} to={button.id}>
               {button.name}

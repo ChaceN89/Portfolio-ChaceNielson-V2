@@ -17,6 +17,12 @@ function Hero() {
       <ScrollWheel to="CallToAction" />
 
       <HeroImg />
+
+      <div className="w-full h-full flex justify-center items-end absolute inset-0 z-0 opacity-20">
+        <div className="w-full absolute z-5">
+          absolute component in lower left
+        </div>
+      </div> 
     </section>
   );
 }

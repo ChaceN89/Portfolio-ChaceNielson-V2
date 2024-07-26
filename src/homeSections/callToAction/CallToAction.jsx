@@ -1,8 +1,8 @@
 import React from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import BackgroundWrapper from '../common/layout/BackgroundWrapper';
+import BackgroundWrapper from '../../wrappers/BackgroundWrapper';
 import InnerCallToAction from './InnerCallToAction';
-import ScrollWheel from '../common/uiElements/ScrollWheel';
+import ScrollWheel from '../../components/uiElements/ScrollWheel';
 
 // Define the scroll ranges and translation values for the parallax effect
 const scrollStart = 0; // Start of the scroll range (0 pixels from the top of this section)
@@ -44,9 +44,21 @@ function CallToAction() {
       >
         <InnerCallToAction />
       </motion.div>
+
+      {/* ScrollWheel positioned absolutely within BackgroundWrapper */}
       <ScrollWheel to="AboutMe" />
+
+      {/*Second  Absolute component in lower left to test position for a future button */}
+      <div className="w-full h-full flex justify-center items-end absolute inset-0 z-0 opacity-20">
+        <div className="w-full absolute z-5">
+          absolute component in lower left
+        </div>
+      </div> 
+
+      
     </BackgroundWrapper>
   );
 }
 
 export default CallToAction;
+
