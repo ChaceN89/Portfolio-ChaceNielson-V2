@@ -4,7 +4,7 @@
  */
 import React from 'react'
 import LogoLink from '../logo/LogoLink';
-import MediaLinks from '../common/uiElements/MediaLinks';
+import MediaLinks from '../uiElements/MediaLinks';
 
 function Footer() {
   return (

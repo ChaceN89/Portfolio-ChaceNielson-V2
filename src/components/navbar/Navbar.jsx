@@ -22,9 +22,9 @@ function Navbar() {
   };
 
   return (
-    <nav className="bg-secondary pb-1 fixed top-0 w-full z-10">
+    <nav className="bg-secondary pb-1 fixed top-0 w-full z-45"> {/* Increased z-index */}
       <motion.div 
-        className='w-full h-1 bg-accent origin-left'
+        className='w-full h-1 bg-accent origin-left z-40'
         style={{ scaleX: scrollYProgress }}
         transition={{ type: 'spring', stiffness: 100 }}
       />
@@ -39,7 +39,7 @@ function Navbar() {
           {isHamburgerNavOpen ? <FaTimes size={24} /> : <><span className='font-bold'>Menu</span> <FaBars size={24} /> </>}
         </button>
         {isHamburgerNavOpen && (
-          <div className={`fixed md:hidden top-0 left-0 z-45 w-full h-full bg-secondary bg-opacity-90 flex justify-center items-center transition-opacity duration-300 ${animateMenu ? 'opacity-100 fade-in' : 'opacity-0 fade-out'}`}>
+          <div className={`fixed md:hidden top-0 left-0 z-50 w-full h-full bg-secondary bg-opacity-90 flex justify-center items-center transition-opacity duration-300 ${animateMenu ? 'opacity-100 fade-in' : 'opacity-0 fade-out'}`}>
             <NavbarItems toggleMenu={toggleMenu} textSize="text-2xl" />
           </div>
         )}

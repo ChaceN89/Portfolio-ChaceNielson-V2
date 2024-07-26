@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import ImageComponent from '../common/layout/ImageComponent';
+import ImageComponent from '../../wrappers/ImageComponent';
 
 function ParallaxMountains() {
   const { scrollY } = useScroll();

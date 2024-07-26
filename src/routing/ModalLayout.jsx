@@ -1,4 +1,4 @@
-import { useLocation, useNavigate, Outlet, Link } from "react-router-dom";
+import { useLocation, useNavigate, Outlet } from "react-router-dom";
 import AnimatedWrapper from "./AnimatedWrapper"
 
 import BackgroundWrapper from "../wrappers/BackgroundWrapper"

@@ -1,7 +1,8 @@
 import React from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import MyButton from '../common/uiElements/MyButton';
 import { homePageData } from '../../data/homePageData';
+
+import MyButton from '../../components/uiElements/MyButton'
 
 const textVariants = {
   initial: {

@@ -1,8 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { globals } from '../../../data/globals';
+import { globals } from '../../data/globals';
 import { Link as ScrollLink } from 'react-scroll';
-import ImageComponent from '../layout/ImageComponent';
+import ImageComponent from '../../wrappers/ImageComponent';
 
 function ScrollWheel({to="CallToAction"}) {
   const bounceProps = {

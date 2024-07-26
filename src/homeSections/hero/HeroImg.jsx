@@ -1,5 +1,5 @@
 import React from 'react';
-import ImageComponent from '../common/layout/ImageComponent';
+import ImageComponent from '../../wrappers/ImageComponent';
 
 function HeroImg() {
   return (

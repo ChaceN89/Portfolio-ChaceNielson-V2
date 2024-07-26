@@ -47,8 +47,7 @@
 
 import React from 'react';
 import { Link as ScrollLink } from 'react-scroll';
-import { globals } from '../../../data/globals';
-
+import { globals } from '../../data/globals';
 const ButtonContent = ({ children }) => (
   <>
     <span className="absolute inset-0 overflow-hidden rounded-xl z-50">

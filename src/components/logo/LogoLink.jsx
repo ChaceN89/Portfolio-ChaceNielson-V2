@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { Link as ScrollLink } from 'react-scroll';
-import ImageComponent from '../common/layout/ImageComponent';
+import ImageComponent from '../../wrappers/ImageComponent';
 import { globals } from '../../data/globals';
 import './LogoLink.css';
 

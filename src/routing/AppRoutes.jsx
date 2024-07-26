@@ -1,7 +1,52 @@
+/**
+ * @file AppRoutes.jsx
+ * @module AppRoutes
+ * @desc React component for handling application routes with animated page transitions and modal routes.
+ * This component utilizes `framer-motion`'s `AnimatePresence` for animating page transitions and a custom `SlideTransition` component for slide animations.
+ * It includes routes for different pages and a modal section that uses a special layout to mimic a modal appearance.
+ * The modal itself isn't animated within this file but within its own component.
+ *
+ * @note The `AnimatePresence` component ensures that only one page is visible at a time, enhancing the user experience with smooth transitions.
+ *
+ * @component AppRoutes
+ * 
+ * @requires react
+ * @requires react-router-dom
+ * @requires framer-motion
+ * 
+ * @see {@link https://react.dev/ | React Documentation}
+ * @see {@link https://reactrouter.com/ | React Router Documentation}
+ * @see {@link https://www.framer.com/motion/ | Framer Motion Documentation}
+ * 
+ * @param none
+ * 
+ * @returns {JSX.Element} The routes for the application with animations and modal support.
+ * 
+ * @example
+ * // Example usage of AppRoutes in a main component
+ * import React from 'react';
+ * import { BrowserRouter as Router } from 'react-router-dom';
+ * import AppRoutes from './routing/AppRoutes';
+ * 
+ * const AppWithRouter = () => (
+ *   <Router>
+ *     <AppRoutes />
+ *   </Router>
+ * );
+ * 
+ * export default AppWithRouter;
+ * 
+ * @exports AppRoutes
+ * 
+ * @author Chace Nielson
+ * @created 2024-07-26
+ * @updated 2024-07-26
+ */
+
 import React from "react";
 import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 
-// animatioms
+// animations
 import SlideTransition from "./SlideTransition";
 import { AnimatePresence } from "framer-motion";
 
@@ -17,7 +62,6 @@ import ThanksPage from "../pages/ThanksPage";
 // modals
 import SkillsModal from "../pages/SkillsModal";
 import ProjectModal from "../pages/ProjectModal";
-
 
 // App Component
 const AppRoutes = () => {

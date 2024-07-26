@@ -1,3 +1,6 @@
+
+/* Layout.css */
+
 main {
   flex: 1;
 }
@@ -8,10 +11,7 @@ main {
   flex-direction: column;
   min-height: 100vh;
 }
-.layout header {
-  z-index: 10;
-  position: relative;
-}
+
 
 .layout footer {
   z-index: 10;
