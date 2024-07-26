@@ -1,10 +1,10 @@
 import React from 'react';
 import MyRoutes from './routing/MyRoutes';
-import AnalyticsTracker from './googleAnalytics/AnalyticsTracker';
-import TailwindBreakPoints from './testingComponents/TailwindBreakPoints';
+import AnalyticsTracker from '../../googleAnalytics/AnalyticsTracker';
+import TailwindBreakPoints from '../../testingComponents/TailwindBreakPoints';
 import { BrowserRouter as Router } from 'react-router-dom';
 import emailjs from 'emailjs-com';
-import { initializeGA } from "./googleAnalytics/analytics";
+import { initializeGA } from "../../googleAnalytics/analytics";
 import ScrollToTop from './routing/ScrollToTop';
 
 // Initialize EmailJS with the user ID from environment variables and Initialize Google Analytics

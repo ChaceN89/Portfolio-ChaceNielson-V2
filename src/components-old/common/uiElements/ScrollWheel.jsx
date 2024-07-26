@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { globals } from '../../../globals';
+import { globals } from '../../../data/globals';
 import { Link as ScrollLink } from 'react-scroll';
 import ImageComponent from '../layout/ImageComponent';
 

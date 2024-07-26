@@ -1,12 +1,12 @@
 import React from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
-import Hero from '../components-old/hero/Hero';
-import CallToAction from '../components-old/callToAction/CallToAction';
-import AboutMe from '../components-old/aboutMe/AboutMe';
-import JobExperience from '../components-old/jobExperience/JobExperience';
-import ProjectSection from '../components-old/Projects/ProjectSection';
-import ContactForm from '../components-old/contactMe/ContactForm';
-import Line from '../components-old/common/uiElements/Line';
+import Hero from '../hero/Hero';
+import CallToAction from '../callToAction/CallToAction';
+import AboutMe from '../aboutMe/AboutMe';
+import JobExperience from '../jobExperience/JobExperience';
+import ProjectSection from '../Projects/ProjectSection';
+import ContactForm from '../contactMe/ContactForm';
+import Line from '../common/uiElements/Line';
 
 function Home() {
   const location = useLocation();

@@ -47,7 +47,7 @@
 
 import React from 'react';
 import { Link as ScrollLink } from 'react-scroll';
-import { globals } from '../../../globals';
+import { globals } from '../../../data/globals';
 
 const ButtonContent = ({ children }) => (
   <>

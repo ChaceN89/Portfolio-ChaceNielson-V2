@@ -5,7 +5,7 @@ import Photos from '../pages-old/Photos';
 import ContactThanks from '../pages-old/ContactThanks';
 import Layout from './Layout';
 import ModalLayout from './ModalLayout';
-import SlideTransition from '../routing/SlideTransition';
+import SlideTransition from '../../routing/SlideTransition';
 import ModalTransition from './ModalTransition';
 
 import ProjectModal from '../pages-old/ProjectModal';
