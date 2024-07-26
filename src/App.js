@@ -9,12 +9,32 @@ import { Outlet } from 'react-router-dom';
 import ModalTransition from './routing/ModalTransition';
 import SlideTransition from './routing/SlideTransition';
 
+import BackgroundWrapper from './components/common/layout/BackgroundWrapper';
+
 import { Link } from 'react-router-dom';
+
+
+const AnimatedWrapper = ({ children }) => {
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }}
+    >
+      {children}
+    </motion.div>
+  );
+};
 
 // HomePage Component
 const HomePage = () => {
   return (
-    <div className='space-x-4'>
+    <BackgroundWrapper 
+      className=' h-screen'
+      src={process.env.PUBLIC_URL + "/png-backgrounds/detailed/range-b&w2.png"}
+      bgOpacity={75}
+    >
       <div className='flex space-x-3'>
         <h1>Home Page</h1>
         <a className='hover:text-accent' href="/skills/Backend">Open Backend Skills</a>
@@ -22,16 +42,23 @@ const HomePage = () => {
         <a className='hover:text-accent' href="/project/GeoPredict">Open GeoPredict</a>
       </div>
 
+    <div className='space-x-4'>
+
       <Link className='hover:text-accent' to="/photos">Open Photos</Link>
       <Link className='hover:text-accent' to="/thanks">Open Thanks</Link>
-
     </div>
+
+    </BackgroundWrapper>
   );
 };
 
 const PhotoPage = () => {
   return (
-    <div className='space-x-4'>
+    <BackgroundWrapper 
+      className='space-x-4 h-screen'
+      src={process.env.PUBLIC_URL + "/png-backgrounds/detailed/range-b&w5-trim.png"}
+      bgOpacity={75}
+    >
       <div className='flex space-x-3'>
         
         <h1>Photo Page</h1>
@@ -40,7 +67,7 @@ const PhotoPage = () => {
       
       </div>
       <Link className='hover:text-accent' to="/">Open Home</Link>
-    </div>
+    </BackgroundWrapper>
   );
 };
 
@@ -77,6 +104,10 @@ const SkillsModal = () => {
 // ModalPage Component
 const ModalLayout = () => {
   const navigate = useNavigate();
+  // console.log('history', window.history);
+  const location = useLocation()
+  // console.log('location', location);
+
 
   const closeModal = () => {
     if (window.history.state && window.history.state.idx > 0) {
@@ -87,18 +118,26 @@ const ModalLayout = () => {
   };
 
   return (
-      <div
+    <AnimatedWrapper>
+
+      <BackgroundWrapper
         className="modal"
         onClick={closeModal}
+        src={process.env.PUBLIC_URL + "/png-backgrounds/overlays/scratch-2.png"}
+        backgroundSize='contain'
+        backgroundPosition='center'
+        backgroundRepeat='no-repeat'
+        backgroundAttachment='fixed'
+        bgOpacity={20}
       >
-    <ModalTransition>
-
-        <div className="modal-content text-black" onClick={(e) => e.stopPropagation()}>
-          <Outlet />
-          <button onClick={closeModal}>Close Modal</button>
-        </div>
-    </ModalTransition>
-      </div>
+        <ModalTransition>
+          <div className="modal-content text-black" onClick={(e) => e.stopPropagation()}>
+            <Outlet />
+            <button onClick={closeModal}>Close Modal</button>
+          </div>
+          </ModalTransition>
+      </BackgroundWrapper>
+    </AnimatedWrapper>
   );
 };
 
