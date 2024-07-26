@@ -37,9 +37,9 @@ const HomePage = () => {
     >
       <div className='flex space-x-3'>
         <h1>Home Page</h1>
-        <a className='hover:text-accent' href="/skills/Backend">Open Backend Skills</a>
-        <a className='hover:text-accent' href="/skills/WebDesign">Open WebDev Skills</a>
-        <a className='hover:text-accent' href="/project/GeoPredict">Open GeoPredict</a>
+        <Link className='hover:text-accent' to="/skills/Backend">Open Backend Skills</Link>
+        <Link className='hover:text-accent' to="/skills/WebDesign">Open WebDesign Skills</Link>
+        <Link className='hover:text-accent' to="/project/GeoPredict">Open GeoPredict Poject</Link>
       </div>
 
     <div className='space-x-4'>
@@ -54,6 +54,9 @@ const HomePage = () => {
 
 const PhotoPage = () => {
   return (
+    <AnimatedWrapper>
+
+
     <BackgroundWrapper 
       className='space-x-4 h-screen'
       src={process.env.PUBLIC_URL + "/png-backgrounds/detailed/range-b&w5-trim.png"}
@@ -62,12 +65,13 @@ const PhotoPage = () => {
       <div className='flex space-x-3'>
         
         <h1>Photo Page</h1>
-        <a className='hover:text-accent' href="/project/VoiceRecognition">Open VoiceRecognition</a>
-        <a className='hover:text-accent' href="/project/GeoPredict">Open GeoPredict</a>
+        <Link className='hover:text-accent' to="/project/Project222">Open Project222 Poject</Link>
       
       </div>
       <Link className='hover:text-accent' to="/">Open Home</Link>
     </BackgroundWrapper>
+    </AnimatedWrapper>
+
   );
 };
 
@@ -145,7 +149,11 @@ const ModalLayout = () => {
 const Layout = () => {
   return (
     <div className="layout">
-      <header ><h1>Navbar</h1></header>
+      <header className='flex space-x-3'>
+        <Link className='hover:text-accent p-4 border-2 border-white rounded-2xl hover:bg-white' to="/photos">Open Photos</Link>
+        <Link className='hover:text-accent p-4 border-2 border-white rounded-2xl hover:bg-white' to="/thanks">Open Thanks</Link>
+        <Link className='hover:text-accent p-4 border-2 border-white rounded-2xl hover:bg-white' to="/">Open Home</Link>
+      </header>
       <main className="pt-14">
         <Outlet />
       </main>
