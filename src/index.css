@@ -13,10 +13,21 @@ html{
 }
 
 
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  /* padding: 1rem; */
+}
+
 
 /* section wrappers - height is only the heigh and the default is hieght and the container for width*/
 .section-wrapper-height {
-  min-height: calc(100vh - 3rem );
+  min-height: calc(100vh - 4rem );
 }
 .section-wrapper{
   @apply container mx-auto section-wrapper-height ;

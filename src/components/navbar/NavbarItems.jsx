@@ -23,27 +23,41 @@
 
 import React from 'react';
 import LinkItem from './LinkItem';
+import { useLocation } from 'react-router-dom';
 
 const NavbarItems = ({ toggleMenu, textSize }) => {
+  const location = useLocation();
   return (
     <ul className={`text-primary ${textSize} space-y-4 md:space-y-0 md:space-x-4 text-center md:text-left md:flex`}>
+      
+      {location.pathname === '/' ? (
+        <>
+          <li>
+            <LinkItem to="Home" onClick={toggleMenu}>Home</LinkItem>
+          </li>
+          <li>
+            <LinkItem to="AboutMe" onClick={toggleMenu}>About Me</LinkItem>
+          </li>
+          <li>
+            <LinkItem to="Projects" onClick={toggleMenu}>Projects</LinkItem>
+          </li>
+          <li>
+            <LinkItem to="ContactMe" onClick={toggleMenu}>Contact Me</LinkItem>
+          </li>
+        </>
+      ):(
       <li>
-        <LinkItem to="Home" onClick={toggleMenu}>Home</LinkItem>
+        <LinkItem to="/" onClick={toggleMenu} routerLink={true}>Home Page</LinkItem>
       </li>
+
+      ) }
+    
       <li>
-        <LinkItem to="AboutMe" onClick={toggleMenu}>About Me</LinkItem>
-      </li>
-      <li>
-        <LinkItem to="Projects" onClick={toggleMenu}>Projects</LinkItem>
-      </li>
-      <li>
-        <LinkItem to="ContactMe" onClick={toggleMenu}>Contact Me</LinkItem>
-      </li>
-      <li>
-        <LinkItem to="/Gallery" onClick={toggleMenu} routerLink={true}>Photos</LinkItem>
+        <LinkItem to="/photos" onClick={toggleMenu} routerLink={true}>Photos</LinkItem>
       </li>
     </ul>
   );
 };
 
 export default NavbarItems;
+

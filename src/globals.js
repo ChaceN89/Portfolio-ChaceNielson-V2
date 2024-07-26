@@ -1,7 +1,7 @@
 export const globals = {
   ScrollLink:{
     duration:1000,
-    offset:-50
+    offset:-70
   }
 }
 

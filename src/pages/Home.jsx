@@ -1,41 +1,51 @@
 import React from 'react';
-import Navbar from '../components/navbar/Navbar';
-import { Outlet } from 'react-router-dom';
-
+import { NavLink, useLocation } from 'react-router-dom';
 import Hero from '../components/hero/Hero';
 import CallToAction from '../components/callToAction/CallToAction';
 import AboutMe from '../components/aboutMe/AboutMe';
 import JobExperience from '../components/jobExperience/JobExperience';
 import ProjectSection from '../components/Projects/ProjectSection';
 import ContactForm from '../components/contactMe/ContactForm';
-import Footer from '../components/footer/Footer';
 import Line from '../components/common/uiElements/Line';
 
 function Home() {
+  const location = useLocation();
+
   return (
-    <div>
-      <Navbar />
-      <main>
-        <div id='Home' className='mt-12'>
-          <Hero/>
-          <CallToAction />
+    <>
+      <div id='Home'>
+        <Hero/>
+        <div className='flex space-x-3 p-10'>
+          <NavLink
+            className="border-2 border-white rounded-xl p-4 hover:bg-white hover:text-black"
+            to="/projects/proj1"
+            state={{ previousLocation: location }}
+          >
+            Project1 Link
+          </NavLink>
+          <NavLink
+            className="border-2 border-white rounded-xl p-4 hover:bg-white hover:text-black"
+            to="/skills/webDesign"
+            state={{ previousLocation: location }}
+          >
+            Webdesign
+          </NavLink>
         </div>
-        <div id='AboutMe'>
-          <AboutMe />
-          <JobExperience/>
-        </div>
-        <div id='Projects'>
-          <ProjectSection/>
-          <Line/>
-        </div>
-        <div id='ContactMe'>
-          <ContactForm/>
-        </div>
-      </main>
-      <Footer />
-      <Outlet />
-    </div>
+        <CallToAction />
+      </div>
+      <div id='AboutMe'>
+        <AboutMe />
+        <JobExperience/>
+      </div>
+      <div id='Projects'>
+        <ProjectSection/>
+        <Line/>
+      </div>
+      <div id='ContactMe'>
+        <ContactForm/>
+      </div>
+    </>
   );
-}
+};
 
 export default Home;
