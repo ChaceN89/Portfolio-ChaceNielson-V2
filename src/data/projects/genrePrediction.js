@@ -1,4 +1,4 @@
-import { BsGithub, BsFileEarmarkPdf } from "react-icons/bs";
+import { BsGithub } from "react-icons/bs";
 import {SiApachespark, SiJupyter} from "react-icons/si";
 
 const short = "Predicting music genres and creating recommendations using machine learning.";

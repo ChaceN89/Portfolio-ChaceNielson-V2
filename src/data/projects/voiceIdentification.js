@@ -19,7 +19,6 @@ export const voiceIdentification = {
   tag: "Machine Learning",
   blurb: short,
   description: long,
-  blurhash: "qD9%h%tkNYo|WAofM{oeD$t7xubGt7RjWCRi_4V@M{jZRiogjZt7xVa}WYj[a}j[j[oJtSaeV@bFoJoffkkC^*flNHoMRkoeWBoe",
   images: [
     { src: "voice_recognition1.jpg", blurhash: "L6PjDVxa00xu00of_4RP9FRj-;of" },
     { src: "voice_recognition4.jpg", blurhash: "L5S?7G$x*IJF.lXSDixB.7IpVZ%K" },

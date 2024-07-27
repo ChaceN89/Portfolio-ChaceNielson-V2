@@ -1,10 +1,6 @@
-
-
-import { color } from "framer-motion";
 import { BsYoutube } from "react-icons/bs"
 import { BsGithub } from "react-icons/bs"
 import { FaUnity } from "react-icons/fa";
-import { FaBlender } from "react-icons/fa";
 
 const short = <>Unity simulation and physical prototype for CO<sub>2</sub> separation using deep ocean hydrostatic pressure.</>;
 const long = (

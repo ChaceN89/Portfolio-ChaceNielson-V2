@@ -1,4 +1,4 @@
-import { BsYoutube, BsGithub } from "react-icons/bs";
+import { BsYoutube } from "react-icons/bs";
 
 import { FaUnity } from "react-icons/fa";
 
@@ -20,7 +20,6 @@ export const spaceSurvive = {
   tag: "Game Development",
   blurb: short,
   description: long,
-  blurhash: "",
   images: [
     { src: "spaceSurvive.jpg", blurhash: "L26@E32tL#5kq?Io%%%hyEofR3j?" },
   ],

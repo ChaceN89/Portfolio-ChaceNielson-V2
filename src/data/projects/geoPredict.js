@@ -3,21 +3,8 @@ import { BsYoutube } from "react-icons/bs"
 import { CgWebsite } from "react-icons/cg"
 
 // icons for skills
-import { FaReact, FaNodeJs, FaUnity, FaCss3Alt, FaDocker, FaNode } from "react-icons/fa";
-
-
-import { AiOutlineGithub } from "react-icons/ai";
-import { GrMysql } from "react-icons/gr";
-import { TiHtml5 } from "react-icons/ti";
-import { DiPostgresql } from "react-icons/di";
-import { ImGit } from "react-icons/im";
-import { 
-  SiFastapi, SiMongodb, SiTailwindcss,
-  SiJavascript, SiStreamlit, SiRedux,
-  SiApachespark, SiChartdotjs, SiJupyter,
-  SiTypescript
-} from "react-icons/si";
-
+import { FaReact,FaDocker } from "react-icons/fa";
+import { SiFastapi, SiTailwindcss, SiPostgresql} from "react-icons/si";
 
 
 const long = <div className='space-y-2'>
@@ -56,7 +43,7 @@ export const geoPredict = {
     mainStack:[
       {name:"React", icon:FaReact, color:"lightblue"},
       {name:"FastAPI", icon:SiFastapi, color:"#079487"},
-      {name:"PostgreSQL", icon:DiPostgresql, color:"white"},
+      {name:"PostgreSQL", icon:SiPostgresql, color:"white"},
       {name:"Tailwind", icon:SiTailwindcss, color:"#38BDF9"},
     ],
     extendedStack:[

@@ -1,25 +1,9 @@
 import { BsYoutube, BsGithub } from "react-icons/bs";
-import { TfiWorld } from 'react-icons/tfi';
 
 // icons for skills
-import { FaReact, FaNodeJs, FaUnity, FaCss3Alt, FaDocker, FaNode } from "react-icons/fa";
-import { SiSqlite } from "react-icons/si";
+import { FaReact, FaNodeJs, FaNode } from "react-icons/fa";
 
-import { SiRender } from "react-icons/si";
-
-
-
-import { AiOutlineGithub } from "react-icons/ai";
-import { GrMysql } from "react-icons/gr";
-import { TiHtml5 } from "react-icons/ti";
-import { DiPostgresql } from "react-icons/di";
-import { ImGit } from "react-icons/im";
-import { 
-  SiFastapi, SiMongodb, SiTailwindcss,
-  SiJavascript, SiStreamlit, SiRedux,
-  SiApachespark, SiChartdotjs, SiJupyter,
-  SiTypescript
-} from "react-icons/si";
+import { SiMongodb} from "react-icons/si";
 
 const short = "Full-Stack photo gallery application with user authentication.";
 const long = (

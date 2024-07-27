@@ -1,25 +1,10 @@
 import { TfiWorld } from 'react-icons/tfi';
 import { BsGithub } from "react-icons/bs";
 
-
 // icons for skills
-import { FaReact, FaNodeJs, FaUnity, FaCss3Alt, FaDocker, FaNode } from "react-icons/fa";
-
+import { FaReact} from "react-icons/fa";
 import { SiRailway } from "react-icons/si";
-
-
-
-import { AiOutlineGithub } from "react-icons/ai";
-import { GrMysql } from "react-icons/gr";
-import { TiHtml5 } from "react-icons/ti";
-import { DiPostgresql } from "react-icons/di";
-import { ImGit } from "react-icons/im";
-import { 
-  SiFastapi, SiMongodb, SiTailwindcss,
-  SiJavascript, SiStreamlit, SiRedux,
-  SiApachespark, SiChartdotjs, SiJupyter,
-  SiTypescript
-} from "react-icons/si";
+import {  SiFastapi, SiTypescript } from "react-icons/si";
 
 const short = "Image processing task queue using React and FastAPI.";
 const long = (

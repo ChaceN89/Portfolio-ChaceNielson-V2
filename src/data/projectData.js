@@ -11,19 +11,23 @@ import { jenga } from "./projects/jenga";
 import { cubeGame } from "./projects/cubeGame";
 import { flappyBirdClone } from "./projects/flappyBirdClone";
 import { spaceSurvive } from "./projects/spaceSurvive";
+import { glassGeckoGames } from "./projects/glassGecko";
+import { drillbotics } from "./projects/drillbotics";
 
 export const projects = [
+  glassGeckoGames,
   geoPredict,
   capstone,
-  musicPlayer,
-  portfolio,
+  drillbotics,
   voiceIdentification,
-  imageProcessor,
-  jobDashboard,
   photoApp,
-  genrePrediction,
+  musicPlayer,
   jenga,
+  spaceSurvive,
   cubeGame,
   flappyBirdClone,
-  spaceSurvive
+  portfolio,
+  imageProcessor,
+  jobDashboard,
+  genrePrediction,
 ];
