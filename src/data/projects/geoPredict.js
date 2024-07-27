@@ -36,7 +36,13 @@ export const geoPredict = {
       {src:"homePage.jpg", blurhash:"qANAxJD*9Z%LNGxvRixu00t7?bV@-;R*%LWB~WaxD%bIIUt6M|WCIVt6adR+Rjn~WYR+00WBxtogs;j=j]a#IAj[RjjFWBWqV@of"},
       {src:"login.jpg", blurhash:"q7Mtjn8^xU-oVrxsn#t6xtRia_odj?a_axj[9a?wNyIpo$R.bcWC-=x^a%RnWFj^j]WV^kDinN%2nOnhjExaxWMwsjxWs*n#jYoJ"},
     ],
-    techStack:[
+    mainStack:[
+      "React", 
+      "FastAPI", 
+      "PostgreSQL", 
+      "Tailwind", 
+    ],
+    fullStack:[
       "Full-Stack", 
       "Authentication", 
       "React", 

@@ -28,7 +28,12 @@ export const musicPlayer = {
     { src: "musicPlayer1.jpg", blurhash: "" },
     { src: "musicPlayer2.jpg", blurhash: "" },
   ],
-  techStack: [
+
+  mainStack:[
+    "Vue",
+    "Tailwind"
+  ],
+  fullStack:[
     "Vue",
     "Tailwind",
     "Vercel"

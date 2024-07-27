@@ -1,0 +1,22 @@
+.carousel-container {
+  height: 400px; /* Default height for larger screens */
+  border-radius: 10px;
+}
+
+@media (max-width: 1200px) {
+  .carousel-container {
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-container {
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-container {
+    height: 150px;
+  }
+}

@@ -26,7 +26,11 @@ export const spaceSurvive = {
     { src: "spaceSurvive1.jpg", blurhash: "" },
     { src: "spaceSurvive2.jpg", blurhash: "" },
   ],
-  techStack: [
+  mainStack: [
+    "Unity",
+    "C#"
+  ],
+  fullStack: [
     "Unity",
     "C#"
   ],

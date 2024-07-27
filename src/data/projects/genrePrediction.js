@@ -25,12 +25,19 @@ export const genrePrediction = {
   images: [
     { src: "genrePrediction1.jpg", blurhash: "" },
     { src: "genrePrediction2.jpg", blurhash: "" },
-  ],
-  techStack: [
+  ],  
+  mainStack:[
     "Apache Spark",
     "Python",
     "Jupyter",
     "Machine Learning"
+  ],
+  fullStack:[
+    "Apache Spark",
+    "Python",
+    "Jupyter",
+    "Machine Learning"
+
   ],
   externalLinks: [
     { name: "Genre Analysis", link: "https://github.com/ChaceN89/Machine-Learning-Music-Notebooks/blob/main/MusicGenrePrediction/ENSF_544_Final_Project.ipynb", icon: BsGithub },

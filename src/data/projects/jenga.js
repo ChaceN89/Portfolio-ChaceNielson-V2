@@ -26,7 +26,11 @@ export const jenga = {
     { src: "jenga1.jpg", blurhash: "" },
     { src: "jenga2.jpg", blurhash: "" },
   ],
-  techStack: [
+  mainStack:[
+    "Unity",
+    "C#",
+  ],
+  fullStack:[
     "Unity",
     "C#",
     "Haptic Pen",

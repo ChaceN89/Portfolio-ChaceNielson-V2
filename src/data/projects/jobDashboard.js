@@ -28,7 +28,14 @@ export const jobDashboard = {
     { src: "jobDashboard1.jpg", blurhash: "" },
     { src: "jobDashboard2.jpg", blurhash: "" },
   ],
-  techStack: [
+
+  mainStack:[
+    "Vue",
+    "FastAPI",
+    "SQLite",
+    "Tailwind"
+  ],
+  fullStack:[
     "Full-Stack",
     "Vue",
     "FastAPI",

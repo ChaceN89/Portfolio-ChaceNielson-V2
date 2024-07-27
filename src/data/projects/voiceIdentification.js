@@ -27,8 +27,14 @@ export const voiceIdentification = {
     { src: "voice_recognition1.jpg", blurhash: "q7Egm_t7Rit8~pt6Rjt7j@ofayoea{oft7jZofofRjjs-;ozayj[ayayj[j[ogj[j[WBayayjt7aya}ofayayjt7ayj[ayayj[og" },
     { src: "voice_recognition2.jpg", blurhash: "q3Hj-|M_t7t8~pt6Rjt7j@ofayoea{oft7jZofofRjjs-;ozayj[ayayj[j[ogj[j[WBayayjt7aya}ofayayjt7ayj[ayayj[og" },
   ],
-  techStack: [
-    "Ploty-Dash",
+
+  mainStack: [
+    "Plotly-Dash",
+    "Python",
+    "Machine Learning"
+  ],
+  fullStack: [
+    "Plotly-Dash",
     "Python",
     "CSS",
     "Machine Learning"

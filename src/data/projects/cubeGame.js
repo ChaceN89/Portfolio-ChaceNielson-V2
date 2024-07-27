@@ -25,7 +25,12 @@ export const cubeGame = {
     { src: "cubeGame1.jpg", blurhash: "" },
     { src: "cubeGame2.jpg", blurhash: "" },
   ],
-  techStack: [
+
+  mainStack:[
+    "Unity",
+    "C#"
+  ],
+  fullStack:[
     "Unity",
     "C#"
   ],

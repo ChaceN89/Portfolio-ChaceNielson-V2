@@ -28,7 +28,14 @@ export const imageProcessor = {
     { src: "imageProcessor1.jpg", blurhash: "" },
     { src: "imageProcessor2.jpg", blurhash: "" },
   ],
-  techStack: [
+
+  mainStack:[
+    "React",
+    "TypeScript",
+    "FastAPI",
+    "Railway"
+  ],
+  fullStack:[
     "React",
     "TypeScript",
     "FastAPI",

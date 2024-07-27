@@ -31,6 +31,16 @@ export const portfolio = {
     "React",
     "Tailwind",
     "CSS",
+    "Vercel",
+    "Framer Motion"
+  ],
+  mainStack: [
+    "React",
+    "Tailwind"
+  ],
+  fullStack: [
+    "React",
+    "Tailwind",
     "Vercel"
   ],
   externalLinks: [

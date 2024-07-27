@@ -26,7 +26,13 @@ export const photoApp = {
     { src: "photoApp1.jpg", blurhash: "" },
     { src: "photoApp2.jpg", blurhash: "" },
   ],
-  techStack: [
+  mainStack:[
+    "MongoDB",
+    "React",
+    "ExpressJS",
+    "NodeJS",
+  ],
+  fullStack:[
     "Full-Stack",
     "Authentication",
     "MongoDB",

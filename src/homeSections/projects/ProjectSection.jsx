@@ -2,7 +2,6 @@ import React from 'react';
 import ProjectCard from './ProjectCard';
 import { projects } from '../../data/projectData';
 
-
 function ProjectSection() {
   return (
     <section className='min-h-section-height p-4 '>

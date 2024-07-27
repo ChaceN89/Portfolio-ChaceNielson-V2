@@ -26,10 +26,16 @@ export const flappyBirdClone = {
     { src: "flappyBird1.jpg", blurhash: "" },
     { src: "flappyBird2.jpg", blurhash: "" },
   ],
-  techStack: [
+
+  mainStack:[
     "Unity",
     "C#"
   ],
+  fullStack:[
+    "Unity",
+    "C#"
+  ],
+
   modalInfo: {
     description: long,
     videos: [
