@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, useAnimation, useInView } from 'framer-motion';
 import ImageComponent from '../../wrappers/ImageComponent';
 
 function ProjectCard({ project }) {
@@ -8,6 +8,18 @@ function ProjectCard({ project }) {
   const navigate = useNavigate();
   const [isHovered, setIsHovered] = useState(false);
   const [isClicked, setIsClicked] = useState(false);
+  const [isInitialLoad, setIsInitialLoad] = useState(true);
+
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true, margin: '0px 0px -200px 0px' });
+  const controls = useAnimation();
+
+  useEffect(() => {
+    if (inView) {
+      controls.start('visible');
+      setTimeout(() => setIsInitialLoad(false), 1000); // Set initial load to false after the delay
+    }
+  }, [controls, inView]);
 
   const handleMouseEnter = () => {
     if (window.innerWidth >= 640) { // 640px is the breakpoint for small screens in Tailwind CSS
@@ -28,10 +40,10 @@ function ProjectCard({ project }) {
       navigate(`/project/${project.id}`, { state: { background: location } });
     }
   };
-  
 
   return (
     <div
+      ref={ref}
       className="relative group border-2 border-gray-300 rounded-md overflow-hidden shadow-md"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
@@ -40,9 +52,9 @@ function ProjectCard({ project }) {
       <div className="relative w-full h-72 sm:h-80 md:h-64 lg:h-60 2xl:h-56 cursor-pointer">
         <motion.div
           className="w-full h-full"
-          initial={{ filter: 'blur(1.5px)' }}
+          initial={{ filter: 'blur(0px)' }}
           animate={{ filter: isHovered || isClicked ? 'blur(0px)' : 'blur(1.5px)' }}
-          transition={{ duration: 0.7 }}
+          transition={{ delay: isInitialLoad ? 1 : 0, duration: 0.2, }}
         >
           <ImageComponent
             src={`${process.env.PUBLIC_URL}/projects/${project.id}/${project.images[0].src}`}
@@ -52,13 +64,12 @@ function ProjectCard({ project }) {
           />
         </motion.div>
         
-      
         <AnimatePresence>
           {(!isHovered && !isClicked) && (
             <motion.div
-              className="absolute bottom-0 left-0 w-full h-1/2 p-2 text-white bg-black bg-opacity-40 backdrop-blur-3xl flex flex-col justify-between "
+              className="absolute bottom-0 left-0 w-full h-1/2 p-2 text-white bg-black bg-opacity-40 backdrop-blur-3xl flex flex-col justify-between"
               initial={{ y: "100%" }}
-              animate={{ y: 0 }}
+              animate={inView ? { y: 0, transition: { delay: isInitialLoad ? 1 : 0, duration: 0.3 } } : {}}
               exit={{ y: '100%' }}
               transition={{ duration: 0.3 }}
             >
@@ -66,7 +77,7 @@ function ProjectCard({ project }) {
                 <h3 className="relative z-10">{project.name}</h3>
                 <p className="text-sm relative z-10">{project.blurb}</p>
               </div>
-              <div className="relative z-10 flex ">
+              <div className="relative z-10 flex">
                 {project.mainStack.map((stack, index) => (
                   <div key={index} className="flex items-center mr-2">
                     {stack.icon && (
@@ -82,7 +93,7 @@ function ProjectCard({ project }) {
                         className="inline-block mr-1 h-5" 
                       />
                     )}
-                    {stack.name && <span >{stack.name}</span>}
+                    {stack.name && <span>{stack.name}</span>}
                   </div>
                 ))}
               </div>
@@ -90,14 +101,13 @@ function ProjectCard({ project }) {
           )}
         </AnimatePresence>
 
-
         <AnimatePresence>
           {(isHovered || isClicked) && (
             <motion.div
-              className="absolute top-0 right-0 p-2 text-white bg-black bg-opacity-50 rounded-bl-2xl"
+              className="absolute top-0 right-0 px-2 py-1 text-white bg-black bg-opacity-50 rounded-bl-2xl"
               initial={{ y: '-100%' }}
-              animate={{ y: 0, transition: { delay: 0.2, duration: 0.3 } }}
-              exit={{ y: '-100%', transition: { duration: 0.3 } }}
+              animate={{ y: 0, transition: { delay: 0, duration: 0.2 } }}
+              exit={{ y: '-100%', transition: { duration: 0.2 } }}
             >
               <Link
                 to={`/project/${project.id}`}
@@ -110,7 +120,6 @@ function ProjectCard({ project }) {
             </motion.div>
           )}
         </AnimatePresence>
-
 
       </div>
     </div>

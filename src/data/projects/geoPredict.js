@@ -2,6 +2,23 @@
 import { BsYoutube } from "react-icons/bs"
 import { CgWebsite } from "react-icons/cg"
 
+// icons for skills
+import { FaReact, FaNodeJs, FaUnity, FaCss3Alt, FaDocker, FaNode } from "react-icons/fa";
+
+
+import { AiOutlineGithub } from "react-icons/ai";
+import { GrMysql } from "react-icons/gr";
+import { TiHtml5 } from "react-icons/ti";
+import { DiPostgresql } from "react-icons/di";
+import { ImGit } from "react-icons/im";
+import { 
+  SiFastapi, SiMongodb, SiTailwindcss,
+  SiJavascript, SiStreamlit, SiRedux,
+  SiApachespark, SiChartdotjs, SiJupyter,
+  SiTypescript
+} from "react-icons/si";
+
+
 
 const long = <div className='space-y-2'>
       <p>
@@ -37,20 +54,19 @@ export const geoPredict = {
       {src:"login.jpg", blurhash:"q7Mtjn8^xU-oVrxsn#t6xtRia_odj?a_axj[9a?wNyIpo$R.bcWC-=x^a%RnWFj^j]WV^kDinN%2nOnhjExaxWMwsjxWs*n#jYoJ"},
     ],
     mainStack:[
-      "React", 
-      "FastAPI", 
-      "PostgreSQL", 
-      "Tailwind", 
+      {name:"React", icon:FaReact, color:"lightblue"},
+      {name:"FastAPI", icon:SiFastapi, color:"#079487"},
+      {name:"PostgreSQL", icon:DiPostgresql, color:"#31648C"},
+      {name:"Tailwind", icon:SiTailwindcss, color:"#38BDF9"},
     ],
-    fullStack:[
-      "Full-Stack", 
-      "Authentication", 
-      "React", 
-      "FastAPI", 
-      "PostgreSQL", 
-      "Tailwind", 
-      "Docker", 
-      "Cloud Deployment"
+    extendedStack:[
+      {name:"Full-Stack", svg_path:"full-stack.svg"},
+      {name:"Docker", icon:FaDocker, color:"#089CEC"},
+      {name:"Data Analysis", svg_path:"data-analysis.svg"},
+      {name:"Data Analysis", svg_path:"cloud-computer.svg"},
+      {name:"Machine Learning", svg_path:"machine-learning.svg"},
+      {name:"Authentication", svg_path:"authentication.svg"},
+
     ],
     externalLinks:[
         {name:"Overview", link:"https://youtu.be/oTU0C_8-dSw", icon:BsYoutube},

@@ -27,7 +27,7 @@ export const cubeGame = {
   ],
   extendedStack:[
     {name:"Game Development", svg_path:"game-controller.svg"} ,
-    {name:"Unity Physics System", svg_path:"collision.svg"} ,
+    {name:"Unity Physics System", svg_path:"physic.svg"} ,
   ],
   externalLinks: [
     { name: "Play Game", link: "https://chacen89.github.io/CubeGame/", icon: FaUnity },
