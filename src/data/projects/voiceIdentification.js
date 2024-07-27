@@ -32,7 +32,6 @@ export const voiceIdentification = {
     {name:"Python", svg_path:"python.svg"},
     {name:"Machine Learning", svg_path:"machine-learning.svg"},
   ],
-
   externalLinks: [
     { name: "Code", link: "https://github.com/ChaceN89/voice-recognition", icon: BsGithub },
     { name: "Notebook", link: "https://github.com/ChaceN89/voice-recognition/blob/main/original_notebook/ENCM%20Final%20Project%20Speech%20Recognition.ipynb", icon: BsGithub },

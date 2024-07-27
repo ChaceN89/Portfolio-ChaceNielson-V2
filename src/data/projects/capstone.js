@@ -23,7 +23,7 @@ export const capstone = {
     blurb: short, 
     description: long,
     images:[
-      {src:"highlight.jpg", blurhash:""},
+      {src:"highlight.jpg", blurhash:"LYEEK4o$t7od_6e.X7W=-_aJkBWr"},
       {src:"capstone1.jpg", blurhash:"LCCtg~4#5[xt~bkMITWU0C-s-qRj"},
       {src:"capstone2.jpg", blurhash:"L8HeI3D4^H_4~B=sDj^*-BH;00%L"},
       {src:"capstone3.jpg", blurhash:"LAD11#-;^dQ.}+?RS%E+=|kiV:I]"},

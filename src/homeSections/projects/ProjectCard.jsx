@@ -58,7 +58,7 @@ function ProjectCard({ project }) {
         >
           <ImageComponent
             src={`${process.env.PUBLIC_URL}/projects/${project.id}/${project.images[0].src}`}
-            blurHash="LYEEK4o$t7od_6e.X7W=-_aJkBWr"
+            blurHash={project.images[0].blurhash}
             alt={project.name}
             className="w-full h-full object-contain"
           />
