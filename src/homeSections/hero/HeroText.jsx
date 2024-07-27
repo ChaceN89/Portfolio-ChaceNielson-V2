@@ -33,7 +33,7 @@ function HeroText() {
 
   return (
     <motion.div
-      className="text-container"
+      className="text-container mix-blend-difference"
       variants={textVariants}
       initial="initial"
       animate="animate"

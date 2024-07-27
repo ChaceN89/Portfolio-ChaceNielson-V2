@@ -6,7 +6,7 @@ import { BsGithub } from "react-icons/bs"
 import { FaUnity } from "react-icons/fa";
 import { FaBlender } from "react-icons/fa";
 
-const short = "Unity simulation and physical prototype for carbon dioxide separation using deep ocean hydrostatic pressure.";
+const short = <>Unity simulation and physical prototype for CO<sub>2</sub> separation using deep ocean hydrostatic pressure.</>;
 const long =     
 <div className="space-y-2">
   <p>This capstone project, titled "Energy Storage and Direct Air Capture in the Deep Ocean," was completed at the University of Calgary. The project explores innovative methods for carbon dioxide (CO<sub>2</sub>) separation from the atmosphere, leveraging the deep ocean's hydrostatic pressure. Our team designed both a physical prototype and a comprehensive Unity simulation to test and demonstrate the concept. The prototype, tested in a controlled pool environment, successfully showed the feasibility of CO<sub>2</sub> condensation through pressure changes.</p>

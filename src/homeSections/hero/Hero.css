@@ -7,7 +7,7 @@
 .hero-img-wrapper {
   @apply  hidden md:flex justify-end 
   absolute bottom-0 right-0 
-  md:translate-x-52 lg:translate-x-32 xl:translate-x-10  2xl:mr-40
+  /* md:translate-x-52 lg:translate-x-32 xl:translate-x-10  2xl:mr-40 */
   w-auto h-full;
 }
 .hero-img {
