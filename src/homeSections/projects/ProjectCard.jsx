@@ -28,6 +28,7 @@ function ProjectCard({ project }) {
       navigate(`/project/${project.id}`, { state: { background: location } });
     }
   };
+  
 
   return (
     <div
@@ -41,7 +42,7 @@ function ProjectCard({ project }) {
           className="w-full h-full"
           initial={{ filter: 'blur(1px)' }}
           animate={{ filter: isHovered || isClicked ? 'blur(0px)' : 'blur(1px)' }}
-          transition={{ duration: 0.3 }}
+          transition={{ duration: 0.7 }}
         >
           <ImageComponent
             src={`${process.env.PUBLIC_URL}/projects/${project.id}/${project.images[0].src}`}
@@ -50,11 +51,13 @@ function ProjectCard({ project }) {
             className="w-full h-full object-contain"
           />
         </motion.div>
+        
+      
         <AnimatePresence>
           {(!isHovered && !isClicked) && (
             <motion.div
               className="absolute bottom-0 left-0 w-full h-1/2 p-2 text-white bg-black bg-opacity-40 backdrop-blur-3xl flex flex-col justify-between "
-              initial={{ y: 0 }}
+              initial={{ y: "100%" }}
               animate={{ y: 0 }}
               exit={{ y: '100%' }}
               transition={{ duration: 0.3 }}
@@ -87,14 +90,15 @@ function ProjectCard({ project }) {
             </motion.div>
           )}
         </AnimatePresence>
+
+
         <AnimatePresence>
           {(isHovered || isClicked) && (
             <motion.div
               className="absolute top-0 right-0 p-2 text-white bg-black bg-opacity-50 rounded-bl-2xl"
               initial={{ y: '-100%' }}
-              animate={{ y: 0 }}
-              exit={{ y: '-100%' }}
-              transition={{ duration: 0.3 }}
+              animate={{ y: 0, transition: { delay: 0.2, duration: 0.3 } }}
+              exit={{ y: '-100%', transition: { duration: 0.3 } }}
             >
               <Link
                 to={`/project/${project.id}`}
@@ -107,6 +111,8 @@ function ProjectCard({ project }) {
             </motion.div>
           )}
         </AnimatePresence>
+
+
       </div>
     </div>
   );
