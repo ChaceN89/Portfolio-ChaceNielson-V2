@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import { motion, useAnimation, useInView } from 'framer-motion';
 import ProjectCard from './ProjectCard';
-import { projects } from '../../data/projectData';
+import { projects } from '../../data/pageData/projectData';
 
 const projectVariants = {
   hidden: {

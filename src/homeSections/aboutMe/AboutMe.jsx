@@ -1,8 +1,8 @@
 import React  from 'react';
 
 
-import { techSkills } from '../../data/skillsData';
-import { interests } from '../../data/interestsData';
+import { techSkills } from '../../data/pageData/skillsData';
+import { interests } from '../../data/pageData/interestsData';
 
 import Interests from './Interests';
 import SkillSections from './SkillSections';

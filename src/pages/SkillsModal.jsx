@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { techSkills } from "../data/skillsData";
+import { techSkills } from "../data/pageData/skillsData";
 
 const SkillsModal = () => {
   const { id } = useParams();

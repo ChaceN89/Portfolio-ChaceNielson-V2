@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { projects } from "../data/projectData";
+import { projects } from "../data/pageData/projectData";
 import ProjectImageCarousel from "../homeSections/projects/ProjectImageCarousel";
 import { BsFileEarmarkPdf } from "react-icons/bs";
 import openPdf from "../functions/openDocs";

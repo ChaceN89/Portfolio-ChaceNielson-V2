@@ -1,5 +1,5 @@
 import React from 'react';
-import { callToActionData } from '../../data/callToActionData';
+import { callToActionData } from '../../data/pageData/callToActionData';
 import MyButton from '../../components/uiElements/MyButton';
 import ImageComponent from '../../wrappers/ImageComponent';
 

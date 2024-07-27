@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import { experienceData } from '../../data/experienceData'
+import { experienceData } from '../../data/pageData/experienceData'
 import JobDetails from './JobDetails'
 
 function JobExperience() {
