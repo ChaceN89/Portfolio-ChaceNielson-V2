@@ -22,16 +22,12 @@ export const cubeGame = {
     { src: "cubeGame.jpg", blurhash: "LHO:^eD%4.%M00xv%2of_Nxt-;D%" },
   ],
   mainStack:[
-    "Unity",
-    "C#"
-  ],
-  mainStack:[
-    {name:"Unity", icon:FaUnity, color:"white"},
+    {name:"Unity", icon:FaUnity, color:"black"},
     {name:"C#", svg_path:"c-sharp.svg"} 
   ],
-  fullStack:[
-    "Unity",
-    "C#"
+  extendedStack:[
+    {name:"Game Development", svg_path:"game-controller.svg"} ,
+    {name:"Unity Physics System", svg_path:"collision.svg"} ,
   ],
   externalLinks: [
     { name: "Play Game", link: "https://chacen89.github.io/CubeGame/", icon: FaUnity },

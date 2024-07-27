@@ -40,8 +40,8 @@ function ProjectCard({ project }) {
       <div className="relative w-full h-72 sm:h-80 md:h-64 lg:h-60 2xl:h-56 cursor-pointer">
         <motion.div
           className="w-full h-full"
-          initial={{ filter: 'blur(1px)' }}
-          animate={{ filter: isHovered || isClicked ? 'blur(0px)' : 'blur(1px)' }}
+          initial={{ filter: 'blur(1.5px)' }}
+          animate={{ filter: isHovered || isClicked ? 'blur(0px)' : 'blur(1.5px)' }}
           transition={{ duration: 0.7 }}
         >
           <ImageComponent
@@ -79,11 +79,10 @@ function ProjectCard({ project }) {
                       <img 
                         src={`${process.env.PUBLIC_URL}/svg-icons/${stack.svg_path}`} 
                         alt={stack.name} 
-                        className="inline-block mr-1 h-4" 
-                        style={{ fill: stack.color || 'inherit' }} 
+                        className="inline-block mr-1 h-5" 
                       />
                     )}
-                    {stack.name && <span style={{ color: stack.color || 'inherit' }}>{stack.name}</span>}
+                    {stack.name && <span >{stack.name}</span>}
                   </div>
                 ))}
               </div>

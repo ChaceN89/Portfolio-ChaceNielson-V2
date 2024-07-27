@@ -2,8 +2,7 @@ import React, { useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { projects } from "../data/projectData";
 import ProjectImageCarousel from "../homeSections/projects/ProjectImageCarousel";
-import { BsYoutube, BsGithub, BsFileEarmarkPdf } from "react-icons/bs";
-import { FaUnity } from "react-icons/fa";
+import { BsFileEarmarkPdf } from "react-icons/bs";
 import openPdf from "../functions/openDocs";
 
 const ProjectModal = () => {
@@ -25,22 +24,41 @@ const ProjectModal = () => {
     return null;
   }
 
+  // Combine mainStack and extraStack if extraStack exists
+  const fullStack = project.extendedStack ? [...project.mainStack, ...project.extendedStack] : project.mainStack;
+
   return (
     <div className="overflow-y-auto max-h-section-height-small p-4">
       <h1 className="text-3xl font-bold mb-4">{project.name}</h1>
       {project.description && <div className="mb-4">{project.description}</div>}
-      {project.fullStack && project.fullStack.length > 0 && (
+      {fullStack && fullStack.length > 0 && (
         <>
           <h2 className="text-2xl font-semibold mb-2">Tech Stack</h2>
           <ul className="flex flex-wrap space-x-3 mb-4">
-            {project.fullStack.map((tech, index) => (
-              <li key={index} className="bg-gray-200 rounded-full px-3 py-1">{tech}</li>
+            {fullStack.map((tech, index) => (
+              <div key={index} className="flex items-center mr-2">
+                {tech.icon && (
+                  <tech.icon 
+                    className="inline-block mr-1" 
+                    style={{ color: tech.color || 'inherit' }} 
+                    size={40}
+                  />
+                )}
+                {tech.svg_path && (
+                  <img 
+                    src={`${process.env.PUBLIC_URL}/svg-icons/${tech.svg_path}`} 
+                    alt={tech.name} 
+                    className="inline-block mr-1 h-12" 
+                  />
+                )}
+                {tech.name && <span>{tech.name}</span>}
+              </div>
             ))}
           </ul>
         </>
       )}
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 ">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
         {project.images && project.images.length > 0 && (
           <div className="row-span-2">
             <h2 className="text-2xl font-semibold mb-2">Images</h2>
@@ -67,9 +85,9 @@ const ProjectModal = () => {
             <h2 className="text-2xl font-semibold mb-2">PDFs</h2>
             <div>
               {project.pdfs.map((pdf, index) => (
-                <a 
+                <button
                   key={index} 
-                  href="#" 
+
                   onClick={(e) => {
                     e.preventDefault();
                     openPdf(pdf.link);
@@ -78,7 +96,7 @@ const ProjectModal = () => {
                 >
                   <BsFileEarmarkPdf className="inline-block mr-2" />
                   {pdf.name}
-                </a>
+                </button>
               ))}
             </div>
           </div>

@@ -33,18 +33,15 @@ export const capstone = {
       {src:"capstone8_sim.jpg", blurhash:"LdEz+.kHT2ng_9t0oZkD%CoubWkC"},
     ],
     mainStack:[
-      {name:"Unity", icon:FaUnity, color:"white"},
-      {name:"Blender", svg_path:"blender.svg"} 
+      {name:"Unity", icon:FaUnity, color:"black"},
+      {name:"Blender", svg_path:"blender.svg"}, 
+      {name:"C#", svg_path:"c-sharp.svg"} 
     ],
-    fullStack:[
-      "Full-Stack", 
-      "Authentication", 
-      "React", 
-      "FastAPI", 
-      "PostgreSQL", 
-      "Tailwind", 
-      "Docker", 
-      "Cloud Deployment"
+    extendedStack:[
+      {name:"Simulation", svg_path:"computer.svg"} ,
+      {name:"Engineering", svg_path:"engineering.svg"} ,
+      {name:"3D Design and Printing", svg_path:"3d-cube.svg"} ,
+      {name:"Circuity Design", svg_path:"circuit-board.svg"} ,
     ],
     externalLinks:[
         {name:"Overview Video", link:"https://www.youtube.com/watch?v=TvnBOPB7dhc", icon:BsYoutube},

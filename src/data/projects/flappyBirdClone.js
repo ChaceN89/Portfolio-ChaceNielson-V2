@@ -1,16 +1,13 @@
-// import { FaUnity } from "react-icons/fa";
+import { FaUnity } from "react-icons/fa";
 
-const short = "Flappy Bird clone built with Unity and C#.";
+const short = "A Flappy Bird clone developed using Unity and C#.";
 const long = (
   <div className='space-y-2'>
     <p>
-      This project is a clone of the popular Flappy Bird game, developed using Unity and C#. The game features similar mechanics where the player controls a bird to navigate through pipes without hitting them.
+      This project is a Flappy Bird clone developed with Unity and C#. Players control a bird navigating through pipes, avoiding collisions.
     </p>
     <p>
-      The project demonstrates the use of Unity's physics and scripting capabilities to create a simple yet engaging game.
-    </p>
-    <p>
-      It serves as an example of recreating a well-known game using modern game development tools.
+      It showcases Unity's physics and scripting capabilities in creating an engaging game, serving as an example of recreating a popular game using modern tools.
     </p>
   </div>
 );
@@ -23,17 +20,11 @@ export const flappyBirdClone = {
   description: long,
   blurhash: "",
   images: [
-    { src: "flappyBird1.jpg", blurhash: "" },
-    { src: "flappyBird2.jpg", blurhash: "" },
+    { src: "flappyBird.jpg", blurhash: "L8CI]Vs~Ros~8[obWHkA.Uk8oYs~" },
   ],
-
   mainStack:[
-    "Unity",
-    "C#"
-  ],
-  fullStack:[
-    "Unity",
-    "C#"
+    {name:"Unity", icon:FaUnity, color:"black"},
+    {name:"C#", svg_path:"c-sharp.svg"} 
   ],
 
   modalInfo: {

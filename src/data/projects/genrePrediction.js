@@ -1,16 +1,14 @@
 import { BsGithub, BsFileEarmarkPdf } from "react-icons/bs";
+import {SiApachespark, SiJupyter} from "react-icons/si";
 
-const short = "Music genre prediction using machine learning.";
+const short = "Predicting music genres and creating recommendations using machine learning.";
 const long = (
   <div className='space-y-2'>
     <p>
-      This project involves predicting music genres using machine learning techniques. It is built with Apache Spark, Python, and Jupyter notebooks.
+      This project uses machine learning to predict music genres and generate recommendations. Built with Apache Spark and Python, it involves data analysis, feature extraction, and model training. Leveraging the power of Apache Spark for big data processing, the project explores various machine learning algorithms to achieve accurate predictions.
     </p>
     <p>
-      The project includes data analysis, feature extraction, and model training to achieve accurate genre predictions. It leverages various machine learning algorithms and big data processing capabilities of Apache Spark.
-    </p>
-    <p>
-      The system provides an interactive Jupyter notebook for experimenting with different models and techniques.
+      An interactive Jupyter notebook is provided for experimenting with different models and techniques. This setup allows users to test and refine their approaches in a flexible, hands-on environment.
     </p>
   </div>
 );
@@ -23,25 +21,21 @@ export const genrePrediction = {
   description: long,
   blurhash: "",
   images: [
-    { src: "genrePrediction1.jpg", blurhash: "" },
-    { src: "genrePrediction2.jpg", blurhash: "" },
+    { src: "genrePrediction.jpg", blurhash: "LIR{uws%#rkX.8bJX5ad_MW@Xknh" },
   ],  
   mainStack:[
-    "Apache Spark",
-    "Python",
-    "Jupyter",
-    "Machine Learning"
+    {name:"Apache Spark", icon:SiApachespark, color:"#E25A1B"},
+    {name:"Python", svg_path:"python.svg"},
   ],
-  fullStack:[
-    "Apache Spark",
-    "Python",
-    "Jupyter",
-    "Machine Learning"
-
+  extendedStack:[
+    {name:"Jupyter", icon:SiJupyter, color:"#F37626"},
+    {name:"Machine Learning", svg_path:"machine-learning.svg"},
   ],
   externalLinks: [
     { name: "Genre Analysis", link: "https://github.com/ChaceN89/Machine-Learning-Music-Notebooks/blob/main/MusicGenrePrediction/ENSF_544_Final_Project.ipynb", icon: BsGithub },
-    { name: "Spark", link: "https://github.com/ChaceN89/Machine-Learning-Music-Notebooks/blob/main/SparkSentimentAnalysis/SparkSentimentMLAnalysis.ipynb", icon: BsGithub },
-    { name: "Report", pdf: "Spark ML Genre Report.pdf", icon: BsFileEarmarkPdf },
+    { name: "Spark Database Setup", link: "https://github.com/ChaceN89/Machine-Learning-Music-Notebooks/blob/main/SparkSentimentAnalysis/SparkSentimentMLAnalysis.ipynb", icon: BsGithub },
   ],
+  pdfs:[
+    { name: "Report", link: "Spark ML Genre Report.pdf" },
+  ]
 };

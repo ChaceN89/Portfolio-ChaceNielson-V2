@@ -43,7 +43,7 @@
  */
 
 import React from "react";
-import { Routes, Route, Navigate, useLocation } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 
 // animations
 import SlideTransition from "./SlideTransition";
