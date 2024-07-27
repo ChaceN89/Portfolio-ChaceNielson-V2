@@ -9,7 +9,7 @@ function ReturnToTop() {
     <div className="fixed bottom-4 right-4 z-10">
       <Tooltip text={"To Top"}>
         <ScrollLink
-          className="hover:cursor-pointer"
+          className="hover:cursor-n-resize"
           to={"Home"}
           spy={true}
           smooth={true}

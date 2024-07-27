@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import ImageComponent from '../../wrappers/ImageComponent';
 
 function ProjectCard({ project }) {
   const location = useLocation();
+  const navigate = useNavigate();
   const [isHovered, setIsHovered] = useState(false);
   const [isClicked, setIsClicked] = useState(false);
 
@@ -23,6 +24,8 @@ function ProjectCard({ project }) {
   const handleClick = () => {
     if (window.innerWidth < 640) {
       setIsClicked(!isClicked);
+    } else {
+      navigate(`/project/${project.id}`, { state: { background: location } });
     }
   };
 
@@ -33,7 +36,7 @@ function ProjectCard({ project }) {
       onMouseLeave={handleMouseLeave}
       onClick={handleClick}
     >
-      <div className="relative  w-full h-72 sm:h-80 md:h-64 lg:h-60 2xl:h-56">
+      <div className="relative w-full h-72 sm:h-80 md:h-64 lg:h-60 2xl:h-56 cursor-pointer">
         <motion.div
           className="w-full h-full"
           initial={{ filter: 'blur(4px)' }}
@@ -73,9 +76,10 @@ function ProjectCard({ project }) {
               transition={{ duration: 0.3 }}
             >
               <Link
-                to={"/project/" + project.id}
+                to={`/project/${project.id}`}
                 state={{ background: location }}
                 className='hover:text-accent'
+                onClick={(e) => e.stopPropagation()} // Prevents the parent click event
               >
                 Learn More
               </Link>
