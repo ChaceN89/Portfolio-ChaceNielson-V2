@@ -56,14 +56,14 @@ export const geoPredict = {
     mainStack:[
       {name:"React", icon:FaReact, color:"lightblue"},
       {name:"FastAPI", icon:SiFastapi, color:"#079487"},
-      {name:"PostgreSQL", icon:DiPostgresql, color:"#31648C"},
+      {name:"PostgreSQL", icon:DiPostgresql, color:"white"},
       {name:"Tailwind", icon:SiTailwindcss, color:"#38BDF9"},
     ],
     extendedStack:[
       {name:"Full-Stack", svg_path:"full-stack.svg"},
       {name:"Docker", icon:FaDocker, color:"#089CEC"},
       {name:"Data Analysis", svg_path:"data-analysis.svg"},
-      {name:"Data Analysis", svg_path:"cloud-computer.svg"},
+      {name:"Cloud Deployment", svg_path:"cloud-computer.svg"},
       {name:"Machine Learning", svg_path:"machine-learning.svg"},
       {name:"Authentication", svg_path:"authentication.svg"},
 

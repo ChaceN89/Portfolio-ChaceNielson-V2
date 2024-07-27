@@ -1,43 +1,37 @@
-// import { FaUnity } from "react-icons/fa";
+import { BsYoutube, BsGithub } from "react-icons/bs";
 
-const short = "Space Survive game built with Unity and C#.";
+import { FaUnity } from "react-icons/fa";
+
+const short = "A space adventure game developed using Unity and C#.";
 const long = (
   <div className='space-y-2'>
     <p>
-      Space Survive is a survival game set in space, developed using Unity and C#. The game involves navigating a spaceship through obstacles and enemies to survive as long as possible.
+      Space Survive is a thrilling survival game set in space, developed using Unity and C#. Players navigate a spaceship through a series of obstacles and enemies, aiming to survive as long as possible. The game features multiple modes, save points, a scoring system, and various enemy types, including a challenging boss fight. Additionally, it includes achievements and power-ups to enhance the gameplay experience.
     </p>
     <p>
-      The project showcases advanced game mechanics and features, including enemy AI, power-ups, and level design.
-    </p>
-    <p>
-      It demonstrates the use of Unity's capabilities to create an engaging and challenging game.
+      The project showcases game mechanics, such as enemy AI and intricate level design, demonstrating Unity's capabilities. Notably, the game was created without traditional animations, instead utilizing the scaling of objects to achieve dynamic effects. Space Survive is a testament to creating an engaging and challenging game through innovative techniques and robust game design principles.
     </p>
   </div>
 );
 
 export const spaceSurvive = {
   id: "space-survive",
-  name: "Space Survive",
+  name: "Top Down Space Shooter",
   tag: "Game Development",
   blurb: short,
   description: long,
   blurhash: "",
   images: [
-    { src: "spaceSurvive1.jpg", blurhash: "" },
-    { src: "spaceSurvive2.jpg", blurhash: "" },
+    { src: "spaceSurvive.jpg", blurhash: "L26@E32tL#5kq?Io%%%hyEofR3j?" },
   ],
-  mainStack: [
-    "Unity",
-    "C#"
+  mainStack:[
+    {name:"Unity", icon:FaUnity, color:"black"},
+    {name:"C#", svg_path:"c-sharp.svg"} 
   ],
-  fullStack: [
-    "Unity",
-    "C#"
+  extendedStack:[
+    {name:"Game Development", svg_path:"game-controller.svg"} ,
   ],
-  modalInfo: {
-    description: long,
-    videos: [
-      { path: process.env.PUBLIC_URL + "/videos/SpaceSurvive_small.mp4", description: 'Gameplay' }
-    ]
-  }
+  externalLinks: [
+    { name: "Trailer", link: "https://www.youtube.com/watch?v=pwIbyhqWbsM", icon: BsYoutube },
+  ],
 };

@@ -49,11 +49,11 @@ function ProjectCard({ project }) {
       onMouseLeave={handleMouseLeave}
       onClick={handleClick}
     >
-      <div className="relative w-full h-72 sm:h-80 md:h-64 lg:h-60 2xl:h-56 cursor-pointer">
-        <motion.div
+      <div className="relative w-full h-72 sm:h-80 md:h-64 lg:h-60 2xl:h-56 cursor-pointer ">
+      <motion.div
           className="w-full h-full"
-          initial={{ filter: isInitialLoad ? 'blur(0px)' : 'blur(1.5px)' }} // Ensure the image is unblurred initially
-          animate={{ filter: isHovered || isClicked ? 'blur(0px)' : 'blur(1.5px)' }}
+          initial={{ opacity: isInitialLoad ? 1 : 0.8, filter: 'blur(0px)' }} // Ensure the image is fully visible and unblurred initially
+          animate={{ opacity: isHovered || isClicked ? 1 : 0.8, filter: isHovered || isClicked ? 'blur(0px)' : 'blur(0.5px)' }}
           transition={{ delay: isInitialLoad ? 1 : 0, duration: 0.3, ease: 'easeInOut' }}
         >
           <ImageComponent
@@ -63,18 +63,18 @@ function ProjectCard({ project }) {
             className="w-full h-full object-contain"
           />
         </motion.div>
-        
+              
         <AnimatePresence>
           {(!isHovered && !isClicked) && (
             <motion.div
-              className="absolute bottom-0 left-0 w-full h-1/2 p-2 text-white bg-black bg-opacity-40 backdrop-blur-xl flex flex-col justify-between"
+              className="absolute bottom-0 left-0 w-full h-1/2 p-2 text-white bg-black bg-opacity-25 backdrop-blur-lg flex flex-col justify-between"
               initial={{ y: "100%" }}
               animate={inView ? { y: 0, transition: { delay: isInitialLoad ? 0.8 : 0, duration: 0.3 } } : {}}
               exit={{ y: '100%' }}
               transition={{ duration: 0.3 }}
             >
               <div>
-                <h3 className="relative z-10">{project.name}</h3>
+                <h3 className="relative z-10 underline">{project.name}</h3>
                 <p className="text-sm relative z-10">{project.blurb}</p>
               </div>
               <div className="relative z-10 flex">
