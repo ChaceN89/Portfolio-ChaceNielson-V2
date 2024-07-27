@@ -25,6 +25,10 @@ export const cubeGame = {
     "Unity",
     "C#"
   ],
+  mainStack:[
+    {name:"Unity", icon:FaUnity, color:"white"},
+    {name:"C#", svg_path:"c-sharp.svg"} 
+  ],
   fullStack:[
     "Unity",
     "C#"

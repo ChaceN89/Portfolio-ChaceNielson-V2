@@ -53,14 +53,16 @@ function ProjectCard({ project }) {
         <AnimatePresence>
           {(!isHovered && !isClicked) && (
             <motion.div
-              className="absolute bottom-0 left-0 w-full h-1/2 p-2 text-white bg-black bg-opacity-20 backdrop-blur-lg flex flex-col "
+              className="absolute bottom-0 left-0 w-full h-1/2 p-2 text-white bg-black bg-opacity-40 backdrop-blur-3xl flex flex-col justify-between "
               initial={{ y: 0 }}
               animate={{ y: 0 }}
               exit={{ y: '100%' }}
               transition={{ duration: 0.3 }}
             >
-              <h3 className="relative z-10">{project.name}</h3>
-              <p className="text-sm relative z-10">{project.blurb}</p>
+              <div>
+                <h3 className="relative z-10">{project.name}</h3>
+                <p className="text-sm relative z-10">{project.blurb}</p>
+              </div>
               <div className="relative z-10 flex ">
                 {project.mainStack.map((stack, index) => (
                   <div key={index} className="flex items-center mr-2">
