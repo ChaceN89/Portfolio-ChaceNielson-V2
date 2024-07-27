@@ -1,4 +1,4 @@
-import { FaUnity } from "react-icons/fa";
+// import { FaUnity } from "react-icons/fa";
 
 const short = "Flappy Bird clone built with Unity and C#.";
 const long = (

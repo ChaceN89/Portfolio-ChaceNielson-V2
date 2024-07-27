@@ -1,4 +1,4 @@
-import { FaUnity } from "react-icons/fa";
+// import { FaUnity } from "react-icons/fa";
 
 const short = "Space Survive game built with Unity and C#.";
 const long = (

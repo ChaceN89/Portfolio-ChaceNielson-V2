@@ -1,30 +1,42 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { toast, Toaster } from 'react-hot-toast';
 import emailjs from 'emailjs-com';
 import ContactToast from './ContactToast';
 import MyButton from '../../components/uiElements/MyButton';
 import ImageComponent from '../../wrappers/ImageComponent';
+import { motion, useAnimation, useInView } from 'framer-motion';
 
 const EMAILJS_USER_ID = process.env.REACT_APP_EMAILJS_USER_ID;
 const EMAILJS_SERVICE_ID = process.env.REACT_APP_EMAILJS_SERVICE_ID;
 const EMAILJS_TEMPLATE_ID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
 
+const contactVariants = {
+  hidden: { opacity: 0, x: -50 },
+  visible: { opacity: 1, x: 0, transition: { duration: 1, ease: 'easeOut' } }
+};
+
 function ContactForm() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const controls = useAnimation();
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true, margin: '0px 0px -200px 0px' });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start('visible');
+    }
+  }, [controls, inView]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Check if the emailjs configuration is set up correctly
     if (!EMAILJS_USER_ID || !EMAILJS_SERVICE_ID || !EMAILJS_TEMPLATE_ID) {
       toast.error('EmailJS configuration is missing or incorrect.');
       return;
     }
 
-    return ;
-    // Create the email template parameters
     const templateParams = {
       from_name: name,
       from_email: email,
@@ -32,7 +44,6 @@ function ContactForm() {
       reply_to: email
     };
 
-    // Use emailjs to send the email
     emailjs.send(
       EMAILJS_SERVICE_ID,
       EMAILJS_TEMPLATE_ID,
@@ -61,7 +72,13 @@ function ContactForm() {
   };
 
   return (
-    <section className='min-h-section-height  p-4'>
+    <motion.section
+      ref={ref}
+      className=' p-4'
+      initial="hidden"
+      animate={controls}
+      variants={contactVariants}
+    >
       <Toaster />
       <div className="flex flex-col md:flex-row">
         <div className="md:w-2/3">
@@ -119,7 +136,7 @@ function ContactForm() {
           />
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }
 

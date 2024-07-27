@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import NavbarItems from './NavbarItems';
 import LogoLink from '../logo/LogoLink';
-import { motion, useScroll, useSpring, useTransform } from 'framer-motion';
+import { motion, useScroll, useSpring } from 'framer-motion';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import "./Navbar.css";
 
