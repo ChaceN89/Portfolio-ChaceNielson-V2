@@ -61,6 +61,7 @@ export const geoPredict = {
     ],
     extendedStack:[
       {name:"Full-Stack", svg_path:"full-stack.svg"},
+      {name:"Python", svg_path:"python.svg"},
       {name:"Docker", icon:FaDocker, color:"#089CEC"},
       {name:"Data Analysis", svg_path:"data-analysis.svg"},
       {name:"Cloud Deployment", svg_path:"cloud-computer.svg"},

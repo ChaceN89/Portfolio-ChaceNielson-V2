@@ -55,6 +55,7 @@ export const jobDashboard = {
   ],
   extendedStack:[
     {name:"Full-Stack", svg_path:"full-stack.svg"},
+    {name:"Python", svg_path:"python.svg"},
     {name:"Netlify", svg_path:"netlify.svg"},
     {name:"Render", icon:SiRender, color:"black"},
   ],

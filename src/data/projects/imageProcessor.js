@@ -50,6 +50,7 @@ export const imageProcessor = {
     {name:"TypeScript", icon:SiTypescript, color:"#38BDF9"},
   ],
   extendedStack:[
+    {name:"Python", svg_path:"python.svg"},
     {name:"Railway", icon:SiRailway, color:"black"},
   ],
   externalLinks: [

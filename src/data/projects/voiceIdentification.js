@@ -4,13 +4,10 @@ const short = "Voice identification system using machine learning.";
 const long = (
   <div className='space-y-2'>
     <p>
-      This project involves the development of a voice identification system that uses machine learning algorithms to recognize and verify individuals based on their voice. Built using Python and Plotly-Dash, the system processes voice recordings and extracts features for analysis.
+      This project entails developing a voice identification system using machine learning algorithms to recognize and verify individuals by their voice. Built with Python and Plotly-Dash, the system processes voice recordings, extracting features for analysis. It includes a comprehensive Jupyter notebook for data analysis and model training, leveraging various machine learning techniques to achieve high accuracy in voice recognition.
     </p>
     <p>
-      The project includes a comprehensive Jupyter notebook for data analysis and model training. It leverages various machine learning techniques to achieve high accuracy in voice recognition.
-    </p>
-    <p>
-      The system is designed to be user-friendly, with a web interface for uploading and analyzing voice samples.
+      The user-friendly system features a web interface for uploading and analyzing voice samples, making it accessible for practical use. The integration of advanced machine learning methods ensures reliable and efficient voice identification, demonstrating the potential of combining Python's capabilities with intuitive data visualization tools.
     </p>
   </div>
 );
@@ -24,21 +21,18 @@ export const voiceIdentification = {
   description: long,
   blurhash: "qD9%h%tkNYo|WAofM{oeD$t7xubGt7RjWCRi_4V@M{jZRiogjZt7xVa}WYj[a}j[j[oJtSaeV@bFoJoffkkC^*flNHoMRkoeWBoe",
   images: [
-    { src: "voice_recognition1.jpg", blurhash: "q7Egm_t7Rit8~pt6Rjt7j@ofayoea{oft7jZofofRjjs-;ozayj[ayayj[j[ogj[j[WBayayjt7aya}ofayayjt7ayj[ayayj[og" },
-    { src: "voice_recognition2.jpg", blurhash: "q3Hj-|M_t7t8~pt6Rjt7j@ofayoea{oft7jZofofRjjs-;ozayj[ayayj[j[ogj[j[WBayayjt7aya}ofayayjt7ayj[ayayj[og" },
+    { src: "voice_recognition1.jpg", blurhash: "L6PjDVxa00xu00of_4RP9FRj-;of" },
+    { src: "voice_recognition4.jpg", blurhash: "L5S?7G$x*IJF.lXSDixB.7IpVZ%K" },
+    { src: "voice_recognition2.jpg", blurhash: "L3ODnIt600xu00R+~WWC00V@a#s." },
+    { src: "voice_recognition3.jpg", blurhash: "L5PjGc%200fT00of~qi_00Rj?bof" },
+    { src: "voice_recognition5.jpg", blurhash: "L3PQ87RjoeM{_2WB_4Rj00xu-:xu" },
+  ],
+  mainStack: [
+    {name:"Plotly Dash", svg_path:"plotly-dash.svg"},
+    {name:"Python", svg_path:"python.svg"},
+    {name:"Machine Learning", svg_path:"machine-learning.svg"},
   ],
 
-  mainStack: [
-    "Plotly-Dash",
-    "Python",
-    "Machine Learning"
-  ],
-  fullStack: [
-    "Plotly-Dash",
-    "Python",
-    "CSS",
-    "Machine Learning"
-  ],
   externalLinks: [
     { name: "Code", link: "https://github.com/ChaceN89/voice-recognition", icon: BsGithub },
     { name: "Notebook", link: "https://github.com/ChaceN89/voice-recognition/blob/main/original_notebook/ENCM%20Final%20Project%20Speech%20Recognition.ipynb", icon: BsGithub },

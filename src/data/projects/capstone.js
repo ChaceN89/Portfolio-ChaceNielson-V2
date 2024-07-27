@@ -7,13 +7,13 @@ import { FaUnity } from "react-icons/fa";
 import { FaBlender } from "react-icons/fa";
 
 const short = <>Unity simulation and physical prototype for CO<sub>2</sub> separation using deep ocean hydrostatic pressure.</>;
-const long =     
-<div className="space-y-2">
-  <p>This capstone project, titled "Energy Storage and Direct Air Capture in the Deep Ocean," was completed at the University of Calgary. The project explores innovative methods for carbon dioxide (CO<sub>2</sub>) separation from the atmosphere, leveraging the deep ocean's hydrostatic pressure. Our team designed both a physical prototype and a comprehensive Unity simulation to test and demonstrate the concept. The prototype, tested in a controlled pool environment, successfully showed the feasibility of CO<sub>2</sub> condensation through pressure changes.</p>
+const long = (
+  <div className="space-y-2">
+    <p>This capstone project, titled "Energy Storage and Direct Air Capture in the Deep Ocean," was completed at the University of Calgary. The project explores innovative methods for carbon dioxide (CO<sub>2</sub>) separation from the atmosphere, leveraging the deep ocean's hydrostatic pressure. Our team designed both a physical prototype and a comprehensive Unity simulation to test and demonstrate the concept. The prototype, tested in a controlled pool environment, successfully showed the feasibility of CO<sub>2</sub> condensation through pressure changes.</p>
 
-  <p>The Unity simulation complements the prototype by providing an interactive visualization of the integration of energy storage and CO<sub>2</sub> separation systems. This simulation illustrates the device's operation and potential real-world applications, making complex processes accessible and understandable. Overall, this project lays the groundwork for future advancements in sustainable energy and carbon capture technologies, contributing valuable insights and practical solutions to the field.</p>
-</div>;
-
+    <p>The Unity simulation complements the prototype by providing an interactive visualization of the integration of energy storage and CO<sub>2</sub> separation systems. This simulation illustrates the device's operation and potential real-world applications, making complex processes accessible and understandable. Overall, this project lays the groundwork for future advancements in sustainable energy and carbon capture technologies, contributing valuable insights and practical solutions to the field.</p>
+  </div>
+);
 
 export const capstone = {
     starred:true,
