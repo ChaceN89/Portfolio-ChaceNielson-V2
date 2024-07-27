@@ -39,8 +39,8 @@ function ProjectCard({ project }) {
       <div className="relative w-full h-72 sm:h-80 md:h-64 lg:h-60 2xl:h-56 cursor-pointer">
         <motion.div
           className="w-full h-full"
-          initial={{ filter: 'blur(4px)' }}
-          animate={{ filter: isHovered || isClicked ? 'blur(0px)' : 'blur(4px)' }}
+          initial={{ filter: 'blur(1px)' }}
+          animate={{ filter: isHovered || isClicked ? 'blur(0px)' : 'blur(1px)' }}
           transition={{ duration: 0.3 }}
         >
           <ImageComponent
@@ -53,7 +53,7 @@ function ProjectCard({ project }) {
         <AnimatePresence>
           {(!isHovered && !isClicked) && (
             <motion.div
-              className="absolute bottom-0 left-0 w-full p-2 text-white flex flex-col"
+              className="absolute bottom-0 left-0 w-full p-2 text-white bg-black bg-opacity-30  flex flex-col"
               initial={{ y: 0 }}
               animate={{ y: 0 }}
               exit={{ y: '100%' }}
@@ -61,8 +61,30 @@ function ProjectCard({ project }) {
             >
               <div className="absolute inset-0" />
               <h3 className="relative z-10">{project.name}</h3>
-              <p className="relative z-10">{project.blurb}</p>
-              <div className="relative z-10">{project.mainStack.join(', ')}</div>
+              <p className=" text-sm relative z-10">{project.blurb}</p>
+
+              <div className="relative z-10 flex">
+                {project.mainStack.map((stack, index) => (
+                  <div key={index} className="flex items-center mr-2">
+                    {stack.icon && (
+                      <stack.icon 
+                        className="inline-block mr-1" 
+                        style={{ color: stack.color || 'inherit' }} 
+                      />
+                    )}
+                    {stack.svg_path && (
+                      <img 
+                        src={`${process.env.PUBLIC_URL}/svg-icons/${stack.svg_path}`} 
+                        alt={stack.name} 
+                        className="inline-block mr-1 h-4" 
+                        style={{ fill: stack.color || 'inherit' }} 
+                      />
+                    )}
+                    {stack.name && <span style={{ color: stack.color || 'inherit' }}>{stack.name}</span>}
+                  </div>
+                ))}
+              </div>
+
             </motion.div>
           )}
         </AnimatePresence>

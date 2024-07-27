@@ -1,16 +1,13 @@
 import { FaUnity } from "react-icons/fa";
 
-const short = "Simple Cube Game built with Unity and C#.";
+const short = "An endless runner game developed using Unity and C#.";
 const long = (
   <div className='space-y-2'>
     <p>
-      This is a simple cube game developed using Unity and C#. The game involves controlling a cube to navigate through various levels and obstacles.
+      This project is an endless runner game created using Unity and C#. Players control a cube, navigating it through a series of challenging levels and obstacles.
     </p>
     <p>
-      The project showcases basic game mechanics and physics implemented in Unity.
-    </p>
-    <p>
-      It serves as a demonstration of fundamental game development skills and the use of Unity's features.
+      The game demonstrates essential game mechanics and physics, highlighting the capabilities of Unity for developing engaging and interactive experiences.
     </p>
   </div>
 );
@@ -22,10 +19,8 @@ export const cubeGame = {
   blurb: short,
   description: long,
   images: [
-    { src: "cubeGame1.jpg", blurhash: "" },
-    { src: "cubeGame2.jpg", blurhash: "" },
+    { src: "cubeGame.jpg", blurhash: "LHO:^eD%4.%M00xv%2of_Nxt-;D%" },
   ],
-
   mainStack:[
     "Unity",
     "C#"

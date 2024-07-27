@@ -1,28 +1,40 @@
 
 
+import { color } from "framer-motion";
 import { BsYoutube } from "react-icons/bs"
-import { CgWebsite } from "react-icons/cg"
+import { BsGithub } from "react-icons/bs"
+import { FaUnity } from "react-icons/fa";
+import { FaBlender } from "react-icons/fa";
 
-const short = "A physical device and Unity simulation designed for carbon dioxide separation using hydrostatic pressure.";
-const long = "This project was completed for my capstone project at the University of Calgary. 'Energy Storage and Direct Air Capture in the Deep Ocean,' explores innovative methods for carbon dioxide (CO2) separation from the atmosphere. By leveraging deep ocean hydrostatic pressure, we designed a physical prototype and a comprehensive Unity simulation. The prototype, tested in a pool environment, demonstrates the feasibility of CO2 condensation using pressure changes. The Unity simulation illustrates the integration of energy storage and CO2 separation systems, providing an interactive visualization of the device's operation and potential real-world applications. This project lays the groundwork for future advancements in sustainable energy and carbon capture technologies.";
+const short = "Unity simulation and physical prototype for carbon dioxide separation using deep ocean hydrostatic pressure.";
+const long =     
+<div className="space-y-2">
+  <p>This capstone project, titled "Energy Storage and Direct Air Capture in the Deep Ocean," was completed at the University of Calgary. The project explores innovative methods for carbon dioxide (CO<sub>2</sub>) separation from the atmosphere, leveraging the deep ocean's hydrostatic pressure. Our team designed both a physical prototype and a comprehensive Unity simulation to test and demonstrate the concept. The prototype, tested in a controlled pool environment, successfully showed the feasibility of CO<sub>2</sub> condensation through pressure changes.</p>
+
+  <p>The Unity simulation complements the prototype by providing an interactive visualization of the integration of energy storage and CO<sub>2</sub> separation systems. This simulation illustrates the device's operation and potential real-world applications, making complex processes accessible and understandable. Overall, this project lays the groundwork for future advancements in sustainable energy and carbon capture technologies, contributing valuable insights and practical solutions to the field.</p>
+</div>;
 
 
 export const capstone = {
     starred:true,
     id:"capstone", // id and folder name in the projects folder
-    name:"Capstone",  
+    name:<span>C0<sub>2</sub> Separation</span>, 
     tag:"Unity and Engineering",
     blurb: short, 
     description: long,
     images:[
-      {src:"highlight.jpg", blurhash:"qC9G,ZtkS0tRR%ogNFoe9Xt7xubFt7RjWVRj_4V@M{jZRjofays;xVa}WYj[bHj[j[oKkYaeada{oJofkCkC^*flRkoMRkoeWBs."},
-      {src:"crossPlot.jpg", blurhash:"q2Hog|GOtj%4nAwQ$n$-=OnBr_kBX4XNkUbq+S#uVtNYXfXNNrSb*EPKSva3nAm@m@nADhaMxcs;NFR%ozoy:vr2srgJS[Xfkob="},
-      {src:"homePage.jpg", blurhash:"qANAxJD*9Z%LNGxvRixu00t7?bV@-;R*%LWB~WaxD%bIIUt6M|WCIVt6adR+Rjn~WYR+00WBxtogs;j=j]a#IAj[RjjFWBWqV@of"},
-      {src:"login.jpg", blurhash:"q7Mtjn8^xU-oVrxsn#t6xtRia_odj?a_axj[9a?wNyIpo$R.bcWC-=x^a%RnWFj^j]WV^kDinN%2nOnhjExaxWMwsjxWs*n#jYoJ"},
+      {src:"highlight.jpg", blurhash:""},
+      {src:"capstone1.jpg", blurhash:"LCCtg~4#5[xt~bkMITWU0C-s-qRj"},
+      {src:"capstone2.jpg", blurhash:"L8HeI3D4^H_4~B=sDj^*-BH;00%L"},
+      {src:"capstone3.jpg", blurhash:"LAD11#-;^dQ.}+?RS%E+=|kiV:I]"},
+      {src:"capstone5.jpg", blurhash:"L3Ss50%g?aM{?aIV%Mxt00Mx_4t7"},
+      {src:"capstone6_sim.jpg", blurhash:"LnD_REohbujd_7oxWBk8%Wobawf8"},
+      {src:"capstone7_sim.jpg", blurhash:"LQEEl-NTX9t9~YRXtRa_^|bzb:i^"},
+      {src:"capstone8_sim.jpg", blurhash:"LdEz+.kHT2ng_9t0oZkD%CoubWkC"},
     ],
     mainStack:[
-      "Unity", 
-      "Blender"
+      {name:"Unity", icon:FaUnity, color:"white"},
+      {name:"Blender", svg_path:"blender.svg"} 
     ],
     fullStack:[
       "Full-Stack", 
@@ -35,8 +47,13 @@ export const capstone = {
       "Cloud Deployment"
     ],
     externalLinks:[
-        {name:"Overview", link:"https://youtu.be/oTU0C_8-dSw", icon:BsYoutube},
-        {name:"Website", link:"http://136.159.140.62/", icon:CgWebsite}
+        {name:"Overview Video", link:"https://www.youtube.com/watch?v=TvnBOPB7dhc", icon:BsYoutube},
+        {name:"Simulation", link:"https://dev3933.d18ixp0pwlw4ex.amplifyapp.com/", icon:FaUnity},
+        {name:"Unity Code", link:"https://github.com/ChaceN89/Capstone-Simulation", icon:BsGithub},
     ],
+    pdfs:[
+      {name:"Poster", link:"Capstone Poster.pdf"},
+      {name:"Report", link:"Capstone Final Report.pdf"},
+    ]
 
 }

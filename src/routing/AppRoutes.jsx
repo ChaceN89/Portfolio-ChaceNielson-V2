@@ -72,7 +72,7 @@ const AppRoutes = () => {
           <Route path="/photos" element={<SlideTransition><PhotoPage /></SlideTransition>} />
           <Route path="/thanks" element={<SlideTransition><ThanksPage /></SlideTransition>} /> 
 
-          <Route path="*" element={<Navigate to="/" replace />} />
+          {/* <Route path="*" element={<Navigate to="/" replace />} /> */}
           
           {/* Modal Routes */}
           <Route path="" element={<ModalLayout />}>

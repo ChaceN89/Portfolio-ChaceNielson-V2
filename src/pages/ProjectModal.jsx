@@ -2,6 +2,9 @@ import React, { useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { projects } from "../data/projectData";
 import ProjectImageCarousel from "../homeSections/projects/ProjectImageCarousel";
+import { BsYoutube, BsGithub, BsFileEarmarkPdf } from "react-icons/bs";
+import { FaUnity } from "react-icons/fa";
+import openPdf from "../functions/openDocs";
 
 const ProjectModal = () => {
   const { id } = useParams();
@@ -36,13 +39,15 @@ const ProjectModal = () => {
           </ul>
         </>
       )}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 ">
         {project.images && project.images.length > 0 && (
-          <div>
+          <div className="row-span-2">
             <h2 className="text-2xl font-semibold mb-2">Images</h2>
             <ProjectImageCarousel images={project.images} id={project.id} title={project.name} />
           </div>
         )}
+
         {project.externalLinks && project.externalLinks.length > 0 && (
           <div>
             <h2 className="text-2xl font-semibold mb-2">External Links</h2>
@@ -51,6 +56,28 @@ const ProjectModal = () => {
                 <a key={index} href={link.link} target="_blank" rel="noopener noreferrer" className="m-2 inline-block text-blue-500">
                   {link.icon && <link.icon className="inline-block mr-2" />}
                   {link.name}
+                </a>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {project.pdfs && project.pdfs.length > 0 && (
+          <div>
+            <h2 className="text-2xl font-semibold mb-2">PDFs</h2>
+            <div>
+              {project.pdfs.map((pdf, index) => (
+                <a 
+                  key={index} 
+                  href="#" 
+                  onClick={(e) => {
+                    e.preventDefault();
+                    openPdf(pdf.link);
+                  }} 
+                  className="m-2 inline-block text-blue-500"
+                >
+                  <BsFileEarmarkPdf className="inline-block mr-2" />
+                  {pdf.name}
                 </a>
               ))}
             </div>
