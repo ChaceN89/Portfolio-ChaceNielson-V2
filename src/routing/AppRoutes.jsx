@@ -45,9 +45,6 @@
 import React from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 
-// animations
-import SlideTransition from "./SlideTransition";
-
 // layouts
 import Layout from "./Layout";
 import ModalLayout from "./ModalLayout";
@@ -69,8 +66,8 @@ const AppRoutes = () => {
       <Routes location={location} key={location.key}>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
-          <Route path="/photos" element={<SlideTransition><PhotoPage /></SlideTransition>} />
-          <Route path="/thanks" element={<SlideTransition><ThanksPage /></SlideTransition>} /> 
+          <Route path="/photos" element={<PhotoPage />} />
+          <Route path="/thanks" element={<ThanksPage />} /> 
 
           {/* <Route path="*" element={<Navigate to="/" replace />} /> */}
           

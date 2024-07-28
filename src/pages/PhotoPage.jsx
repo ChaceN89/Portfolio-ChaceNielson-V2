@@ -1,23 +1,17 @@
+import React from 'react';
 import BackgroundWrapper from "../wrappers/BackgroundWrapper";
-import ScrollToTop from "../routing/ScrollToTop";
+import GalleryPhotos from '../components/uiElements/GalleryPhotos';
 
 const PhotoPage = () => {
   return (
-
-    <BackgroundWrapper 
-      className='space-x-4 h-screen'
-      src={process.env.PUBLIC_URL + "/png-backgrounds/detailed/range-b&w3-mountain.png"}
+    <BackgroundWrapper
+      className="min-h-screen"
+      src={process.env.PUBLIC_URL + "/png-backgrounds/overlays/scratch-1.png"}
       bgOpacity={75}
-      backgroundAttachment='scroll'
+      backgroundRepeat = "repeat"
+      backgroundAttachment="scroll"
     >
-      <ScrollToTop />
-        
-      <h1 className="container mx-auto pl-10 pt-32">My Photos </h1>
-
-      <div className="">
-        Gallery
-      </div>
-      
+      <GalleryPhotos />
     </BackgroundWrapper>
   );
 };

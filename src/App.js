@@ -44,6 +44,7 @@ import AppRoutes from './routing/AppRoutes';
 // Import Styles
 import './styles/Layout.css';
 import './styles/Modal.css';
+import './styles/GalleryCSS.css';
 
 import TailwindBreakPoints from './testingComponents/TailwindBreakPoints'
 import AnalyticsTracker from './googleAnalytics/AnalyticsTracker'
