@@ -11,7 +11,7 @@ function Interests() {
     <BackgroundWrapper 
       id="AboutMe" 
       className=''
-      src={process.env.PUBLIC_URL + "/png-backgrounds/detailed/range-b&w1.png"}
+      src={process.env.PUBLIC_URL + "/png-backgrounds/detailed/range-b&w3-trim.png"}
       bgOpacity={10}
     >
       <SlideTransition>
