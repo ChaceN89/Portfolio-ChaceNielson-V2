@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import BackgroundWrapper from '../../wrappers/BackgroundWrapper';
 import InnerCallToAction from './InnerCallToAction';
@@ -24,25 +24,55 @@ const parallaxConfig = {
 
 function CallToAction() {
   const { scrollY } = useScroll(); // Get the current scroll position
+  const [isParallaxEnabled, setIsParallaxEnabled] = useState(true);
+
+  // Function to check the window size
+  const checkWindowSize = () => {
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+    if (width < 800 || height < 600) {
+      setIsParallaxEnabled(false);
+    } else {
+      setIsParallaxEnabled(true);
+    }
+  };
+
+  useEffect(() => {
+    // Check window size on initial render
+    checkWindowSize();
+    // Add event listener to check window size on resize
+    window.addEventListener('resize', checkWindowSize);
+    // Clean up event listener on component unmount
+    return () => window.removeEventListener('resize', checkWindowSize);
+  }, []);
+
   // Map the scroll position to the translation values using useTransform
   const y = useTransform(scrollY, parallaxConfig.scrollRange, parallaxConfig.translateYRange);
 
   return (
     <BackgroundWrapper
       id="CallToAction"
-      className="h-section-height relative flex items-center justify-center px-6"
+      className="h-section-height min-h-108 relative flex items-center justify-center "
       src={process.env.PUBLIC_URL + "/png-backgrounds/detailed/range-b&w2-trim.png"}
       lowResSrc={process.env.PUBLIC_URL + "/png-backgrounds/detailed/range-b&w2-trim-small.png"}
       bgOpacity={40}
     >
-      <motion.div 
-        className='z-10'
-        style={{ y }} // Apply the parallax effect to this element
-      >
-        <SlideTransition>
-          <InnerCallToAction />
-        </SlideTransition>
-      </motion.div>
+      {isParallaxEnabled ? (
+        <motion.div 
+          className='z-10'
+          style={{ y }} // Apply the parallax effect to this element
+        >
+          <SlideTransition>
+            <InnerCallToAction />
+          </SlideTransition>
+        </motion.div>
+      ) : (
+        <div className='z-10'>
+          <SlideTransition>
+            <InnerCallToAction />
+          </SlideTransition>
+        </div>
+      )}
       <ScrollWheel to="AboutMe" />
     </BackgroundWrapper>
   );
