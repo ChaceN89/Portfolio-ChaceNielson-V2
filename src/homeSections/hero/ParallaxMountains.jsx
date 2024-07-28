@@ -1,3 +1,37 @@
+/**
+ * @file ParallaxMountains.jsx
+ * @module ParallaxMountains
+ * @desc React component that implements a parallax effect for the mountains in the hero section.
+ * This component uses the framer-motion library to create a smooth scrolling effect.
+ *
+ * @component ParallaxMountains
+ * 
+ * @requires react
+ * @requires motion, useScroll, useTransform from 'framer-motion'
+ * @requires ImageComponent from '../../wrappers/ImageComponent'
+ * 
+ * @see {@link https://reactjs.org/docs/getting-started.html | React Documentation}
+ * @see {@link https://www.framer.com/motion/ | Framer Motion Documentation}
+ * 
+ * @example
+ * // Example usage of ParallaxMountains component
+ * import ParallaxMountains from './ParallaxMountains';
+ * 
+ * function App() {
+ *   return (
+ *     <div className="App">
+ *       <ParallaxMountains />
+ *     </div>
+ *   );
+ * }
+ * 
+ * @exports ParallaxMountains
+ * 
+ * @author Chace Nielson
+ * @created 2024-07-28
+ * @updated 2024-07-28
+ */
+
 import React from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import ImageComponent from '../../wrappers/ImageComponent';
