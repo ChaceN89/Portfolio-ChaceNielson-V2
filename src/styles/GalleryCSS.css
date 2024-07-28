@@ -1,5 +1,5 @@
 /* Responsive Gallery Layout */
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 500px) {
   .gallery {
     -webkit-column-count: 1;
     -moz-column-count: 1;
@@ -10,7 +10,7 @@
   }
 }
 
-@media only screen and (min-width: 400px) {
+@media only screen and (min-width: 500px) {
   .gallery {
     -webkit-column-count: 2;
     -moz-column-count: 2;
@@ -21,7 +21,7 @@
   }
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 840px) {
   .gallery {
     -webkit-column-count: 3;
     -moz-column-count: 3;
@@ -32,7 +32,7 @@
   }
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1200px) {
   .gallery {
     -webkit-column-count: 4;
     -moz-column-count: 4;
@@ -43,7 +43,7 @@
   }
 }
 
-@media only screen and (min-width: 1400px) {
+@media only screen and (min-width: 1500px) {
   .gallery {
     -webkit-column-count: 5;
     -moz-column-count: 5;
