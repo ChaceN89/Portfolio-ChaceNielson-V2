@@ -33,7 +33,7 @@ function Navbar() {
         className='w-full h-1 bg-accent origin-left z-40'
         style={{ scaleX: springScrollYProgress }}
       />
-      <div className="container mx-auto flex justify-between md:justify-center items-center p-2">
+      <div className="container mx-auto flex justify-between md:justify-center items-center p-0.5 md:p-2">
         <div className="text-left flex justify-start md:hidden">
           <LogoLink />
         </div>

@@ -1,8 +1,11 @@
 import React from 'react';
 import { BsYoutube, BsInstagram, BsLinkedin, BsGithub } from 'react-icons/bs';
 import Tooltip from './Tooltip';
+import { useMediaQuery } from 'react-responsive';
 
 function MediaLinks() {
+  const isMediumScreen = useMediaQuery({ query: '(min-width: 768px)' });
+
   const mediaLinks = [
     { name: "GitHub", icon: BsGithub, link: "https://github.com/ChaceN89" },
     { name: "YouTube", icon: BsYoutube, link: "https://www.youtube.com/@chacenielson5413" },
@@ -10,8 +13,10 @@ function MediaLinks() {
     { name: "LinkedIn", icon: BsLinkedin, link: "https://www.linkedin.com/in/chace-nielson" }
   ];
 
+  const iconSize = isMediumScreen ? 28 : 20;
+
   return (
-    <div className="grid grid-cols-2 gap-0.5 sm:flex justify-center space-x-0.5 relative">
+    <div className="flex justify-center space-x-0.5 relative">
       {mediaLinks.map((link) => (
         <Tooltip key={link.name} text={link.name}>
           <a
@@ -21,11 +26,11 @@ function MediaLinks() {
             rel="noopener noreferrer"
           >
             <div className="flex items-center justify-center 
-              w-10 h-10 rounded-full 
+              w-8 h-8 md:w-12 md:h-12 rounded-full 
               bg-primary hover:bg-accent text-secondary hover:text-primary 
               transition duration-300"
             >
-              <link.icon size={24} className="" />
+              <link.icon size={iconSize} className="" />
             </div>
           </a>
         </Tooltip>

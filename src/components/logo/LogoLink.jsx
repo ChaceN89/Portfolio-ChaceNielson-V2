@@ -17,14 +17,14 @@ function LogoLink({ size = "large" }) {
 
   const sizes = {
     large: {
-      container: { width: '48px', height: '48px' },
+      container: { width: '34px', height: '34px' },
       logoClass: "max-w-12 max-h-12 md:max-w-16 md:max-h-16",
-      textClass: "text-2xl"
+      textClass: "text-xl"
     },
     small: {
-      container: { width: '24px', height: '24px' },
+      container: { width: '22px', height: '22px' },
       logoClass: "max-w-6 max-h-6 md:max-w-8 md:max-h-8",
-      textClass: "text-xl"
+      textClass: "text-base"
     }
   };
 
@@ -54,7 +54,7 @@ function LogoLink({ size = "large" }) {
             style={currentSize.container}
           >
             <ImageComponent
-              className="w-12 md:w-16 object-contain rounded-full"
+              className="object-contain rounded-full"
               src={process.env.PUBLIC_URL + '/png-portraits/chace-2.png'}
               lowResSrc={process.env.PUBLIC_URL + '/png-portraits/chace-2-small-2.png'}
               alt="Logo"

@@ -1,23 +1,30 @@
 /* Hero.css */
 .hero{
-  @apply overflow-hidden w-full relative flex items-center justify-start h-section-height  min-h-108
+  @apply overflow-hidden relative
+   w-full flex items-center justify-start 
+   h-section-height  min-h-108
 }
 
 /* the hero img */
 .hero-img-wrapper {
-  @apply  hidden md:flex justify-end 
+  @apply hidden md:flex justify-end 
   absolute bottom-0 right-0 
   w-auto h-full;
 }
 .hero-img {
-  @apply h-full object-cover max-h-screen 
+  @apply object-cover 
+  h-full max-h-screen min-h-120
+  opacity-90 z-0 
 }
+
 
 /* hero text */
 .text-container{
   @apply mx-auto container 
   grid grid-cols-1 md:grid-cols-2 
-  text-left pb-20 z-10;
+  text-left pb-20 z-10
+  mix-blend-difference
+
 }
   /* the actual alignment of the text */
   .text-container > div{

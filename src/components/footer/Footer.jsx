@@ -9,8 +9,8 @@ import MediaLinks from '../uiElements/MediaLinks';
 function Footer() {
   return (
     <footer className=" bg-secondary flex relative bottom-0">
-      <div className='container mx-auto w-full flex flex-col md:flex-row justify-between items-center py-4'>
-        <LogoLink/>
+      <div className='container mx-auto flex justify-between p-1 sm:p-2'>
+        <LogoLink size='small'/>
         <MediaLinks/>
       </div>
     </footer>

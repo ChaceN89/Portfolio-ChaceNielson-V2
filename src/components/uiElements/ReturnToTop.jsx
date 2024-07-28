@@ -6,7 +6,7 @@ import Tooltip from './Tooltip'
 
 function ReturnToTop() {
   return (
-    <div className="fixed bottom-4 right-4 z-10">
+    <div className="fixed bottom-2 right-2 z-10">
       <Tooltip text={"To Top"}>
         <ScrollLink
           className="hover:cursor-n-resize"
