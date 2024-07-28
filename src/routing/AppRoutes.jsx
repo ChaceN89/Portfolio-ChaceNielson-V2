@@ -43,7 +43,7 @@
  */
 
 import React from "react";
-import { Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route, useLocation, Navigate } from "react-router-dom";
 
 // layouts
 import Layout from "./Layout";
@@ -68,8 +68,7 @@ const AppRoutes = () => {
           <Route index element={<HomePage />} />
           <Route path="/photos" element={<PhotoPage />} />
           <Route path="/thanks" element={<ThanksPage />} /> 
-
-          {/* <Route path="*" element={<Navigate to="/" replace />} /> */}
+          <Route path="*" element={<Navigate to="/" replace />} />
           
           {/* Modal Routes */}
           <Route path="" element={<ModalLayout />}>
