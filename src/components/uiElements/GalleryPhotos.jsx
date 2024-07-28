@@ -1,6 +1,6 @@
 import React from 'react';
 import ImageComponent from '../../wrappers/ImageComponent';
-import { galleryPhotos } from '../../data/pageData/galleryPhotos';
+import { galleryPhotos } from '../../data/pageData/galleryData';
 import LazyLoad from 'react-lazy-load';
 
 export default function GalleryPhotos() {
