@@ -1,6 +1,6 @@
 import React from 'react';
 import BackgroundWrapper from "../wrappers/BackgroundWrapper";
-import GalleryPhotos from '../components/uiElements/GalleryPhotos';
+import GalleryPhotos from '../components/photoGallery/GalleryPhotos';
 
 const PhotoPage = () => {
   return (
