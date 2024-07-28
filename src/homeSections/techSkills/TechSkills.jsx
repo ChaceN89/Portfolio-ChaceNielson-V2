@@ -1,6 +1,5 @@
 import React from 'react';
 import SkillsBox from './SkillsBox';
-import { Link } from 'react-router-dom';
 
 import { techSkills, skillPageData } from '../../data/pageData/skillsData';
 import BackgroundWrapper from '../../wrappers/BackgroundWrapper';

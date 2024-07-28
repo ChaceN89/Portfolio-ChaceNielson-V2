@@ -4,7 +4,7 @@ import emailjs from 'emailjs-com';
 import ContactToast from './ContactToast';
 import MyButton from '../../components/uiElements/MyButton';
 import ImageComponent from '../../wrappers/ImageComponent';
-import { motion, useAnimation, useInView } from 'framer-motion';
+import { useAnimation, useInView } from 'framer-motion';
 
 import SlideTransition from '../../routing/SlideTransition';
 import BackgroundWrapper from '../../wrappers/BackgroundWrapper';

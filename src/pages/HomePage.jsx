@@ -11,7 +11,6 @@ import ProjectSection from '../homeSections/projects/ProjectSection';
 import ContactForm from '../homeSections/contactForm/ContactForm';
 
 import ReturnToTop from '../components/uiElements/ReturnToTop';
-import SlideTransition from '../routing/SlideTransition';
 
 import { globals } from '../data/globals';
 
