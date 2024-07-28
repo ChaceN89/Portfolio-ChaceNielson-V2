@@ -2,7 +2,8 @@ import React from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { heroData } from '../../data/pageData/heroData';
 
-import MyButton from '../../components/uiElements/MyButton'
+import MyButton from '../../components/uiElements/MyButton';
+import openPdf from '../../functions/openDocs';
 
 const textVariants = {
   initial: {
@@ -40,13 +41,23 @@ function HeroText() {
       style={{ y }}
     >
       <motion.div variants={textVariants}>
-        <motion.h3 variants={textVariants} className='pl-2'>{heroData.top}</motion.h3>
-        <motion.h1 variants={textVariants} className="pb-2">{heroData.name}</motion.h1>
-        <motion.div variants={textVariants} className="pb-4">{heroData.description}</motion.div>
+        <motion.h3 variants={textVariants} className="pl-2">
+          {heroData.top}
+        </motion.h3>
+        <motion.h1 variants={textVariants} className="pb-2">
+          {heroData.name}
+        </motion.h1>
+        <motion.div variants={textVariants} className="pb-4">
+          {heroData.description}
+        </motion.div>
         <motion.div variants={textVariants} className="text-buttons">
           {heroData.buttons.map((button) => (
             <motion.div key={button.id} variants={textVariants}>
-              <MyButton to={button.id}>
+              <MyButton
+                className="w-full"
+                to={button.id}
+                onClick={button.pdf ? () => openPdf(button.pdf) : undefined}
+              >
                 {button.name}
               </MyButton>
             </motion.div>

@@ -6,7 +6,7 @@ import ImageComponent from '../../wrappers/ImageComponent';
 function InnerCallToAction() {
   return (
     <div className="border-2 border-secondary text-secondary bg-primary bg-opacity-65 rounded-xl w-full h-full
-      grid grid-cols-1 md:grid-cols-3 px-4  max-w-sm sm:max-w-md md:max-w-3xl z-10
+      grid grid-cols-1 md:grid-cols-3 px-4  max-w-md sm:max-w-md md:max-w-2xl z-10
     ">
       <div className="col-span-1 hidden md:flex items-center justify-center ">
         <ImageComponent
