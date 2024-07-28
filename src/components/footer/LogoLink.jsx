@@ -1,3 +1,47 @@
+/**
+ * @file LogoLink.jsx
+ * @module LogoLink
+ * @desc Component representing the logo link, which either scrolls to the top of the home page or navigates to the home page.
+ * The component adjusts its size based on the provided size prop.
+ * 
+ * @component LogoLink
+ * 
+ * @param {Object} props - The component props.
+ * @param {string} [props.size="large"] - The size of the logo link, either "large" or "small".
+ * 
+ * @requires react
+ * @requires useEffect from 'react'
+ * @requires useLocation, useNavigate from 'react-router-dom'
+ * @requires react-scroll { Link as ScrollLink }
+ * @requires ImageComponent from '../../wrappers/ImageComponent'
+ * @requires globals from '../../data/globals'
+ * @requires ./LogoLink.css
+ * 
+ * @see {@link https://react.dev/ | React Documentation}
+ * @see {@link https://reactrouter.com/ | React Router Documentation}
+ * @see {@link https://www.npmjs.com/package/react-scroll | React Scroll Documentation}
+ * 
+ * @returns {JSX.Element} The LogoLink component that either scrolls to the top of the home page or navigates to the home page.
+ * 
+ * @example
+ * // Example usage of LogoLink component
+ * import LogoLink from '../logo/LogoLink';
+ * 
+ * function Header() {
+ *   return (
+ *     <header>
+ *       <LogoLink size="small" />
+ *     </header>
+ *   );
+ * }
+ * 
+ * @exports LogoLink
+ * 
+ * @author Chace Nielson
+ * @created 2024-07-28
+ * @updated 2024-07-28
+ */
+
 import React, { useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { Link as ScrollLink } from 'react-scroll';

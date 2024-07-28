@@ -1,6 +1,47 @@
+/**
+ * @file MediaLinks.jsx
+ * @module MediaLinks
+ * @desc Component representing a list of social media links with icons.
+ * Each icon is wrapped with a Tooltip component for displaying the name of the social media platform.
+ * The icon size adjusts based on the screen size.
+ * 
+ * @component MediaLinks
+ * 
+ * @requires react
+ * @requires react-icons/bs { BsYoutube, BsInstagram, BsLinkedin, BsGithub }
+ * @requires useMediaQuery from 'react-responsive'
+ * @requires Tooltip from '../uiElements/Tooltip'
+ * 
+ * @see {@link https://react.dev/ | React Documentation}
+ * @see {@link https://github.com/react-icons/react-icons | React Icons Documentation}
+ * @see {@link https://github.com/contra/react-responsive | React Responsive Documentation}
+ * 
+ * @param none
+ * 
+ * @returns {JSX.Element} The MediaLinks component that displays social media icons with tooltips.
+ * 
+ * @example
+ * // Example usage of MediaLinks in a footer component
+ * import MediaLinks from '../components/footer/MediaLinks';
+ * 
+ * function Footer() {
+ *   return (
+ *     <footer className="footer">
+ *       <MediaLinks />
+ *     </footer>
+ *   );
+ * }
+ * 
+ * @exports MediaLinks
+ * 
+ * @author Chace Nielson
+ * @created 2024-07-28
+ * @updated 2024-07-28
+ */
+
 import React from 'react';
 import { BsYoutube, BsInstagram, BsLinkedin, BsGithub } from 'react-icons/bs';
-import Tooltip from './Tooltip';
+import Tooltip from '../uiElements/Tooltip';
 import { useMediaQuery } from 'react-responsive';
 
 function MediaLinks() {
