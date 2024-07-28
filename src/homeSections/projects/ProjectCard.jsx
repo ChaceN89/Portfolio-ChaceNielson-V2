@@ -11,7 +11,7 @@ function ProjectCard({ project }) {
   const [isInitialLoad, setIsInitialLoad] = useState(true);
 
   const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: '0px 0px -200px 0px' });
+  const inView = useInView(ref, { once: true, margin: '0px 0px -75px 0px' });
   const controls = useAnimation();
 
   useEffect(() => {
@@ -46,7 +46,7 @@ function ProjectCard({ project }) {
       <motion.div
           className="w-full h-full"
           initial={{ opacity: 1, filter: 'blur(0px)' }} // initially the img is completly visible
-          animate={{ opacity: isInitialLoad || isClicked ? 1 : 0.4, filter: isInitialLoad || isClicked ? 'blur(0px)' : 'blur(1px)' }} // on animate if the in is clicked make it clear else blur it
+          animate={{ opacity: isInitialLoad || isClicked ? 1 : 0.5, filter: isInitialLoad || isClicked ? 'blur(0px)' : 'blur(1px)' }} // on animate if the in is clicked make it clear else blur it
           transition={{ delay: isInitialLoad ? 1 : 0, duration: 0.5, ease: 'easeInOut' }} // delay the animation for 1 sec if its the initial load
         >
           <ImageComponent

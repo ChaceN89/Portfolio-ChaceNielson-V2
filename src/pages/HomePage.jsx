@@ -4,12 +4,14 @@ import { animateScroll as scroll, scroller } from 'react-scroll';
 
 import Hero from '../homeSections/hero/Hero';
 import CallToAction from '../homeSections/callToAction/CallToAction';
-import AboutMe from '../homeSections/aboutMe/AboutMe';
+import TechSkills from '../homeSections/techSkills/TechSkills';
 import JobExperience from '../homeSections/jobExperience/JobExperience';
+import Interests from '../homeSections/interests/Interests';
 import ProjectSection from '../homeSections/projects/ProjectSection';
 import ContactForm from '../homeSections/contactForm/ContactForm';
 
 import ReturnToTop from '../components/uiElements/ReturnToTop';
+import SlideTransition from '../routing/SlideTransition';
 
 import { globals } from '../data/globals';
 
@@ -37,8 +39,11 @@ const HomePage = () => {
         <CallToAction />
       </div>
       <div id='AboutMe'>
-        <AboutMe />
-        <JobExperience />
+        <TechSkills/>
+        <hr />
+        <JobExperience/>
+        <hr />
+        <Interests/>
       </div>
       <div id='Projects'>
         <ProjectSection />

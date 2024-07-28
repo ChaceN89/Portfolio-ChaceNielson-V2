@@ -1,10 +1,22 @@
 import React from 'react';
 import SkillsBox from './SkillsBox';
 import { Link } from 'react-router-dom';
-function SkillSections({ techSkills }) {
+
+import { techSkills } from '../../data/pageData/skillsData';
+import BackgroundWrapper from '../../wrappers/BackgroundWrapper';
+import SlideTransition from '../../routing/SlideTransition';
+
+function TechSkills() {
 
   return (
-    <div className="space-y-8 px-10">
+    <BackgroundWrapper 
+      id="AboutMe" 
+      className='space-y-8 px-10'
+      src={process.env.PUBLIC_URL + "/png-backgrounds/overlays/scratch-2.png"}
+      bgOpacity={20}
+    >
+      <SlideTransition>
+
       {techSkills.map((category, index) => (
         <div key={index} className="grid grid-cols-5 gap-x-8">
           <div className='col-span-3'>
@@ -26,8 +38,10 @@ function SkillSections({ techSkills }) {
           </div>
         </div>
       ))}
-    </div>
+            </SlideTransition>
+
+    </BackgroundWrapper>
   );
 }
 
-export default SkillSections;
+export default TechSkills;
