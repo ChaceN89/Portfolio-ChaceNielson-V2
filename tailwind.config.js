@@ -10,6 +10,7 @@ module.exports = {
         secondary: '#fff', // white
         'secondary-dark': '#e0e0e0', // light near white
         
+        'accent-light': '#FFA500', // light orange
         accent: '#CC5500', // lighter color
         'accent-dark': '#993D00', // darker color
       },

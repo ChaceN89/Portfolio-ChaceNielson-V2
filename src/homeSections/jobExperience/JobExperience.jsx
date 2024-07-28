@@ -7,7 +7,9 @@ function JobExperience() {
   const [experienceID, setExperienceID] = useState(0)
 
   return (
-    <section className='min-h-section-height pb-10' >
+    <section 
+      id='WorkExperience'
+    className='min-h-section-height pb-10' >
       <hr />
 
       <h2 className='py-10'>Experience</h2>

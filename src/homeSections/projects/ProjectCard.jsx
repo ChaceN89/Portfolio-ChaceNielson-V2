@@ -21,40 +21,33 @@ function ProjectCard({ project }) {
     }
   }, [controls, inView]);
 
-  const handleMouseEnter = () => {
-    if (window.innerWidth >= 640) { // 640px is the breakpoint for small screens in Tailwind CSS
-      setIsHovered(true);
-    }
-  };
 
-  const handleMouseLeave = () => {
-    if (window.innerWidth >= 640) {
-      setIsHovered(false);
-    }
-  };
 
   const handleClick = () => {
-    if (window.innerWidth < 640) {
       setIsClicked(!isClicked);
-    } else {
-      navigate(`/project/${project.id}`, { state: { background: location } });
-    }
   };
+
+  const clickLearnMore = (e) => {
+    e.preventDefault();
+      navigate(`/project/${project.id}`, { state: { background: location } });
+  }
 
   return (
     <div
       ref={ref}
       className="relative group border-2 border-gray-300 rounded-md overflow-hidden shadow-md"
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
+      onMouseEnter={()=>setIsHovered(true)}
+      onMouseLeave={()=>{setIsClicked(false); setIsHovered(false)}}
       onClick={handleClick}
     >
+
+      {/* the image aniamtion  */}
       <div className="relative w-full h-72 sm:h-80 md:h-64 lg:h-60 2xl:h-56 cursor-pointer ">
       <motion.div
           className="w-full h-full"
-          initial={{ opacity: isInitialLoad ? 1 : 0.8, filter: 'blur(0px)' }} // Ensure the image is fully visible and unblurred initially
-          animate={{ opacity: isHovered || isClicked ? 1 : 0.8, filter: isHovered || isClicked ? 'blur(0px)' : 'blur(0.5px)' }}
-          transition={{ delay: isInitialLoad ? 1 : 0, duration: 0.3, ease: 'easeInOut' }}
+          initial={{ opacity: 1, filter: 'blur(0px)' }} // initially the img is completly visible
+          animate={{ opacity: isInitialLoad || isClicked ? 1 : 0.4, filter: isInitialLoad || isClicked ? 'blur(0px)' : 'blur(1px)' }} // on animate if the in is clicked make it clear else blur it
+          transition={{ delay: isInitialLoad ? 1 : 0, duration: 0.5, ease: 'easeInOut' }} // delay the animation for 1 sec if its the initial load
         >
           <ImageComponent
             src={`${process.env.PUBLIC_URL}/projects/${project.id}/${project.images[0].src}`}
@@ -65,7 +58,7 @@ function ProjectCard({ project }) {
         </motion.div>
               
         <AnimatePresence>
-          {(!isHovered && !isClicked) && (
+          {(!isClicked) && (
             <motion.div
               className="absolute bottom-0 left-0 w-full h-1/2 p-2 text-white bg-black bg-opacity-25 backdrop-blur-lg flex flex-col justify-between"
               initial={{ y: "100%" }}
@@ -101,8 +94,10 @@ function ProjectCard({ project }) {
           )}
         </AnimatePresence>
 
+
+{/* learn more always show up when the ishovered is on */}
         <AnimatePresence>
-          {(isHovered || isClicked) && (
+          {(isHovered) && (
             <motion.div
               className="absolute top-0 right-0 px-2 py-1 text-white bg-black bg-opacity-50 rounded-bl-xl"
               initial={{ y: '-100%' }}
@@ -113,7 +108,7 @@ function ProjectCard({ project }) {
                 to={`/project/${project.id}`}
                 state={{ background: location }}
                 className='hover:text-accent'
-                onClick={(e) => e.stopPropagation()} // Prevents the parent click event
+                onClick={clickLearnMore} // Prevents the parent click event
               >
                 Learn More
               </Link>
