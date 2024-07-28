@@ -6,14 +6,14 @@ import MyButton from '../../components/uiElements/MyButton';
 import ImageComponent from '../../wrappers/ImageComponent';
 import { motion, useAnimation, useInView } from 'framer-motion';
 
+import SlideTransition from '../../routing/SlideTransition';
+import BackgroundWrapper from '../../wrappers/BackgroundWrapper';
+
 const EMAILJS_USER_ID = process.env.REACT_APP_EMAILJS_USER_ID;
 const EMAILJS_SERVICE_ID = process.env.REACT_APP_EMAILJS_SERVICE_ID;
 const EMAILJS_TEMPLATE_ID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
 
-const contactVariants = {
-  hidden: { opacity: 0, x: -50 },
-  visible: { opacity: 1, x: 0, transition: { duration: 1, ease: 'easeOut' } }
-};
+
 
 function ContactForm() {
   const [name, setName] = useState('');
@@ -72,15 +72,15 @@ function ContactForm() {
   };
 
   return (
-    <motion.section
-      ref={ref}
-      className=' p-4'
-      initial="hidden"
-      animate={controls}
-      variants={contactVariants}
-    >
+    <BackgroundWrapper 
+    className='relative' 
+    src={process.env.PUBLIC_URL + "/png-backgrounds/detailed/range-b&w2-trim.png"}
+    lowResSrc={process.env.PUBLIC_URL + "/png-backgrounds/detailed/range-b&w2-trim-small.png"}
+    bgOpacity={20}
+  >
+    <SlideTransition>
       <Toaster />
-      <div className="flex flex-col md:flex-row">
+      <div className="flex flex-col md:flex-row container mx-auto">
         <div className="md:w-2/3">
           <div className="rounded-xl">
             <h2 className="font-bold">Let's Connect</h2>
@@ -136,7 +136,8 @@ function ContactForm() {
           />
         </div>
       </div>
-    </motion.section>
+    </SlideTransition>
+    </BackgroundWrapper>
   );
 }
 

@@ -40,9 +40,7 @@ const HomePage = () => {
       </div>
       <div id='AboutMe'>
         <TechSkills/>
-        <hr />
         <JobExperience/>
-        <hr />
         <Interests/>
       </div>
       <div id='Projects'>

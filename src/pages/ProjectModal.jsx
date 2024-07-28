@@ -30,10 +30,8 @@ const ProjectModal = () => {
   return (
     <div className="overflow-y-auto max-h-section-height-small p-4">
       <h1 className="text-3xl font-bold mb-4">{project.name}</h1>
-      {project.description && <div className="mb-4">{project.description}</div>}
       {fullStack && fullStack.length > 0 && (
         <>
-          <h2 className="text-2xl font-semibold mb-2">Tech Stack</h2>
           <ul className="flex flex-wrap space-x-3 mb-4">
             {fullStack.map((tech, index) => (
               <div key={index} className="flex items-center mr-2">
@@ -58,27 +56,21 @@ const ProjectModal = () => {
         </>
       )}
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-        {project.images && project.images.length > 0 && (
-          <div className="row-span-2">
-            <h2 className="text-2xl font-semibold mb-2">Images</h2>
-            <ProjectImageCarousel images={project.images} id={project.id} title={project.name} />
-          </div>
-        )}
+      <div className="grid grid-cols-1 md:grid-cols-2">
 
         {project.externalLinks && project.externalLinks.length > 0 && (
-          <div>
-            <h2 className="text-2xl font-semibold mb-2">External Links</h2>
             <div>
-              {project.externalLinks.map((link, index) => (
-                <a key={index} href={link.link} target="_blank" rel="noopener noreferrer" className="m-2 inline-block text-blue-500">
-                  {link.icon && <link.icon className="inline-block mr-2" />}
-                  {link.name}
-                </a>
-              ))}
+              <h2 className="text-2xl font-semibold mb-2">External Links</h2>
+              <div>
+                {project.externalLinks.map((link, index) => (
+                  <a key={index} href={link.link} target="_blank" rel="noopener noreferrer" className="m-2 inline-block text-blue-500">
+                    {link.icon && <link.icon className="inline-block mr-2" />}
+                    {link.name}
+                  </a>
+                ))}
+              </div>
             </div>
-          </div>
-        )}
+          )}
 
         {project.pdfs && project.pdfs.length > 0 && (
           <div>
@@ -101,6 +93,26 @@ const ProjectModal = () => {
             </div>
           </div>
         )}
+
+      </div>
+
+
+      {project.description && <div className="mb-4">{project.description}</div>}
+
+
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+        {project.images && project.images.length > 0 && (
+          <div className="row-span-2">
+            <h2 className="text-2xl font-semibold mb-2">Images</h2>
+            <ProjectImageCarousel images={project.images} id={project.id} title={project.name} />
+          </div>
+        )}
+
+
+
+
+
+
       </div>
     </div>
   );
