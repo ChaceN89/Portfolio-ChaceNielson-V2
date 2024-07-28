@@ -1,12 +1,27 @@
+/**
+ * @file imageProcessor.js
+ * @module imageProcessor
+ * @desc Contains data for the Image Task Queue project.
+ * 
+ * @name Image Task Queue
+ * 
+ * @ChaceN89
+ * @created 2024-07-28
+ * @updated 2024-07-28
+ */
+
+// icons for links
 import { TfiWorld } from 'react-icons/tfi';
 import { BsGithub } from "react-icons/bs";
 
-// icons for skills
-import { FaReact} from "react-icons/fa";
-import { SiRailway } from "react-icons/si";
-import {  SiFastapi, SiTypescript } from "react-icons/si";
+// Icons for skills
+import { FaReact } from "react-icons/fa";
+import { SiRailway, SiFastapi, SiTypescript } from "react-icons/si";
 
+// Short description (blurb) to be displayed on the project card
 const short = "Image processing task queue using React and FastAPI.";
+
+// Long description for the modal page, providing detailed information about the project
 const long = (
   <div className='space-y-2'>
     <p>
@@ -25,18 +40,17 @@ export const imageProcessor = {
   tag: "Full-Stack",
   blurb: short,
   description: long,
-  blurhash: "",
   images: [
     { src: "imageProcessor.jpg", blurhash: "LFEseT-^{v9#LfUvK%%M2hD19[#8" },
   ],
   mainStack:[
-    {name:"React", icon:FaReact, color:"lightblue"},
-    {name:"FastAPI", icon:SiFastapi, color:"#079487"},
-    {name:"TypeScript", icon:SiTypescript, color:"#38BDF9"},
+    { name: "React", icon: FaReact, color: "lightblue" },
+    { name: "FastAPI", icon: SiFastapi, color: "#079487" },
+    { name: "TypeScript", icon: SiTypescript, color: "#38BDF9" },
   ],
   extendedStack:[
-    {name:"Python", svg_path:"python.svg"},
-    {name:"Railway", icon:SiRailway, color:"black"},
+    { name: "Python", svg_path: "python.svg" },
+    { name: "Railway", icon: SiRailway, color: "black" },
   ],
   externalLinks: [
     { name: "Website", link: "https://main--img-processor.netlify.app/", icon: TfiWorld },

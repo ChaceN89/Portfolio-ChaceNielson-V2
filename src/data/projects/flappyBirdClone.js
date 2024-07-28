@@ -1,6 +1,21 @@
+/**
+ * @file flappyBirdClone.js
+ * @module flappyBirdClone
+ * @desc Contains data for the Flappy Bird Clone project.
+ * 
+ * @name Flappy Bird Clone
+ * 
+ * @ChaceN89
+ * @created 2024-07-28
+ * @updated 2024-07-28
+ */
+
 import { FaUnity } from "react-icons/fa";
 
+// Short description (blurb) to be displayed on the project card
 const short = "A Flappy Bird clone developed using Unity and C#.";
+
+// Long description for the modal page, providing detailed information about the project
 const long = (
   <div className='space-y-2'>
     <p>
@@ -18,15 +33,13 @@ export const flappyBirdClone = {
   tag: "Game Development",
   blurb: short,
   description: long,
-  blurhash: "",
   images: [
     { src: "flappyBird.jpg", blurhash: "L8CI]Vs~Ros~8[obWHkA.Uk8oYs~" },
   ],
-  mainStack:[
-    {name:"Unity", icon:FaUnity, color:"black"},
-    {name:"C#", svg_path:"c-sharp.svg"} 
+  mainStack: [
+    { name: "Unity", icon: FaUnity, color: "black" },
+    { name: "C#", svg_path: "c-sharp.svg" }
   ],
-
   modalInfo: {
     description: long,
     videos: [

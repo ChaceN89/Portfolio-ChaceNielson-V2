@@ -1,9 +1,23 @@
+/**
+ * @file jobDashboard.js
+ * @module jobDashboard
+ * @desc Contains data for the Job Dashboard project.
+ * 
+ * @name Job Dashboard
+ * 
+ * @ChaceN89
+ * @created 2024-07-28
+ * @updated 2024-07-28
+ */
+
 import { TfiWorld } from 'react-icons/tfi';
 import { BsGithub } from "react-icons/bs";
-import { SiRender, SiFastapi, SiTailwindcss,} from "react-icons/si";
+import { SiRender, SiFastapi, SiTailwindcss } from "react-icons/si";
 
-
+// Short description (blurb) to be displayed on the project card
 const short = "Job dashboard for managing job applications and interviews.";
+
+// Long description for the modal page, providing detailed information about the project
 const long = (
   <div className='space-y-2'>
     <p>
@@ -29,16 +43,16 @@ export const jobDashboard = {
     { src: "jobDashboard.jpg", blurhash: "L7Op#=4mxu?cE2IokBxb9+%jj=Mv" },
   ],
   mainStack:[
-    {name:"Vue", svg_path:"vue.svg"},
-    {name:"Tailwind", icon:SiTailwindcss, color:"#38BDF9"},
-    {name:"FastAPI", icon:SiFastapi, color:"#079487"},
-    {name:"SQLite", svg_path:"sqlite.svg"}, 
+    { name: "Vue", svg_path: "vue.svg" },
+    { name: "Tailwind", icon: SiTailwindcss, color: "#38BDF9" },
+    { name: "FastAPI", icon: SiFastapi, color: "#079487" },
+    { name: "SQLite", svg_path: "sqlite.svg" }, 
   ],
   extendedStack:[
-    {name:"Full-Stack", svg_path:"full-stack.svg"},
-    {name:"Python", svg_path:"python.svg"},
-    {name:"Netlify", svg_path:"netlify.svg"},
-    {name:"Render", icon:SiRender, color:"black"},
+    { name: "Full-Stack", svg_path: "full-stack.svg" },
+    { name: "Python", svg_path: "python.svg" },
+    { name: "Netlify", svg_path: "netlify.svg" },
+    { name: "Render", icon: SiRender, color: "black" },
   ],
   externalLinks: [
     { name: "Website", link: "https://job-dashboard-chace.netlify.app/", icon: TfiWorld },

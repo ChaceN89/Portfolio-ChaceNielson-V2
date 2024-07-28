@@ -41,6 +41,7 @@
  * 
  * @exports projects
  * 
+ * @author Chace Nielson
  * @created 2024-07-28
  * @updated 2024-07-28
  */

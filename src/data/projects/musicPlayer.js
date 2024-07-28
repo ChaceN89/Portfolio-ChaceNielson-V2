@@ -1,9 +1,24 @@
+/**
+ * @file musicPlayer.js
+ * @module musicPlayer
+ * @desc Contains data for the Music Player project.
+ * 
+ * @name Music Player
+ * 
+ * @ChaceN89
+ * @created 2024-07-28
+ * @updated 2024-07-28
+ */
+
+// skills
 import { FaMusic } from "react-icons/fa";
 import { BsGithub } from "react-icons/bs";
 import { SiVercel, SiTailwindcss } from "react-icons/si";
 
-
+// Short description (blurb) to be displayed on the project card
 const short = "A music player application built with Vue and Tailwind.";
+
+// Long description for the modal page, providing detailed information about the project
 const long = (
   <div className='space-y-2'>
     <p>
@@ -31,14 +46,12 @@ export const musicPlayer = {
     { src: "musicPlayer1.jpg", blurhash: "LKMQ;at1-;-=t6IUof%2_4%NM{IT" },
     { src: "musicPlayer2.jpg", blurhash: "LANm]1_M?brt-;D*js%L~W%3RjD%" },
   ],
-
-  mainStack:[
-    {name:"Vue", svg_path:"vue.svg"},
-    {name:"Tailwind", icon:SiTailwindcss, color:"#38BDF9"},
+  mainStack: [
+    { name: "Vue", svg_path: "vue.svg" },
+    { name: "Tailwind", icon: SiTailwindcss, color: "#38BDF9" },
   ],
-  extendedStack:[
-    
-    {name:"Vercel", icon:SiVercel, color:"black"},
+  extendedStack: [
+    { name: "Vercel", icon: SiVercel, color: "black" },
   ],
   externalLinks: [
     { name: "Website", link: "https://music-player-chace-nielsons-projects.vercel.app/", icon: FaMusic },

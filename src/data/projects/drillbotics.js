@@ -1,5 +1,19 @@
+/**
+ * @file drillbotics.js
+ * @module drillbotics
+ * @desc Contains data for the Drillbotics project.
+ * 
+ * @name Drillbotics
+*
+ * @ChaceN89
+ * @created 2024-07-28
+ * @updated 2024-07-28
+ */
 
-const short = "Functional mini dril rig and GUI.";
+// Short description (blurb) to be displayed on the project card
+const short = "Functional mini drill rig and GUI.";
+
+// Long description for the modal page, providing detailed information about the project
 const long = (
   <div className='space-y-2'>
     <p>
@@ -28,14 +42,14 @@ export const drillbotics = {
     { src: "drillbotics6.jpg", blurhash: "LAF=jk~p-p?a_3o#tQRjR5RkIoRi" },
   ],
   mainStack: [
-    {name:"Plotly Dash", svg_path:"plotly-dash.svg"},
-    {name:"Python", svg_path:"python.svg"},
+    { name: "Plotly Dash", svg_path: "plotly-dash.svg" },
+    { name: "Python", svg_path: "python.svg" },
   ],
   extendedStack: [
-    {name:"Engineering", svg_path:"engineering.svg"} ,
-    {name:"Circuity Design", svg_path:"circuit-board.svg"} ,
+    { name: "Engineering", svg_path: "engineering.svg" },
+    { name: "Circuity Design", svg_path: "circuit-board.svg" },
   ],
   externalLinks: [
-    
+    // Add external links if available
   ],
 };

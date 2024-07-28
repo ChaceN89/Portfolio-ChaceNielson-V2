@@ -1,11 +1,25 @@
+/**
+ * @file photoApp.js
+ * @module photoApp
+ * @desc Contains data for the Photo App project.
+ * 
+ * @name Photo App
+ * 
+ * @ChaceN89
+ * @created 2024-07-28
+ * @updated 2024-07-28
+ */
+
 import { BsYoutube, BsGithub } from "react-icons/bs";
 
 // icons for skills
 import { FaReact, FaNodeJs, FaNode } from "react-icons/fa";
+import { SiMongodb } from "react-icons/si";
 
-import { SiMongodb} from "react-icons/si";
-
+// Short description (blurb) to be displayed on the project card
 const short = "Full-Stack photo gallery application with user authentication.";
+
+// Long description for the modal page, providing detailed information about the project
 const long = (
   <div className='space-y-2'>
     <p>
@@ -31,15 +45,15 @@ export const photoApp = {
     { src: "photo3.jpg", blurhash: "LGAdcs%L00NI?wxvoJkBx]o#-;$%" },
     { src: "photo1.jpg", blurhash: "LCAKgzxu00Sjx]xu.AWC_2t8Rks+" },
   ],
-  mainStack:[
-    {name:"React", icon:FaReact, color:"lightblue"},
-    {name:"MongoDB", icon:SiMongodb, color:"#4DA53F"},
-    {name:"ExpressJS", icon:FaNodeJs, color:"#3FA040"},
+  mainStack: [
+    { name: "React", icon: FaReact, color: "lightblue" },
+    { name: "MongoDB", icon: SiMongodb, color: "#4DA53F" },
+    { name: "ExpressJS", icon: FaNodeJs, color: "#3FA040" },
   ],
-  extendedStack:[
-    {name:"Full-Stack", svg_path:"full-stack.svg"},
-    {name:"Authentication", svg_path:"authentication.svg"},
-    {name:"NodeJS", icon:FaNode, color:"#68A063"},
+  extendedStack: [
+    { name: "Full-Stack", svg_path: "full-stack.svg" },
+    { name: "Authentication", svg_path: "authentication.svg" },
+    { name: "NodeJS", icon: FaNode, color: "#68A063" },
   ],
   externalLinks: [
     { name: "Overview", link: "https://www.youtube.com/watch?v=mktAIV4sjFQ", icon: BsYoutube },

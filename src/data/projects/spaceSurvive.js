@@ -1,8 +1,22 @@
-import { BsYoutube } from "react-icons/bs";
+/**
+ * @file spaceSurvive.js
+ * @module spaceSurvive
+ * @desc Contains data for the Space Survive project.
+ * 
+ * @name Top Down Space Shooter
+ * 
+ * @ChaceN89
+ * @created 2024-07-28
+ * @updated 2024-07-28
+ */
 
+import { BsYoutube } from "react-icons/bs";
 import { FaUnity } from "react-icons/fa";
 
+// Short description (blurb) to be displayed on the project card
 const short = "A space adventure game developed using Unity and C#.";
+
+// Long description for the modal page, providing detailed information about the project
 const long = (
   <div className='space-y-2'>
     <p>

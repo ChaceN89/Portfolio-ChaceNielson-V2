@@ -1,7 +1,22 @@
-import { BsGithub } from "react-icons/bs";
-import {SiApachespark, SiJupyter} from "react-icons/si";
+/**
+ * @file genrePrediction.js
+ * @module genrePrediction
+ * @desc Contains data for the Genre Prediction project.
+ * 
+ * @name Genre Prediction
+ * 
+ * @ChaceN89
+ * @created 2024-07-28
+ * @updated 2024-07-28
+ */
 
+import { BsGithub } from "react-icons/bs";
+import { SiApachespark, SiJupyter } from "react-icons/si";
+
+// Short description (blurb) to be displayed on the project card
 const short = "Predicting music genres and creating recommendations using machine learning.";
+
+// Long description for the modal page, providing detailed information about the project
 const long = (
   <div className='space-y-2'>
     <p>
@@ -22,20 +37,20 @@ export const genrePrediction = {
   blurhash: "",
   images: [
     { src: "genrePrediction.jpg", blurhash: "LIR{uws%#rkX.8bJX5ad_MW@Xknh" },
-  ],  
-  mainStack:[
-    {name:"Apache Spark", icon:SiApachespark, color:"#E25A1B"},
-    {name:"Python", svg_path:"python.svg"},
   ],
-  extendedStack:[
-    {name:"Jupyter", icon:SiJupyter, color:"#F37626"},
-    {name:"Machine Learning", svg_path:"machine-learning.svg"},
+  mainStack: [
+    { name: "Apache Spark", icon: SiApachespark, color: "#E25A1B" },
+    { name: "Python", svg_path: "python.svg" },
+  ],
+  extendedStack: [
+    { name: "Jupyter", icon: SiJupyter, color: "#F37626" },
+    { name: "Machine Learning", svg_path: "machine-learning.svg" },
   ],
   externalLinks: [
     { name: "Genre Analysis", link: "https://github.com/ChaceN89/Machine-Learning-Music-Notebooks/blob/main/MusicGenrePrediction/ENSF_544_Final_Project.ipynb", icon: BsGithub },
     { name: "Spark Database Setup", link: "https://github.com/ChaceN89/Machine-Learning-Music-Notebooks/blob/main/SparkSentimentAnalysis/SparkSentimentMLAnalysis.ipynb", icon: BsGithub },
   ],
-  pdfs:[
+  pdfs: [
     { name: "Report", link: "Spark ML Genre Report.pdf" },
   ]
 };
