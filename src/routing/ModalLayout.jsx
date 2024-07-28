@@ -1,5 +1,5 @@
 import { useLocation, useNavigate, Outlet } from "react-router-dom";
-import AnimatedWrapper from "./AnimatedWrapper"
+import FadeTransition from "./FadeTransition";
 
 import BackgroundWrapper from "../wrappers/BackgroundWrapper"
 import SlideTransition from "./SlideTransition";
@@ -20,7 +20,7 @@ const ModalLayout = () => {
   };
 
   return (
-    <AnimatedWrapper>
+    <FadeTransition>
       <BackgroundWrapper
         className="modal"
         onClick={closeModal}
@@ -34,7 +34,7 @@ const ModalLayout = () => {
           </div>
         </SlideTransition>
       </BackgroundWrapper>
-    </AnimatedWrapper>
+    </FadeTransition>
   );
 };
 
