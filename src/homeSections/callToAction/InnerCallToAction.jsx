@@ -1,20 +1,53 @@
+/**
+ * @file InnerCallToAction.jsx
+ * @module InnerCallToAction
+ * @desc React component that renders the inner content of the call-to-action section.
+ * This component displays an image, text, and buttons based on data imported from callToActionData.
+ * 
+ * @component InnerCallToAction
+ * 
+ * @requires react
+ * @requires callToActionData from '../../data/pageData/callToActionData'
+ * @requires MyButton from '../../components/uiElements/MyButton'
+ * @requires ImageComponent from '../../wrappers/ImageComponent'
+ * 
+ * @see {@link https://reactjs.org/docs/getting-started.html | React Documentation}
+ * 
+ * @example
+ * // Example usage of InnerCallToAction in a parent component
+ * import InnerCallToAction from './InnerCallToAction';
+ * 
+ * function ParentComponent() {
+ *   return (
+ *     <div>
+ *       <InnerCallToAction />
+ *     </div>
+ *   );
+ * }
+ * 
+ * @exports InnerCallToAction
+ * 
+ * @author Chace Nielson
+ * @created 2024-07-28
+ * @updated 2024-07-28
+ */
+
 import React from 'react';
 import { callToActionData } from '../../data/pageData/callToActionData';
+// Components
 import MyButton from '../../components/uiElements/MyButton';
 import ImageComponent from '../../wrappers/ImageComponent';
 
 function InnerCallToAction() {
   return (
-    <div className="border-2 border-secondary text-secondary bg-primary bg-opacity-65 rounded-xl w-full h-full 
-      grid grid-cols-1 md:grid-cols-3 z-10 px-4 max-w-sm sm:max-w-md md:max-w-2xl xl:max-w-4xl mx-auto
-    ">
-      <div className="col-span-1 hidden md:flex items-end justify-center ">
+    <div className="inner-call-to-action">
+      <div className="col-span-1 hidden md:flex items-end justify-center">
         <ImageComponent
           src={callToActionData.img}
           lowResSrc={callToActionData.lowResImg}
           alt="Call to Action Logo"
           className="object-contain w-40 h-56 md:w-56 md:h-72" // Adjust width and height as needed
-        /> 
+        />
       </div>
       <div className="col-span-2 flex flex-col h-full justify-center items-start p-6">
         <h2>{callToActionData.top}</h2>

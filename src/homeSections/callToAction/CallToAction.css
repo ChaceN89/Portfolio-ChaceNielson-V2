@@ -1,0 +1,31 @@
+/**
+ * @file CallToAction.css
+ * @module CallToActionStyles
+ * @desc Contains the styles for the CallToAction component.
+ * This file uses Tailwind CSS classes with additional customization for specific elements.
+ *
+ * @see {@link https://tailwindcss.com/docs/installation | Tailwind CSS Documentation}
+ * 
+ * @example
+ * // Example usage of CSS classes in the CallToAction component
+ * <div className="call-to-action-wrapper">
+ *   <div className="inner-call-to-action">
+ *     // Content goes here
+ *   </div>
+ * </div>
+ *
+ * @created 2024-07-28
+ * @updated 2024-07-28
+ */
+
+ .call-to-action-wrapper {
+  @apply md:h-section-height min-h-108 relative flex items-center justify-center;
+}
+
+.inner-call-to-action {
+  @apply border-2 border-secondary text-secondary bg-primary bg-opacity-65 rounded-xl 
+  w-full h-full 
+  grid grid-cols-1 md:grid-cols-3 z-10 
+  px-4 mx-auto
+  max-w-sm sm:max-w-md md:max-w-2xl xl:max-w-4xl 
+}

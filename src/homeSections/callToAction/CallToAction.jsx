@@ -1,24 +1,54 @@
+/**
+ * @file CallToAction.jsx
+ * @module CallToAction
+ * @desc React component that implements a call-to-action section with a parallax effect.
+ * This component uses the framer-motion library to create a smooth scrolling effect
+ * and adjusts the layout based on window size.
+ *
+ * @component CallToAction
+ * 
+ * @requires react
+ * @requires useState, useEffect from 'react'
+ * @requires motion, useScroll, useTransform from 'framer-motion'
+ * @requires BackgroundWrapper from '../../wrappers/BackgroundWrapper'
+ * @requires InnerCallToAction from './InnerCallToAction'
+ * @requires ScrollWheel from '../../components/uiElements/ScrollWheel'
+ * @requires globals from '../../data/globals'
+ * @requires './CallToAction.css'
+ * 
+ * @see {@link https://reactjs.org/docs/getting-started.html | React Documentation}
+ * @see {@link https://www.framer.com/motion/ | Framer Motion Documentation}
+ * 
+ * @example
+ * // Example usage of CallToAction component
+ * import CallToAction from './CallToAction';
+ * 
+ * function App() {
+ *   return (
+ *     <div className="App">
+ *       <CallToAction />
+ *     </div>
+ *   );
+ * }
+ * 
+ * @exports CallToAction
+ * 
+ * @author Chace Nielson
+ * @created 2024-07-28
+ * @updated 2024-07-28
+ */
+
 import React, { useState, useEffect } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
+
+// components
 import BackgroundWrapper from '../../wrappers/BackgroundWrapper';
 import InnerCallToAction from './InnerCallToAction';
 import ScrollWheel from '../../components/uiElements/ScrollWheel';
 
-// Define the scroll ranges and translation values for the parallax effect
-const scrollStart = 0; // Start of the scroll range (0 pixels from the top of this section)
-const scrollMiddle = window.innerHeight; // Middle of the scroll range (1x the window height)
-const scrollEnd = 2 * window.innerHeight; // End of the scroll range (2x the window height)
-
-// Define the translation values for the parallax effect
-const translateStart = -100; // Move up by 300 pixels at the start
-const translateMiddle = 0; // No movement in the middle
-const translateEnd = 100; // Move down by 300 pixels at the end
-
-// Configure the parallax effect with scroll ranges and translation values
-const parallaxConfig = {
-  scrollRange: [scrollStart, scrollMiddle, scrollEnd],
-  translateYRange: [translateStart, translateMiddle, translateEnd],
-};
+// data and styles
+import { globals } from '../../data/globals';
+import './CallToAction.css';
 
 function CallToAction() {
   const { scrollY } = useScroll(); // Get the current scroll position
@@ -45,12 +75,12 @@ function CallToAction() {
   }, []);
 
   // Map the scroll position to the translation values using useTransform
-  const y = useTransform(scrollY, parallaxConfig.scrollRange, parallaxConfig.translateYRange);
+  const y = useTransform(scrollY, globals.parallaxConfigCallToAction.scrollRange, globals.parallaxConfigCallToAction.translateYRange);
 
   return (
     <BackgroundWrapper
       id="CallToAction"
-      className="md:h-section-height min-h-108 relative flex items-center justify-center "
+      className="call-to-action-wrapper"
       src={process.env.PUBLIC_URL + "/png-backgrounds/detailed/range-b&w2-trim.png"}
       lowResSrc={process.env.PUBLIC_URL + "/png-backgrounds/detailed/range-b&w2-trim-small.png"}
       bgOpacity={40}
