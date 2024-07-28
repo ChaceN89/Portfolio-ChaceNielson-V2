@@ -1,11 +1,55 @@
+/**
+ * @file Tooltip.jsx
+ * @module Tooltip
+ * @desc React component that displays a tooltip with a given text when the user hovers over the children elements.
+ * The tooltip position adjusts based on the viewport boundaries to ensure it is fully visible.
+ * 
+ * @component Tooltip
+ * 
+ * @param {Object} props - The component props.
+ * @param {string} props.text - The text to display inside the tooltip.
+ * @param {number} [props.openDuration=1000] - The duration in milliseconds before the tooltip appears.
+ * @param {string} [props.className=""] - Additional class names to style the tooltip.
+ * @param {React.ReactNode} props.children - The child elements that trigger the tooltip on hover.
+ * 
+ * @requires react
+ * @requires useState, useEffect, useRef from 'react'
+ * 
+ * @see {@link https://react.dev/ | React Documentation}
+ * 
+ * @returns {JSX.Element} The Tooltip component that displays a styled tooltip on hover.
+ * 
+ * @example
+ * // Example usage of Tooltip component
+ * import Tooltip from './Tooltip';
+ * 
+ * function App() {
+ *   return (
+ *     <div className="App">
+ *       // Other components
+ *       <Tooltip text="This is a tooltip">
+ *         <button>Hover over me</button>
+ *       </Tooltip>
+ *     </div>
+ *   );
+ * }
+ * 
+ * @exports Tooltip
+ * 
+ * @author Chace Nielson
+ * @created 2024-07-28
+ * @updated 2024-07-28
+ */
+
 import React, { useState, useEffect, useRef } from 'react';
 
-const Tooltip = ({ text, openDuration=1000, className="", children }) => {
+const Tooltip = ({ text, openDuration = 1000, className = "", children }) => {
   const [hovered, setHovered] = useState(false);
   const [showTooltip, setShowTooltip] = useState(false);
   const [tooltipStyle, setTooltipStyle] = useState({});
   const tooltipRef = useRef(null);
 
+  // Effect to handle the tooltip visibility based on hover state
   useEffect(() => {
     if (hovered) {
       const timer = setTimeout(() => setShowTooltip(true), openDuration);
@@ -15,6 +59,7 @@ const Tooltip = ({ text, openDuration=1000, className="", children }) => {
     }
   }, [hovered, openDuration]);
 
+  // Effect to adjust the tooltip position based on viewport boundaries
   useEffect(() => {
     if (showTooltip && tooltipRef.current) {
       const tooltipRect = tooltipRef.current.getBoundingClientRect();
