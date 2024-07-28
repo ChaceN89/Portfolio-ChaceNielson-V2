@@ -52,7 +52,7 @@ function CallToAction() {
   return (
     <BackgroundWrapper
       id="CallToAction"
-      className="h-section-height min-h-108 relative flex items-center justify-center "
+      className="md:h-section-height min-h-108 relative flex items-center justify-center "
       src={process.env.PUBLIC_URL + "/png-backgrounds/detailed/range-b&w2-trim.png"}
       lowResSrc={process.env.PUBLIC_URL + "/png-backgrounds/detailed/range-b&w2-trim-small.png"}
       bgOpacity={40}

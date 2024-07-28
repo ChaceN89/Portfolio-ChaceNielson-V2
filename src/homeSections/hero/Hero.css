@@ -1,19 +1,24 @@
 /* Hero.css */
 .hero{
   @apply overflow-hidden relative
-   w-full flex items-center justify-start 
-   h-section-height  min-h-108
+   w-full 
+   flex  flex-col md:flex-row
+   items-center justify-start 
+   h-1/2 md:h-section-height  md:min-h-108
 }
 
 /* the hero img */
 .hero-img-wrapper {
-  @apply hidden md:flex justify-end 
-  absolute bottom-0 right-0 
+  @apply  flex flex-col md:flex justify-end 
+  md:absolute bottom-0 right-0 
   w-auto h-full;
 }
 .hero-img {
   @apply object-cover 
-  h-full max-h-screen min-h-120
+  max-h-screen 
+  md:h-full
+  md:min-h-120 
+  -mt-14 md:mt-0
   opacity-90 z-0 
 }
 
