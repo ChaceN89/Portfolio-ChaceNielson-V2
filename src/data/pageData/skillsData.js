@@ -1,3 +1,46 @@
+/**
+ * @file skillPageData.js
+ * @module skillPageData
+ * @desc Contains data for the technical skills section of the application.
+ * This data includes various technical skills categorized by type, including web design, backend design, engineering, and game design.
+ * Each skill category includes a description, top skills with icons, and minor skills.
+ * 
+ * @requires react
+ * @requires react-icons/fa
+ * @requires react-icons/ai
+ * @requires react-icons/di
+ * @requires react-icons/im
+ * @requires react-icons/si
+ * @requires react-icons/md
+ * @requires react-router-dom
+ * 
+ * @see {@link https://react-icons.github.io/react-icons/ | React Icons Documentation}
+ * @see {@link https://reactjs.org/docs/getting-started.html | React Documentation}
+ * 
+ * @example
+ * // Example usage of skillPageData in a component
+ * import { techSkills } from './skillPageData';
+ * 
+ * function SkillsSection() {
+ *   return (
+ *     <div>
+ *       {techSkills.map(skill => (
+ *         <div key={skill.id}>
+ *           <h3>{skill.name}</h3>
+ *           <p>{skill.description}</p>
+ *         </div>
+ *       ))}
+ *     </div>
+ *   );
+ * }
+ * 
+ * @exports skillPageData
+ * @exports techSkills
+ * 
+ * @created 2024-07-28
+ * @updated 2024-07-28
+ */
+
 import React from 'react';
 import { FaReact, FaNodeJs, FaUnity, FaNode } from "react-icons/fa";
 import { AiOutlineGithub } from "react-icons/ai";
@@ -7,12 +50,13 @@ import { SiFastapi, SiTailwindcss, SiJavascript } from "react-icons/si";
 import { MdOutlineAnimation } from "react-icons/md";
 import { Link } from 'react-router-dom';
 
-
+// Data for the skill page header
 export const skillPageData = {
   title: "Technical Skills",
   description: "A Comprehensive Overview of My Technical Expertise",
 };
 
+// Component for linking to detailed skill pages
 const SkillLink = ({ link, name }) => (
   <Link 
     to={"/skills/" + link}
@@ -22,7 +66,7 @@ const SkillLink = ({ link, name }) => (
   </Link>
 );
 
-
+// Data for various technical skills
 export const techSkills = [
   { // Web Design 
     id: "web-design",

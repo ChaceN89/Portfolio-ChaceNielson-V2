@@ -3,7 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { projects } from "../data/pageData/projectData";
 import ProjectImageCarousel from "../homeSections/projects/ProjectImageCarousel";
 import { BsFileEarmarkPdf } from "react-icons/bs";
-import openPdf from "../functions/utils";
+import {openPdf} from "../functions/utils";
 
 const ProjectModal = () => {
   const { id } = useParams();

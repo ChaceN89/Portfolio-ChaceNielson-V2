@@ -1,5 +1,35 @@
-export const experienceData = [
-  {
+/**
+ * @file workExperienceData.js
+ * @module workExperienceData
+ * @desc Contains data for the professional experiences used in various parts of the application.
+ * This data includes company names, roles, dates, images, descriptions, technologies, achievements, responsibilities, links, and soft skills.
+ * 
+ * @example
+ * // Example usage of workExperienceData in a component
+ * import { workExperienceData } from './workExperienceData';
+ * 
+ * function ExperienceSection() {
+ *   return (
+ *     <div>
+ *       {workExperienceData.map((experience, index) => (
+ *         <div key={index}>
+ *           <h2>{experience.name}</h2>
+ *           <p>{experience.role}</p>
+ *           <p>{experience.technologies[0]}</p>
+ *         </div>
+ *       ))}
+ *     </div>
+ *   );
+ * }
+ * 
+ * @exports experienceData
+ * 
+ * @created 2024-07-28
+ * @updated 2024-07-28
+ */
+
+export const workExperienceData = [
+  { // Glass Gecko Games
     name: 'Glass Gecko Games',
     role: 'Software Developer',
     dates: ['June 2024', 'Current'],
@@ -13,12 +43,12 @@ export const experienceData = [
     ],
     responsibilities: [
       'Collaborated with a team of designers and developers to create engaging game features',
-      'multiple diciplines on team working together to create a game',
+      'Worked with multiple disciplines on the team to create a game',
       'Conducted code reviews and provided feedback to team members',
-      'Participated in planning and  meetings'
+      'Participated in planning and meetings'
     ],
     links:[
-      {name: 'Glass Gecko Games Website', link:'https://www.glassgeckogames.com'}
+      { name: 'Glass Gecko Games Website', link: 'https://www.glassgeckogames.com' }
     ],
     softSkills: [
       'Problem-solving',
@@ -28,7 +58,7 @@ export const experienceData = [
       'Adaptability'
     ],
   },
-  {
+  { // Alberta Tomorrow
     name: 'Alberta Tomorrow',
     role: 'Software Developer',
     img: process.env.PUBLIC_URL + '/jpg-portraits/mountain-portrait-trim.jpg',
@@ -41,12 +71,12 @@ export const experienceData = [
       'Integrated Mapbox API to display interactive maps',
     ],
     responsibilities: [
-      ' Client needs',
+      'Assessed client needs',
       'Participated in planning and design meetings',
       'Assisted with troubleshooting and debugging issues',
     ],
     links:[
-      {name: 'Alberta Tomorrow Website', link:'https://www.albertatomorrow.com'}
+      { name: 'Alberta Tomorrow Website', link: 'https://www.albertatomorrow.com' }
     ],
     softSkills: [
       'Problem-solving',
@@ -56,25 +86,24 @@ export const experienceData = [
       'Adaptability'
     ],
   },
-  {
+  { // Geothermal
     name: 'Geothermal',
     role: 'Software Developer',
     img: process.env.PUBLIC_URL + '/jpg-portraits/mountain-portrait-trim.jpg',
     dates: ['May 2022', 'Jan 2024'],
-    description: 'Developed a web application using React and FastAPI postgres Etc',
+    description: 'Developed a web application using React and FastAPI',
     technologies: ['React', 'FastAPI', 'PostgreSQL', 'Docker'],
     achievements: [
       'Developed a responsive web application using React',
       'Implemented a RESTful API using FastAPI',
       'Integrated PostgreSQL database to store user data',
-      "Performed hiring interviews for new developers"
+      'Performed hiring interviews for new developers'
     ],
     responsibilities: [
       'Collaborated with a team of designers and developers to create engaging web features',
       'Conducted code reviews and provided feedback to team members',
       'Participated in planning and design meetings',
     ],
-
     softSkills: [
       'Problem-solving',
       'Team collaboration',

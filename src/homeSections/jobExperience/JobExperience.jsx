@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import { experienceData } from '../../data/pageData/experienceData'
+import { workExperienceData } from '../../data/pageData/workExperienceData'
 import JobDetails from './JobDetails'
 
 import BackgroundWrapper from '../../wrappers/BackgroundWrapper'
@@ -25,7 +25,7 @@ function JobExperience() {
           <div className='grid grid-cols-3 gap-2'>
 
             <div className='flex flex-col space-y-2'>
-              {experienceData.map((experience, index) => (
+              {workExperienceData.map((experience, index) => (
                 <button 
                 key={index} 
                 onClick={() => setExperienceID(index)}
@@ -36,7 +36,7 @@ function JobExperience() {
               ))}
             </div>
             <div className='col-span-2'>
-              <JobDetails experience={experienceData[experienceID]} />
+              <JobDetails experience={workExperienceData[experienceID]} />
             </div>
           </div>
         </div>
