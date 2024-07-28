@@ -77,9 +77,9 @@ export default function GalleryPhotos() {
   };
 
   return (
-    <div className='gallery p-4 md:p-6 text-center relative'>
+    <div className='gallery px-4 md:px-6 py-2 text-center relative'>
       {galleryPhotos.map((item, index) => (
-        <div key={index} className='py-2'>
+        <div key={index} className=''>
           <div className='flex flex-col max-w-full'>
             <LazyLoad height={300} offsetVertical={300}>
               <div 
@@ -104,10 +104,10 @@ export default function GalleryPhotos() {
           isOpen={isModalOpen}
           onRequestClose={closeModal}
           contentLabel="Photo Modal"
-          className="flex items-center justify-center outline-none"
-          overlayClassName="fixed inset-0 bg-black bg-opacity-50 z-30 flex items-center justify-center"
+          className="flex items-center justify-center outline-none pt-12"
+          overlayClassName="fixed inset-0 bg-black bg-opacity-70 z-30 flex items-center justify-center"
         >
-          <div className='relative z-35 h-120 min-w-[34rem] w-full bg-secondary p-10 rounded'>
+          <div className='relative z-35 max-h-section-height  h-120 min-w-[34rem] w-full bg-secondary p-10 rounded'>
             <button
               onClick={closeModal}
               className='absolute top-0 right-0 p-2 text-primary hover:text-accent transition-transform transform hover:scale-110'
