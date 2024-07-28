@@ -53,29 +53,3 @@
     column-width: 20%;
   }
 }
-
-.model {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: rgba(0, 0, 0, 0.8);
-  z-index: 1000;
-}
-
-.model img {
-  max-width: 90%;
-  max-height: 90%;
-}
-
-.closeModal {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  cursor: pointer;
-  color: white;
-}

@@ -7,7 +7,6 @@ const PhotoPage = () => {
     <BackgroundWrapper
       className="min-h-screen"
       src={process.env.PUBLIC_URL + "/png-backgrounds/overlays/scratch-1.png"}
-      bgOpacity={75}
       backgroundRepeat = "repeat"
       backgroundAttachment="scroll"
     >

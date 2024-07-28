@@ -9,12 +9,12 @@ export default function GalleryPhotos() {
       {galleryPhotos.map((item, index) => (
         <div key={index} className='py-2'>
           <div className='flex flex-col max-w-full'>
-            <LazyLoad height={200} offsetVertical={300}>
-              <div className='relative' style={{ height: '200px', width: '100%' }}>
+            <LazyLoad height={350} offsetVertical={300}>
+              <div className='relative' style={{ height: '350px', width: '100%' }}>
                 <ImageComponent
                   src={`${process.env.PUBLIC_URL}/gallery-photos/${item.photo}`}
                   alt={`Photo ${index + 1}`}
-                  className='object-cover w-full h-full'
+                  className='object-cover w-full h-full rounded-sm'
                   blurHash={item.Blurhash}
                 />
               </div>
