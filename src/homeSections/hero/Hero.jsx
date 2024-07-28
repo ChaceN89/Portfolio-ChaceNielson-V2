@@ -11,7 +11,7 @@
  * @requires ScrollWheel from '../../components/uiElements/ScrollWheel'
  * @requires HeroImg from './HeroImg'
  * @requires HeroText from './HeroText'
- * @requires FadeTransition from '../../routing/FadeTransition'
+ * @requires FadeTransition from '../../animations/FadeTransition'
  * @requires './Hero.css'
  * 
  * @see {@link https://reactjs.org/docs/getting-started.html | React Documentation}
@@ -40,7 +40,7 @@ import ParallaxMountains from './ParallaxMountains';
 import ScrollWheel from '../../components/uiElements/ScrollWheel';
 import HeroImg from './HeroImg';
 import HeroText from './HeroText';
-import FadeTransition from '../../routing/FadeTransition';
+import FadeTransition from '../../animations/FadeTransition';
 import './Hero.css';
 
 function Hero() {

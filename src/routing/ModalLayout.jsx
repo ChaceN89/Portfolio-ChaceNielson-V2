@@ -1,8 +1,8 @@
 import { useLocation, useNavigate, Outlet } from "react-router-dom";
-import FadeTransition from "./FadeTransition";
+import FadeTransition from "../animations/FadeTransition";
 
 import BackgroundWrapper from "../wrappers/BackgroundWrapper"
-import SlideTransition from "./SlideTransition";
+import SlideTransition from "../animations/SlideTransition";
 
 
 const ModalLayout = () => {

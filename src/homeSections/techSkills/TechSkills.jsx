@@ -3,7 +3,7 @@ import SkillsBox from './SkillsBox';
 
 import { techSkills, skillPageData } from '../../data/pageData/skillsData';
 import BackgroundWrapper from '../../wrappers/BackgroundWrapper';
-import SlideTransition from '../../routing/SlideTransition';
+import SlideTransition from '../../animations/SlideTransition';
 import SectionHeader from '../../components/uiElements/SectionHeader';
 
 function TechSkills() {

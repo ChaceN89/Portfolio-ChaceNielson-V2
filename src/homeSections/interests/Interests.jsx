@@ -2,7 +2,7 @@ import React from 'react'
 import { interests } from '../../data/pageData/interestsData';
 
 import BackgroundWrapper from '../../wrappers/BackgroundWrapper';
-import SlideTransition from '../../routing/SlideTransition';
+import SlideTransition from '../../animations/SlideTransition';
 import SectionHeader from '../../components/uiElements/SectionHeader';
 
 function Interests() {

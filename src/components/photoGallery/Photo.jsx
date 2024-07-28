@@ -12,7 +12,7 @@
  * @requires useRef, useEffect from 'react'
  * @requires LazyLoad from 'react-lazy-load'
  * @requires ImageComponent from '../../wrappers/ImageComponent'
- * @requires framer-motion
+ * @requires ElevateOnView from '../../animations/ElevateOnView'
  * 
  * @see {@link https://react.dev/ | React Documentation}
  * @see {@link https://www.framer.com/docs/ | Framer Motion Documentation}
@@ -41,47 +41,14 @@
  * @updated 2024-07-28
  */
 
-import React, { useRef, useEffect } from 'react';
+import React from 'react';
 import LazyLoad from 'react-lazy-load';
 import ImageComponent from '../../wrappers/ImageComponent';
-import { motion, useAnimation, useInView } from 'framer-motion';
-
-const photoVariants = {
-  hidden: {
-    y: 50,
-    opacity: 0,
-  },
-  visible: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      type: 'tween',
-      duration: 0.5,
-      ease: 'easeOut',
-    },
-  },
-};
+import ElevateOnView from '../../animations/ElevateOnView';
 
 function Photo({ item, index, openModal }) {
-  const controls = useAnimation();
-  const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: '0px 0px -200px 0px' });
-
-  // Start the animation when the photo comes into view
-  useEffect(() => {
-    if (inView) {
-      controls.start('visible');
-    }
-  }, [controls, inView]);
-
   return (
-    <motion.div
-      key={index}
-      ref={ref}
-      initial="hidden"
-      animate={controls}
-      variants={photoVariants}
-    >
+    <ElevateOnView>
       <div className='flex flex-col max-w-full'>
         <LazyLoad height={300} offsetVertical={300}>
           <div
@@ -98,7 +65,7 @@ function Photo({ item, index, openModal }) {
           </div>
         </LazyLoad>
       </div>
-    </motion.div>
+    </ElevateOnView>
   );
 }
 

@@ -6,7 +6,7 @@ import MyButton from '../../components/uiElements/MyButton';
 import ImageComponent from '../../wrappers/ImageComponent';
 import { useAnimation, useInView } from 'framer-motion';
 
-import SlideTransition from '../../routing/SlideTransition';
+import SlideTransition from '../../animations/SlideTransition';
 import BackgroundWrapper from '../../wrappers/BackgroundWrapper';
 
 const EMAILJS_USER_ID = process.env.REACT_APP_EMAILJS_USER_ID;
