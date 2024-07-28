@@ -1,3 +1,49 @@
+/**
+ * @file Navbar.jsx
+ * @module Navbar
+ * @desc React component for the navigation bar. 
+ * This component includes a logo link, navigation items, and a responsive hamburger menu for smaller screens.
+ * It also displays a progress bar at the top of the navbar that indicates the scroll progress of the page.
+ * 
+ * @note This component is part of the main layout of the application.
+ *
+ * @component Navbar
+ * 
+ * @requires react
+ * @requires useState from 'react'
+ * @requires NavbarItems from './NavbarItems'
+ * @requires LogoLink from '../logo/LogoLink'
+ * @requires framer-motion { motion, useScroll, useSpring }
+ * @requires react-icons/fa { FaBars, FaTimes }
+ * @requires ./Navbar.css
+ * 
+ * @see {@link https://react.dev/ | React Documentation}
+ * @see {@link https://www.framer.com/docs/ | Framer Motion Documentation}
+ * @see {@link https://react-icons.github.io/react-icons/ | React Icons Documentation}
+ * 
+ * @param none
+ * 
+ * @returns {JSX.Element} The Navbar component that provides navigation links and a responsive menu.
+ * 
+ * @example
+ * // Example usage of Navbar in a layout component
+ * import Navbar from '../components/navbar/Navbar';
+ * 
+ * function Layout() {
+ *   return (
+ *     <div className="layout">
+ *       <Navbar />
+ *       // Main content here
+ *     </div>
+ *   );
+ * }
+ * 
+ * @exports Navbar
+ * 
+ * @created 2024-07-28
+ * @updated 2024-07-28
+ */
+
 import React, { useState } from 'react';
 import NavbarItems from './NavbarItems';
 import LogoLink from '../logo/LogoLink';
@@ -17,6 +63,7 @@ function Navbar() {
     mass: 1
   });
 
+  // Toggle the hamburger menu
   const toggleMenu = () => {
     if (!isHamburgerNavOpen) {
       setIsHamburgerNavOpen(true);
@@ -29,20 +76,25 @@ function Navbar() {
 
   return (
     <nav className="bg-secondary pb-1 fixed top-0 w-full z-45">
+      {/* Scroll progress bar */}
       <motion.div 
         className='w-full h-1 bg-accent origin-left z-40'
         style={{ scaleX: springScrollYProgress }}
       />
       <div className="container mx-auto flex justify-between md:justify-center items-center p-0.5 md:p-2">
+        {/* Logo link for small screens */}
         <div className="text-left flex justify-start md:hidden">
           <LogoLink />
         </div>
+        {/* Navigation items for large screens */}
         <div className="hidden md:flex">
           <NavbarItems textSize="text-lg" />
         </div>
+        {/* Hamburger menu button for small screens */}
         <button onClick={toggleMenu} className="text-primary md:hidden z-50 hover:text-accent flex gap-1">
           {isHamburgerNavOpen ? <FaTimes size={24} /> : <><span className='font-bold'>Menu</span> <FaBars size={24} /> </>}
         </button>
+        {/* Hamburger menu items */}
         {isHamburgerNavOpen && (
           <div className={`fixed md:hidden top-0 left-0 z-50 w-full h-full bg-secondary bg-opacity-95 flex justify-center items-center transition-opacity duration-300 ${animateMenu ? 'opacity-100 fade-in' : 'opacity-0 fade-out'}`}>
             <NavbarItems toggleMenu={toggleMenu} textSize="text-2xl" />

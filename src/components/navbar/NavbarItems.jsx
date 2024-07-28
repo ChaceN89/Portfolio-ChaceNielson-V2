@@ -11,14 +11,16 @@
  * 
  * @requires react
  * @requires ./LinkItem
+ * @requires react-router-dom { useLocation }
  * 
- * @see {@link https://reactjs.org/docs/getting-started.html|React Documentation}
+ * @see {@link https://reactjs.org/docs/getting-started.html | React Documentation}
+ * @see {@link https://reactrouter.com/ | React Router Documentation}
  * 
  * @returns {JSX.Element} - The rendered component.
  * 
  * @author Chace Nielson
  * @created 2024-07-10
- * @updated 2024-07-10
+ * @updated 2024-07-28
  */
 
 import React from 'react';
@@ -29,35 +31,19 @@ const NavbarItems = ({ toggleMenu, textSize }) => {
   const location = useLocation();
   return (
     <ul className={`text-primary ${textSize} space-y-4 md:space-y-0 md:space-x-4 text-center md:text-left md:flex`}>
-      
       {location.pathname === '/' ? (
         <>
-          <li>
-            <LinkItem to="Home" onClick={toggleMenu}>Home</LinkItem>
-          </li>
-          <li>
-            <LinkItem to="AboutMe" onClick={toggleMenu}>About Me</LinkItem>
-          </li>
-          <li>
-            <LinkItem to="Projects" onClick={toggleMenu}>Projects</LinkItem>
-          </li>
-          <li>
-            <LinkItem to="ContactMe" onClick={toggleMenu}>Contact Me</LinkItem>
-          </li>
+          <LinkItem to="Home" onClick={toggleMenu}>Home</LinkItem>
+          <LinkItem to="AboutMe" onClick={toggleMenu}>About Me</LinkItem>
+          <LinkItem to="Projects" onClick={toggleMenu}>Projects</LinkItem>
+          <LinkItem to="ContactMe" onClick={toggleMenu}>Contact Me</LinkItem>
         </>
-      ):(
-      <li>
+      ) : (
         <LinkItem to="/" onClick={toggleMenu} routerLink={true}>Home Page</LinkItem>
-      </li>
-
-      ) }
-    
-      <li>
-        <LinkItem to="/photos" onClick={toggleMenu} routerLink={true}>Photos</LinkItem>
-      </li>
+      )}
+      <LinkItem to="/photos" onClick={toggleMenu} routerLink={true}>Photos</LinkItem>
     </ul>
   );
 };
 
 export default NavbarItems;
-

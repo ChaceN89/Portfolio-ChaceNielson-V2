@@ -13,12 +13,12 @@
  * @param {boolean} [props.routerLink] - If true, use NavLink for routing, otherwise use Link for scrolling.
  * 
  * @requires react
- * @requires react-scroll
- * @requires react-router-dom
+ * @requires react-scroll { Link as ScrollLink }
+ * @requires react-router-dom { NavLink }
  * 
- * @see {@link https://reactjs.org/docs/getting-started.html|React Documentation}
- * @see {@link https://reactrouter.com/|React Router Documentation}
- * @see {@link https://www.npmjs.com/package/react-scroll|React Scroll Documentation}
+ * @see {@link https://reactjs.org/docs/getting-started.html | React Documentation}
+ * @see {@link https://reactrouter.com/ | React Router Documentation}
+ * @see {@link https://www.npmjs.com/package/react-scroll | React Scroll Documentation}
  * 
  * @returns {JSX.Element} The rendered LinkItem component.
  * 
@@ -36,7 +36,7 @@
  * 
  * @author Chace Nielson
  * @created 2024-07-10
- * @updated 2024-07-10
+ * @updated 2024-07-28
  */
 
 import React from 'react';
@@ -45,32 +45,36 @@ import { NavLink } from 'react-router-dom';
 import { globals } from '../../data/globals';
 
 const LinkItem = ({ to, children, onClick, routerLink = false }) => {
-  return routerLink ? (
-    <NavLink
-      to={to}
-      className={({ isActive }) =>
-        `${isActive ? 'bg-primary text-secondary rounded-3xl' : 
-        'hover:text-accent bg-none duration-300'
-        } 
-        px-4 py-2 transition-all `
-      }
-      onClick={onClick}
-    >
-      {children}
-    </NavLink>
-  ) : (
-    <ScrollLink
-      to={to}
-      spy={true}
-      smooth={true}
-      offset={globals.ScrollLink.offset}  // Adjust this offset based on your fixed navbar height
-      duration={globals.ScrollLink.duration}
-      className="px-4 py-2 transition-all hover:text-accent duration-300 cursor-pointer"
-      activeClass="bg-primary text-secondary rounded-3xl"
-      onClick={onClick}
-    >
-      {children}
-    </ScrollLink>
+  return (
+    <li>
+      {routerLink ? (
+        <NavLink
+          to={to}
+          className={({ isActive }) =>
+            `${isActive ? 'bg-primary text-secondary rounded-3xl' : 
+            'hover:text-accent bg-none duration-300'
+            } 
+            px-4 py-2 transition-all `
+          }
+          onClick={onClick}
+        >
+          {children}
+        </NavLink>
+      ) : (
+        <ScrollLink
+          to={to}
+          spy={true}
+          smooth={true}
+          offset={globals.ScrollLink.offset}  // Adjust this offset based on your fixed navbar height
+          duration={globals.ScrollLink.duration}
+          className="px-4 py-2 transition-all hover:text-accent duration-300 cursor-pointer"
+          activeClass="bg-primary text-secondary rounded-3xl"
+          onClick={onClick}
+        >
+          {children}
+        </ScrollLink>
+      )}
+    </li>
   );
 };
 
