@@ -3,6 +3,7 @@ import { motion, useAnimation, useInView } from 'framer-motion';
 import ProjectCard from './ProjectCard';
 import { projects } from '../../data/pageData/projectData';
 import BackgroundWrapper from '../../wrappers/BackgroundWrapper';
+import SectionHeader from '../../components/uiElements/SectionHeader';
 
 const projectVariants = {
   hidden: {
@@ -53,10 +54,8 @@ function ProjectSection() {
         animate={controls}
         variants={sectionVariants}
         >
-        <div className='flex items-center justify-start w-full space-x-2 py-10'>
-          <h2 className='font-bold whitespace-nowrap'>Projects</h2>
-          <p className='opacity-60'> When I am coding</p>
-        </div>
+
+        <SectionHeader title='Projects' subtitle="When I'm coding" />
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-6'>
           {projects.map((project) => (
             <motion.div key={project.id} variants={projectVariants}>

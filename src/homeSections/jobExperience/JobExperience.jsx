@@ -4,6 +4,7 @@ import JobDetails from './JobDetails'
 
 import BackgroundWrapper from '../../wrappers/BackgroundWrapper'
 import SlideTransition from '../../routing/SlideTransition'
+import SectionHeader from '../../components/uiElements/SectionHeader'
 
 function JobExperience() {
 
@@ -20,7 +21,7 @@ function JobExperience() {
     >
       <SlideTransition >
         <div className='container mx-auto'>
-          <h2 className='py-10'>Experience</h2>
+          <SectionHeader title='Work Experience'subtitle="Technical work" />
           <div className='grid grid-cols-3 gap-2'>
 
             <div className='flex flex-col space-y-2'>

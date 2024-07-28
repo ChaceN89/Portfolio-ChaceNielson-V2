@@ -24,7 +24,7 @@ function ScrollWheel({ to = "CallToAction" }) {
   };
 
   return (
-    <div className="absolute inset-0 z-5 flex justify-center items-end">
+    <div className="hidden absolute inset-0 z-5 md:flex justify-center items-end">
       
       {/* transparent background  */}
       <div className="absolute inset-0 z-0 bg-secondary opacity-0"/>
