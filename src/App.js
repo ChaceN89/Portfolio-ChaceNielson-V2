@@ -10,11 +10,15 @@
  * 
  * @requires react
  * @requires react-router-dom
+ * @requires AppRoutes from './routing/AppRoutes'
+ * @requires TailwindBreakPoints from './testingComponents/TailwindBreakPoints'
+ * @requires AnalyticsTracker from './googleAnalytics/AnalyticsTracker'
+ * @requires './styles/Layout.css'
+ * @requires './styles/Modal.css'
+ * @requires './styles/Gallery.css'
  * 
  * @see {@link https://react.dev/ | React Documentation}
  * @see {@link https://reactrouter.com/ | React Router Documentation}
- * 
- * @param none
  * 
  * @returns {JSX.Element} The App component wrapped in a Router.
  * 
@@ -30,7 +34,7 @@
  * 
  * @author Chace Nielson
  * @created 2024-07-26
- * @updated 2024-07-26
+ * @updated 2024-07-28
  */
 
 import React from 'react';
@@ -44,16 +48,16 @@ import AppRoutes from './routing/AppRoutes';
 // Import Styles
 import './styles/Layout.css';
 import './styles/Modal.css';
-import './styles/GalleryCSS.css';
+import './styles/Gallery.css';
 
-import TailwindBreakPoints from './testingComponents/TailwindBreakPoints'
-import AnalyticsTracker from './googleAnalytics/AnalyticsTracker'
+import TailwindBreakPoints from './testingComponents/TailwindBreakPoints';
+import AnalyticsTracker from './googleAnalytics/AnalyticsTracker';
 
 // Export App wrapped in Router
 const AppWithRouter = () => (
   <Router>
     <TailwindBreakPoints />
-    <AnalyticsTracker/>
+    <AnalyticsTracker />
     <AppRoutes />
   </Router>
 );
