@@ -9,8 +9,7 @@
  * 
  * @requires react
  * @requires BackgroundWrapper from '../../wrappers/BackgroundWrapper'
- * @requires SlideTransition from '../../animations/SlideTransition'
- * @requires SectionHeader from '../../components/uiElements/SectionHeader'
+ * @requires SectionWrapper from '../../components/uiElements/SectionWrapper'
  * @requires SkillCategory from './SkillCategory'
  * @requires techSkills, skillPageData from '../../data/pageData/skillsData'
  * 
@@ -37,9 +36,8 @@
 import React from 'react';
 import { techSkills, skillPageData } from '../../data/pageData/skillsData';
 import BackgroundWrapper from '../../wrappers/BackgroundWrapper';
-import SlideTransition from '../../animations/SlideTransition';
-import SectionHeader from '../../components/uiElements/SectionHeader';
 import SkillCategory from './SkillCategory';
+import SectionWrapper from '../../components/uiElements/SectionWrapper';
 
 function TechSkills() {
 
@@ -51,18 +49,16 @@ function TechSkills() {
       bgOpacity={20}
     >
       <hr />
-        <div className='container mx-auto pb-10 px-2'>
-          <SlideTransition>
-            <div className='py-10 pb-8'>
-              <SectionHeader title={skillPageData.title} subtitle={skillPageData.description} />
-            </div>
-          </SlideTransition>
-          <div className='space-y-4 md:space-y-8 px-4'>
-            {techSkills.map((category, index) => (
-              <SkillCategory key={index} category={category} />
-            ))}
-          </div>
+      <SectionWrapper
+        title={skillPageData.title}
+        subtitle={skillPageData.description}
+      >
+        <div className='space-y-4 md:space-y-8'>
+          {techSkills.map((category, index) => (
+            <SkillCategory key={index} category={category} />
+          ))}
         </div>
+      </SectionWrapper>
       <hr />
     </BackgroundWrapper>
   );
