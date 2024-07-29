@@ -22,7 +22,7 @@
  .hero {
   @apply overflow-hidden relative w-full 
   flex flex-col md:flex-row items-center justify-start 
-  h-1/2 md:h-section-height md:min-h-108;
+  md:h-section-height md:min-h-108;
 }
 
 /* the hero img */
@@ -34,7 +34,7 @@
 .hero-img {
   @apply object-cover 
   h-section-height md:h-full md:min-h-120 
-  -mt-14 md:mt-0 
+  -mt-28 md:mt-0 
   opacity-90 z-0;
 }
 
