@@ -52,31 +52,11 @@ import { Link } from 'react-router-dom';
 export const heroData = {
   top: "Hi, my name is",
   name: "CHACE NIELSON",
-  description: (
+  description: 
     <div>
-      I am a 
-      <Link 
-        className="text-accent-light hover:underline"
-        to='/skills/engineering' 
-      >
-        Software Engineer
-      </Link> 
-      with a passion for music and the outdoors. I have worked on a variety of projects from 
-      <Link 
-        className="text-accent-light hover:underline"
-        to='/skills/web-design' 
-      >
-        Web Design
-      </Link> 
-      to 
-      <Link 
-        className="text-accent-light hover:underline"
-        to='/skills/game-design' 
-      >
-        Unity Games
-      </Link>.
+      I am a <Link className="text-accent-light hover:underline" to='/skills/engineering'>Software Engineer</Link> with a passion for music and the outdoors. I have worked on a variety of projects from <Link className="text-accent-light hover:underline" to='/skills/web-design' >Web Design</Link> to <Link className="text-accent-light hover:underline" to='/skills/game-design'>Unity Games</Link>.
     </div>
-  ),
+  ,
   
   // list of buttons
   buttons: [

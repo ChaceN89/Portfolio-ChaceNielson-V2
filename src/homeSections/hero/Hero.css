@@ -33,7 +33,7 @@
 
 .hero-img {
   @apply object-cover 
-  max-h-screen md:h-full md:min-h-120 
+  h-section-height md:h-full md:min-h-120 
   -mt-14 md:mt-0 
   opacity-90 z-0;
 }
@@ -41,9 +41,11 @@
 /* hero text */
 .text-container {
   @apply mx-auto container 
+  h-section-height md:h-min
   grid grid-cols-1 md:grid-cols-2 
   text-left 
   pb-20 z-10 
+  p-4
   mix-blend-difference;
 }
 
@@ -54,8 +56,9 @@
 
 /* buttons within the hero text */
 .text-buttons {
-  @apply grid grid-cols-2 gap-2 
+  @apply grid grid-cols-1 gap-2 
   lg:flex justify-center lg:justify-start
   text-sm md:text-base 
+
   z-50;
 }
