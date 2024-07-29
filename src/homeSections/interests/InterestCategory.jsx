@@ -9,6 +9,7 @@
  * @requires react
  * @requires ShowIcon from '../../components/uiElements/ShowIcon'
  * @requires ElevateOnView from '../../animations/ElevateOnView'
+ * @requires useMediaQuery from 'react-responsive'
  * 
  * @see {@link https://reactjs.org/docs/getting-started.html | React Documentation}
  * 
@@ -42,13 +43,18 @@
 import React from 'react'
 import ShowIcon from '../../components/uiElements/ShowIcon'
 import ElevateOnView from '../../animations/ElevateOnView'
+import { useMediaQuery } from 'react-responsive'
 
 function InterestCategory({ interest }) {
+  const isSmallScreen = useMediaQuery({ query: '(max-width: 400px)' });
+  const isReallySmallScreen = useMediaQuery({ query: '(max-width: 300px)' });
+  const iconSize = isReallySmallScreen ? '3.5rem' : isSmallScreen ? '4.5rem' : '5rem';
+
   return (
-    <ElevateOnView className='border-2 border-secondary p-2 border-opacity-10 rounded-lg col-span-1' >
+    <ElevateOnView className='border-2 border-secondary p-2 border-opacity-10 rounded-lg' >
       <div className="flex items-center space-x-2 md:space-x-4">
         <div className='flex-shrink-0'>
-          <ShowIcon skill={interest.icon} size="5rem" useWhiteText={true}/>
+          <ShowIcon skill={interest.icon} size={iconSize} useWhiteText={true}/>
         </div>
         <div>
           <h3 className="text-xl font-semibold">{interest.name}</h3>

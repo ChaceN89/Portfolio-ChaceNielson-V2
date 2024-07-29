@@ -8,6 +8,7 @@
  * 
  * @requires react
  * @requires Tooltip from '../../components/uiElements/Tooltip'
+ * @requires useMediaQuery from 'react-responsive'
  * 
  * @see {@link https://reactjs.org/docs/getting-started.html | React Documentation}
  * 
@@ -33,25 +34,30 @@
  * @created 2024-07-28
  * @updated 2024-07-29
  */
-
 import React from 'react';
 import Tooltip from '../../components/uiElements/Tooltip';
 import ShowIcon from '../../components/uiElements/ShowIcon';
+import { useMediaQuery } from 'react-responsive';
 
 function MainSkills({ topSkills }) {
 
+  // check screen size for icon size  
+  const isSmallScreen = useMediaQuery({ query: '(max-width: 400px)' });
+  const isReallySmallScreen = useMediaQuery({ query: '(max-width: 300px)' });
+  const iconSize = isReallySmallScreen ? '2rem' : isSmallScreen ? '3rem' : '4.5rem';
+
+
   return (
-    <div className="flex space-x-5 sm:space-x-10 justify-center md:justify-start py-3 lg:py-0">
+    <div className="flex justify-center w-full space-x-4 sm:space-x-0 sm:grid grid-cols-2 sm:gap-4"> 
       {topSkills.map((topSkill, idx) => (
-        <div key={idx} className="flex-col text-center items-center">
-          <Tooltip 
-            openDuration={100} 
-            className="max-w-xs"
-            text={topSkill.name}
-          >
-            <ShowIcon skill={topSkill} size={60}  useWhiteText={true}/>
-          </Tooltip>
-        </div>
+        <Tooltip 
+          key={idx}
+          openDuration={100} 
+          className="max-w-xs"
+          text={topSkill.name}
+        >
+          <ShowIcon skill={topSkill} size={iconSize} useWhiteText={true} />
+        </Tooltip>
       ))}
     </div>
   );

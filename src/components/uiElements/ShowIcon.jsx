@@ -3,7 +3,8 @@
  * @module ShowIcon
  * @desc React component that displays an icon based on the provided skill object. 
  * The component adjusts the icon color based on the useWhiteText prop and ensures both SVG and React icons have the same size.
- * can handle both React icons and SVG images. see the example below for more details.
+ * Can handle both React icons and SVG images. See the example below for more details.
+ * icons should remain at the same size for consistency.
  *
  * @component ShowIcon
  * 
@@ -36,10 +37,9 @@
  * @created 2024-07-29
  * @updated 2024-07-29
  */
-import React from 'react'
+import React from 'react';
 
-function ShowIcon({skill, size="2rem", useWhiteText=false}) {
-
+function ShowIcon({ skill, size = "2rem", useWhiteText = false }) {
   // Determine the icon color based on the lightColor prop - only affect white or black icons
   let iconColor;
   if (useWhiteText) {
@@ -56,14 +56,14 @@ function ShowIcon({skill, size="2rem", useWhiteText=false}) {
   const imgStyle = { width: size, height: size };
 
   return (
-    <>
+    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: size, height: size }}>
       {IconComponent ? (
         <IconComponent style={iconStyle} />
       ) : (
         <img src={process.env.PUBLIC_URL + "/svg-icons/" + skill.svg_path} alt={skill.name} style={imgStyle} />
       )}
-    </>
-  )
+    </div>
+  );
 }
 
-export default ShowIcon
+export default ShowIcon;

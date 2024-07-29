@@ -2,14 +2,14 @@
  * @file SkillCategory.js
  * @module SkillCategory
  * @desc React component that displays a category of skills with an animated elevation effect.
- * This component uses the ElevateOnView animation, SkillsBox to display the top skills, and 
+ * This component uses the ElevateOnView animation, MainSkills to display the top skills, and 
  * Link from react-router-dom to navigate to the detailed skills page.
  *
  * @component SkillCategory
  * 
  * @requires react
  * @requires ElevateOnView from '../../animations/ElevateOnView'
- * @requires SkillsBox from './SkillsBox'
+ * @requires MainSkills from './MainSkills'
  * @requires Link from 'react-router-dom'
  * 
  * @see {@link https://reactjs.org/docs/getting-started.html | React Documentation}
@@ -48,24 +48,21 @@ function SkillCategory({ category, index }) {
   const location = useLocation();
 
   return (
-    <ElevateOnView marginY='-75px'>
-      <div key={index} className="grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-6">
-        <div>
-          <div className='flex space-x-4 items-center justify-start'>
-            <h3 className="font-bold whitespace-nowrap">{category.name}</h3>
-            <Link 
-              to={"/skills/" + category.id}
-              className="text-accent hover:text-accent-dark hover:underline cursor-pointer text-sm"
-              state={{ background: location }}
-            >
-              {category.linkName}
-            </Link>
-          </div>
-          <p className="text-sm text-secondary text-opacity-60 pt-0.5">
-            {category.description} 
-          </p>
+    <ElevateOnView className='border-2 border-secondary p-4 border-opacity-10 rounded-lg'>
+      <div className='grid grid-cols-1 sm:grid-cols-3 gap-4'>
+        <div className='sm:col-span-2 '>
+          <h3 className="font-bold">{category.name}</h3>
+          <p className="text-sm text-secondary text-opacity-60 pt-0.5">{category.description}</p>
+          <Link 
+            to={"/skills/" + category.id}
+            className="text-accent hover:text-accent-dark hover:underline cursor-pointer text-sm"
+            state={{ background: location }}
+          >
+            {category.linkName}
+          </Link>
         </div>
-        <div>
+
+        <div className='flex justify-center items-center'>
           <MainSkills topSkills={category.topSkills} />
         </div>
       </div>

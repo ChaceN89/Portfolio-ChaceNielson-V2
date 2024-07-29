@@ -53,7 +53,7 @@ function TechSkills() {
         title={skillPageData.title}
         subtitle={skillPageData.description}
       >
-        <div className='space-y-4 md:space-y-8'>
+        <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
           {techSkills.map((category, index) => (
             <SkillCategory key={index} category={category} />
           ))}
