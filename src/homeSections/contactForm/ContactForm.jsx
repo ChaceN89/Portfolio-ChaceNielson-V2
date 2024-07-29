@@ -122,7 +122,7 @@ function ContactForm() {
                 />
               </div>
               <div className='w-full flex justify-start'>
-                <MyButton buttonType="submit">Send Message</MyButton>
+                <MyButton type="submit">Send Message</MyButton>
               </div>
             </form>
           </div>

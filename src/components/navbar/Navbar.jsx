@@ -14,12 +14,12 @@
  * @requires NavbarItems from './NavbarItems'
  * @requires LogoLink from '../logo/LogoLink'
  * @requires framer-motion { motion, useScroll, useSpring }
- * @requires react-icons/fa { FaBars, FaTimes }
+ * @requires hamburger-react { Squash as Hamburger }
  * @requires ./Navbar.css
  * 
  * @see {@link https://react.dev/ | React Documentation}
  * @see {@link https://www.framer.com/docs/ | Framer Motion Documentation}
- * @see {@link https://react-icons.github.io/react-icons/ | React Icons Documentation}
+ * @see {@link https://hamburger-react.netlify.app/ | Hamburger React Documentation}
  * 
  * @param none
  * 
@@ -41,14 +41,14 @@
  * @exports Navbar
  * 
  * @created 2024-07-28
- * @updated 2024-07-28
+ * @updated 2024-07-29
  */
 
 import React, { useState } from 'react';
 import NavbarItems from './NavbarItems';
 import LogoLink from '../footer/LogoLink';
 import { motion, useScroll, useSpring } from 'framer-motion';
-import { FaBars, FaTimes } from 'react-icons/fa';
+import { Squash as Hamburger } from 'hamburger-react';
 import "./Navbar.css";
 
 function Navbar() {
@@ -82,21 +82,25 @@ function Navbar() {
         style={{ scaleX: springScrollYProgress }}
       />
       <div className="container mx-auto flex justify-between md:justify-center items-center p-0.5 md:p-2">
+        
         {/* Logo link for small screens */}
         <div className="text-left flex justify-start md:hidden">
           <LogoLink />
         </div>
+
         {/* Navigation items for large screens */}
         <div className="hidden md:flex">
           <NavbarItems textSize="text-lg" />
         </div>
+
         {/* Hamburger menu button for small screens */}
         <button onClick={toggleMenu} className="text-primary md:hidden z-50 hover:text-accent flex gap-1">
-          {isHamburgerNavOpen ? <FaTimes size={24} /> : <><span className='font-bold'>Menu</span> <FaBars size={24} /> </>}
+          <Hamburger toggled={isHamburgerNavOpen} rounded />
         </button>
+
         {/* Hamburger menu items */}
         {isHamburgerNavOpen && (
-          <div className={`fixed md:hidden top-0 left-0 z-50 w-full h-full bg-secondary bg-opacity-95 flex justify-center items-center transition-opacity duration-300 ${animateMenu ? 'opacity-100 fade-in' : 'opacity-0 fade-out'}`}>
+          <div className={`fixed md:hidden top-0 left-0 z-45 w-full h-full bg-secondary bg-opacity-95 flex justify-center items-center transition-opacity duration-300 ${animateMenu ? 'opacity-100 fade-in' : 'opacity-0 fade-out'}`}>
             <NavbarItems toggleMenu={toggleMenu} textSize="text-2xl" />
           </div>
         )}
