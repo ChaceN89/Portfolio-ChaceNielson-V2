@@ -32,7 +32,7 @@
  * 
  * @author Chace Nielson
  * @created 2024-07-28
- * @updated 2024-07-28
+ * @updated 2024-07-29
  */
 import React from 'react';
 import { techSkills, skillPageData } from '../../data/pageData/skillsData';
@@ -51,14 +51,13 @@ function TechSkills() {
       bgOpacity={20}
     >
       <hr />
-        <div className='container mx-auto pb-10'>
+        <div className='container mx-auto pb-10 px-2'>
           <SlideTransition>
             <div className='py-10 pb-8'>
-
               <SectionHeader title={skillPageData.title} subtitle={skillPageData.description} />
             </div>
           </SlideTransition>
-          <div className='space-y-4 md:space-y-8'>
+          <div className='space-y-4 md:space-y-8 px-4'>
             {techSkills.map((category, index) => (
               <SkillCategory key={index} category={category} />
             ))}

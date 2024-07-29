@@ -14,16 +14,6 @@ html{
 
 
 
-
-
-
-
-/* section wrappers - height is only the heigh and the default is hieght and the container for width*/
-.section-height {
-  min-height: calc(100vh - 4rem );
-}
-
-
 /* headers */
 h1{
   @apply text-7xl font-bold font-mangold;

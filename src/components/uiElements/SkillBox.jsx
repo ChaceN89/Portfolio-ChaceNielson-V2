@@ -5,7 +5,9 @@ import React from 'react';
  * @module SkillBox
  * @desc React component that displays an individual skill with an icon and name.
  * This component handles rendering either a React icon or an SVG image, with a conditional
- * check to adjust the icon color if it is white.
+ * check to adjust the icon color if it is white in theshow icon component.
+ * used the showIcon component to display the skill icon.
+ * 
  *
  * @component SkillBox
  *
@@ -17,6 +19,7 @@ import React from 'react';
  * @param {string} [props.skill.svg_path] - The path to the SVG icon (optional)
  *
  * @requires react
+ * @requires ./ShowIcon
  *
  * @see {@link https://reactjs.org/docs/getting-started.html | React Documentation}
  *
@@ -34,20 +37,20 @@ import React from 'react';
  *   
  *   return <SkillBox skill={skill} />;
  * }
+ * 
+ * @author Chace Nielson
+ * @created 2024-07-28
+ * @updated 2024-07-29
  *
  * @exports SkillBox
  */
-const SkillBox = ({ skill }) => {
-  const IconComponent = skill.icon;
-  const iconColor = skill.color === 'white' ? 'black' : skill.color;
+
+import ShowIcon from './ShowIcon';
+const SkillBox = ({ skill, useWhiteText=false }) => {
 
   return (
     <div className="flex flex-col items-center p-2 border rounded-md shadow-md">
-      {IconComponent ? (
-        <IconComponent style={{ color: iconColor, fontSize: '2rem' }} />
-      ) : (
-        <img src={process.env.PUBLIC_URL + "/svg-icons/" + skill.svg_path} alt={skill.name} style={{ width: '2rem', height: '2rem' }} />
-      )}
+      <ShowIcon skill={skill} size="2rem" height="2rem" useWhiteText={useWhiteText} />
       <p className="mt-2 text-center">{skill.name}</p>
     </div>
   );

@@ -37,7 +37,7 @@
  * 
  * @author Chace Nielson
  * @created 2024-07-28
- * @updated 2024-07-28
+ * @updated 2024-07-29
  */
 import React from 'react';
 import ElevateOnView from '../../animations/ElevateOnView';
@@ -50,7 +50,7 @@ function SkillCategory({ category, index }) {
   return (
     <ElevateOnView marginY='-75px'>
       <div key={index} className="grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-6">
-        <div className='px-4'>
+        <div>
           <div className='flex space-x-4 items-center justify-start'>
             <h3 className="font-bold whitespace-nowrap">{category.name}</h3>
             <Link 

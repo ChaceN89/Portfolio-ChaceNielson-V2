@@ -31,11 +31,12 @@
  * 
  * @author Chace Nielson
  * @created 2024-07-28
- * @updated 2024-07-28
+ * @updated 2024-07-29
  */
 
 import React from 'react';
 import Tooltip from '../../components/uiElements/Tooltip';
+import ShowIcon from '../../components/uiElements/ShowIcon';
 
 function MainSkills({ topSkills }) {
   const size = 60;
@@ -49,16 +50,7 @@ function MainSkills({ topSkills }) {
             className="max-w-xs"
             text={topSkill.name}
           >
-            {topSkill.icon ? (
-              <topSkill.icon size={size} color={topSkill.color} />
-            ) : (
-              <img
-                width={size}
-                height={size}
-                src={process.env.PUBLIC_URL + '/svg-icons/' + topSkill.svg_path}
-                alt={topSkill.name}
-              />
-            )}
+            <ShowIcon skill={topSkill} size={60}  useWhiteText={true}/>
           </Tooltip>
         </div>
       ))}

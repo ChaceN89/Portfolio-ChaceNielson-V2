@@ -26,5 +26,5 @@
 }
 
 .modal-content {
-  @apply bg-secondary p-4 rounded-lg shadow-lg max-h-section-height mx-20;
+  @apply bg-secondary p-4 rounded-lg shadow-lg max-h-section-height mx-4 md:mx-20;
 }
