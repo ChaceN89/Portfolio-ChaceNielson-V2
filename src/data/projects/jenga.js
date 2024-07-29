@@ -10,13 +10,12 @@
  * @updated 2024-07-28
  */
 
-import { BsGithub, BsYoutube } from "react-icons/bs";
-import { FaUnity } from "react-icons/fa";
+import IconSkills from "../iconSkills";
 
 // Short description (blurb) to be displayed on the project card
 const short = "Haptic Jenga built using Unity and C#.";
 
-//Long description for the modal page, providing detailed information about the project
+// Long description for the modal page, providing detailed information about the project
 const long = (
   <div className='space-y-2'>
     <p>
@@ -42,8 +41,8 @@ export const jenga = {
     { src: "jenga1.jpg", blurhash: "LaK-,:fkIuoL9haykDWB.Aof%Lof" },
   ],
   mainStack:[
-    { name: "Unity", icon: FaUnity, color: "black" },
-    { name: "C#", svg_path: "c-sharp.svg" }
+    IconSkills.UNITY,
+    IconSkills.CSHARP,
   ],
   extendedStack:[
     { name: "Unity Physics System", svg_path: "physics.svg" },
@@ -51,7 +50,7 @@ export const jenga = {
     { name: "Haptic Stylus", svg_path: "stylus.svg" },
   ],
   externalLinks: [
-    { name: "Code", link: "https://github.com/ChaceN89/Haptic-Jenga", icon: BsGithub },
-    { name: "Video", link: "https://www.youtube.com/watch?v=e-xqfE_f2uc", icon: BsYoutube },
+    { name: "Code", link: "https://github.com/ChaceN89/Haptic-Jenga", icon: IconSkills.GITHUB.icon },
+    { name: "Video", link: "https://www.youtube.com/watch?v=e-xqfE_f2uc", icon: IconSkills.YOUTUBE.icon },
   ],
 };

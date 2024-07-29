@@ -10,10 +10,7 @@
  * @updated 2024-07-28
  */
 
-// skills
-import { FaMusic } from "react-icons/fa";
-import { BsGithub } from "react-icons/bs";
-import { SiVercel, SiTailwindcss } from "react-icons/si";
+import IconSkills from "../iconSkills";
 
 // Short description (blurb) to be displayed on the project card
 const short = "A music player application built with Vue and Tailwind.";
@@ -47,14 +44,14 @@ export const musicPlayer = {
     { src: "musicPlayer2.jpg", blurhash: "LANm]1_M?brt-;D*js%L~W%3RjD%" },
   ],
   mainStack: [
-    { name: "Vue", svg_path: "vue.svg" },
-    { name: "Tailwind", icon: SiTailwindcss, color: "#38BDF9" },
+    IconSkills.VUE,
+    IconSkills.TAILWINDCSS,
   ],
   extendedStack: [
-    { name: "Vercel", icon: SiVercel, color: "black" },
+    IconSkills.VERCEL,
   ],
   externalLinks: [
-    { name: "Website", link: "https://music-player-chace-nielsons-projects.vercel.app/", icon: FaMusic },
-    { name: "Code", link: "https://github.com/ChaceN89/music-player", icon: BsGithub },
+    { name: "Website", link: "https://music-player-chace-nielsons-projects.vercel.app/", icon: IconSkills.MUSIC.icon },
+    { name: "Code", link: "https://github.com/ChaceN89/music-player", icon: IconSkills.GITHUB.icon },
   ],
 };

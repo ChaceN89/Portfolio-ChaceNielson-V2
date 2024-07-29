@@ -10,8 +10,7 @@
  * @updated 2024-07-28
  */
 
-import { BsYoutube } from "react-icons/bs";
-import { FaUnity } from "react-icons/fa";
+import IconSkills from "../iconSkills";
 
 // Short description (blurb) to be displayed on the project card
 const short = "A space adventure game developed using Unity and C#.";
@@ -37,14 +36,14 @@ export const spaceSurvive = {
   images: [
     { src: "spaceSurvive.jpg", blurhash: "L26@E32tL#5kq?Io%%%hyEofR3j?" },
   ],
-  mainStack:[
-    {name:"Unity", icon:FaUnity, color:"black"},
-    {name:"C#", svg_path:"c-sharp.svg"} 
+  mainStack: [
+    IconSkills.UNITY,
+    IconSkills.CSHARP,
   ],
-  extendedStack:[
-    {name:"Game Development", svg_path:"game-controller.svg"} ,
+  extendedStack: [
+    IconSkills.GAME_DEVELOPMENT,
   ],
   externalLinks: [
-    { name: "Trailer", link: "https://www.youtube.com/watch?v=pwIbyhqWbsM", icon: BsYoutube },
+    { name: "Trailer", link: "https://www.youtube.com/watch?v=pwIbyhqWbsM", icon: IconSkills.YOUTUBE.icon },
   ],
 };

@@ -35,26 +35,29 @@
 import React, { useRef, useEffect } from 'react';
 import { motion, useAnimation, useInView } from 'framer-motion';
 
-const elevationVariants = {
-  hidden: {
-    y: 50,
-    opacity: 0,
-  },
-  visible: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      type: 'tween',
-      duration: 0.5,
-      ease: 'easeOut',
-    },
-  },
-};
 
-function ElevateOnView({ children }) {
+
+function ElevateOnView({ children, duration = 0.5, marginY = '-150px', yPos = 100 }) {
   const controls = useAnimation();
   const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: '0px 0px -200px 0px' });
+  const inView = useInView(ref, { once: true, margin: `0px 0px ${marginY} 0px` });
+
+
+  const elevationVariants = {
+    hidden: {
+      y: yPos,
+      opacity: 0,
+    },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        type: 'tween',
+        duration: duration,
+        ease: 'easeOut',
+      },
+    },
+  };
 
   // Start the animation when the component comes into view
   useEffect(() => {

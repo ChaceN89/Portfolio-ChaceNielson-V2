@@ -10,9 +10,7 @@
  * @updated 2024-07-28
  */
 
-import { BsYoutube } from "react-icons/bs";
-import { BsGithub } from "react-icons/bs";
-import { FaUnity } from "react-icons/fa";
+import IconSkills from "../iconSkills";
 
 // Short description (blurb) to be displayed on the project card
 const short = <>Unity simulation and physical prototype for CO<sub>2</sub> separation using deep ocean hydrostatic pressure.</>;
@@ -43,23 +41,23 @@ export const capstone = {
     { src: "capstone8_sim.jpg", blurhash: "LdEz+.kHT2ng_9t0oZkD%CoubWkC" },
   ],
   mainStack: [
-    { name: "Unity", icon: FaUnity, color: "black" },
-    { name: "Blender", svg_path: "blender.svg" },
-    { name: "C#", svg_path: "c-sharp.svg" }
+    IconSkills.UNITY,
+    IconSkills.BLENDER,
+    IconSkills.CSHARP,
   ],
   extendedStack: [
-    { name: "Simulation", svg_path: "computer.svg" },
-    { name: "Engineering", svg_path: "engineering.svg" },
-    { name: "3D Design and Printing", svg_path: "3d-cube.svg" },
-    { name: "Circuity Design", svg_path: "circuit-board.svg" },
+    IconSkills.SIMULATION,
+    IconSkills.ENGINEERING,
+    IconSkills.DESIGN_PRINTING,
+    IconSkills.CIRCUITY,
   ],
   externalLinks: [
-    { name: "Overview Video", link: "https://www.youtube.com/watch?v=TvnBOPB7dhc", icon: BsYoutube },
-    { name: "Simulation", link: "https://dev3933.d18ixp0pwlw4ex.amplifyapp.com/", icon: FaUnity },
-    { name: "Unity Code", link: "https://github.com/ChaceN89/Capstone-Simulation", icon: BsGithub },
+    { name: "Overview Video", link: "https://www.youtube.com/watch?v=TvnBOPB7dhc", icon: IconSkills.YOUTUBE.icon },
+    { name: "Simulation", link: "https://dev3933.d18ixp0pwlw4ex.amplifyapp.com/", icon: IconSkills.UNITY.icon },
+    { name: "Unity Code", link: "https://github.com/ChaceN89/Capstone-Simulation", icon: IconSkills.GITHUB.icon },
   ],
   pdfs: [
-    { name: "Poster", link: "Capstone Poster.pdf" },
-    { name: "Report", link: "Capstone Final Report.pdf" },
+    { name: "Poster", link: "Capstone Poster.pdf", icon: IconSkills.PDF.icon },
+    { name: "Report", link: "Capstone Final Report.pdf", icon: IconSkills.PDF.icon }
   ]
 };

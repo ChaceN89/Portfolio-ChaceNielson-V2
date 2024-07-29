@@ -10,12 +10,7 @@
  * @updated 2024-07-28
  */
 
-import { BsYoutube } from "react-icons/bs";
-import { CgWebsite } from "react-icons/cg";
-
-// Icons for skills
-import { FaReact, FaDocker } from "react-icons/fa";
-import { SiFastapi, SiTailwindcss, SiPostgresql } from "react-icons/si";
+import IconSkills from "../iconSkills";
 
 // Short description (blurb) to be displayed on the project card
 const short = "Full-Stack Web Application for analyzing drilling data.";
@@ -41,9 +36,9 @@ const long = (
 export const geoPredict = {
   starred: true,
   id: "geo-predict", // id and folder name in the projects folder
-  name: "GEO Predict",  
+  name: "GEO Predict",
   tag: "Full-Stack",
-  blurb: short, 
+  blurb: short,
   description: long,
   images: [
     { src: "highlight.jpg", blurhash: "qC9G,ZtkS0tRR%ogNFoe9Xt7xubFt7RjWVRj_4V@M{jZRjofays;xVa}WYj[bHj[j[oKkYaeada{oJofkCkC^*flRkoMRkoeWBs." },
@@ -52,22 +47,22 @@ export const geoPredict = {
     { src: "login.jpg", blurhash: "q7Mtjn8^xU-oVrxsn#t6xtRia_odj?a_axj[9a?wNyIpo$R.bcWC-=x^a%RnWFj^j]WV^kDinN%2nOnhjExaxWMwsjxWs*n#jYoJ" },
   ],
   mainStack: [
-    { name: "React", icon: FaReact, color: "lightblue" },
-    { name: "FastAPI", icon: SiFastapi, color: "#079487" },
-    { name: "PostgreSQL", icon: SiPostgresql, color: "white" },
-    { name: "Tailwind", icon: SiTailwindcss, color: "#38BDF9" },
+    IconSkills.REACT,
+    IconSkills.FASTAPI,
+    IconSkills.POSTGRESQL,
+    IconSkills.TAILWINDCSS,
   ],
   extendedStack: [
-    { name: "Full-Stack", svg_path: "full-stack.svg" },
-    { name: "Python", svg_path: "python.svg" },
-    { name: "Docker", icon: FaDocker, color: "#089CEC" },
-    { name: "Data Analysis", svg_path: "data-analysis.svg" },
-    { name: "Cloud Deployment", svg_path: "cloud-computer.svg" },
-    { name: "Machine Learning", svg_path: "machine-learning.svg" },
-    { name: "Authentication", svg_path: "authentication.svg" },
+    IconSkills.FULL_STACK,
+    IconSkills.PYTHON,
+    IconSkills.DOCKER,
+    IconSkills.DATA_ANALYSIS,
+    IconSkills.CLOUD_DEPLOYMENT,
+    IconSkills.MACHINE_LEARNING,
+    IconSkills.AUTHENTICATION,
   ],
   externalLinks: [
-    { name: "Overview", link: "https://youtu.be/oTU0C_8-dSw", icon: BsYoutube },
-    { name: "Website", link: "http://136.159.140.62/", icon: CgWebsite }
+    { name: "Overview", link: "https://youtu.be/oTU0C_8-dSw", icon: IconSkills.YOUTUBE.icon },
+    { name: "Website", link: "http://136.159.140.62/", icon: IconSkills.WORLD.icon },
   ],
 };

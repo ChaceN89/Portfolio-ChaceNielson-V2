@@ -4,16 +4,11 @@
  * @desc Contains data for the interests section used in various parts of the application.
  * Each interest entry includes the name, description, and an icon representing the interest.
  * 
- * @requires react-icons/fa
- * @requires react-icons/gi
- * 
- * @see {@link https://react-icons.github.io/react-icons/ | React Icons Documentation}
- * 
+ * @requires ../iconSkills
+ *  
  * @example
  * // Example usage of interests in a component
  * import { interests } from './interestsData';
- * import { FaSnowboarding, FaBasketballBall, FaGuitar, FaHiking } from "react-icons/fa";
- * import { GiMountainClimbing } from "react-icons/gi";
  * 
  * function InterestsSection() {
  *   return (
@@ -36,33 +31,37 @@
  * @updated 2024-07-28
  */
 
-import { FaSnowboarding, FaBasketballBall, FaGuitar, FaHiking } from "react-icons/fa";
-import { GiMountainClimbing } from "react-icons/gi";
+import IconSkills from "../iconSkills";
 
 export const interests = [
   { 
     name: "Snowboarding", 
-    description: "I have been snowboarding since I was a kid. I love the thrill of carving down the mountain and hitting jumps in the terrain park.", 
-    art: FaSnowboarding,
+    description: "I picked up snowboarding in university and have been hooked ever since. It's my favorite winter activity.", 
+    art: IconSkills.SNOWBOARDING.icon,
   },
   { 
     name: "Basketball",
     description: "I played basketball in high school and college, and I still play in local leagues when I can.",
-    art: FaBasketballBall
+    art: IconSkills.BASKETBALL.icon
   },
   { 
-    name: "Guitar",
-    description: "I have been playing guitar for the past 10 years. I enjoy playing a variety of music, from rock and blues to classical and jazz.",
-    art: FaGuitar
+    name: "Music",
+    description: "I have been playing guitar for the last 4 years. I enjoy playing songs and writing my own music.",
+    art: IconSkills.MUSIC.icon
   },
   { 
     name: "Hiking",
-    description: "I love the outdoors and enjoy hiking and backpacking in the mountains. I have hiked the West Coast Trail and the Great Divide Trail.",   
-    art: FaHiking
+    description: "I love the mountains and enjoy hiking and backpacking in the summer and winter.",
+    art: IconSkills.HIKING.icon
   },
   { 
     name: "Climbing",
-    description: "I have been climbing for the past 5 years. I enjoy both rock climbing and ice climbing, and have climbed in Colorado, Utah, and Alaska.",
-    art: GiMountainClimbing
+    description: "I have been climbing my whole life. I enjoy rock climbing, mountaineering, and ice climbing.",
+    art: IconSkills.MOUNTAIN_CLIMBING.icon
+  },
+  { 
+    name: "Swimming",
+    description: "I recently picked up swimming as a way to stay in shape and enjoy the water.",
+    art: IconSkills.SWIMMING.icon
   }
 ];

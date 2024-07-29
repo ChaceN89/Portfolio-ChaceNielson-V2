@@ -10,7 +10,7 @@
  * @updated 2024-07-28
  */
 
-import { FaUnity } from "react-icons/fa";
+import IconSkills from "../iconSkills";
 
 // Short description (blurb) to be displayed on the project card
 const short = "A Flappy Bird clone developed using Unity and C#.";
@@ -37,8 +37,8 @@ export const flappyBirdClone = {
     { src: "flappyBird.jpg", blurhash: "L8CI]Vs~Ros~8[obWHkA.Uk8oYs~" },
   ],
   mainStack: [
-    { name: "Unity", icon: FaUnity, color: "black" },
-    { name: "C#", svg_path: "c-sharp.svg" }
+    IconSkills.UNITY,
+    IconSkills.CSHARP,
   ],
   modalInfo: {
     description: long,

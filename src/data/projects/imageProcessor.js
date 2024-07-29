@@ -10,13 +10,7 @@
  * @updated 2024-07-28
  */
 
-// icons for links
-import { TfiWorld } from 'react-icons/tfi';
-import { BsGithub } from "react-icons/bs";
-
-// Icons for skills
-import { FaReact } from "react-icons/fa";
-import { SiRailway, SiFastapi, SiTypescript } from "react-icons/si";
+import IconSkills from "../iconSkills";
 
 // Short description (blurb) to be displayed on the project card
 const short = "Image processing task queue using React and FastAPI.";
@@ -44,16 +38,16 @@ export const imageProcessor = {
     { src: "imageProcessor.jpg", blurhash: "LFEseT-^{v9#LfUvK%%M2hD19[#8" },
   ],
   mainStack:[
-    { name: "React", icon: FaReact, color: "lightblue" },
-    { name: "FastAPI", icon: SiFastapi, color: "#079487" },
-    { name: "TypeScript", icon: SiTypescript, color: "#38BDF9" },
+    IconSkills.REACT,
+    IconSkills.FASTAPI,
+    IconSkills.TYPESCRIPT,
   ],
   extendedStack:[
-    { name: "Python", svg_path: "python.svg" },
-    { name: "Railway", icon: SiRailway, color: "black" },
+    IconSkills.PYTHON,
+    IconSkills.RAILWAY,
   ],
   externalLinks: [
-    { name: "Website", link: "https://main--img-processor.netlify.app/", icon: TfiWorld },
-    { name: "Code", link: "https://github.com/ChaceN89/image-processor", icon: BsGithub },
+    { name: "Website", link: "https://main--img-processor.netlify.app/", icon: IconSkills.WORLD.icon },
+    { name: "Code", link: "https://github.com/ChaceN89/image-processor", icon: IconSkills.GITHUB.icon },
   ],
 };

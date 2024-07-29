@@ -67,7 +67,15 @@ function ProjectCard({ project }) {
               transition={{ duration: 0.3 }}
             >
               <div>
-                <h3 className="relative z-10 underline">{project.name}</h3>
+                
+                <Link
+                  to={`/project/${project.id}`}
+                  state={{ background: location }}
+                  className='hover:text-accent'
+                  onClick={clickLearnMore} // Prevents the parent click event
+                >
+                  <h3 className="relative z-10 underline">{project.name}</h3>
+                </Link>
                 <p className="text-sm relative z-10">{project.blurb}</p>
               </div>
               <div className="relative z-10 flex">

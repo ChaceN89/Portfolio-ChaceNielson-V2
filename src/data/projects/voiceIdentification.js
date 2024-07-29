@@ -1,6 +1,21 @@
-import { BsGithub, BsFileEarmarkPdf } from "react-icons/bs";
+/**
+ * @file voiceIdentification.js
+ * @module voiceIdentification
+ * @desc Contains data for the Voice Identification project.
+ * 
+ * @name Voice Identification
+ * 
+ * @ChaceN89
+ * @created 2024-07-28
+ * @updated 2024-07-28
+ */
 
+import IconSkills from "../iconSkills";
+
+// Short description (blurb) to be displayed on the project card
 const short = "Voice identification system using machine learning.";
+
+// Long description for the modal page, providing detailed information about the project
 const long = (
   <div className='space-y-2'>
     <p>
@@ -27,13 +42,13 @@ export const voiceIdentification = {
     { src: "voice_recognition5.jpg", blurhash: "L3PQ87RjoeM{_2WB_4Rj00xu-:xu" },
   ],
   mainStack: [
-    {name:"Plotly Dash", svg_path:"plotly-dash.svg"},
-    {name:"Python", svg_path:"python.svg"},
-    {name:"Machine Learning", svg_path:"machine-learning.svg"},
+    IconSkills.PLOTLY_DASH,
+    IconSkills.PYTHON,
+    IconSkills.MACHINE_LEARNING,
   ],
   externalLinks: [
-    { name: "Code", link: "https://github.com/ChaceN89/voice-recognition", icon: BsGithub },
-    { name: "Notebook", link: "https://github.com/ChaceN89/voice-recognition/blob/main/original_notebook/ENCM%20Final%20Project%20Speech%20Recognition.ipynb", icon: BsGithub },
-    { name: "Report", pdf: "Voice ID Report.pdf", icon: BsFileEarmarkPdf },
+    { name: "Code", link: "https://github.com/ChaceN89/voice-recognition", icon: IconSkills.GITHUB.icon },
+    { name: "Notebook", link: "https://github.com/ChaceN89/voice-recognition/blob/main/original_notebook/ENCM%20Final%20Project%20Speech%20Recognition.ipynb", icon: IconSkills.GITHUB.icon },
+    { name: "Report", pdf: "Voice ID Report.pdf", icon: IconSkills.PDF.icon },
   ],
 };

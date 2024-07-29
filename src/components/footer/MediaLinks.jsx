@@ -8,12 +8,11 @@
  * @component MediaLinks
  * 
  * @requires react
- * @requires react-icons/bs { BsYoutube, BsInstagram, BsLinkedin, BsGithub }
  * @requires useMediaQuery from 'react-responsive'
  * @requires Tooltip from '../uiElements/Tooltip'
+ * @requires IconSkills from '../../data/iconSkills'
  * 
  * @see {@link https://react.dev/ | React Documentation}
- * @see {@link https://github.com/react-icons/react-icons | React Icons Documentation}
  * @see {@link https://github.com/contra/react-responsive | React Responsive Documentation}
  * 
  * @param none
@@ -40,18 +39,18 @@
  */
 
 import React from 'react';
-import { BsYoutube, BsInstagram, BsLinkedin, BsGithub } from 'react-icons/bs';
 import Tooltip from '../uiElements/Tooltip';
 import { useMediaQuery } from 'react-responsive';
+import IconSkills from '../../data/iconSkills';
 
 function MediaLinks() {
   const isMediumScreen = useMediaQuery({ query: '(min-width: 768px)' });
 
   const mediaLinks = [
-    { name: "GitHub", icon: BsGithub, link: "https://github.com/ChaceN89" },
-    { name: "YouTube", icon: BsYoutube, link: "https://www.youtube.com/@chacenielson5413" },
-    { name: "Instagram", icon: BsInstagram, link: "https://www.instagram.com/chacenielson" },
-    { name: "LinkedIn", icon: BsLinkedin, link: "https://www.linkedin.com/in/chace-nielson" }
+    { name: "GitHub", icon: IconSkills.GITHUB.icon, link: "https://github.com/ChaceN89" },
+    { name: "YouTube", icon: IconSkills.YOUTUBE.icon, link: "https://www.youtube.com/@chacenielson5413" },
+    { name: "Instagram", icon: IconSkills.INSTAGRAM.icon, link: "https://www.instagram.com/chacenielson" },
+    { name: "LinkedIn", icon: IconSkills.LINKEDIN.icon, link: "https://www.linkedin.com/in/chace-nielson" }
   ];
 
   const iconSize = isMediumScreen ? 28 : 20;

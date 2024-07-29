@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { projects } from "../data/pageData/projectData";
 import ProjectImageCarousel from "../homeSections/projects/ProjectImageCarousel";
-import { BsFileEarmarkPdf } from "react-icons/bs";
 import {openPdf} from "../functions/utils";
 
 const ProjectModal = () => {
@@ -11,6 +10,8 @@ const ProjectModal = () => {
 
   // Check if the project exists based on the id
   const project = projects.find(project => project.id === id.toLowerCase());
+
+
 
   useEffect(() => {
     // If the project is not found, navigate to the home page
@@ -57,42 +58,39 @@ const ProjectModal = () => {
       )}
 
       <div className="grid grid-cols-1 md:grid-cols-2">
+      {project.externalLinks && project.externalLinks.length > 0 && (
+  <div>
+    <h2 className="text-2xl font-semibold mb-2">External Links</h2>
+    <div>
+      {project.externalLinks.map((link, index) => (
+        link.pdf ? (
+          <button
+            key={index}
+            onClick={() => openPdf(link.pdf)}
+            className="m-2 inline-block text-blue-500"
+          >
+            {link.icon && <link.icon className="inline-block mr-2" />}
+            {link.name}
+          </button>
+        ) : (
+          <a
+            key={index}
+            href={link.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="m-2 inline-block text-blue-500"
+          >
+            {link.icon && <link.icon className="inline-block mr-2" />}
+            {link.name}
+          </a>
+        )
+      ))}
+    </div>
+  </div>
+)}
 
-        {project.externalLinks && project.externalLinks.length > 0 && (
-            <div>
-              <h2 className="text-2xl font-semibold mb-2">External Links</h2>
-              <div>
-                {project.externalLinks.map((link, index) => (
-                  <a key={index} href={link.link} target="_blank" rel="noopener noreferrer" className="m-2 inline-block text-blue-500">
-                    {link.icon && <link.icon className="inline-block mr-2" />}
-                    {link.name}
-                  </a>
-                ))}
-              </div>
-            </div>
-          )}
 
-        {project.pdfs && project.pdfs.length > 0 && (
-          <div>
-            <h2 className="text-2xl font-semibold mb-2">PDFs</h2>
-            <div>
-              {project.pdfs.map((pdf, index) => (
-                <button
-                  key={index} 
-
-                  onClick={(e) => {
-                    e.preventDefault();
-                    openPdf(pdf.link);
-                  }} 
-                  className="m-2 inline-block text-blue-500"
-                >
-                  <BsFileEarmarkPdf className="inline-block mr-2" />
-                  {pdf.name}
-                </button>
-              ))}
-            </div>
-          </div>
-        )}
+       
 
       </div>
 

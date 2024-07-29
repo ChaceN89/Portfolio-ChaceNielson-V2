@@ -10,9 +10,7 @@
  * @updated 2024-07-28
  */
 
-import { TfiWorld } from 'react-icons/tfi';
-import { BsGithub } from "react-icons/bs";
-import { SiRender, SiFastapi, SiTailwindcss } from "react-icons/si";
+import IconSkills from "../iconSkills";
 
 // Short description (blurb) to be displayed on the project card
 const short = "Job dashboard for managing job applications and interviews.";
@@ -43,19 +41,19 @@ export const jobDashboard = {
     { src: "jobDashboard.jpg", blurhash: "L7Op#=4mxu?cE2IokBxb9+%jj=Mv" },
   ],
   mainStack:[
-    { name: "Vue", svg_path: "vue.svg" },
-    { name: "Tailwind", icon: SiTailwindcss, color: "#38BDF9" },
-    { name: "FastAPI", icon: SiFastapi, color: "#079487" },
-    { name: "SQLite", svg_path: "sqlite.svg" }, 
+    IconSkills.VUE,
+    IconSkills.TAILWINDCSS,
+    IconSkills.FASTAPI,
+    { name: "SQLite", svg_path: "sqlite.svg" },
   ],
   extendedStack:[
-    { name: "Full-Stack", svg_path: "full-stack.svg" },
-    { name: "Python", svg_path: "python.svg" },
-    { name: "Netlify", svg_path: "netlify.svg" },
-    { name: "Render", icon: SiRender, color: "black" },
+    IconSkills.FULL_STACK,
+    IconSkills.PYTHON,
+    IconSkills.NETLIFY,
+    IconSkills.RENDER,
   ],
   externalLinks: [
-    { name: "Website", link: "https://job-dashboard-chace.netlify.app/", icon: TfiWorld },
-    { name: "Code", link: "https://github.com/ChaceN89/job-dashboard", icon: BsGithub },
+    { name: "Website", link: "https://job-dashboard-chace.netlify.app/", icon: IconSkills.WORLD.icon },
+    { name: "Code", link: "https://github.com/ChaceN89/job-dashboard", icon: IconSkills.GITHUB.icon },
   ],
 };

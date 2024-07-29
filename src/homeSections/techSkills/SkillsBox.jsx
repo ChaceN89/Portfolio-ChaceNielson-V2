@@ -1,11 +1,11 @@
 import React from 'react'
 import Tooltip from '../../components/uiElements/Tooltip';
-function SkillsBox({ category }) {
+function SkillsBox({ topSkills }) {
   const size = 60;
 
   return (
     <div className="grid  grid-cols-2 md:grid-cols-4 gap-2">
-      {category.topSkills.map((topSkill, idx) => (
+      {topSkills.map((topSkill, idx) => (
         <div key={idx} className="flex-col text-center items-center">
           <Tooltip 
             openDuration={100} 

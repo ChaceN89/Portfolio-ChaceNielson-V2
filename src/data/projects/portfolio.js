@@ -10,13 +10,7 @@
  * @updated 2024-07-28
  */
 
-import { BsGithub } from "react-icons/bs";
-
-// icons for skills
-import { FaReact } from "react-icons/fa";
-import { MdOutlineBlurOn } from "react-icons/md";
-import { SiTailwindcss, SiVercel } from "react-icons/si";
-import { TbBrandFramerMotion } from "react-icons/tb";
+import IconSkills from "../iconSkills";
 
 // Short description (blurb) to be displayed on the project card
 const short = "My original portfolio.";
@@ -47,15 +41,15 @@ export const portfolio = {
     { src: "portfolio.jpg", blurhash: "L78g,54m9F_4X9V?aexv9Ft7s;I." },
   ],
   mainStack: [
-    { name: "React", icon: FaReact, color: "lightblue" },
-    { name: "Tailwind", icon: SiTailwindcss, color: "#38BDF9" },
+    IconSkills.REACT,
+    IconSkills.TAILWINDCSS,
   ],
   extendedStack: [
-    { name: "Framer Motion", icon: TbBrandFramerMotion, color: "black" },
-    { name: "Blurhash", icon: MdOutlineBlurOn, color: "black" },
-    { name: "Vercel", icon: SiVercel, color: "black" },
+    IconSkills.FRAMER_MOTION,
+    IconSkills.BLURHASH,
+    IconSkills.VERCEL,
   ],
   externalLinks: [
-    { name: "Code", link: "https://github.com/ChaceN89/Portfolio-ChaceNielson", icon: BsGithub },
+    { name: "Code", link: "https://github.com/ChaceN89/Portfolio-ChaceNielson", icon: IconSkills.GITHUB.icon },
   ],
 };

@@ -10,6 +10,8 @@
  * @updated 2024-07-28
  */
 
+import IconSkills from "../iconSkills";
+
 // Short description (blurb) to be displayed on the project card
 const short = "Functional mini drill rig and GUI.";
 
@@ -42,12 +44,12 @@ export const drillbotics = {
     { src: "drillbotics6.jpg", blurhash: "LAF=jk~p-p?a_3o#tQRjR5RkIoRi" },
   ],
   mainStack: [
-    { name: "Plotly Dash", svg_path: "plotly-dash.svg" },
-    { name: "Python", svg_path: "python.svg" },
+    IconSkills.PLOTLY_DASH,
+    IconSkills.PYTHON,
   ],
   extendedStack: [
-    { name: "Engineering", svg_path: "engineering.svg" },
-    { name: "Circuity Design", svg_path: "circuit-board.svg" },
+    IconSkills.ENGINEERING,
+    IconSkills.CIRCUITY,
   ],
   externalLinks: [
     // Add external links if available

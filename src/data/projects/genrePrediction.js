@@ -10,8 +10,7 @@
  * @updated 2024-07-28
  */
 
-import { BsGithub } from "react-icons/bs";
-import { SiApachespark, SiJupyter } from "react-icons/si";
+import IconSkills from "../iconSkills";
 
 // Short description (blurb) to be displayed on the project card
 const short = "Predicting music genres and creating recommendations using machine learning.";
@@ -39,18 +38,18 @@ export const genrePrediction = {
     { src: "genrePrediction.jpg", blurhash: "LIR{uws%#rkX.8bJX5ad_MW@Xknh" },
   ],
   mainStack: [
-    { name: "Apache Spark", icon: SiApachespark, color: "#E25A1B" },
-    { name: "Python", svg_path: "python.svg" },
+    IconSkills.APACHE_SPARK,
+    IconSkills.PYTHON,
   ],
   extendedStack: [
-    { name: "Jupyter", icon: SiJupyter, color: "#F37626" },
-    { name: "Machine Learning", svg_path: "machine-learning.svg" },
+    IconSkills.JUPYTER,
+    IconSkills.MACHINE_LEARNING,
   ],
   externalLinks: [
-    { name: "Genre Analysis", link: "https://github.com/ChaceN89/Machine-Learning-Music-Notebooks/blob/main/MusicGenrePrediction/ENSF_544_Final_Project.ipynb", icon: BsGithub },
-    { name: "Spark Database Setup", link: "https://github.com/ChaceN89/Machine-Learning-Music-Notebooks/blob/main/SparkSentimentAnalysis/SparkSentimentMLAnalysis.ipynb", icon: BsGithub },
+    { name: "Genre Analysis", link: "https://github.com/ChaceN89/Machine-Learning-Music-Notebooks/blob/main/MusicGenrePrediction/ENSF_544_Final_Project.ipynb", icon: IconSkills.GITHUB.icon },
+    { name: "Spark Database Setup", link: "https://github.com/ChaceN89/Machine-Learning-Music-Notebooks/blob/main/SparkSentimentAnalysis/SparkSentimentMLAnalysis.ipynb", icon: IconSkills.GITHUB.icon },
   ],
   pdfs: [
-    { name: "Report", link: "Spark ML Genre Report.pdf" },
+    { name: "Report", link: "Spark ML Genre Report.pdf", icon: IconSkills.PDF.icon },
   ]
 };

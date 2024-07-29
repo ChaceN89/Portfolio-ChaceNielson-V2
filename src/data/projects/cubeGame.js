@@ -10,7 +10,7 @@
  * @updated 2024-07-28
  */
 
-import { FaUnity } from "react-icons/fa";
+import IconSkills from "../iconSkills";
 
 // Short description (blurb) to be displayed on the project card
 const short = "An endless runner game developed using Unity and C#.";
@@ -37,14 +37,14 @@ export const cubeGame = {
     { src: "cubeGame.jpg", blurhash: "LHO:^eD%4.%M00xv%2of_Nxt-;D%" },
   ],
   mainStack: [
-    { name: "Unity", icon: FaUnity, color: "black" },
-    { name: "C#", svg_path: "c-sharp.svg" }
+    IconSkills.UNITY,
+    IconSkills.CSHARP,
   ],
   extendedStack: [
-    { name: "Game Development", svg_path: "game-controller.svg" },
-    { name: "Unity Physics System", svg_path: "physic.svg" },
+    IconSkills.GAME_DEVELOPMENT,
+    IconSkills.UNITY_PHYSICS,
   ],
   externalLinks: [
-    { name: "Play Game", link: "https://chacen89.github.io/CubeGame/", icon: FaUnity },
+    { name: "Play Game", link: "https://chacen89.github.io/CubeGame/", icon: IconSkills.UNITY.icon },
   ],
 };
