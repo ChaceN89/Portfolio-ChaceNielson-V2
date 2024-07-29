@@ -12,7 +12,7 @@
 import { FaReact, FaNodeJs, FaUnity, FaNode, FaDocker, FaMusic, FaSnowboarding, FaBasketballBall, FaGuitar, FaHiking, FaBiking, FaSwimmer } from "react-icons/fa";
 import { DiPostgresql } from "react-icons/di";
 import { ImGit } from "react-icons/im";
-import { SiFastapi, SiTailwindcss, SiJavascript, SiMongodb, SiApachespark, SiJupyter, SiTypescript, SiRender, SiVercel, SiRailway, SiStreamlit, SiDjango, SiChartdotjs, SiRedux } from "react-icons/si";
+import { SiFastapi, SiTailwindcss, SiMongodb, SiApachespark, SiJupyter, SiTypescript, SiRender, SiVercel, SiRailway, SiStreamlit, SiDjango, SiChartdotjs, SiRedux } from "react-icons/si";
 import { MdOutlineAnimation, MdOutlineBlurOn } from "react-icons/md";
 import { TbBrandFramerMotion } from "react-icons/tb";
 import { TfiWorld } from "react-icons/tfi";
@@ -24,7 +24,7 @@ import { GrMysql } from "react-icons/gr";
 // Enumeration of technical skills with corresponding icons and svg paths or react-icons and react-icon color
 const IconSkills = {
   REACT: { name: "React", icon: FaReact, color: "lightblue" },
-  JAVASCRIPT: { name: "JavaScript", icon: SiJavascript, color: "yellow" },
+  JAVASCRIPT: { name: "JavaScript", svg_path: "javascript.svg" },
   TAILWINDCSS: { name: "TailwindCSS", icon: SiTailwindcss, color: "#38BDF9" },
   NODE_JS: { name: "Node.js", icon: FaNode, color: "#68A063" },
   

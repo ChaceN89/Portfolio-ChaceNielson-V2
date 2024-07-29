@@ -51,7 +51,7 @@ function InterestCategory({ interest }) {
   const iconSize = isReallySmallScreen ? '3.5rem' : isSmallScreen ? '4.5rem' : '5rem';
 
   return (
-    <ElevateOnView className='border-2 border-secondary p-2 border-opacity-10 rounded-lg' >
+    <ElevateOnView className='border-faint' >
       <div className="flex items-center space-x-2 md:space-x-4">
         <div className='flex-shrink-0'>
           <ShowIcon skill={interest.icon} size={iconSize} useWhiteText={true}/>

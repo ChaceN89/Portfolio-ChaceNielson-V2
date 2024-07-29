@@ -48,11 +48,13 @@ function SkillCategory({ category, index }) {
   const location = useLocation();
 
   return (
-    <ElevateOnView className='border-2 border-secondary p-4 border-opacity-10 rounded-lg'>
+    <ElevateOnView className='border-faint'>
       <div className='grid grid-cols-1 sm:grid-cols-3 gap-4'>
-        <div className='sm:col-span-2 '>
-          <h3 className="font-bold">{category.name}</h3>
-          <p className="text-sm text-secondary text-opacity-60 pt-0.5">{category.description}</p>
+        <div className='sm:col-span-2 flex flex-col space-y-2 justify-between'>
+          <div className='flex flex-col space-y-2'>
+            <h3 className="font-bold text-2xl">{category.name}</h3>
+            <p className="text-sm text-secondary text-opacity-60 ">{category.description}</p>
+          </div>
           <Link 
             to={"/skills/" + category.id}
             className="text-accent hover:text-accent-dark hover:underline cursor-pointer text-sm"

@@ -48,7 +48,7 @@ function MainSkills({ topSkills }) {
 
 
   return (
-    <div className="flex justify-center w-full space-x-4 sm:space-x-0 sm:grid grid-cols-2 sm:gap-4"> 
+    <div className="flex justify-center w-full space-x-4 sm:space-x-0 sm:grid grid-cols-2 sm:gap-4 "> 
       {topSkills.map((topSkill, idx) => (
         <Tooltip 
           key={idx}

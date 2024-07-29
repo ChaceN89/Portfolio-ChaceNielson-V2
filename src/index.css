@@ -13,6 +13,9 @@ html{
 }
 
 
+.border-faint{
+  @apply border-2 border-secondary p-4 border-opacity-20 rounded-lg;
+}
 
 /* headers */
 h1{
