@@ -15,11 +15,10 @@ import IconSkills from "../iconSkills";
 export const backendDesign = { 
   id: "backend-design",
   name: "Backend Design", 
-  linkName: "View More skills", 
-
+  linkName: "See More of My Backend Tools", 
   description: (
     <span>
-      I have been designing backend applications for 2 years. My main backend stack includes Python, Express.js, FastAPI, and PostgreSQL.
+      It might not be as flashy, but the backend drives my frontend development.
     </span>
   ),
   topSkills: [

@@ -50,7 +50,7 @@ function Photo({ item, index, openModal }) {
   return (
     <ElevateOnView>
       <div className='flex flex-col max-w-full'>
-        <LazyLoad height={300} offsetVertical={300}>
+        <LazyLoad height={300} offsetVertical={600}>
           <div
             className='relative hover:opacity-70'
             style={{ height: '300px', width: '100%' }}

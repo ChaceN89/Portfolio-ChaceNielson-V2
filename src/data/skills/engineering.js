@@ -16,11 +16,10 @@ export const engineering = {
   // Engineering
   id: "engineering",
   name: "Engineering", 
-  linkName: "View More skills", 
-
+  linkName: "My Engineering Background", 
   description: (
     <span>
-      I have been working on engineering projects for 2 years. My main engineering stack includes Git, GitHub, Java, and C++. 
+      I have a degree in Software Engineering from the University of Calgary.
     </span>
   ),
   topSkills: [
@@ -35,5 +34,7 @@ export const engineering = {
     IconSkills.APACHE_SPARK,
     IconSkills.VS_CODE,
     IconSkills.CI_CD,
+    IconSkills.DESIGN_PRINTING,
+    IconSkills.DATA_ANALYSIS,
   ],
 };

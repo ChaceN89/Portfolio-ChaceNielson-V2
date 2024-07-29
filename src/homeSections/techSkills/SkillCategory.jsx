@@ -8,28 +8,26 @@ function SkillCategory({ category, index }) {
 
 
   return (
-    <ElevateOnView>
+    <ElevateOnView marginY = '-75px'>
       <div key={index} className="grid grid-cols-5">
         <div className='col-span-2'>
-          <h3 className="font-bold">{category.name}</h3>
+          <div className='flex space-x-2 items-center'>
+            <h3 className="font-bold">{category.name}</h3>
+            <Link 
+              to={"/skills/" + category.id}
+              className="text-accent hover:text-accent-dark hover:underline cursor-pointer text-sm"
+            >
+              {category.linkName}
+            </Link>
+          </div>
           <p className="text-sm text-secondary text-opacity-60">
-          {category.description} 
- 
+            {category.description} 
           </p>
         </div>
-        <MyButton 
-            to={"/skills/" + category.id}
-            className="text-accent hover:text-accent-dark cursor-pointer"
-          >
-            {category.linkName}
-          </MyButton>
-
-        <div className='col-span-2'>
+        <div className='col-span-3'>
           <SkillsBox topSkills={category.topSkills} />
         </div>
       </div>
-      
-      
     </ElevateOnView>
   )
 }

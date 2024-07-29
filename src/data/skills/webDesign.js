@@ -15,10 +15,10 @@ import IconSkills from "../iconSkills";
 export const webDesign = { 
   id: "web-design",
   name: "Web Design",
-  linkName: "View More skills", 
+  linkName: "See My Web Design Toolkit", 
   description: (
     <span>
-      With 3 years of experience, I specialize in creating responsive web designs for applications using React, JavaScript, and Tailwind. 
+      With 3 years of experience, I specialize in creating interactive and responsive web designs for application development.
     </span>
   ),
   topSkills: [
@@ -38,5 +38,6 @@ export const webDesign = {
     IconSkills.HTML,
     IconSkills.CSS,
     IconSkills.FRAMER_MOTION,
+    IconSkills.BLURHASH,
   ],
 };

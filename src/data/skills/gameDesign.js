@@ -17,9 +17,10 @@ export const gameDesign = {
   // Game Design 
   id: "game-design",
   name: "Game Design", 
+  linkName: "Learn More", 
   description: (
     <span>
-      I have worked with Unity and Blender to create 3D games and animations. I have experience with C# and game physics.
+      While not my top skill, game design is a passion of mine. 
     </span>
   ),
   topSkills: [
