@@ -4,7 +4,7 @@ function SkillsBox({ topSkills }) {
   const size = 60;
 
   return (
-    <div className="grid  grid-cols-2 md:grid-cols-4 gap-2">
+    <div className="flex space-x-10 justify-start">
       {topSkills.map((topSkill, idx) => (
         <div key={idx} className="flex-col text-center items-center">
           <Tooltip 
@@ -18,7 +18,7 @@ function SkillsBox({ topSkills }) {
               <img
                 width={size}
                 height={size}
-                src={process.env.PUBLIC_URL + '/svg-icons/' + topSkill.SVG_path}
+                src={process.env.PUBLIC_URL + '/svg-icons/' + topSkill.svg_path}
                 alt={topSkill.name}
               />
             )}

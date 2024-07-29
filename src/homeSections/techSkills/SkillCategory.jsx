@@ -9,10 +9,10 @@ function SkillCategory({ category, index }) {
 
   return (
     <ElevateOnView marginY = '-75px'>
-      <div key={index} className="grid grid-cols-5">
-        <div className='col-span-2'>
-          <div className='flex space-x-2 items-center'>
-            <h3 className="font-bold">{category.name}</h3>
+      <div key={index} className="grid grid-cols-2 gap-6">
+        <div >
+          <div className='flex space-x-4 items-center'>
+            <h3 className="font-bold pb-2">{category.name}</h3>
             <Link 
               to={"/skills/" + category.id}
               className="text-accent hover:text-accent-dark hover:underline cursor-pointer text-sm"
@@ -24,7 +24,7 @@ function SkillCategory({ category, index }) {
             {category.description} 
           </p>
         </div>
-        <div className='col-span-3'>
+        <div >
           <SkillsBox topSkills={category.topSkills} />
         </div>
       </div>

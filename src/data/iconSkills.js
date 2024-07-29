@@ -38,7 +38,7 @@ const IconSkills = {
   JAVA: { name: "Java", svg_path: "java.svg" },
   CPP: { name: "C++", svg_path: "c-plus-plus.svg" },
   
-  UNITY: { name: "Unity", icon: FaUnity, color: "black" },
+  UNITY: { name: "Unity", icon: FaUnity, color: "white" },
   BLENDER: { name: "Blender", svg_path: "blender.svg" },
   CSHARP: { name: "C#", svg_path: "c-sharp.svg" },
   ANIMATION: { name: "Animation", icon: MdOutlineAnimation, color: "white" },
@@ -77,7 +77,7 @@ const IconSkills = {
   
   WORLD: { name: "World", icon: TfiWorld, color: "black" },
   YOUTUBE: { name: "YouTube", icon: BsYoutube, color: "red" },
-  INSTAGRAM: { name: "Instagram",  icon:BsInstagram, color:"white" },
+  INSTAGRAM: { name: "Instagram",  icon:BsInstagram, color: "white" },
   LINKEDIN: { name: "LinkedIn", icon:BsLinkedin, color: "white" },
   
   MUSIC: { name: "Music", icon: FaMusic, color: "black" },
