@@ -31,7 +31,6 @@ export const gameDesign = {
   ],
   minorSkills: [
     IconSkills.GAME_DEVELOPMENT,
-    IconSkills.ANIMATION,
     IconSkills.UNITY_PHYSICS,
   ],
 };

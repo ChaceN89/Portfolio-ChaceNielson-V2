@@ -1,10 +1,10 @@
 /**
- * @file SkillsBox.js
- * @module SkillsBox
+ * @file MainSkills.js
+ * @module MainSkills
  * @desc React component that displays a box of top skills with icons and tooltips.
  * This component maps through the provided topSkills array and renders each skill with a corresponding icon or image.
  *
- * @component SkillsBox
+ * @component MainSkills
  * 
  * @requires react
  * @requires Tooltip from '../../components/uiElements/Tooltip'
@@ -12,8 +12,8 @@
  * @see {@link https://reactjs.org/docs/getting-started.html | React Documentation}
  * 
  * @example
- * // Example usage of SkillsBox component
- * import SkillsBox from './SkillsBox';
+ * // Example usage of MainSkills component
+ * import MainSkills from './MainSkills';
  * 
  * function App() {
  *   const topSkills = [
@@ -23,11 +23,11 @@
  *   ];
  *   
  *   return (
- *     <SkillsBox topSkills={topSkills} />
+ *     <MainSkills topSkills={topSkills} />
  *   );
  * }
  * 
- * @exports SkillsBox
+ * @exports MainSkills
  * 
  * @author Chace Nielson
  * @created 2024-07-28
@@ -37,7 +37,7 @@
 import React from 'react';
 import Tooltip from '../../components/uiElements/Tooltip';
 
-function SkillsBox({ topSkills }) {
+function MainSkills({ topSkills }) {
   const size = 60;
 
   return (
@@ -66,4 +66,4 @@ function SkillsBox({ topSkills }) {
   );
 }
 
-export default SkillsBox;
+export default MainSkills;

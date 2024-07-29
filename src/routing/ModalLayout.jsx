@@ -41,6 +41,7 @@ import { useEffect, useCallback } from "react";
 import FadeTransition from "../animations/FadeTransition";
 import BackgroundWrapper from "../wrappers/BackgroundWrapper";
 import SlideTransition from "../animations/SlideTransition";
+import MyButton from "../components/uiElements/MyButton";
 
 const ModalLayout = () => {
   const navigate = useNavigate();
@@ -70,20 +71,40 @@ const ModalLayout = () => {
     };
   }, [closeModal]);
 
+
+  const setReturnText = () => {
+    const locationState = location.state?.background;
+    const currentPath = location.pathname;
+
+    if (locationState !== undefined) {
+      if (currentPath.startsWith('/project')) {
+        return 'Back to Projects';
+      } else if (currentPath.startsWith('/skills')) {
+        return 'Back to Skills';
+      } 
+    } 
+      return 'To Home Page';
+  };
+  
   return (
     <FadeTransition>
       <BackgroundWrapper
-        className="modal"
+        className="modal "
         onClick={closeModal}
         src={process.env.PUBLIC_URL + "/png-backgrounds/detailed/range-b&w2-trim.png"}
         bgOpacity={80}
       >
         <SlideTransition enter='right' exit='right' translationDist={400}>
-          <div className="modal-content text-black mx-20" onClick={(e) => e.stopPropagation()}>
-            <Outlet />
-            <button className="bg-primary border-2 border-primary text-secondary hover:text-primary hover:bg-secondary rounded-2xl p-2.5" onClick={closeModal}>
-              Close Modal
-            </button>
+          <div className="modal-content " onClick={(e) => e.stopPropagation()}>
+            <div className="overflow-y-auto max-h-section-height-small">
+              <Outlet />
+            </div>
+            <MyButton 
+              className="bg-primary border-2 border-primary text-secondary hover:text-primary hover:bg-secondary rounded-2xl p-0.5 mt-2" 
+              onClick={closeModal}
+            >
+              {setReturnText()}     
+            </MyButton>
           </div>
         </SlideTransition>
       </BackgroundWrapper>

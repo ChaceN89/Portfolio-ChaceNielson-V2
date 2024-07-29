@@ -73,6 +73,7 @@ function ProjectCard({ project }) {
                   state={{ background: location }}
                   className='hover:text-accent'
                   onClick={clickLearnMore} // Prevents the parent click event
+                  //state info here
                 >
                   <h3 className="relative z-10 underline">{project.name}</h3>
                 </Link>

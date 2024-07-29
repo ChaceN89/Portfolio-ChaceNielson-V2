@@ -29,7 +29,7 @@ const ProjectModal = () => {
   const fullStack = project.extendedStack ? [...project.mainStack, ...project.extendedStack] : project.mainStack;
 
   return (
-    <div className="overflow-y-auto max-h-section-height-small p-4">
+    <div className=" p-4">
       <h1 className="text-3xl font-bold mb-4">{project.name}</h1>
       {fullStack && fullStack.length > 0 && (
         <>

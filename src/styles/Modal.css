@@ -11,7 +11,7 @@
  * 
  * @author Chace Nielson
  * @created 2024-07-26
- * @updated 2024-07-26
+ * @updated 2024-07-28
  */
 
 .modal {
@@ -26,8 +26,5 @@
 }
 
 .modal-content {
-  background: white;
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 50px 150px rgba(0, 0, 0, 0.);
+  @apply bg-secondary p-4 rounded-lg shadow-lg max-h-section-height mx-20;
 }

@@ -39,13 +39,14 @@
  * @created 2024-07-28
  * @updated 2024-07-28
  */
-
 import React from 'react';
 import ElevateOnView from '../../animations/ElevateOnView';
-import SkillsBox from './SkillsBox';
-import { Link } from 'react-router-dom';
+import MainSkills from './MainSkills';
+import { Link, useLocation } from 'react-router-dom';
 
 function SkillCategory({ category, index }) {
+  const location = useLocation();
+
   return (
     <ElevateOnView marginY='-75px'>
       <div key={index} className="grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-6">
@@ -55,6 +56,7 @@ function SkillCategory({ category, index }) {
             <Link 
               to={"/skills/" + category.id}
               className="text-accent hover:text-accent-dark hover:underline cursor-pointer text-sm"
+              state={{ background: location }}
             >
               {category.linkName}
             </Link>
@@ -64,7 +66,7 @@ function SkillCategory({ category, index }) {
           </p>
         </div>
         <div>
-          <SkillsBox topSkills={category.topSkills} />
+          <MainSkills topSkills={category.topSkills} />
         </div>
       </div>
     </ElevateOnView>

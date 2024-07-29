@@ -53,7 +53,10 @@ function TechSkills() {
       <hr />
         <div className='container mx-auto pb-10'>
           <SlideTransition>
-            <SectionHeader title={skillPageData.title} subtitle={skillPageData.description} />
+            <div className='py-10 pb-8'>
+
+              <SectionHeader title={skillPageData.title} subtitle={skillPageData.description} />
+            </div>
           </SlideTransition>
           <div className='space-y-4 md:space-y-8'>
             {techSkills.map((category, index) => (

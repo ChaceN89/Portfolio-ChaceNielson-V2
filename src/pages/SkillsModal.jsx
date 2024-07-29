@@ -1,6 +1,44 @@
+/**
+ * @file SkillsModal.jsx
+ * @module SkillsModal
+ * @desc React component that displays a detailed view of skills in a modal.
+ * This component fetches the skill data based on the URL parameter, and if the skill is found,
+ * it renders the skill details along with top and minor skills using the ShadowBox component.
+ *
+ * @component SkillsModal
+ *
+ * @requires react
+ * @requires react-router-dom
+ * @requires techSkills from '../data/pageData/skillsData'
+ * @requires SectionHeader from '../components/uiElements/SectionHeader'
+ * @requires ShadowBox from '../components/uiElements/SkillBox'
+ *
+ * @see {@link https://reactjs.org/docs/getting-started.html | React Documentation}
+ * @see {@link https://reactrouter.com/ | React Router Documentation}
+ *
+ * @example
+ * // Example usage of SkillsModal component
+ * import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+ * import SkillsModal from './SkillsModal';
+ *
+ * function App() {
+ *   return (
+ *     <Router>
+ *       <Routes>
+ *         <Route path="/skills/:id" element={<SkillsModal />} />
+ *       </Routes>
+ *     </Router>
+ *   );
+ * }
+ *
+ * @exports SkillsModal
+ */
+
 import React, { useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { techSkills } from "../data/pageData/skillsData";
+import SectionHeader from "../components/uiElements/SectionHeader";
+import SkillBox from "../components/uiElements/SkillBox";
 
 const SkillsModal = () => {
   const { id } = useParams();
@@ -21,40 +59,22 @@ const SkillsModal = () => {
     return null;
   }
 
+  const allSkills = skill.topSkills ? [...skill.topSkills, ...skill.minorSkills] : skill.topSkills;
+
   return (
-    <div className="overflow-y-auto max-h-section-height-small p-4">
-      <h1 className="text-3xl font-bold mb-4">{skill.name}</h1>
-      {skill.description && <p className="mb-4">{skill.description}</p>}
-      {skill.topSkills && skill.topSkills.length > 0 && (
-        <>
-          <h2 className="text-2xl font-semibold mb-2">Top Skills</h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 mb-4">
-            {skill.topSkills.map((topSkill, index) => {
-              const IconComponent = topSkill.icon;
-              return (
-                <div key={index} className="flex flex-col items-center p-2 border rounded-md shadow-md">
-                  {IconComponent ? (
-                    <IconComponent style={{ color: topSkill.color, fontSize: '2rem' }} />
-                  ) : (
-                    <img src={topSkill.SVG_path} alt={topSkill.name} style={{ width: '2rem', height: '2rem' }} />
-                  )}
-                  <p className="mt-2 text-center">{topSkill.name}</p>
-                </div>
-              );
-            })}
-          </div>
-        </>
-      )}
-      {skill.minorSkills && skill.minorSkills.length > 0 && (
-        <>
-          <h2 className="text-2xl font-semibold mb-2">Minor Skills</h2>
-          <ul className="list-disc list-inside">
-            {skill.minorSkills.map((minorSkill, index) => (
-              <li key={index}>{minorSkill}</li>
+    <div className="text-primary">
+      <div className="py-1">
+        <SectionHeader title={skill.name} subtitle={skill.description} />
+      </div>
+      <div className="p-4">
+        {allSkills && allSkills.length > 0 && (
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-4">
+            {allSkills.map((singleSkill, index) => (
+              <SkillBox key={index} skill={singleSkill} />
             ))}
-          </ul>
-        </>
-      )}
+          </div>
+        )}
+      </div>
     </div>
   );
 };
