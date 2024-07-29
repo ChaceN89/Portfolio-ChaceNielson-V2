@@ -1,53 +1,19 @@
-/**
- * @file ScrollWheel.jsx
- * @module ScrollWheel
- * @desc React component that displays a scroll button to navigate to the next section.
- * The button bounces and fades in, and is hidden on smaller screens.
- * 
- * @component ScrollWheel
- * 
- * @param {Object} props - The component props.
- * @param {string} [props.to="CallToAction"] - The target section to scroll to.
- * 
- * @requires react
- * @requires framer-motion { motion }
- * @requires globals from '../../data/globals'
- * @requires react-scroll { Link as ScrollLink }
- * @requires ImageComponent from '../../wrappers/ImageComponent'
- * 
- * @see {@link https://react.dev/ | React Documentation}
- * @see {@link https://www.framer.com/docs/ | Framer Motion Documentation}
- * @see {@link https://www.npmjs.com/package/react-scroll | React Scroll Documentation}
- * 
- * @returns {JSX.Element} The ScrollWheel button component that scrolls to the next section.
- * 
- * @example
- * // Example usage of ScrollWheel component
- * import ScrollWheel from './ScrollWheel';
- * 
- * function Section() {
- *   return (
- *     <div className="section">
- *       // Other content
- *       <ScrollWheel to="NextSection" />
- *     </div>
- *   );
- * }
- * 
- * @exports ScrollWheel
- * 
- * @author Chace Nielson
- * @created 2024-07-28
- * @updated 2024-07-28
- */
-
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useMediaQuery } from 'react-responsive';
 import { globals } from '../../data/globals';
 import { Link as ScrollLink } from 'react-scroll';
 import ImageComponent from '../../wrappers/ImageComponent';
 
 function ScrollWheel({ to = "CallToAction" }) {
+  // Check if the screen height is greater than 300px
+  const isTallEnough = useMediaQuery({ query: '(min-height: 400px)' });
+
+  // Only render the component if the screen height is greater than 300px
+  if (!isTallEnough) {
+    return null;
+  }
+
   const bounceProps = {
     initial: { y: 0 }, // Initial position in the middle of the screen
     animate: { y: [0, -20, 0] }, // Keyframes for the bouncing effect
@@ -67,12 +33,12 @@ function ScrollWheel({ to = "CallToAction" }) {
   };
 
   return (
-    <div className="hidden absolute inset-0 z-5 md:flex justify-center items-end">
+    <div className="hidden absolute inset-0 z-15 md:flex justify-center items-end pointer-events-none">
       {/* Transparent background */}
-      <div className="absolute inset-0 z-0 bg-secondary opacity-0" />
+      <div className="absolute inset-0 z-0 bg-secondary opacity-0 pointer-events-none" />
       
       {/* Scroll button content */}
-      <motion.div className="mb-4 z-10" {...fadeInProps}>
+      <motion.div className="mb-4 z-10 pointer-events-auto" {...fadeInProps}>
         <motion.div {...bounceProps}>
           <ScrollLink
             className="hover:cursor-pointer"

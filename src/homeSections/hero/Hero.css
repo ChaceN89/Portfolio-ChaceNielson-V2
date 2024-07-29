@@ -44,7 +44,7 @@
   h-section-height md:h-min
   grid grid-cols-1 md:grid-cols-2 
   text-left 
-  pb-20 z-10 
+  md:mb-20 z-10 
   p-4
   mix-blend-difference;
 }

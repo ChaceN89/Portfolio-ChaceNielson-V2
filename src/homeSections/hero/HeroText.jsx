@@ -73,7 +73,7 @@ function HeroText() {
       variants={textVariants}
       initial="initial"
       animate="animate"
-      style={{ y }}
+      style={{ y, willChange: 'transform' }}
     >
       <motion.div variants={textVariants}>
         <motion.h3 variants={textVariants} className="pl-2">
