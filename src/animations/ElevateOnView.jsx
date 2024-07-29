@@ -37,7 +37,7 @@ import { motion, useAnimation, useInView } from 'framer-motion';
 
 
 
-function ElevateOnView({ children, duration = 0.5, marginY = '-150px', yPos = 100 }) {
+function ElevateOnView({ children, duration = 0.5, marginY = '-150px', yPos = 100, className='' }) {
   const controls = useAnimation();
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: `0px 0px ${marginY} 0px` });
@@ -72,6 +72,7 @@ function ElevateOnView({ children, duration = 0.5, marginY = '-150px', yPos = 10
       initial="hidden"
       animate={controls}
       variants={elevationVariants}
+      className={className}
     >
       {children}
     </motion.div>

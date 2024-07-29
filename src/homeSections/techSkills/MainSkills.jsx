@@ -39,7 +39,6 @@ import Tooltip from '../../components/uiElements/Tooltip';
 import ShowIcon from '../../components/uiElements/ShowIcon';
 
 function MainSkills({ topSkills }) {
-  const size = 60;
 
   return (
     <div className="flex space-x-5 sm:space-x-10 justify-center md:justify-start py-3 lg:py-0">
