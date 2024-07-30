@@ -94,7 +94,7 @@ function Navbar() {
         </div>
 
         {/* Hamburger menu button for small screens */}
-        <button onClick={toggleMenu} className="text-primary md:hidden z-50 hover:text-accent flex gap-1">
+        <button onClick={toggleMenu} className="text-primary md:hidden z-50 hover:text-accent-dark flex gap-1">
           <Hamburger toggled={isHamburgerNavOpen} rounded />
         </button>
 

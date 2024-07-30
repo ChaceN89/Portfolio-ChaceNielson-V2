@@ -68,7 +68,7 @@ const SkillsModal = () => {
       </div>
       <div className="p-4">
         {allSkills && allSkills.length > 0 && (
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-4">
+          <div className="grid text-sm md:text-base grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-4">
             {allSkills.map((singleSkill, index) => (
               <SkillBox key={index} skill={singleSkill} />
             ))}

@@ -58,7 +58,7 @@ function InterestCategory({ interest }) {
         </div>
         <div>
           <h3 className="text-xl font-semibold">{interest.name}</h3>
-          <p className="text-secondary text-sm text-opacity-60">{interest.description}</p>
+          <p className="text-secondary text-sm text-darken">{interest.description}</p>
         </div>
       </div>
     </ElevateOnView>

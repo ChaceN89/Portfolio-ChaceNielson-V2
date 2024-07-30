@@ -11,7 +11,9 @@
 html{
   @apply bg-primary text-secondary font-montserrat;
 }
-
+.text-darken{
+  @apply opacity-75;
+}
 
 .border-faint{
   @apply border-2 border-secondary p-4 border-opacity-20 rounded-lg;

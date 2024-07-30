@@ -6,7 +6,7 @@ const ThanksPage = () => {
     <div className='space-x-4'>
       <ScrollToTop /> 
       <h1>Thanks Page</h1>
-      <Link className='hover:text-accent' to="/">Open Home</Link>
+      <Link className='hover:text-accent-dark' to="/">Open Home</Link>
 
     </div>
   );

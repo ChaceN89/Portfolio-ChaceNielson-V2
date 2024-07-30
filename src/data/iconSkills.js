@@ -63,7 +63,7 @@ const IconSkills = {
   AUTHENTICATION: { name: "Authentication", svg_path: "authentication.svg" },
   
   FRAMER_MOTION: { name: "Framer Motion", icon: TbBrandFramerMotion, color: "black" },
-  BLURHASH: { name: "Blurhash", icon: MdOutlineBlurOn, color: "black" },
+  BLURHASH: { name: "BlurHash", icon: MdOutlineBlurOn, color: "black" },
   NETLIFY: { name: "Netlify", svg_path: "netlify.svg" },
   VERCEL: { name: "Vercel", icon: SiVercel, color: "black" },
   RAILWAY: { name: "Railway", icon: SiRailway, color: "black" },

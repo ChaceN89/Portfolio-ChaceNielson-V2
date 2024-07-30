@@ -53,7 +53,7 @@ function SkillCategory({ category, index }) {
         <div className='sm:col-span-2 flex flex-col space-y-2 justify-between'>
           <div className='flex flex-col space-y-2'>
             <h3 className="font-bold text-2xl">{category.name}</h3>
-            <p className="text-sm text-secondary text-opacity-60 ">{category.description}</p>
+            <p className="text-sm text-secondary text-darken ">{category.description}</p>
           </div>
           <Link 
             to={"/skills/" + category.id}

@@ -52,7 +52,7 @@ const LinkItem = ({ to, children, onClick, routerLink = false }) => {
           to={to}
           className={({ isActive }) =>
             `${isActive ? 'bg-primary text-secondary rounded-3xl' : 
-            'hover:text-accent bg-none duration-300'
+            'hover:text-accent-dark bg-none duration-300'
             } 
             px-4 py-2 transition-all `
           }
@@ -67,7 +67,7 @@ const LinkItem = ({ to, children, onClick, routerLink = false }) => {
           smooth={true}
           offset={globals.ScrollLink.offset}  // Adjust this offset based on your fixed navbar height
           duration={globals.ScrollLink.duration}
-          className="px-4 py-2 transition-all hover:text-accent duration-300 cursor-pointer"
+          className="px-4 py-2 transition-all hover:text-accent-dark duration-300 cursor-pointer"
           activeClass="bg-primary text-secondary rounded-3xl"
           onClick={onClick}
         >

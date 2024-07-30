@@ -91,14 +91,14 @@ function ModalPhotos({ isModalOpen, closeModal, activePhotoIndex, nextPhoto, pre
         {/* Close button for the modal */}
         <button
           onClick={closeModal}
-          className='absolute top-0 right-0 p-2 text-primary hover:text-accent transition-transform transform hover:scale-110'
+          className='absolute top-0 right-0 p-2 text-primary hover:text-accent-dark transition-transform transform hover:scale-110'
         >
           <FaTimes size={24} />
         </button>
         {/* Previous photo button */}
         <button
           onClick={prevPhoto}
-          className='absolute left-0 top-1/2 transform -translate-y-1/2 p-2 text-primary hover:text-accent transition-transform hover:scale-110'
+          className='absolute left-0 top-1/2 transform -translate-y-1/2 p-2 text-primary hover:text-accent-dark transition-transform hover:scale-110'
         >
           <FaArrowLeft size={24} />
         </button>
@@ -126,7 +126,7 @@ function ModalPhotos({ isModalOpen, closeModal, activePhotoIndex, nextPhoto, pre
         {/* Next photo button */}
         <button
           onClick={nextPhoto}
-          className='absolute right-0 top-1/2 transform -translate-y-1/2 p-2 text-primary hover:text-accent transition-transform hover:scale-110'
+          className='absolute right-0 top-1/2 transform -translate-y-1/2 p-2 text-primary hover:text-accent-dark transition-transform hover:scale-110'
         >
           <FaArrowRight size={24} />
         </button>

@@ -1,3 +1,6 @@
+// thissection has an issue with unique key prop to be solved 
+// Bug 1
+
 import React from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useMediaQuery } from 'react-responsive';

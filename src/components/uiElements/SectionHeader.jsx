@@ -41,7 +41,7 @@ function SectionHeader({ title, subtitle }) {
   return (
     <div className='space-y-1'>
       <h2 className='font-bold'>{title}</h2>
-      <p className='opacity-60'>{subtitle}</p>
+      <p className='text-darken'>{subtitle}</p>
     </div>
   );
 }

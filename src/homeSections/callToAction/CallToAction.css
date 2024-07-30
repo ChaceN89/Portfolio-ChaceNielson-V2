@@ -23,7 +23,7 @@
 }
 
 .inner-call-to-action {
-  @apply border-2 border-secondary text-secondary bg-primary bg-opacity-65 rounded-xl 
+  @apply border-2 border-secondary text-secondary bg-primary bg-opacity-80 rounded-xl 
   w-full h-full 
   grid grid-cols-1 md:grid-cols-3 z-10 
   px-4 mx-auto

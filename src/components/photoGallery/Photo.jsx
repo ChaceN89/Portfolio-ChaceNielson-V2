@@ -12,7 +12,7 @@
  * @requires useRef, useEffect from 'react'
  * @requires LazyLoad from 'react-lazy-load'
  * @requires ImageComponent from '../../wrappers/ImageComponent'
- * @requires ElevateOnView from '../../animations/ElevateOnView'
+ * @requires ScrollToTop from '../../routing/ScrollToTop'
  * 
  * @see {@link https://react.dev/ | React Documentation}
  * @see {@link https://www.framer.com/docs/ | Framer Motion Documentation}
@@ -44,11 +44,12 @@
 import React from 'react';
 import LazyLoad from 'react-lazy-load';
 import ImageComponent from '../../wrappers/ImageComponent';
-import ElevateOnView from '../../animations/ElevateOnView';
+import ScrollToTop from '../../routing/ScrollToTop';
 
-function Photo({ item, index, openModal }) {
+function Photo({ item, index, openModal }) {  
   return (
-    <ElevateOnView>
+    <>
+      <ScrollToTop/>
       <div className='flex flex-col max-w-full'>
         <LazyLoad height={300} offsetVertical={600}>
           <div
@@ -59,13 +60,13 @@ function Photo({ item, index, openModal }) {
             <ImageComponent
               src={`${process.env.PUBLIC_URL}/gallery-photos/${item.photo}`}
               alt={`Photo ${index + 1}`}
-              className='object-cover w-full h-full rounded-sm sm:cursor-pointer'
+              className='object-cover w-full h-full rounded-md sm:cursor-pointer'
               blurHash={item.blurhash}
             />
           </div>
         </LazyLoad>
       </div>
-    </ElevateOnView>
+    </>
   );
 }
 

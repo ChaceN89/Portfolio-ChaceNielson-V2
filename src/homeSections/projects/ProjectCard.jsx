@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence, useAnimation, useInView } from 'framer-motion';
 import ImageComponent from '../../wrappers/ImageComponent';
+import ElevateOnView from '../../animations/ElevateOnView';
 
 function ProjectCard({ project }) {
   const location = useLocation();
@@ -33,6 +34,8 @@ function ProjectCard({ project }) {
   }
 
   return (
+    <ElevateOnView>
+
     <div
       ref={ref}
       className="relative group border-2 border-secondary rounded-md overflow-hidden shadow-md"
@@ -71,7 +74,7 @@ function ProjectCard({ project }) {
                 <Link
                   to={`/project/${project.id}`}
                   state={{ background: location }}
-                  className='hover:text-accent'
+                  className='hover:text-accent-dark'
                   onClick={clickLearnMore} // Prevents the parent click event
                   //state info here
                 >
@@ -127,6 +130,8 @@ function ProjectCard({ project }) {
 
       </div>
     </div>
+    </ElevateOnView>
+
   );
 }
 

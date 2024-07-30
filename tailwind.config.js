@@ -10,9 +10,10 @@ module.exports = {
         secondary: '#fff', // white
         'secondary-dark': '#e0e0e0', // light near white
         
-        'accent-light': '#FFA500', // light orange
-        accent: '#CC5500', // lighter color
-        'accent-dark': '#993D00', // darker color
+        accent: '#FFA500', // lighter color
+        'accent-dark': '#CC5500', // darker color
+
+        spotlight: '#f0f0f0', // off white or fffeee
       },
       fontFamily: {
         'open-sans': ['Open Sans', 'sans-serif'],
