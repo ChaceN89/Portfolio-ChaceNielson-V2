@@ -3,8 +3,8 @@
  * @module CardImg
  * @desc React component that renders an image with animation effects.
  * This component uses Framer Motion for animations, including opacity and blur
- * effects based on initial load and click state. It also utilizes the ImageComponent
- * wrapper for displaying images with a blurhash.
+ * effects based on initial load, click state, and hover state. It also utilizes 
+ * the ImageComponent wrapper for displaying images with a blurhash.
  *
  * @component CardImg
  * 
@@ -24,6 +24,7 @@
  *     <CardImg
  *       isInitialLoad={true}
  *       isClicked={false}
+ *       isHovered={false}
  *       projID="project1"
  *       imgSrc="image.jpg"
  *       imgBlurhash="LKO2?U%2Tw=w]~RBVZRi};RPxuwH"
@@ -35,12 +36,14 @@
  * 
  * @param {boolean} isInitialLoad - Indicates if the image is in its initial load state.
  * @param {boolean} isClicked - Indicates if the image has been clicked.
+ * @param {boolean} isHovered - Indicates if the image is being hovered over.
  * @param {string} projID - The unique identifier for the project.
  * @param {string} imgSrc - The source URL of the image.
  * @param {string} imgBlurhash - The blurhash of the image.
  * 
  * @property {boolean} isInitialLoad - State of initial load for the image.
  * @property {boolean} isClicked - State of click interaction for the image.
+ * @property {boolean} isHovered - State of hover interaction for the image.
  * @property {string} projID - Project identifier to construct image path.
  * @property {string} imgSrc - Source path of the image.
  * @property {string} imgBlurhash - Blurhash for the image.
@@ -54,14 +57,14 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import ImageComponent from '../../wrappers/ImageComponent';
 
-function CardImg({ isInitialLoad, isClicked, projID, imgSrc, imgBlurhash }) {
+function CardImg({ isInitialLoad, isClicked, isHovered, projID, imgSrc, imgBlurhash }) {
   return (
     <motion.div
       className="w-full h-full"
       initial={{ opacity: 1, filter: 'blur(0px)' }}
       animate={{ 
-        opacity: isInitialLoad || isClicked ? 1 : 0.8,
-        filter: isInitialLoad || isClicked ? 'blur(0px)' : 'blur(1px)'
+        opacity: (isInitialLoad || isClicked ? 1 : isHovered ? 0.7 : 0.55),
+        filter: isInitialLoad || isClicked || isHovered ? 'blur(0px)' : 'blur(1.5px)'
       }}
       transition={{ 
         delay: isInitialLoad ? 1 : 0, 

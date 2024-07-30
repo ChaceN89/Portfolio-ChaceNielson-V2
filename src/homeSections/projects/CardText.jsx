@@ -81,7 +81,7 @@ function CardText({ project, isInitialLoad, isClicked, clickLearnMore, inView })
         >
           <div className='flex flex-col justify-between h-full'>
             <div className='p-1'>
-              <h3 className='hover:text-accent' onClick={clickLearnMore} >{project.name}</h3>
+              <h3 className='hover:text-accent underline' onClick={clickLearnMore} >{project.name}</h3>
               <p className="text-sm text-darken pt-0.5">{project.blurb}</p>
             </div>
 

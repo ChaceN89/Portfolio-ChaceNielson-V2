@@ -104,6 +104,7 @@ function ProjectCard({ project }) {
           projID={project.id}
           imgSrc={project.images[0].src}
           imgBlurhash={project.images[0].blurhash}
+          isHovered={isHovered}
         />
 
         <CardText
