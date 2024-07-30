@@ -96,7 +96,7 @@ function CardText({ project, isInitialLoad, isClicked, clickLearnMore, inView })
                     />
                   </Tooltip>
                   {index < project.mainStack.length - 1 && (
-                    <div className='h-0.5 rounded-full border-accent border-2'></div>
+                    <div className='h-0.5 rounded-full border-accent border-2'/>
                   )}
                 </React.Fragment>
               ))}
