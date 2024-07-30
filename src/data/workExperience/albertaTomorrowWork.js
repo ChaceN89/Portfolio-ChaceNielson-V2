@@ -22,7 +22,7 @@ export const albertaTomorrowWork = { // Alberta Tomorrow
   img: process.env.PUBLIC_URL + '/png-icons/alberta-tomorrow.jpg',
   dates: ['Jan 2024', 'Current'],
   description: 'Web application development for environmental education and land use planning.',
-  link: 'https://www.albertatomorrow.com',
+  link: 'https://www.albertatomorrow.ca',
   achievements: [
     'Simulation tool focused on sustainable land use in Alberta and BC',
     'Integrated Mapbox API to display interactive maps',

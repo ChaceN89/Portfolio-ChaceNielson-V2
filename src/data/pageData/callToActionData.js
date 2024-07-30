@@ -47,7 +47,7 @@ import { Link as ScrollLink } from 'react-scroll';
 import { globals } from '../globals';
 
 export const callToActionData = {
-  top: "Ready to Scale New Peaks?",
+  top: "Ready to Start Your Next Adventure?",
   bottom: (
     <>
       <p>
