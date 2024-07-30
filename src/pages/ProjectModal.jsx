@@ -82,9 +82,9 @@ const ProjectModal = () => {
       <div className="flex flex-col-reverse items-start md:items-center md:flex-row justify-between py-2">
         <ExternalLinks externalLinks={project.externalLinks} />
         <div className="text-center">
-          <MyButton onClick={scrollToImages}>
+          <button onClick={scrollToImages} className="button-secondary p-1.5 rounded-lg">
             Scroll to Images
-          </MyButton>
+          </button>
         </div>
       </div>
 

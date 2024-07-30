@@ -67,8 +67,7 @@ function MediaLinks() {
           >
             <div className="flex items-center justify-center 
               w-8 h-8 md:w-12 md:h-12 rounded-full 
-              bg-primary hover:bg-accent text-secondary hover:text-primary 
-              transition duration-300"
+              button-secondary"
             >
               <link.icon size={iconSize} className="" />
             </div>

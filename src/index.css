@@ -57,6 +57,11 @@ html{
   @apply bg-primary bg-opacity-45 backdrop-blur-md;
 }
 
+.button-secondary{
+  @apply bg-primary hover:bg-accent text-secondary hover:text-primary border-primary border-2
+  transition duration-300;
+}
+
 /* headers */
 h1{
   @apply text-7xl font-bold font-mangold;
