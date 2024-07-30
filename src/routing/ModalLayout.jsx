@@ -96,7 +96,7 @@ const ModalLayout = () => {
       >
         <SlideTransition enter='right' exit='right' translationDist={400}>
           <div className="modal-content " onClick={(e) => e.stopPropagation()}>
-            <div className="overflow-y-auto max-h-section-height-small">
+            <div id="project-modal-container" className="overflow-y-auto max-h-section-height-small">
               <Outlet />
             </div>
             <MyButton 
