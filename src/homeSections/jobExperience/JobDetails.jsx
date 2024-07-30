@@ -1,10 +1,8 @@
 import React from 'react'
-import SkillBoxContainer from '../../components/uiElements/SkillBoxContainer'
-import ShowIcon from '../../components/uiElements/ShowIcon'
 import DisplaySkill from './DisplaySkill'
 
-function JobDetails({ experience }) {
-  if (!experience) return null
+function JobDetails({ job }) {
+  if (!job) return null
 
   const {
     name,
@@ -17,8 +15,7 @@ function JobDetails({ experience }) {
     links,
     achievements,
     responsibilities,
-
-  } = experience
+  } = job
 
 
   return(
