@@ -13,7 +13,7 @@
 import IconSkills from "../iconSkills";
 
 // Short description (blurb) to be displayed on the project card
-const short = <>Unity simulation and physical prototype for CO<sub>2</sub> separation using deep ocean hydrostatic pressure.</>;
+const short = <>Concept simulation and physical prototype for CO<sub>2</sub> separation device.</>;
 
 // Long description for the modal page, providing detailed information about the project
 const long = (

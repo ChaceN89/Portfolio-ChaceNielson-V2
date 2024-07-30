@@ -1,12 +1,68 @@
+/**
+ * @file ProjectCard.jsx
+ * @module ProjectCard
+ * @desc React component that renders an individual project card with animations.
+ * This component uses Framer Motion for animations, including elevation on view
+ * and hover effects. It also includes navigation to a detailed project page.
+ *
+ * @component ProjectCard
+ * 
+ * @requires react
+ * @requires useState, useRef, useEffect from 'react'
+ * @requires useLocation, useNavigate from 'react-router-dom'
+ * @requires useAnimation, useInView from 'framer-motion'
+ * @requires ElevateOnView from '../../animations/ElevateOnView'
+ * @requires './Card.css'
+ * @requires CardImg from './CardImg'
+ * @requires CardText from './CardText'
+ * @requires CardLearnMore from './CardLearnMore'
+ * 
+ * @see {@link https://reactjs.org/docs/getting-started.html | React Documentation}
+ * @see {@link https://reactrouter.com/ | React Router Documentation}
+ * @see {@link https://www.framer.com/motion/ | Framer Motion Documentation}
+ * 
+ * @example
+ * // Example usage of ProjectCard component
+ * import ProjectCard from './ProjectCard';
+ * 
+ * function ProjectList({ projects }) {
+ *   return (
+ *     <div className="project-list">
+ *       {projects.map((project) => (
+ *         <ProjectCard key={project.id} project={project} />
+ *       ))}
+ *     </div>
+ *   );
+ * }
+ * 
+ * @exports ProjectCard
+ * 
+ * @param {Object} project - The project data to be displayed in the card.
+ * 
+ * @property {string} project.id - The unique identifier for the project.
+ * @property {Array} project.images - The array of images for the project.
+ * @property {string} project.images[0].src - The source URL of the main image.
+ * @property {string} project.images[0].blurhash - The blurhash of the main image.
+ * @property {Object} project - Other project details like name, description, etc.
+ * 
+ * @author Chace Nielson
+ * @created 2024-07-28
+ * @updated 2024-07-28
+ */
+
 import React, { useState, useRef, useEffect } from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { motion, AnimatePresence, useAnimation, useInView } from 'framer-motion';
-import ImageComponent from '../../wrappers/ImageComponent';
+import { useLocation, useNavigate } from 'react-router-dom';
+import { useAnimation, useInView } from 'framer-motion';
 import ElevateOnView from '../../animations/ElevateOnView';
+import './Card.css';
+import CardImg from './CardImg';
+import CardText from './CardText';
+import CardLearnMore from './CardLearnMore';
 
 function ProjectCard({ project }) {
   const location = useLocation();
   const navigate = useNavigate();
+
   const [isHovered, setIsHovered] = useState(false);
   const [isClicked, setIsClicked] = useState(false);
   const [isInitialLoad, setIsInitialLoad] = useState(true);
@@ -18,120 +74,54 @@ function ProjectCard({ project }) {
   useEffect(() => {
     if (inView) {
       controls.start('visible');
-      setTimeout(() => setIsInitialLoad(false), 1000); // Set initial load to false after the delay
+      setTimeout(() => setIsInitialLoad(false), 1000); // Set initial load to false after the delay - delay value to cause the blur effect
     }
   }, [controls, inView]);
 
-
-
+  // function to handle the click event
   const handleClick = () => {
-      setIsClicked(!isClicked);
+    setIsClicked(!isClicked);
   };
 
+  // function to navigate to the project page
   const clickLearnMore = (e) => {
     e.preventDefault();
-      navigate(`/project/${project.id}`, { state: { background: location } });
-  }
+    navigate(`/project/${project.id}`, { state: { background: location } });
+  };
 
   return (
     <ElevateOnView>
+      <div
+        ref={ref}
+        className="card-wrapper"
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => { setIsClicked(false); setIsHovered(false); }}
+        onClick={handleClick}
+      >
+        <CardImg
+          isInitialLoad={isInitialLoad}
+          isClicked={isClicked}
+          projID={project.id}
+          imgSrc={project.images[0].src}
+          imgBlurhash={project.images[0].blurhash}
+        />
 
-    <div
-      ref={ref}
-      className="relative group border-2 border-secondary rounded-md overflow-hidden shadow-md"
-      onMouseEnter={()=>setIsHovered(true)}
-      onMouseLeave={()=>{setIsClicked(false); setIsHovered(false)}}
-      onClick={handleClick}
-    >
+        <CardText
+          clickLearnMore={clickLearnMore}
+          isInitialLoad={isInitialLoad}
+          isHovered={isHovered}
+          isClicked={isClicked}
+          inView={inView}
+          project={project}
+        />
 
-      {/* the image aniamtion  */}
-      <div className="relative w-full h-72 sm:h-80 md:h-64 lg:h-60 2xl:h-56 cursor-pointer bg-primary ">
-      <motion.div
-          className="w-full h-full "
-          initial={{ opacity: 1, filter: 'blur(0px)' }} // initially the img is completly visible
-          animate={{ opacity: isInitialLoad || isClicked ? 1 : 0.6, filter: isInitialLoad || isClicked ? 'blur(0px)' : 'blur(1px)' }} // on animate if the in is clicked make it clear else blur it
-          transition={{ delay: isInitialLoad ? 1 : 0, duration: 0.5, ease: 'easeInOut' }} // delay the animation for 1 sec if its the initial load
-        >
-          <ImageComponent
-            src={`${process.env.PUBLIC_URL}/projects/${project.id}/${project.images[0].src}`}
-            blurHash={project.images[0].blurhash}
-            alt={project.name}
-            className="w-full h-full object-contain "
-          />
-        </motion.div>
-              
-        <AnimatePresence>
-          {(!isClicked) && (
-            <motion.div
-              className="absolute bottom-0 left-0 w-full h-1/2 p-2 text-secondary bg-primary bg-opacity-25 backdrop-blur-lg flex flex-col justify-between"
-              initial={{ y: "100%" }}
-              animate={inView ? { y: 0, transition: { delay: isInitialLoad ? 0.8 : 0, duration: 0.3 } } : {}}
-              exit={{ y: '100%' }}
-              transition={{ duration: 0.3 }}
-            >
-              <div>
-                
-                <Link
-                  to={`/project/${project.id}`}
-                  state={{ background: location }}
-                  className='hover:text-accent-dark'
-                  onClick={clickLearnMore} // Prevents the parent click event
-                  //state info here
-                >
-                  <h3 className="relative z-10 underline">{project.name}</h3>
-                </Link>
-                <p className="text-sm relative z-10">{project.blurb}</p>
-              </div>
-              <div className="relative z-10 flex">
-                {project.mainStack.map((stack, index) => (
-                  <div key={index} className="flex items-center mr-2">
-                    {stack.icon && (
-                      <stack.icon 
-                        className="inline-block mr-1" 
-                        style={{ color: stack.color || 'inherit' }} 
-                      />
-                    )}
-                    {stack.svg_path && (
-                      <img 
-                        src={`${process.env.PUBLIC_URL}/svg-icons/${stack.svg_path}`} 
-                        alt={stack.name} 
-                        className="inline-block mr-1 h-5" 
-                      />
-                    )}
-                    {stack.name && <span>{stack.name}</span>}
-                  </div>
-                ))}
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-
-
-{/* learn more always show up when the ishovered is on */}
-        <AnimatePresence>
-          {(isHovered) && (
-            <motion.div
-              className="absolute top-0 right-0 px-2 py-1 text-secondary bg-primary bg-opacity-50 rounded-bl-xl"
-              initial={{ y: '-100%' }}
-              animate={{ y: 0, transition: { delay: 0, duration: 0.3 } }}
-              exit={{ y: '-100%', transition: { duration: 0.3 } }}
-            >
-              <Link
-                to={`/project/${project.id}`}
-                state={{ background: location }}
-                className='hover:text-accent'
-                onClick={clickLearnMore} // Prevents the parent click event
-              >
-                Learn More
-              </Link>
-            </motion.div>
-          )}
-        </AnimatePresence>
+        <CardLearnMore
+          clickLearnMore={clickLearnMore}
+          isHovered={isHovered}
+        />
 
       </div>
-    </div>
     </ElevateOnView>
-
   );
 }
 

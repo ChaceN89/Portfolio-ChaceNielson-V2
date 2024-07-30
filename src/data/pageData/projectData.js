@@ -62,6 +62,11 @@ import { spaceSurvive } from "../projects/spaceSurvive";
 import { glassGeckoGames } from "../projects/glassGecko";
 import { drillbotics } from "../projects/drillbotics";
 
+export const projectPageData = {
+  title: "My Projects",
+  description: "A collection of projects I have worked on showcasing a variety of skills and technologies.",
+};
+
 export const projects = [
   glassGeckoGames,
   geoPredict,

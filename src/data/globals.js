@@ -73,5 +73,11 @@ export const globals = {
   parallaxConfigCallToAction:{
     scrollRange: [scrollStart, scrollMiddle, scrollEnd], // Scroll range values
     translateYRange: [translateStart, translateMiddle, translateEnd], // Translation values for parallax effect
+  },
+
+  project: {
+    slide:0.4,
+    initialSlide:0.8
+
   }
 }

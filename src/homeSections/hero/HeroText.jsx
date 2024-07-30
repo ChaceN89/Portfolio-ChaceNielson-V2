@@ -1,5 +1,42 @@
-// thissection has an issue with unique key prop to be solved 
-// Bug 1
+/**
+ * @file HeroText.jsx
+ * @module HeroText
+ * @desc React component that implements a hero section with sliding text animations
+ * and a parallax effect. This component uses the framer-motion library to create
+ * smooth slide-in animations and applies a parallax scrolling effect to the text.
+ * The parallax effect is removed on small screens to improve performance and usability.
+ *
+ * @component HeroText
+ * 
+ * @requires react
+ * @requires motion, useScroll, useTransform from 'framer-motion'
+ * @requires useMediaQuery from 'react-responsive'
+ * @requires heroData from '../../data/pageData/heroData'
+ * @requires MyButton from '../../components/uiElements/MyButton'
+ * @requires openPdf from '../../functions/utils'
+ * 
+ * @see {@link https://reactjs.org/docs/getting-started.html | React Documentation}
+ * @see {@link https://www.framer.com/motion/ | Framer Motion Documentation}
+ * @see {@link https://github.com/yocontra/react-responsive | React Responsive Documentation}
+ * 
+ * @example
+ * // Example usage of HeroText component
+ * import HeroText from './HeroText';
+ * 
+ * function App() {
+ *   return (
+ *     <div className="App">
+ *       <HeroText />
+ *     </div>
+ *   );
+ * }
+ * 
+ * @exports HeroText
+ * 
+ * @author Chace Nielson
+ * @created 2024-07-28
+ * @updated 2024-07-28
+ */
 
 import React from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
@@ -47,8 +84,8 @@ function HeroText() {
           {heroData.description}
         </motion.div>
         <motion.div variants={textVariants} className="text-buttons">
-          {heroData.buttons.map((button) => (
-            <motion.div key={button.id} variants={textVariants}>
+          {heroData.buttons.map((button, index) => (
+            <motion.div key={index} variants={textVariants}>
               <MyButton
                 className="w-full"
                 to={button.id}
