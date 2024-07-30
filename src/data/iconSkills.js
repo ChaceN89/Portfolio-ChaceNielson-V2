@@ -19,6 +19,8 @@ import { TfiWorld } from "react-icons/tfi";
 import { BsGithub, BsYoutube, BsInstagram, BsLinkedin, BsFileEarmarkPdf } from "react-icons/bs";
 import { GiMountainClimbing } from "react-icons/gi";
 import { GrMysql } from "react-icons/gr";
+import { FcCollaboration } from "react-icons/fc";
+
 
 
 // Enumeration of technical skills with corresponding icons and svg paths or react-icons and react-icon color
@@ -106,8 +108,13 @@ const IconSkills = {
   REDUX:{name:"Redux", icon:SiRedux, color:'#4A4ABC' },
   HTML: { name: "HTML", svg_path:"html-5.svg"},
   CSS: { name: "CSS", svg_path:"css-3.svg"},
-
-
+  
+  
+  PROBLEM_SOLVING: { name: "Problem Solving", svg_path: "problem-solving.svg" },
+  TEAM_COLLABORATION:{name:"Collaboration", icon:FcCollaboration, color:'black' },
+  COMMUNICATION: { name: "Communication", svg_path: "communication.svg" },
+  TIME_MANAGEMENT:{name:"Time Management", svg_path:"clock.svg" },
+  LEADERSHIP:{name:"Leadership", svg_path:"leadership.svg" },
 };
 
 export default IconSkills;

@@ -28,13 +28,20 @@
  * @created 2024-07-28
  * @updated 2024-07-28
  */
+import IconSkills from "../iconSkills";
 
-export const workExperienceData = [
+
+export const workExperiencePageData = {
+  title: 'Work Experience',
+  description: 'Technical work',
+}
+
+export const workExperience = [
   { // Glass Gecko Games
     name: 'Glass Gecko Games',
     role: 'Software Developer',
     dates: ['June 2024', 'Current'],
-    img: process.env.PUBLIC_URL + '/jpg-portraits/mountain-portrait-trim.jpg',
+    img: process.env.PUBLIC_URL + '/png-icons/glass-gecko-games-icon.png',
     description: 'Developing games using Unity and C#',
     technologies: ['Unity', 'C#', 'React', 'Tailwind CSS'],
     achievements: [
@@ -51,18 +58,25 @@ export const workExperienceData = [
     links:[
       { name: 'Glass Gecko Games Website', link: 'https://www.glassgeckogames.com' }
     ],
+    skills: [
+      IconSkills.DOCKER,
+      IconSkills.REST_API,
+      IconSkills.POSTGRESQL,
+      IconSkills.REACT,
+      IconSkills.FASTAPI,
+    ],
     softSkills: [
-      'Problem-solving',
-      'Team collaboration',
-      'Communication',
-      'Time management',
-      'Adaptability'
+      IconSkills.PROBLEM_SOLVING,
+      IconSkills.TEAM_COLLABORATION,
+      IconSkills.COMMUNICATION,
+      IconSkills.TIME_MANAGEMENT,
+      IconSkills.LEADERSHIP,
     ],
   },
   { // Alberta Tomorrow
     name: 'Alberta Tomorrow',
     role: 'Software Developer',
-    img: process.env.PUBLIC_URL + '/jpg-portraits/mountain-portrait-trim.jpg',
+    img: process.env.PUBLIC_URL + '/png-icons/alberta-tomorrow.jpg',
     dates: ['July 2024', 'Current'],
     description: 'Developing a web application using Vue and Node.js',
     technologies: ['Vue', 'Node.js', 'Mapbox', 'AWS'],
@@ -79,21 +93,29 @@ export const workExperienceData = [
     links:[
       { name: 'Alberta Tomorrow Website', link: 'https://www.albertatomorrow.com' }
     ],
+    skills: [
+      IconSkills.DOCKER,
+      IconSkills.REST_API,
+      IconSkills.AWS,
+      IconSkills.VUE,
+      IconSkills.NODE_JS,
+      IconSkills.PYTHON,
+ 
+    ],
     softSkills: [
-      'Problem-solving',
-      'Team collaboration',
-      'Communication',
-      'Time management',
-      'Adaptability'
+      IconSkills.PROBLEM_SOLVING,
+      IconSkills.TEAM_COLLABORATION,
+      IconSkills.COMMUNICATION,
+      IconSkills.TIME_MANAGEMENT,
+      IconSkills.LEADERSHIP,
     ],
   },
   { // Geothermal
-    name: 'Geothermal',
+    name: 'Energi Simulation Centre for Geothermal Systems Research',
     role: 'Software Developer',
-    img: process.env.PUBLIC_URL + '/jpg-portraits/mountain-portrait-trim.jpg',
+    img: process.env.PUBLIC_URL + '/png-icons/geothermal.png',
     dates: ['May 2022', 'Jan 2024'],
     description: 'Developed a web application using React and FastAPI',
-    technologies: ['React', 'FastAPI', 'PostgreSQL', 'Docker'],
     achievements: [
       'Developed a responsive web application using React',
       'Implemented a RESTful API using FastAPI',
@@ -105,12 +127,19 @@ export const workExperienceData = [
       'Conducted code reviews and provided feedback to team members',
       'Participated in planning and design meetings',
     ],
+    skills: [
+      IconSkills.DOCKER,
+      IconSkills.REST_API,
+      IconSkills.POSTGRESQL,
+      IconSkills.REACT,
+      IconSkills.FASTAPI,
+    ],
     softSkills: [
-      'Problem-solving',
-      'Team collaboration',
-      'Communication',
-      'Time management',
-      'Adaptability'
+      IconSkills.PROBLEM_SOLVING,
+      IconSkills.TEAM_COLLABORATION,
+      IconSkills.COMMUNICATION,
+      IconSkills.TIME_MANAGEMENT,
+      IconSkills.LEADERSHIP,
     ],
   }
 ];

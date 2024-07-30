@@ -86,11 +86,11 @@ function CardText({ project, isInitialLoad, isClicked, clickLearnMore, inView })
             </div>
 
             <div className='flex flex-wrap space-x-2 justify-center  w-full p-1 items-center'>
-              {project.mainStack.map((stack, index) => (
+              {project.mainStack.map((skill, index) => (
                 <React.Fragment key={index}>
-                  <Tooltip text={stack.name}>
+                  <Tooltip text={skill.name}>
                     <ShowIcon 
-                      skill={stack}
+                      skill={skill}
                       size="2.5rem"
                       useWhiteText={true}
                     />

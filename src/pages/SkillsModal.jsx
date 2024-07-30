@@ -11,7 +11,7 @@
  * @requires react-router-dom
  * @requires techSkills from '../data/pageData/skillsData'
  * @requires SectionHeader from '../components/uiElements/SectionHeader'
- * @requires ShadowBox from '../components/uiElements/SkillBox'
+ * @requires SkillBoxContainer from '../components/uiElements/SkillBoxContainer'
  *
  * @see {@link https://reactjs.org/docs/getting-started.html | React Documentation}
  * @see {@link https://reactrouter.com/ | React Router Documentation}
@@ -38,7 +38,7 @@ import React, { useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { techSkills } from "../data/pageData/skillsData";
 import SectionHeader from "../components/uiElements/SectionHeader";
-import SkillBox from "../components/uiElements/SkillBox";
+import SkillBoxContainer from "../components/uiElements/SkillBoxContainer";
 
 const SkillsModal = () => {
   const { id } = useParams();
@@ -66,15 +66,7 @@ const SkillsModal = () => {
       <div className="py-1">
         <SectionHeader title={skill.name} subtitle={skill.description} />
       </div>
-      <div className="p-4">
-        {allSkills && allSkills.length > 0 && (
-          <div className="grid text-sm md:text-base grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-4">
-            {allSkills.map((singleSkill, index) => (
-              <SkillBox key={index} skill={singleSkill} />
-            ))}
-          </div>
-        )}
-      </div>
+      <SkillBoxContainer stack={allSkills} />
     </div>
   );
 };

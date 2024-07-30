@@ -1,4 +1,7 @@
 import React from 'react'
+import SkillBoxContainer from '../../components/uiElements/SkillBoxContainer'
+import ShowIcon from '../../components/uiElements/ShowIcon'
+import DisplaySkill from './DisplaySkill'
 
 function JobDetails({ experience }) {
   if (!experience) return null
@@ -9,35 +12,44 @@ function JobDetails({ experience }) {
     dates,
     img,
     description,
-    technologies,
+    skills,
+    softSkills,
+    links,
     achievements,
     responsibilities,
-    softSkills,
-    links
+
   } = experience
 
-  return (
-    <div className='p-6 bg-secondary rounded-lg shadow-lg overflow-auto max-h-102'>
-      <div className='flex items-center space-x-4'>
+
+  return(
+    <div className='text-primary '>
+      <div className='flex items-center space-x-4 '>
         <img src={img} alt={name} className='w-16 h-16 rounded-full object-cover' />
-        <div>
+        <div className=''>
           <h2 className='text-xl font-bold text-primary'>{name}</h2>
           <p className='text-gray-600'>{role}</p>
           <p className='text-gray-500'>{dates ? dates.join(' - ') : ''}</p>
         </div>
       </div>
-      <p className='mt-4 text-gray-700'>{description}</p>
-      
-      {technologies && technologies.length > 0 && (
-        <div className='mt-4'>
-          <h3 className='text-lg font-semibold text-primary'>Technologies</h3>
-          <ul className='list-disc list-inside'>
-            {technologies.map((tech, index) => (
-              <li key={index} className='text-gray-700'>{tech}</li>
-            ))}
-          </ul>
+
+
+      {links && links.length > 0 && (
+        <div className=''>
+          {links.map((link, index) => (
+            <a key={index} href={link.link} className='text-blue-500 hover:underline'>{link.name}</a>
+          ))}
         </div>
       )}
+ 
+
+      <p className='mt-4 text-gray-700'>{description}</p>
+      <div className='flex-shrink'>
+
+        <DisplaySkill skillList={skills} />
+        <DisplaySkill skillList={softSkills} />
+    </div>
+
+    
 
       {achievements && achievements.length > 0 && (
         <div className='mt-4'>
@@ -60,32 +72,9 @@ function JobDetails({ experience }) {
           </ul>
         </div>
       )}
-
-      {softSkills && softSkills.length > 0 && (
-        <div className='mt-4'>
-          <h3 className='text-lg font-semibold text-primary'>Soft Skills</h3>
-          <ul className='list-disc list-inside'>
-            {softSkills.map((skill, index) => (
-              <li key={index} className='text-gray-700'>{skill}</li>
-            ))}
-          </ul>
-        </div>
-      )}
-
-      {links && links.length > 0 && (
-        <div className='mt-4'>
-          <h3 className='text-lg font-semibold text-primary'>Links</h3>
-          <ul className='list-disc list-inside'>
-            {links.map((link, index) => (
-              <li key={index}>
-                <a href={link.link} className='text-blue-500 hover:underline'>{link.name}</a>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
     </div>
   )
-}
+
+  }
 
 export default JobDetails

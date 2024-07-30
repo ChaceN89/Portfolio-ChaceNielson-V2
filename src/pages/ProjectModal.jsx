@@ -9,6 +9,10 @@
  * @requires react
  * @requires react-router-dom
  * @requires react-scroll
+ * @requires ProjectImageCarousel
+ * @requires SectionHeader
+ * @requires ExternalLinks
+ * @requires SkillBoxContainer
  * 
  * @example
  * // Example usage of ProjectModal
@@ -38,10 +42,9 @@ import { useParams, useNavigate } from "react-router-dom";
 import { projects } from "../data/pageData/projectData";
 import ProjectImageCarousel from "../homeSections/projects/ProjectImageCarousel";
 import SectionHeader from "../components/uiElements/SectionHeader";
-import SkillBox from "../components/uiElements/SkillBox";
 import ExternalLinks from "../homeSections/projects/ExternalLinks";
 import { Element, scroller } from 'react-scroll';
-import MyButton from "../components/uiElements/MyButton";
+import SkillBoxContainer from "../components/uiElements/SkillBoxContainer";
 
 const ProjectModal = () => {
   const { id } = useParams();
@@ -91,15 +94,7 @@ const ProjectModal = () => {
       <hr className="border-primary border-opacity-60" />
 
       {/* Skill Icons */}
-      <div className="p-4">
-        {fullStack && fullStack.length > 0 && (
-          <div className="grid text-sm md:text-base grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-4">
-            {fullStack.map((singleSkill, index) => (
-              <SkillBox key={index} skill={singleSkill} />
-            ))}
-          </div>
-        )}
-      </div>
+      <SkillBoxContainer stack={fullStack} />
 
       {/* description */}
       <div className="pb-4">{project.description}</div>
