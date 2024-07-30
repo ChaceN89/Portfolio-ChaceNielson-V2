@@ -27,7 +27,7 @@ export const capstone = {
   starred: true,
   id: "capstone", // id and folder name in the projects folder
   name: <span>C0<sub>2</sub> Separation</span>,
-  tag: "Unity and Engineering",
+  tag: "Engineering",
   blurb: short,
   description: long,
   images: [

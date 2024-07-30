@@ -30,7 +30,7 @@ const long = (
 export const spaceSurvive = {
   id: "space-survive",
   name: "2D Space Shooter",
-  tag: "Game Development",
+  tag: "Game",
   blurb: short,
   description: long,
   images: [

@@ -30,7 +30,7 @@ const long = (
 export const jenga = {
   id: "jenga",
   name: "Jenga",
-  tag: "Game Development",
+  tag: "Game",
   blurb: short,
   description: long,
   images: [

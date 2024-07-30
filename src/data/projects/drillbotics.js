@@ -13,7 +13,7 @@
 import IconSkills from "../iconSkills";
 
 // Short description (blurb) to be displayed on the project card
-const short = "Functional mini drill rig and GUI.";
+const short = "Functional mini drill rig and GUI to record real-time drilling operations.";
 
 // Long description for the modal page, providing detailed information about the project
 const long = (
@@ -31,7 +31,7 @@ export const drillbotics = {
   starred: true,
   id: "drillbotics",
   name: "Drillbotics",
-  tag: "Machine Learning",
+  tag: "Engineerng",
   blurb: short,
   description: long,
   images: [

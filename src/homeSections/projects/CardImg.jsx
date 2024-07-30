@@ -64,7 +64,7 @@ function CardImg({ isInitialLoad, isClicked, isHovered, projID, imgSrc, imgBlurh
       initial={{ opacity: 1, filter: 'blur(0px)' }}
       animate={{ 
         opacity: (isInitialLoad || isClicked ? 1 : isHovered ? 0.7 : 0.55),
-        filter: isInitialLoad || isClicked || isHovered ? 'blur(0px)' : 'blur(1.5px)'
+        filter: isInitialLoad || isClicked || isHovered ? 'blur(0px)' : 'blur(1px)'
       }}
       transition={{ 
         delay: isInitialLoad ? 1 : 0, 

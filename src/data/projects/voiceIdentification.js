@@ -13,13 +13,13 @@
 import IconSkills from "../iconSkills";
 
 // Short description (blurb) to be displayed on the project card
-const short = "Voice identification system using machine learning.";
+const short = "Voice identification user interface using machine learning.";
 
 // Long description for the modal page, providing detailed information about the project
 const long = (
   <div className='space-y-2'>
     <p>
-      This project entails developing a voice identification system using machine learning algorithms to recognize and verify individuals by their voice. Built with Python and Plotly-Dash, the system processes voice recordings, extracting features for analysis. It includes a comprehensive Jupyter notebook for data analysis and model training, leveraging various machine learning techniques to achieve high accuracy in voice recognition.
+      This project entails developing a voice identification system using machine learning algorithms to recognize and verify individuals by their voice. Built with Python and Plotly-Dash, the system processes voice recordings, extracting features for analysis. It includes a comprehensive Jupyter notebook for data analysis and model training, leveraging various machine learning techniques to achieve high accuracy in voice recognition. Mainly Gaussian Mixture Models (GMM) and Convolutional Neural Networks (CNN) are used for voice identification.
     </p>
     <p>
       The user-friendly system features a web interface for uploading and analyzing voice samples, making it accessible for practical use. The integration of advanced machine learning methods ensures reliable and efficient voice identification, demonstrating the potential of combining Python's capabilities with intuitive data visualization tools.

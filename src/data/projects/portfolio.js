@@ -34,7 +34,7 @@ export const portfolio = {
   starred: true,
   id: "portfolio",
   name: "My Portfolio",
-  tag: "Frontend",
+  tag: "UI/UX",
   blurb: short,
   description: long,
   images: [

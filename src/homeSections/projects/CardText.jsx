@@ -79,29 +79,35 @@ function CardText({ project, isInitialLoad, isClicked, clickLearnMore, inView })
             duration: globals.project.slide 
           }}
         >
-          <div className='flex flex-col justify-between h-full'>
-            <div className='p-1'>
+          <div className='flex flex-col justify-between h-full p-1.5'>
+            
+            <div className=''>
               <h3 className='hover:text-accent underline' onClick={clickLearnMore} >{project.name}</h3>
               <p className="text-sm text-darken pt-0.5">{project.blurb}</p>
             </div>
 
-            <div className='flex flex-wrap space-x-2 justify-center  w-full p-1 items-center'>
-              {project.mainStack.map((skill, index) => (
-                <React.Fragment key={index}>
-                  <Tooltip text={skill.name}>
-                    <ShowIcon 
-                      skill={skill}
-                      size="2.5rem"
-                      useWhiteText={true}
-                    />
-                  </Tooltip>
-                  {index < project.mainStack.length - 1 && (
-                    <div className='h-0.5 rounded-full border-accent border-2'/>
-                  )}
-                </React.Fragment>
-              ))}
+            <div className='flex flex-wrap justify-between w-full  items-center'>
+              <span className='text-darken'>{project.tag}</span>
+              <div className='flex space-x-2 justify-end items-center'>
+                {project.mainStack.map((skill, index) => (
+                  <React.Fragment key={index}>
+                    <Tooltip text={skill.name}>
+                      <ShowIcon 
+                        skill={skill}
+                        size="2.5rem"
+                        useWhiteText={true}
+                      />
+                    </Tooltip>
+                    {index < project.mainStack.length - 1 && (
+                      <div className='h-0.5 rounded-full border-accent border-2'/>
+                    )}
+                  </React.Fragment>
+                ))}
+              </div>
             </div>
+
           </div>
+
         </motion.div>
       )}
     </AnimatePresence>

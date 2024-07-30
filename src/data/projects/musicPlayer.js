@@ -34,10 +34,9 @@ export const musicPlayer = {
   starred: true,
   id: "music-player",
   name: "Music Player",
-  tag: "Frontend",
+  tag: "UI/UX",
   blurb: short,
   description: long,
-  blurhash: "",
   images: [
     { src: "musicPlayer.jpg", blurhash: "LADl{3~pIV00ROxvt7MxD*00xv?b" },
     { src: "musicPlayer1.jpg", blurhash: "LKMQ;at1-;-=t6IUof%2_4%NM{IT" },

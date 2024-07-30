@@ -30,7 +30,7 @@ const long = (
 export const cubeGame = {
   id: "cube-game",
   name: "Cube Game",
-  tag: "Game Development",
+  tag: "Game",
   blurb: short,
   description: long,
   images: [

@@ -13,7 +13,7 @@
 import IconSkills from "../iconSkills";
 
 // Short description (blurb) to be displayed on the project card
-const short = "Full-Stack Web Application for analyzing drilling data.";
+const short = "Web application for analyzing drilling data using machine learning models.";
 
 // Long description for the modal page, providing detailed information about the project
 const long = (

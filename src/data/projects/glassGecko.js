@@ -13,7 +13,7 @@
 import IconSkills from "../iconSkills";
 
 // Short description (blurb) to be displayed on the project card
-const short = "Website built for Glass Gecko Games.";
+const short = "The website built for the Glass Gecko Games team.";
 
 // Long description for the modal page, providing detailed information about the project
 const long = (
@@ -31,7 +31,7 @@ export const glassGeckoGames = {
   starred: true,
   id: "glass-gecko-games",
   name: "Glass Gecko Games",
-  tag: "Frontend",
+  tag: "UI/UX",
   blurb: short,
   description: long,
   images: [
