@@ -75,7 +75,7 @@ function Navbar() {
   };
 
   return (
-    <nav className="bg-secondary pb-1 fixed top-0 w-full z-45">
+    <nav className="bg-secondary bg-opacity-95 pb-1 fixed top-0 w-full z-45">
       {/* Scroll progress bar */}
       <motion.div 
         className='w-full h-1 bg-accent origin-left z-40'

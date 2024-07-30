@@ -36,7 +36,7 @@ function JobExperience() {
   return (
     <BackgroundWrapper 
       id='WorkExperience'
-      className='min-h-section-height' 
+      className='min-h-section-height ' 
       src={process.env.PUBLIC_URL + "/png-backgrounds/detailed/range-b&w2-trim.png"}
       lowResSrc={process.env.PUBLIC_URL + "/png-backgrounds/detailed/range-b&w2-trim-small.png"}
       bgOpacity={40}
@@ -45,7 +45,7 @@ function JobExperience() {
         title={workExperiencePageData.title}
         subtitle={workExperiencePageData.description}
       >
-        <div className='grid grid-cols-1 md:grid-cols-3 md:gap-4 h-full'>
+        <div className='grid grid-cols-1 md:grid-cols-4 md:gap-4 h-full'>
           <div className='pb-4 md:pb-0'>
             <JobButtons 
               setExperienceID={setExperienceID}
@@ -53,7 +53,7 @@ function JobExperience() {
               workExperienceList={workExperienceList}
             />
           </div>
-          <div className='col-span-2 h-section-height-small min-h-102 bg-secondary rounded-lg p-2 px-4 overflow-auto'>
+          <div className='col-span-3 min-h-section-height-small h-fit bg-secondary rounded-lg overflow-auto'>
             <JobDetails job={workExperienceList[experienceID]} />
           </div>
         </div>

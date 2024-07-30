@@ -21,7 +21,7 @@ export const albertaTomorrowWork = { // Alberta Tomorrow
   role: 'Software Developer',
   img: process.env.PUBLIC_URL + '/png-icons/alberta-tomorrow.jpg',
   dates: ['Jan 2024', 'Current'],
-  description: 'Web application development for environmental education and land use planning.',
+  description: 'Web application development using interactive maps, data visualization and gamification.',
   link: 'https://www.albertatomorrow.ca',
   achievements: [
     'Simulation tool focused on sustainable land use in Alberta and BC',

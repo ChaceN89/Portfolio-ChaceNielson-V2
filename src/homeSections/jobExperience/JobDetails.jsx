@@ -1,9 +1,49 @@
-import React from 'react'
-import DisplaySkill from './DisplaySkill'
-import IconSkills from '../../data/iconSkills'
-import ShowIcon from '../../components/uiElements/ShowIcon'
+/**
+ * @file JobDetails.js
+ * @module JobDetails
+ * @desc Displays detailed information about a specific job, including role, dates, description, skills, soft skills, achievements, and responsibilities. 
+ * Provides a link to an external resource if available.
+ * 
+ * @requires react
+ * @requires DisplaySkill from './DisplaySkill'
+ * @requires DisplayList from './DisplayList'
+ * @requires FaExternalLinkAlt from 'react-icons/fa'
+ * 
+ * @example
+ * // Example usage of JobDetails in a component
+ * import JobDetails from './JobDetails';
+ * 
+ * function App() {
+ *   const job = {
+ *     name: 'Job Name',
+ *     role: 'Job Role',
+ *     dates: ['Start Date', 'End Date'],
+ *     img: 'Image URL',
+ *     description: 'Job Description',
+ *     skills: ['Skill 1', 'Skill 2'],
+ *     softSkills: ['Soft Skill 1', 'Soft Skill 2'],
+ *     link: 'External Link',
+ *     achievements: ['Achievement 1', 'Achievement 2'],
+ *     responsibilities: ['Responsibility 1', 'Responsibility 2'],
+ *   };
+ * 
+ *   return <JobDetails job={job} />;
+ * }
+ * 
+ * @exports JobDetails
+ * 
+ * @author Chace Nielson
+ * @created 2024-07-30
+ * @updated 2024-07-30
+ */
+
+import React from 'react';
+import DisplaySkill from './DisplaySkill';
+import DisplayList from './DisplayList';
+import { FaExternalLinkAlt } from 'react-icons/fa';
+
 function JobDetails({ job }) {
-  if (!job) return null
+  if (!job) return null;
 
   const {
     name,
@@ -16,63 +56,38 @@ function JobDetails({ job }) {
     link,
     achievements,
     responsibilities,
-  } = job
+  } = job;
 
   const goToLink = () => {
-    if (link) window.open(link, '_blank')
-  }
-  
+    if (link) window.open(link, '_blank');
+  };
 
-  return(
-    <div className='text-primary '>
-      <div className='flex items-center space-x-4 '>
-        <img src={img} alt={name} className='w-16 h-16 rounded-full object-cover' />
-        <div className=''>
-          <h2  className='text-xl font-bold text-primary  flex space-x-0.5 items-center'>
-            <div>{name}</div>
-            <div onClick={goToLink} className='hover:cursor-pointer hover:bg-accent'>
-              <ShowIcon skill={IconSkills.WORLD} size = "1rem" />
-              </div> 
-            </h2>
-          <p className='text-gray-600'>{role}</p>
-          <p className='text-gray-500'>{dates ? dates.join(' - ') : ''}</p>
+  return (
+    <div className='text-primary p-2 px-4'>
+      <div className='flex justify-between'>
+        <div className='flex items-start space-x-4'>
+          <img src={img} alt={name} className='w-16 h-16 rounded-full object-cover' />
+          <div>
+            <h4 className='font-bold text-lg'>{name}</h4>
+            <p className='opacity-60 text-base'>{role}</p>
+            <p className='opacity-60 text-base'>{dates ? dates.join(' - ') : ''}</p>
+          </div>
         </div>
+        <span className='hover:text-accent pl-1 cursor-pointer' onClick={goToLink}>
+          <FaExternalLinkAlt size={24} className='inline-block align-text-bottom' />
+        </span>
       </div>
- 
 
-      <p className='mt-4 text-gray-700'>{description}</p>
-      <div className='flex-shrink'>
+      <p className='py-2'>{description}</p>
 
-        <DisplaySkill skillList={skills} />
-        <DisplaySkill skillList={softSkills} />
+      <div className='flex-shrink pt-2'>
+        <DisplaySkill skillList={skills.concat(softSkills)} />
+      </div>
+
+      <DisplayList title='Achievements' list={achievements} />
+      <DisplayList title='Responsibilities' list={responsibilities} />
     </div>
+  );
+}
 
-    
-
-      {achievements && achievements.length > 0 && (
-        <div className='mt-4'>
-          <h3 className='text-lg font-semibold text-primary'>Achievements</h3>
-          <ul className='list-disc list-inside'>
-            {achievements.map((achievement, index) => (
-              <li key={index} className='text-gray-700'>{achievement}</li>
-            ))}
-          </ul>
-        </div>
-      )}
-
-      {responsibilities && responsibilities.length > 0 && (
-        <div className='mt-4'>
-          <h3 className='text-lg font-semibold text-primary'>Responsibilities</h3>
-          <ul className='list-disc list-inside'>
-            {responsibilities.map((responsibility, index) => (
-              <li key={index} className='text-gray-700'>{responsibility}</li>
-            ))}
-          </ul>
-        </div>
-      )}
-    </div>
-  )
-
-  }
-
-export default JobDetails
+export default JobDetails;
