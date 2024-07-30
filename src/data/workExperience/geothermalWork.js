@@ -31,7 +31,7 @@ export const geothermalWork = { // Geothermal
   responsibilities: [
     'Presentation of project progress to stakeholders',
     'Conducted code reviews and provided feedback to team members',
-    'Performed hiring interviews for new developers',
+    'Conducted interviews for new developers',
   ],
   skills: [
     IconSkills.REACT,

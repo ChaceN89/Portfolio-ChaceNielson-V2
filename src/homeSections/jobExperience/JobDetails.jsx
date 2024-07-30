@@ -12,11 +12,12 @@ function JobDetails({ job }) {
     description,
     skills,
     softSkills,
-    links,
+    link,
     achievements,
     responsibilities,
   } = job
 
+  
 
   return(
     <div className='text-primary '>
@@ -28,15 +29,6 @@ function JobDetails({ job }) {
           <p className='text-gray-500'>{dates ? dates.join(' - ') : ''}</p>
         </div>
       </div>
-
-
-      {links && links.length > 0 && (
-        <div className=''>
-          {links.map((link, index) => (
-            <a key={index} href={link.link} className='text-blue-500 hover:underline'>{link.name}</a>
-          ))}
-        </div>
-      )}
  
 
       <p className='mt-4 text-gray-700'>{description}</p>

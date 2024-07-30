@@ -53,7 +53,7 @@ function JobExperience() {
               workExperienceList={workExperienceList}
             />
           </div>
-          <div className='col-span-2 h-section-height-small min-h-102 bg-secondary rounded-lg p-2 overflow-auto'>
+          <div className='col-span-2 h-section-height-small min-h-102 bg-secondary rounded-lg p-2 px-4 overflow-auto'>
             <JobDetails job={workExperienceList[experienceID]} />
           </div>
         </div>

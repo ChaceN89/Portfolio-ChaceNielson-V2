@@ -25,7 +25,6 @@ export const glassGeckoWork = {
   link: 'https://glassgeckogames.com/',
   achievements: [
     'Developed and launched the company website',
-    'Created macOS builds for existing games, enhancing platform reach',
     'Implemented a robust multiplayer networking system in Unity',
   ],
   responsibilities: [
