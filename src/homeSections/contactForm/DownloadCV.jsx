@@ -6,8 +6,6 @@ import DownloadButton from '../../components/buttons/GeneralButton';
 import {openPdf} from '../../functions/utils'
 import MyButton from '../../components/buttons/MyButton'
 
-import { FaExternalLinkAlt } from "react-icons/fa";
-
 function DownloadCV() {
 	// functions to open pdfs in a separate
 

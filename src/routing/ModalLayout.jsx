@@ -43,7 +43,6 @@ import { IoMdClose } from "react-icons/io";
 import FadeTransition from "../animations/FadeTransition";
 import BackgroundWrapper from "../wrappers/BackgroundWrapper";
 import SlideTransition from "../animations/SlideTransition";
-import MyButton from "../components/buttons/MyButton";
 
 
 const ModalLayout = () => {

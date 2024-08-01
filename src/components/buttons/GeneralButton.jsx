@@ -3,8 +3,7 @@
  * Uses download icon for all instances
  */
 import React from 'react'
-import { AiOutlineDownload } from "react-icons/ai";
-import { FaExternalLinkAlt, FaChevronRight } from "react-icons/fa";
+import { FaChevronRight } from "react-icons/fa";
 
 
 

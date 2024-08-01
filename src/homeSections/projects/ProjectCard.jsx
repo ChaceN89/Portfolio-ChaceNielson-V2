@@ -78,10 +78,6 @@ function ProjectCard({ project }) {
     }
   }, [controls, inView]);
 
-  // function to handle the click event
-  const handleClick = () => {
-    setIsClicked(!isClicked);
-  };
 
   // function to navigate to the project page
   const clickLearnMore = (e) => {
