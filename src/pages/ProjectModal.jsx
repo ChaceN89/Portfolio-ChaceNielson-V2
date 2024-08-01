@@ -45,6 +45,8 @@ import SectionHeader from "../components/uiElements/SectionHeader";
 import ExternalLinks from "../homeSections/projects/ExternalLinks";
 import { Element, scroller } from 'react-scroll';
 import SkillBoxContainer from "../components/uiElements/SkillBoxContainer";
+import { FaArrowAltCircleDown } from "react-icons/fa";
+
 
 const ProjectModal = () => {
   const { id } = useParams();
@@ -82,13 +84,13 @@ const ProjectModal = () => {
         <SectionHeader title={project.name} subtitle={project.blurb} />
       </div>
 
-      <div className="flex flex-col-reverse items-start md:items-center md:flex-row justify-between py-2">
-        <ExternalLinks externalLinks={project.externalLinks} />
-        <div className="text-center">
-          <button onClick={scrollToImages} className="button-secondary p-1.5 rounded-lg">
-            Scroll to Images
+      <div className="flex flex-col-reverse items-center  sm:flex-row justify-start py-2">
+        <div className="text-left pr-2">
+          <button onClick={scrollToImages} className="button-secondary p-0.5 rounded-full">
+            <FaArrowAltCircleDown size={24}/>
           </button>
         </div>
+        <ExternalLinks externalLinks={project.externalLinks} />
       </div>
 
       <hr className="border-primary border-opacity-60" />

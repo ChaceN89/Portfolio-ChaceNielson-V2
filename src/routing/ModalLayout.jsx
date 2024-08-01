@@ -105,12 +105,12 @@ const ModalLayout = () => {
             <div id="project-modal-container" className="overflow-y-auto max-h-section-height-small p-2">
               <Outlet />
             </div>
-            <MyButton 
-              className="bg-primary border-2 border-primary text-secondary hover:text-primary hover:bg-secondary rounded-2xl p-0.5 mt-2" 
+            <button 
+              className="button-secondary p-2 rounded-lg mt-2" 
               onClick={closeModal}
             >
               {setReturnText()}     
-            </MyButton>
+            </button>
           </div>
         </SlideTransition>
       </BackgroundWrapper>

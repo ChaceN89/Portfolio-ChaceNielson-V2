@@ -81,9 +81,7 @@ const HomePage = () => {
     <>
       <div id='Home'>
         <Hero />
-        <div className='bg-spotlight bg-opacity-70'>
-          <CallToAction />
-        </div>
+        <CallToAction />
       </div>
       <div id='AboutMe'>
         <TechSkills />

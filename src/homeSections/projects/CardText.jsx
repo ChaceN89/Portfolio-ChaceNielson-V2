@@ -61,55 +61,53 @@ import { globals } from '../../data/globals';
 import ShowIcon from '../../components/uiElements/ShowIcon';
 import Tooltip from '../../components/uiElements/Tooltip';
 
-function CardText({ project, isInitialLoad, isClicked, clickLearnMore, inView }) {
+function CardText({ project, isInitialLoad, inView }) {
   return (
     <AnimatePresence>
-      {!isClicked && (
-        <motion.div
-          className="absolute bottom-0 left-0 w-full h-1/2 flex flex-col justify-between bg-frosted-glass border-t-2 card-thin-border"
-          initial={{ y: "100%" }}
-          animate={
-            inView && { 
-              y: 0, transition: { 
-                delay: isInitialLoad ? globals.project.initialSlide : 0, duration: globals.project.slide 
-              } 
-            }}
-          exit={{ y: '100%' }}
-          transition={{ 
-            duration: globals.project.slide 
+      <motion.div
+        className="absolute bottom-0 left-0 w-full h-1/2 flex flex-col justify-between bg-frosted-glass border-t-2 card-thin-border"
+        initial={{ y: "100%" }}
+        animate={
+          inView && { 
+            y: 0, transition: { 
+              delay: isInitialLoad ? globals.project.initialSlide : 0, duration: globals.project.slide 
+            } 
           }}
-        >
-          <div className='flex flex-col justify-between h-full p-1.5'>
-            
-            <div className=''>
-              <h3 className='hover:text-accent underline' onClick={clickLearnMore} >{project.name}</h3>
-              <p className="text-sm text-darken pt-0.5">{project.blurb}</p>
-            </div>
-
-            <div className='flex flex-wrap justify-between w-full  items-center'>
-              <span className='text-darken'>{project.tag}</span>
-              <div className='flex space-x-2 justify-end items-center'>
-                {project.mainStack.map((skill, index) => (
-                  <React.Fragment key={index}>
-                    <Tooltip text={skill.name}>
-                      <ShowIcon 
-                        skill={skill}
-                        size="2.5rem"
-                        useWhiteText={true}
-                      />
-                    </Tooltip>
-                    {index < project.mainStack.length - 1 && (
-                      <div className='h-0.5 rounded-full border-accent border-2'/>
-                    )}
-                  </React.Fragment>
-                ))}
-              </div>
-            </div>
-
+        exit={{ y: '100%' }}
+        transition={{ 
+          duration: globals.project.slide 
+        }}
+      >
+        <div className='flex flex-col justify-between h-full p-1.5'>
+          
+          <div className=''>
+            <h3 className='underline' >{project.name}</h3>
+            <p className="text-sm text-darken pt-0.5">{project.blurb}</p>
           </div>
 
-        </motion.div>
-      )}
+          <div className='flex flex-wrap justify-between w-full  items-center'>
+            <span className='text-darken'>{project.tag}</span>
+            <div className='flex space-x-2 justify-end items-center'>
+              {project.mainStack.map((skill, index) => (
+                <React.Fragment key={index}>
+                  <Tooltip text={skill.name}>
+                    <ShowIcon 
+                      skill={skill}
+                      size="2.5rem"
+                      useWhiteText={true}
+                    />
+                  </Tooltip>
+                  {index < project.mainStack.length - 1 && (
+                    <div className='h-0.5 rounded-full border-accent border-2'/>
+                  )}
+                </React.Fragment>
+              ))}
+            </div>
+          </div>
+
+        </div>
+
+      </motion.div>
     </AnimatePresence>
   );
 }

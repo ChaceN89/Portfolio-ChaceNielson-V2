@@ -1,7 +1,6 @@
 import React from 'react';
 import handleClick from './handleClick';
 import './ThinButton.css';
-import { IoEllipse } from 'react-icons/io5';
 
 const ThinButton = ({ buttonType = 1, to, onClick, aLink, children, className, type = 'button', ...rest }) => {
   

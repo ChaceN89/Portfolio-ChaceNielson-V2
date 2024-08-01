@@ -96,7 +96,7 @@ function ProjectCard({ project }) {
         className="card-wrapper"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => { setIsClicked(false); setIsHovered(false); }}
-        onClick={handleClick}
+        onClick={clickLearnMore}
       >
         <CardImg
           isInitialLoad={isInitialLoad}
@@ -111,13 +111,12 @@ function ProjectCard({ project }) {
           clickLearnMore={clickLearnMore}
           isInitialLoad={isInitialLoad}
           isHovered={isHovered}
-          isClicked={isClicked}
           inView={inView}
           project={project}
         />
 
         <CardLearnMore
-          clickLearnMore={clickLearnMore}
+          // clickLearnMore={clickLearnMore}
           isHovered={isHovered}
         />
 
