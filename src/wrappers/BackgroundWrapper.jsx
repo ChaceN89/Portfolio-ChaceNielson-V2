@@ -49,7 +49,7 @@ import React, { useState, useEffect } from 'react';
  * @note The `lowResSrc` is displayed with reduced opacity until the high resolution image is fully loaded.
  * 
  * @created 2024-07-26
- * @updated 2024-07-26
+ * @updated 2024-08-01
  */
 
 function BackgroundWrapper({
@@ -60,8 +60,7 @@ function BackgroundWrapper({
   backgroundSize = "contain",
   backgroundPosition = "center",
   backgroundRepeat = "no-repeat",
-  backgroundAttachment = "fixed",
-  scale = 1,
+  backgroundAttachment = "fixed", // Change to scroll for better mobile support
   bgOpacity = 100,
   children
 }) {
@@ -72,8 +71,6 @@ function BackgroundWrapper({
     highResImg.src = src;
     highResImg.onload = () => setHighResLoaded(true);
   }, [src]);
-
-  const scaledBackgroundSize = `${100 * scale}%`;
 
   return (
     <div 
@@ -91,7 +88,7 @@ function BackgroundWrapper({
         className="absolute top-0 left-0 w-full h-full transition-opacity duration-500 ease-in-out"
         style={{
           backgroundImage: `url(${lowResSrc})`,
-          backgroundSize: scaledBackgroundSize,
+          backgroundSize: backgroundSize,
           backgroundPosition: backgroundPosition,
           backgroundRepeat: backgroundRepeat,
           backgroundAttachment: backgroundAttachment,
@@ -104,7 +101,7 @@ function BackgroundWrapper({
         className="absolute top-0 left-0 w-full h-full transition-opacity duration-500 ease-in-out"
         style={{
           backgroundImage: `url(${src})`,
-          backgroundSize: scaledBackgroundSize,
+          backgroundSize: backgroundSize,
           backgroundPosition: backgroundPosition,
           backgroundRepeat: backgroundRepeat,
           backgroundAttachment: backgroundAttachment,

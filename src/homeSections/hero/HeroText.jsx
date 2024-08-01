@@ -42,7 +42,7 @@ import React from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useMediaQuery } from 'react-responsive';
 import { heroData } from '../../data/pageData/heroData';
-import MyButton from '../../components/uiElements/MyButton';
+import MyButton from '../../components/buttons/MyButton';
 import { openPdf } from '../../functions/utils';
 
 const textVariants = {

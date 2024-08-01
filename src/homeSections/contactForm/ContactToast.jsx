@@ -13,8 +13,8 @@
  * @requires react
  * @requires react-hot-toast
  * 
- * @see {@link https://reactjs.org/docs/getting-started.html|React Documentation}
- * @see {@link https://react-hot-toast.com/docs|React Hot Toast Documentation}
+ * @see {@link https://reactjs.org/docs/getting-started.html | React Documentation}
+ * @see {@link https://react-hot-toast.com/docs | React Hot Toast Documentation}
  * 
  * @returns {JSX.Element} The custom toast notification component.
  * 

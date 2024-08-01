@@ -35,7 +35,7 @@
 import React from 'react';
 import { callToActionData } from '../../data/pageData/callToActionData';
 // Components
-import MyButton from '../../components/uiElements/MyButton';
+import MyButton from '../../components/buttons/MyButton';
 import ImageComponent from '../../wrappers/ImageComponent';
 
 function InnerCallToAction() {

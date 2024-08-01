@@ -9,6 +9,7 @@
  * @requires FadeTransition from '../animations/FadeTransition'
  * @requires BackgroundWrapper from '../wrappers/BackgroundWrapper'
  * @requires SlideTransition from '../animations/SlideTransition'
+ * @requires IoMdClose from 'react-icons/io'
  * 
  * @see {@link https://reactjs.org/docs/getting-started.html | React Documentation}
  * @see {@link https://reactrouter.com/web/guides/quick-start | React Router Documentation}
@@ -38,10 +39,12 @@
 
 import { useLocation, useNavigate, Outlet } from "react-router-dom";
 import { useEffect, useCallback } from "react";
+import { IoMdClose } from "react-icons/io";
 import FadeTransition from "../animations/FadeTransition";
 import BackgroundWrapper from "../wrappers/BackgroundWrapper";
 import SlideTransition from "../animations/SlideTransition";
-import MyButton from "../components/uiElements/MyButton";
+import MyButton from "../components/buttons/MyButton";
+
 
 const ModalLayout = () => {
   const navigate = useNavigate();
@@ -95,8 +98,11 @@ const ModalLayout = () => {
         bgOpacity={80}
       >
         <SlideTransition enter='right' exit='right' translationDist={400}>
-          <div className="modal-content " onClick={(e) => e.stopPropagation()}>
-            <div id="project-modal-container" className="overflow-y-auto max-h-section-height-small">
+          <div className="modal-content relative" onClick={(e) => e.stopPropagation()}>
+            <button className="absolute top-2 right-2 md:text-2xl text-primary hover:text-accent" onClick={closeModal}>
+              <IoMdClose size={30} />
+            </button>
+            <div id="project-modal-container" className="overflow-y-auto max-h-section-height-small p-2">
               <Outlet />
             </div>
             <MyButton 
