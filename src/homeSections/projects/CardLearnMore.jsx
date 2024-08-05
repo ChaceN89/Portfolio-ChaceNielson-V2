@@ -51,20 +51,17 @@ import React from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { globals } from '../../data/globals';
 
-function CardLearnMore({ isHovered, clickLearnMore }) {
+function CardLearnMore({ isHovered }) {
   return (
     <AnimatePresence>
       {isHovered && (
         <motion.div
-          className="absolute top-0 right-0 bg-frosted-glass rounded-bl-xl p-1 border-l-2 border-b-2 card-thin-border"
+          className="absolute top-0 right-0 bg-frosted-glass rounded-bl-xl py-0.5 px-1 text-sm border-l-2 border-b-2 card-thin-border"
           initial={{ y: '-100%' }}
           animate={{ y: 0, transition: { delay: 0, duration: globals.project.slide } }}
           exit={{ y: '-100%', transition: { duration: globals.project.slide } }}
         >
-          <div
-            className='hover:text-accent text-base'
-            // onClick={clickLearnMore} // Prevents the parent click event
-          >
+          <div className='hover:text-accent' >
             Click to Learn More
           </div>
         </motion.div>

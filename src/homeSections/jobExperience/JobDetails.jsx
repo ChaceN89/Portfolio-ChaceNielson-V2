@@ -73,7 +73,8 @@ function JobDetails({ job }) {
             <p className='opacity-60 text-base'>{dates ? dates.join(' - ') : ''}</p>
           </div>
         </div>
-        <span className='hover:text-accent pl-1 cursor-pointer' onClick={goToLink}>
+        <span className='hover:text-accent pl-1 cursor-pointer space-x-1 whitespace-nowrap' onClick={goToLink}>
+          <span>Visit</span>
           <FaExternalLinkAlt size={24} className='inline-block align-text-bottom' />
         </span>
       </div>

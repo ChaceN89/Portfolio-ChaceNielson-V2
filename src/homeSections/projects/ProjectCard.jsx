@@ -112,7 +112,6 @@ function ProjectCard({ project }) {
         />
 
         <CardLearnMore
-          // clickLearnMore={clickLearnMore}
           isHovered={isHovered}
         />
 

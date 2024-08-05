@@ -61,11 +61,13 @@ function CardImg({ isInitialLoad, isClicked, isHovered, projID, imgSrc, imgBlurh
   return (
     <motion.div
       className="w-full h-full"
-      initial={{ opacity: 1, filter: 'blur(0px)' }}
+      initial={{ opacity: 1, filter: 'blur(0px)', scale: 1 }}
       animate={{ 
         opacity: (isInitialLoad || isHovered ? 1 : 0.6),
-        filter: isInitialLoad || isClicked || isHovered ? 'blur(0px)' : 'blur(0.5px)'
+        filter: isInitialLoad || isClicked || isHovered ? 'blur(0px)' : 'blur(0.5px)',
+        scale: isHovered ? 1.05 : 1 // Add this line to handle scaling
       }}
+      whileHover={{ scale: 1.15 }} // Add this line to handle hover scaling
       transition={{ 
         delay: isInitialLoad ? 1 : 0, 
         duration: 0.5, ease: 'easeInOut' 
