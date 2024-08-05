@@ -1,0 +1,10 @@
+.contact-label{
+  @apply block text-base font-medium text-secondary
+}
+
+
+.contact-input{
+  @apply block w-full shadow-lg rounded-lg bg-secondary bg-opacity-10 backdrop-blur-lg
+  mt-1 px-3 py-2
+  ;
+}

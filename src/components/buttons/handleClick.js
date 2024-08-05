@@ -14,7 +14,7 @@ export default function handleClick({ to = null, onClick = null, aLink = null, e
       duration: globals.ScrollLink.duration,
     });
   } else if (onClick) {
-    onClick();
+    onClick(event);
   } else if (aLink) {
     window.open(aLink, '_blank');
   }

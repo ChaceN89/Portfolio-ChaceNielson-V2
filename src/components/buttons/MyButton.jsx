@@ -51,16 +51,26 @@ import './GlowButton.css';
 function MyButton({ to, onClick, aLink, children, className, type = 'button', ...rest }) {
   const buttonClass = `glow-on-hover border border-secondary border-opacity-50 ${className}`;
 
+  const handleButtonClick = (event) => {
+    if (type === 'submit') {
+      // Do not call handleClick if the button is a submit button to avoid preventing form submission
+      if (onClick) onClick(event);
+    } else {
+      handleClick({ to, onClick, aLink, event });
+    }
+  };
+
   return (
     <button
       type={type}
       className={buttonClass}
-      onClick={(event) => handleClick({ to, onClick, aLink, event })}
+      onClick={handleButtonClick}
       {...rest}
-      >
+    >
       <span>{children}</span>
     </button>
   );
 }
 
 export default MyButton;
+

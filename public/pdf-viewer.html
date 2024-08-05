@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="%PUBLIC_URL%/resume.ico" />
+    <title>PDF Viewer</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <iframe id="pdfFrame" src="" frameborder="0"></iframe>
+    <script>
+        // Get the PDF name from the URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const pdfName = urlParams.get('pdf');
+        if (pdfName) {
+            const publicUrl = window.location.origin;
+            document.getElementById('pdfFrame').src = `${publicUrl}/pdfs/${decodeURIComponent(pdfName)}`;
+        }
+    </script>
+</body>
+</html>

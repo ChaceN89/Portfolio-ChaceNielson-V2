@@ -35,7 +35,7 @@
  * @returns {void}
  */
 function openPdf(pdfName) {
-  const fileUrl = `${process.env.PUBLIC_URL}/pdfs/${pdfName}`;
+  const fileUrl = `${process.env.PUBLIC_URL}/pdf-viewer.html?pdf=${encodeURIComponent(pdfName)}`;
   window.open(fileUrl, '_blank');
 }
 
