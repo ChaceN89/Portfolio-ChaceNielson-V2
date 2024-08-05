@@ -56,7 +56,7 @@ function ShowIcon({ skill, size = "2rem", useWhiteText = false }) {
   const imgStyle = { width: size, height: size };
 
   return (
-    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: size, height: size }}>
+    <div className='hover:scale-90 transition-all' style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: size, height: size }}>
       {IconComponent ? (
         <IconComponent style={iconStyle} />
       ) : (

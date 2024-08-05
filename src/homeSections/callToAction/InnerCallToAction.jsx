@@ -40,7 +40,7 @@ import ImageComponent from '../../wrappers/ImageComponent';
 
 function InnerCallToAction() {
   return (
-    <div className="inner-call-to-action">
+    <div className="inner-call-to-action bg-frosted-glass">
       <div className="col-span-1 hidden md:flex items-end justify-center">
         <ImageComponent
           src={callToActionData.img}
