@@ -22,7 +22,7 @@ function Contact() {
           <div className="w-full md:w-3/5">
             <Form />
           </div>
-          <div className="w-full md:w-2/5 flex justify-center items-center">
+          <div className="hidden w-full md:w-2/5 md:flex justify-center items-center">
             <ImageComponent
               src={`${process.env.PUBLIC_URL}/png-portraits/chace-1.png`}
               alt="Contact Photo"

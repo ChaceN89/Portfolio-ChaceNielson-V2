@@ -44,16 +44,21 @@ import ElevateOnView from '../../animations/ElevateOnView';
 import MainSkills from './MainSkills';
 import { Link, useLocation } from 'react-router-dom';
 
-function SkillCategory({ category, index }) {
+function SkillCategory({ category, index, hoverIndex, handleMouseEnter, handleMouseLeave }) {
   const location = useLocation();
 
   return (
     <ElevateOnView className='border-faint'>
-      <div className='grid grid-cols-1 sm:grid-cols-3 gap-4'>
+      <div 
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        className={`grid grid-cols-1 sm:grid-cols-3 gap-4 
+          transition-all ${hoverIndex !== null && hoverIndex !== index ? 'duration-500 blur-xs' : 'duration-100'}`}
+      >
         <div className='sm:col-span-2 flex flex-col space-y-2 justify-between'>
           <div className='flex flex-col space-y-2'>
             <h3 className="font-bold text-2xl">{category.name}</h3>
-            <p className="text-sm text-secondary text-darken ">{category.description}</p>
+            <p className="text-sm text-secondary text-darken">{category.description}</p>
           </div>
           <Link 
             to={"/skills/" + category.id}

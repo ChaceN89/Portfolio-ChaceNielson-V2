@@ -33,13 +33,15 @@
  * @created 2024-07-28
  * @updated 2024-07-29
  */
-import React from 'react';
+import React, { useState } from 'react';
 import { techSkills, skillPageData } from '../../data/pageData/skillsData';
 import BackgroundWrapper from '../../wrappers/BackgroundWrapper';
 import SkillCategory from './SkillCategory';
 import SectionWrapper from '../../components/uiElements/SectionWrapper';
 
 function TechSkills() {
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+  
 
   return (
     <BackgroundWrapper 
@@ -55,7 +57,14 @@ function TechSkills() {
       >
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
           {techSkills.map((category, index) => (
-            <SkillCategory key={index} category={category} />
+            <SkillCategory 
+              key={index} 
+              category={category} 
+              index={index}
+              hoverIndex={hoveredIndex}
+              handleMouseEnter={() => setHoveredIndex(index)}
+              handleMouseLeave={() => setHoveredIndex(null)}
+            />
           ))}
         </div>
       </SectionWrapper>
