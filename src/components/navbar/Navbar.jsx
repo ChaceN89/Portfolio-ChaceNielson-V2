@@ -41,7 +41,7 @@
  * @exports Navbar
  * 
  * @created 2024-07-28
- * @updated 2024-07-29
+ * @updated 2024-08-05
  */
 
 import React, { useState } from 'react';
@@ -75,33 +75,35 @@ function Navbar() {
   };
 
   return (
-    <nav className="bg-secondary bg-opacity-95 pb-1 fixed top-0 w-full z-45">
+    <nav className="bg-frosted-glass pb-1 fixed top-0 w-full z-45">
       {/* Scroll progress bar */}
       <motion.div 
         className='w-full h-1 bg-accent origin-left z-40'
         style={{ scaleX: springScrollYProgress }}
       />
-      <div className="container mx-auto flex justify-between md:justify-center items-center p-0.5 md:p-2">
+      <div className="bg-frosted-container container mx-auto flex justify-between md:justify-center items-center p-0.5 md:p-2">
         
         {/* Logo link for small screens */}
         <div className="text-left flex justify-start md:hidden">
           <LogoLink />
         </div>
-
+  
         {/* Navigation items for large screens */}
         <div className="hidden md:flex">
           <NavbarItems textSize="text-lg" />
         </div>
-
+  
         {/* Hamburger menu button for small screens */}
-        <button onClick={toggleMenu} className="text-primary md:hidden z-50 hover:text-accent-dark flex gap-1">
+        <button onClick={toggleMenu} className="text-secondary md:hidden z-50 hover:text-accent-dark flex gap-1">
           <Hamburger toggled={isHamburgerNavOpen} rounded />
         </button>
-
+  
         {/* Hamburger menu items */}
         {isHamburgerNavOpen && (
-          <div className={`fixed md:hidden top-0 left-0 z-45 w-full h-full bg-secondary bg-opacity-95 flex justify-center items-center transition-opacity duration-300 ${animateMenu ? 'opacity-100 fade-in' : 'opacity-0 fade-out'}`}>
-            <NavbarItems toggleMenu={toggleMenu} textSize="text-2xl" />
+          <div className={`fixed md:hidden min-h-screen top-0 left-0 z-45 w-full flex justify-center items-center transition-opacity duration-300 h-full ${animateMenu ? 'opacity-100 fade-in' : 'opacity-0 fade-out'}`}>
+            <div className="hamburger-bg flex justify-center items-center w-full h-full">
+              <NavbarItems toggleMenu={toggleMenu} textSize="text-2xl" />
+            </div>
           </div>
         )}
       </div>

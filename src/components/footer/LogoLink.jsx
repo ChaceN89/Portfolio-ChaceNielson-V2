@@ -39,7 +39,7 @@
  * 
  * @author Chace Nielson
  * @created 2024-07-28
- * @updated 2024-07-28
+ * @updated 2024-08-05
  */
 
 import React, { useEffect } from 'react';
@@ -83,7 +83,7 @@ function LogoLink({ size = "large" }) {
   };
 
   return (
-    <div className='logo-link flex gap-0 items-center text-primary hover:cursor-pointer'>
+    <div className='logo-link flex gap-0 items-center text-secondary hover:cursor-pointer'>
       {location.pathname === '/' ? (
         <ScrollLink
           to="Home"

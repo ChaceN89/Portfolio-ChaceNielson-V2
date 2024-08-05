@@ -41,7 +41,7 @@
  * }
  * 
  * @created 2024-07-28
- * @updated 2024-07-28
+ * @updated 2024-08-05
  */
 
 // Parallax settings for Call to Action section
@@ -68,7 +68,7 @@ const translateEnd = 100; // Move down by 100 pixels at the end
 export const globals = {
   ScrollLink:{
     duration: 1000, // Duration of the scroll animation in milliseconds
-    offset: -70 // Offset to account for fixed headers
+    offset: -50 // Offset to account for fixed headers
   },
   parallaxConfigCallToAction:{
     scrollRange: [scrollStart, scrollMiddle, scrollEnd], // Scroll range values

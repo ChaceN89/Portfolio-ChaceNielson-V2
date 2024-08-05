@@ -28,7 +28,7 @@
  * 
  * @author Chace Nielson
  * @created 2024-07-28
- * @updated 2024-07-28
+ * @updated 2024-08-05
  */
 
 import React from 'react';
@@ -44,6 +44,7 @@ function CallToAction() {
 
   return(
     <BackgroundWrapper 
+      id='CallToAction'
       className='py-10 min-h-section-height-small flex flex-col justify-center items-center'
       src={process.env.PUBLIC_URL + "/png-backgrounds/detailed/range-b&w2-trim.png"}
       lowResSrc={process.env.PUBLIC_URL + "/png-backgrounds/detailed/range-b&w2-trim-small.png"}

@@ -53,8 +53,16 @@ html{
   @apply border-2 border-secondary p-4 border-opacity-20 rounded-lg;
 }
 
-.bg-frosted-glass{
+.bg-frosted-glass {
   @apply bg-primary bg-opacity-45 backdrop-blur-md;
+}
+
+.bg-frosted-container {
+  @apply relative z-10;
+}
+
+.hamburger-bg {
+  @apply bg-primary bg-opacity-90;
 }
 
 .button-secondary{

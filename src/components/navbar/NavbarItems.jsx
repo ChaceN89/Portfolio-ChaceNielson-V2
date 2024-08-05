@@ -20,7 +20,7 @@
  * 
  * @author Chace Nielson
  * @created 2024-07-10
- * @updated 2024-07-28
+ * @updated 2024-08-05
  */
 
 import React from 'react';
@@ -30,7 +30,7 @@ import { useLocation } from 'react-router-dom';
 const NavbarItems = ({ toggleMenu, textSize }) => {
   const location = useLocation();
   return (
-    <ul className={`text-primary ${textSize} space-y-4 md:space-y-0 md:space-x-4 text-center md:text-left md:flex`}>
+    <ul className={`text-secondary ${textSize} space-y-4 md:space-y-0 md:space-x-4 text-center md:text-left md:flex`}>
       {location.pathname === '/' ? (
         <>
           <LinkItem to="Home" onClick={toggleMenu}>Home</LinkItem>

@@ -33,7 +33,7 @@
  * 
  * @author Chace Nielson
  * @created 2024-07-28
- * @updated 2024-07-28
+ * @updated 2024-08-05
  */
 
 import React from 'react';
@@ -42,10 +42,10 @@ import MediaLinks from './MediaLinks';
 
 function Footer() {
   return (
-    <footer className="bg-secondary flex relative bottom-0">
+    <footer className="bg-frosted-glass flex relative bottom-0">
       <div className='container mx-auto flex justify-between p-1 sm:p-2'>
         {/* Link back to top with the logo */}
-        <LogoLink size='small' />
+        <LogoLink />
         {/* List of social media or other resource links */}
         <MediaLinks />
       </div>
