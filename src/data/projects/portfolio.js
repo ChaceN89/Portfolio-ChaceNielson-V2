@@ -53,8 +53,8 @@ export const portfolio = {
     IconSkills.RESPONSIVE_DESIGN
   ],
   externalLinks: [
-    { name: "Version 1", link: "https://portfolio-4gesq0m1e-chace-nielsons-projects.vercel.app/#/", icon: IconSkills.WORLD.icon },
-    { name: "Version 1 Code", link: "https://github.com/ChaceN89/Portfolio-ChaceNielson", icon: IconSkills.GITHUB.icon },
-    { name: "Version 2 Code", link: "https://github.com/ChaceN89/portfolio_2", icon: IconSkills.GITHUB.icon },
-  ],
+    { name: "Previous Portfolio", link: "https://portfolio-4gesq0m1e-chace-nielsons-projects.vercel.app", icon: IconSkills.WORLD.icon },
+    { name: "Original Repository", link: "https://github.com/ChaceN89/Portfolio-ChaceNielson", icon: IconSkills.GITHUB.icon },
+    { name: "Current Repository",  link: "https://github.com/ChaceN89/Portfolio-ChaceNielson-V2", icon: IconSkills.GITHUB.icon },
+  ]
 };
