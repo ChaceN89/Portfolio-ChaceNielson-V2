@@ -15,7 +15,7 @@
  *     <div>
  *       {interests.map((interest, index) => (
  *         <div key={index}>
- *           <interest.art size={32} />
+ *           <interest.icon size={32} />
  *           <h3>{interest.name}</h3>
  *           <p>{interest.description}</p>
  *         </div>
@@ -25,10 +25,12 @@
  * }
  * 
  * @exports interests
+ * @exports interestsPageData
  * 
  * @author Chace Nielson
  * @created 2024-07-28
  * @updated 2024-07-28
+ * @since 2.1
  */
 
 import IconSkills from "../iconSkills";
@@ -36,7 +38,7 @@ import IconSkills from "../iconSkills";
 export const interestsPageData = {
   title: "Interests",
   description: "I have a variety of interests outside of programming. Here are a few of my favorites."
-}
+};
 
 export const interests = [
   { 

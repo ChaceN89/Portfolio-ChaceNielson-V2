@@ -29,6 +29,7 @@
  * @author Chace Nielson
  * @created 2024-07-28
  * @updated 2024-08-05
+ * @since 2.1
  */
 
 import React from 'react';
@@ -41,8 +42,7 @@ import InnerCallToAction from './InnerCallToAction';
 import './CallToAction.css';
 
 function CallToAction() {
-
-  return(
+  return (
     <BackgroundWrapper 
       id='CallToAction'
       className='py-10 min-h-section-height-small flex flex-col justify-center items-center'
@@ -50,9 +50,9 @@ function CallToAction() {
       lowResSrc={process.env.PUBLIC_URL + "/png-backgrounds/detailed/range-b&w2-trim-small.png"}
       backgroundSize="cover"
     >
-      <InnerCallToAction/>
+      <InnerCallToAction />
     </BackgroundWrapper>
-  )
+  );
 }
 
 export default CallToAction;

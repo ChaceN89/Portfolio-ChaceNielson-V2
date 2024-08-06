@@ -2,16 +2,17 @@
  * @file geothermalWork.js
  * @module geothermalWork
  * @desc Contains data for the Energi Simulation Centre for Geothermal Systems Research work experience.
- * This data includes company name, role, dates, image, description, achievements, responsibilities, technologies, and soft skills.
+ * This data includes company name, role, dates, image, description, achievements, responsibilities, and soft skills.
  * 
  * @example
  * import { geothermalWork } from '../workExperience/geothermalWork';
  * 
  * @exports geothermalWork
  * 
- * @ChaceN89
+ * @author Chace Nielson
+ * @version 2.1
  * @created 2024-07-28
- * @updated 2024-07-29
+ * @updated 2024-08-05
  */
 
 import IconSkills from "../iconSkills";
@@ -29,9 +30,9 @@ export const geothermalWork = { // Geothermal
     'Application was used to analyze geothermal wells in New Mexico and Germany',
   ],
   responsibilities: [
-    'Presentation of project progress to stakeholders',
+    'Presented project progress to stakeholders',
     'Conducted code reviews and provided feedback to team members',
-    'Conducted interviews for new developers',
+    'Interviewed candidates for new developer positions',
   ],
   skills: [
     IconSkills.REACT,

@@ -40,10 +40,12 @@
  * }
  * 
  * @exports projects
+ * @exports projectPageData
  * 
  * @author Chace Nielson
  * @created 2024-07-28
  * @updated 2024-07-28
+ * @since 2.1
  */
 
 import { geoPredict } from "../projects/geoPredict";
@@ -84,3 +86,40 @@ export const projects = [
   jobDashboard,
   genrePrediction,
 ];
+
+
+// example of a project object
+/**
+
+export const exampleProject = {
+  id: "example-project",
+  name: "Example Project",
+  tag: "Web Development",
+  blurb: "A short description of the example project.",
+  description: (
+    <div className='space-y-2'>
+      <p>This is a detailed description of the example project, providing insights into the development process, technologies used, and key features implemented.</p>
+    </div>
+  ),
+  youtubeEmbed: "youtube-embed link",
+  images: [
+    { src: "example1.jpg", blurhash: "L9AD+Zxu0z~pIVRjMxRj0L~q0La#" },
+    { src: "example2.jpg", blurhash: "L6CFpEbH00D$^gRkozoJ_3oLx]jE" },
+  ],
+  mainStack: [
+    IconSkills.REACT,
+    IconSkills.NODEJS,
+    // Add more icons as needed
+  ],
+  extendedStack: [
+    IconSkills.TYPESCRIPT,
+    IconSkills.MONGODB,
+    // Add more icons as needed
+  ],
+  externalLinks: [
+    { name: "GitHub", link: "https://github.com/example", icon: IconSkills.GITHUB.icon },
+    { name: "Live Demo", link: "https://example.com", icon: IconSkills.WORLD.icon },
+  ],
+};
+
+ */

@@ -30,14 +30,14 @@
 
 import ReactGA from 'react-ga4';
 
-// the tracking ID value for Google Analytics
+// The tracking ID value for Google Analytics
 const TRACKING_ID = process.env.REACT_APP_GA_TRACKING_ID;
 
 /**
  * Initialization function for Google Analytics
  */
 export function initializeGA() {
-    ReactGA.initialize(TRACKING_ID);
+  ReactGA.initialize(TRACKING_ID);
 }
 
 /**
@@ -52,21 +52,26 @@ export function recordGAPage(path) {
 /**
  * Function to record a specific event with more details
  * 
- * @param {string} category - The category of the event.
- * @param {string} action - The action of the event.
- * @param {string} [label] - The label of the event.
- * @param {number} [value] - The value associated with the event.
- * @param {Object} [additionalParams] - Additional parameters to be included with the event.
+ * @param {Object} eventDetails - The details of the event.
+ * @param {string} eventDetails.category - The category of the event.
+ * @param {string} eventDetails.action - The action of the event.
+ * @param {string} [eventDetails.label] - The label of the event.
+ * @param {number} [eventDetails.value] - The value associated with the event.
+ * @param {Object} [eventDetails.additionalParams] - Additional parameters to be included with the event.
  */
-export function recordGAEvent( name ) {
+export function recordGAEvent(eventDetails) {
+  const { category, action, label, value, additionalParams } = eventDetails;
+
   if (typeof category !== 'string' || typeof action !== 'string') {
-      console.error('Category and action must be strings');
-      return;
+    console.error('Category and action must be strings');
+    return;
   }
 
   ReactGA.event({
-    category: name,
-    action: name,
-    label: name,
+    category,
+    action,
+    label,
+    value,
+    ...additionalParams,
   });
 }

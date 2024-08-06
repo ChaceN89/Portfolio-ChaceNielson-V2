@@ -32,9 +32,10 @@
  * 
  * @exports JobButtons
  * 
- * @ChaceN89
+ * @author Chace Nielson
  * @created 2024-07-28
- * @updated 2024-07-29
+ * @updated 2024-07-
+ * @since 2.1
  */
 
 import React from 'react';

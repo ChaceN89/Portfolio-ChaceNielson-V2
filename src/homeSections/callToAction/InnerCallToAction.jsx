@@ -8,7 +8,7 @@
  * 
  * @requires react
  * @requires callToActionData from '../../data/pageData/callToActionData'
- * @requires MyButton from '../../components/uiElements/MyButton'
+ * @requires MyButton from '../../components/buttons/MyButton'
  * @requires ImageComponent from '../../wrappers/ImageComponent'
  * 
  * @see {@link https://reactjs.org/docs/getting-started.html | React Documentation}
@@ -30,6 +30,7 @@
  * @author Chace Nielson
  * @created 2024-07-28
  * @updated 2024-07-28
+ * @since 2.1
  */
 
 import React from 'react';

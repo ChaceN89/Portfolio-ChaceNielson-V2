@@ -25,7 +25,7 @@
  * function App() {
  *   return (
  *     <div className="App">
- *       //Other components 
+ *       // Other components 
  *       <ReturnToTop />
  *     </div>
  *   );
@@ -33,6 +33,8 @@
  * 
  * @exports ReturnToTop
  * 
+ * @author Chace Nielson
+ * @since 2.1
  * @created 2024-07-28
  * @updated 2024-07-28
  */
@@ -43,6 +45,11 @@ import { Link as ScrollLink } from 'react-scroll';
 import { FaArrowUp } from 'react-icons/fa';
 import Tooltip from './Tooltip';
 
+/**
+ * ReturnToTop component
+ *
+ * @returns {JSX.Element} The ReturnToTop button component.
+ */
 function ReturnToTop() {
   return (
     <div className="fixed bottom-2 right-2 z-10">

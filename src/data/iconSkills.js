@@ -2,12 +2,40 @@
  * @file iconSkills.js
  * @module iconSkills
  * @desc Contains enumeration for technical skills and their corresponding icons.
- * Enumeration of technical skills with corresponding icons and svg paths or react-icons and react-icon color
+ * Enumeration of technical skills with corresponding icons and svg paths or react-icons and react-icon color.
  * 
  * @example - FOR TESTING PURPOSES - VIEW ALL SKILLS/ICONS
  * import IconSkills from '../data/iconSkills';
- *  allSkills: [ IconSkills.REACT, IconSkills.JAVASCRIPT, IconSkills.TAILWINDCSS, IconSkills.NODE_JS, IconSkills.PYTHON, IconSkills.EXPRESS_JS, IconSkills.FASTAPI, IconSkills.POSTGRESQL, IconSkills.GITHUB, IconSkills.GIT, IconSkills.JAVA, IconSkills.CPP, IconSkills.UNITY, IconSkills.BLENDER, IconSkills.CSHARP, IconSkills.ANIMATION, IconSkills.SIMULATION, IconSkills.ENGINEERING, IconSkills.DESIGN_PRINTING, IconSkills.CIRCUITY, IconSkills.GAME_DEVELOPMENT, IconSkills.UNITY_PHYSICS, IconSkills.PLASTIC_SCM, IconSkills.PLOTLY_DASH, IconSkills.APACHE_SPARK, IconSkills.JUPYTER, IconSkills.MACHINE_LEARNING, IconSkills.FULL_STACK, IconSkills.DOCKER, IconSkills.DATA_ANALYSIS, IconSkills.CLOUD_DEPLOYMENT, IconSkills.AUTHENTICATION, IconSkills.FRAMER_MOTION, IconSkills.BLURHASH, IconSkills.NETLIFY, IconSkills.VERCEL, IconSkills.RAILWAY, IconSkills.RENDER, IconSkills.VUE, IconSkills.MONGODB, IconSkills.TYPESCRIPT, IconSkills.EXPRESSJS, IconSkills.TAILWIND, IconSkills.WORLD, IconSkills.YOUTUBE, IconSkills.INSTAGRAM, IconSkills.LINKEDIN, IconSkills.STREAMLIT, IconSkills.DJANGO, IconSkills.MYSQL, IconSkills.SQLITE, IconSkills.REST_API, IconSkills.HADOOP, IconSkills.VS_CODE, IconSkills.CI_CD, IconSkills.AWS, IconSkills.CHART_JS, IconSkills.REDUX, IconSkills.HTML, IconSkills.CSS, IconSkills.MUSIC, IconSkills.SNOWBOARDING, IconSkills.BASKETBALL, IconSkills.GUITAR, IconSkills.HIKING, IconSkills.MOUNTAIN_CLIMBING, IconSkills.BIKING, IconSkills.SWIMMING, IconSkills.PDF, IconSkills.PROBLEM_SOLVING, IconSkills.TEAM_COLLABORATION, IconSkills.COMMUNICATION, IconSkills.TIME_MANAGEMENT, IconSkills.LEADERSHIP, IconSkills.WEB_DESIGN, IconSkills.CODE_REVIEWS, IconSkills.INTERPERSONAL_SKILLS, IconSkills.ADAPTABILITY, IconSkills.CRITICAL_THINKING, IconSkills.CREATIVITY, IconSkills.SELF_MOTIVATION, ],
  * 
+ * const allSkills = [
+ *   IconSkills.REACT, IconSkills.JAVASCRIPT, IconSkills.TAILWINDCSS, 
+ *   IconSkills.NODE_JS, IconSkills.PYTHON, IconSkills.EXPRESS_JS, 
+ *   IconSkills.FASTAPI, IconSkills.POSTGRESQL, IconSkills.GITHUB, 
+ *   IconSkills.GIT, IconSkills.JAVA, IconSkills.CPP, IconSkills.WEB_DESIGN, 
+ *   IconSkills.CODE_REVIEWS, IconSkills.UNITY, IconSkills.BLENDER, 
+ *   IconSkills.CSHARP, IconSkills.ANIMATION, IconSkills.SIMULATION, 
+ *   IconSkills.ENGINEERING, IconSkills.DESIGN_PRINTING, IconSkills.CIRCUITY, 
+ *   IconSkills.GAME_DEVELOPMENT, IconSkills.UNITY_PHYSICS, 
+ *   IconSkills.PLASTIC_SCM, IconSkills.PLOTLY_DASH, IconSkills.APACHE_SPARK, 
+ *   IconSkills.JUPYTER, IconSkills.MACHINE_LEARNING, IconSkills.FULL_STACK, 
+ *   IconSkills.DOCKER, IconSkills.DATA_ANALYSIS, IconSkills.CLOUD_DEPLOYMENT, 
+ *   IconSkills.AUTHENTICATION, IconSkills.FRAMER_MOTION, IconSkills.BLURHASH, 
+ *   IconSkills.NETLIFY, IconSkills.VERCEL, IconSkills.RAILWAY, IconSkills.RENDER, 
+ *   IconSkills.VUE, IconSkills.MAPBOX_GL, IconSkills.MONGODB, IconSkills.TYPESCRIPT, 
+ *   IconSkills.EXPRESSJS, IconSkills.TAILWIND, IconSkills.WORLD, IconSkills.YOUTUBE, 
+ *   IconSkills.INSTAGRAM, IconSkills.LINKEDIN, IconSkills.STREAMLIT, 
+ *   IconSkills.DJANGO, IconSkills.MYSQL, IconSkills.SQLITE, IconSkills.REST_API, 
+ *   IconSkills.HADOOP, IconSkills.VS_CODE, IconSkills.CI_CD, IconSkills.AWS, 
+ *   IconSkills.CHART_JS, IconSkills.REDUX, IconSkills.HTML, IconSkills.CSS, 
+ *   IconSkills.MUSIC, IconSkills.SNOWBOARDING, IconSkills.BASKETBALL, 
+ *   IconSkills.GUITAR, IconSkills.HIKING, IconSkills.MOUNTAIN_CLIMBING, 
+ *   IconSkills.BIKING, IconSkills.SWIMMING, IconSkills.PDF, 
+ *   IconSkills.PROBLEM_SOLVING, IconSkills.TEAM_COLLABORATION, 
+ *   IconSkills.COMMUNICATION, IconSkills.TIME_MANAGEMENT, IconSkills.LEADERSHIP, 
+ *   IconSkills.INTERPERSONAL_SKILLS, IconSkills.ADAPTABILITY, 
+ *   IconSkills.CRITICAL_THINKING, IconSkills.CREATIVITY, 
+ *   IconSkills.SELF_MOTIVATION
+ * ];
  * 
  * @ChaceN89
  * @created 2024-07-28
@@ -26,7 +54,6 @@ import { GiMountainClimbing } from "react-icons/gi";
 import { GrMysql } from "react-icons/gr";
 import { GoCodeReview } from "react-icons/go";
 
-
 // Enumeration of technical skills with corresponding icons and svg paths or react-icons and react-icon color
 const IconSkills = {
   REACT: { name: "React", icon: FaReact, color: "lightblue" },
@@ -39,12 +66,12 @@ const IconSkills = {
   FASTAPI: { name: "FastAPI", icon: SiFastapi, color: "#079487" },
   POSTGRESQL: { name: "PostgreSQL", icon: DiPostgresql, color: "white" },
   
-  GITHUB: { name: "GitHub", icon:BsGithub, color: "white" },
+  GITHUB: { name: "GitHub", icon: BsGithub, color: "white" },
   GIT: { name: "Git", icon: ImGit, color: "#EE513B" },
   JAVA: { name: "Java", svg_path: "java.svg" },
   CPP: { name: "C++", svg_path: "c-plus-plus.svg" },
   WEB_DESIGN: { name: "Web Design", svg_path: "web-design.svg" },
-  CODE_REVIEWS: { name: "Code Reviews", icon:GoCodeReview, color:'black' },
+  CODE_REVIEWS: { name: "Code Reviews", icon: GoCodeReview, color: 'black' },
   
   UNITY: { name: "Unity", icon: FaUnity, color: "white" },
   BLENDER: { name: "Blender", svg_path: "blender.svg" },
@@ -88,24 +115,24 @@ const IconSkills = {
   
   WORLD: { name: "World", icon: TfiWorld, color: "black" },
   YOUTUBE: { name: "YouTube", icon: BsYoutube, color: "red" },
-  INSTAGRAM: { name: "Instagram",  icon:BsInstagram, color: "white" },
-  LINKEDIN: { name: "LinkedIn", icon:BsLinkedin, color: "white" },
-
-  STREAMLIT: { name: "Streamlit", icon:SiStreamlit, color:"#FF4B4B" },
-  DJANGO: { name: "Django", icon:SiDjango, color:"#FF4B4B" },
-  MYSQL: { name: "MySQL", icon:GrMysql, color:'#01618A' },
+  INSTAGRAM: { name: "Instagram", icon: BsInstagram, color: "white" },
+  LINKEDIN: { name: "LinkedIn", icon: BsLinkedin, color: "white" },
+  
+  STREAMLIT: { name: "Streamlit", icon: SiStreamlit, color: "#FF4B4B" },
+  DJANGO: { name: "Django", icon: SiDjango, color: "#FF4B4B" },
+  MYSQL: { name: "MySQL", icon: GrMysql, color: '#01618A' },
   SQLITE: { name: "SQLite", svg_path: "sqlite.svg" },
   REST_API: { name: "REST API", svg_path: "rest-api.svg" },
-
+  
   HADOOP: { name: "Hadoop", svg_path: "hadoop.svg" },
   VS_CODE: { name: "VS Code", svg_path: "vs-code.svg" },
   CI_CD: { name: "CI/CD", svg_path: "ci-cd.svg" },
-
+  
   AWS: { name: "AWS", svg_path: "aws.svg" },
-  CHART_JS:{name:"Chart.js", icon:SiChartdotjs, color:'#FE777B'},
-  REDUX:{name:"Redux", icon:SiRedux, color:'#4A4ABC' },
-  HTML: { name: "HTML", svg_path:"html-5.svg"},
-  CSS: { name: "CSS", svg_path:"css-3.svg"},
+  CHART_JS: { name: "Chart.js", icon: SiChartdotjs, color: '#FE777B' },
+  REDUX: { name: "Redux", icon: SiRedux, color: '#4A4ABC' },
+  HTML: { name: "HTML", svg_path: "html-5.svg" },
+  CSS: { name: "CSS", svg_path: "css-3.svg" },
   
   MUSIC: { name: "Music", icon: FaMusic, color: "black" },
   SNOWBOARDING: { name: "Snowboarding", icon: FaSnowboarding, color: "black" },
@@ -115,14 +142,14 @@ const IconSkills = {
   MOUNTAIN_CLIMBING: { name: "Mountain Climbing", icon: GiMountainClimbing, color: "black" },
   BIKING: { name: "Biking", icon: FaBiking, color: "black" },
   SWIMMING: { name: "Swimming", icon: FaSwimmer, color: "black" },
-
+  
   PDF: { name: "PDF", icon: BsFileEarmarkPdf, color: "black" },
- 
+  
   PROBLEM_SOLVING: { name: "Problem Solving", svg_path: "problem-solving.svg" },
-  TEAM_COLLABORATION:{name:"Collaboration", svg_path:"collaboration.svg" },
-  COMMUNICATION: { name: "Communication", svg_path:"communication.svg"},
-  TIME_MANAGEMENT:{name:"Time Management", svg_path:"clock.svg" },
-  LEADERSHIP:{name:"Leadership", svg_path:"leadership.svg" },
+  TEAM_COLLABORATION: { name: "Collaboration", svg_path: "collaboration.svg" },
+  COMMUNICATION: { name: "Communication", svg_path: "communication.svg" },
+  TIME_MANAGEMENT: { name: "Time Management", svg_path: "clock.svg" },
+  LEADERSHIP: { name: "Leadership", svg_path: "leadership.svg" },
   
   INTERPERSONAL_SKILLS: { name: "Interpersonal Skills", svg_path: "interpersonal-skills.svg" },
   ADAPTABILITY: { name: "Adaptability", svg_path: "adaptation.svg" },

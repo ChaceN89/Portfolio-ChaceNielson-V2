@@ -1,3 +1,22 @@
+/**
+ * @file ImageCarousel.css
+ * @module ImageCarouselStyles
+ * @desc Contains the responsive styles for the image carousel component.
+ * This file defines the height and width of the carousel container for various screen sizes,
+ * ensuring the carousel adapts to different devices and screen resolutions.
+ * 
+ * @example
+ * // Example usage in a component
+ * <div className="carousel-container">
+ *   <!-- Carousel items go here -->
+ * </div>
+ * 
+ * @see {@link https://tailwindcss.com/docs/responsive-design | Tailwind CSS Responsive Design Documentation}
+ * 
+ * @created 2024-08-06
+ * @updated 2024-08-06
+ */
+
 .carousel-container {
   height: 450px; /* Default height for larger screens */
   width: 70%;

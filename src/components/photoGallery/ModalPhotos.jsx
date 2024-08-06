@@ -20,12 +20,13 @@
  * @see {@link https://www.framer.com/docs/ | Framer Motion Documentation}
  * @see {@link https://reactcommunity.org/react-modal/ | React Modal Documentation}
  * 
- * @param {boolean} isModalOpen - State to control the visibility of the modal.
- * @param {function} closeModal - Function to close the modal.
- * @param {number} activePhotoIndex - Index of the currently displayed photo.
- * @param {function} nextPhoto - Function to navigate to the next photo.
- * @param {function} prevPhoto - Function to navigate to the previous photo.
- * @param {number} direction - Direction of the navigation for the transition effect.
+ * @param {Object} props - The component props.
+ * @param {boolean} props.isModalOpen - State to control the visibility of the modal.
+ * @param {function} props.closeModal - Function to close the modal.
+ * @param {number} props.activePhotoIndex - Index of the currently displayed photo.
+ * @param {function} props.nextPhoto - Function to navigate to the next photo.
+ * @param {function} props.prevPhoto - Function to navigate to the previous photo.
+ * @param {number} props.direction - Direction of the navigation for the transition effect.
  * 
  * @returns {JSX.Element} The ModalPhotos component that displays a photo in a modal with navigation controls.
  * 
@@ -47,6 +48,7 @@
  * @author Chace Nielson
  * @created 2024-07-28
  * @updated 2024-07-28
+ * @since 2.1
  */
 
 import React from 'react';
@@ -58,6 +60,18 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 Modal.setAppElement('#root'); // This is to avoid screen reader issues
 
+/**
+ * ModalPhotos component
+ *
+ * @param {Object} props - The component props.
+ * @param {boolean} props.isModalOpen - State to control the visibility of the modal.
+ * @param {function} props.closeModal - Function to close the modal.
+ * @param {number} props.activePhotoIndex - Index of the currently displayed photo.
+ * @param {function} props.nextPhoto - Function to navigate to the next photo.
+ * @param {function} props.prevPhoto - Function to navigate to the previous photo.
+ * @param {number} props.direction - Direction of the navigation for the transition effect.
+ * @returns {JSX.Element} The ModalPhotos component.
+ */
 function ModalPhotos({ isModalOpen, closeModal, activePhotoIndex, nextPhoto, prevPhoto, direction }) {
 
   const variants = {

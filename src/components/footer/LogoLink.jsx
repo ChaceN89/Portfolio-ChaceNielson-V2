@@ -40,6 +40,7 @@
  * @author Chace Nielson
  * @created 2024-07-28
  * @updated 2024-08-05
+ * @since 2.1
  */
 
 import React, { useEffect } from 'react';
@@ -49,16 +50,25 @@ import ImageComponent from '../../wrappers/ImageComponent';
 import { globals } from '../../data/globals';
 import './LogoLink.css';
 
+/**
+ * LogoLink component
+ *
+ * @param {Object} props - The component props.
+ * @param {string} [props.size="large"] - The size of the logo link, either "large" or "small".
+ * @returns {JSX.Element} The LogoLink component.
+ */
 function LogoLink({ size = "large" }) {
   const location = useLocation();
   const navigate = useNavigate();
 
+  // Scroll to top if the current path is home
   useEffect(() => {
     if (location.pathname === '/') {
       window.scrollTo(0, 0);
     }
   }, [location]);
 
+  // Size configurations for the logo link
   const sizes = {
     large: {
       container: { width: '34px', height: '34px' },
@@ -74,6 +84,7 @@ function LogoLink({ size = "large" }) {
 
   const currentSize = sizes[size];
 
+  // Handle logo click event
   const handleLogoClick = () => {
     if (location.pathname === '/') {
       window.scrollTo({ top: 0, behavior: 'smooth' });

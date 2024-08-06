@@ -39,6 +39,7 @@
  * @author Chace Nielson
  * @created 2024-07-29
  * @updated 2024-07-29
+ * @since 2.1
  */
 import React from 'react'
 import ShowIcon from '../../components/uiElements/ShowIcon'
@@ -51,19 +52,21 @@ function InterestCategory({ interest, index, hoverIndex, handleMouseEnter, handl
   const iconSize = isReallySmallScreen ? '3.5rem' : isSmallScreen ? '4.5rem' : '5rem';
 
   return (
-    <ElevateOnView className='border-faint bg-frosted-glass' >
-      <div 
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-        className={`flex items-center space-x-2 md:space-x-4
-          transition-all ${hoverIndex !== null && hoverIndex !== index ? 'duration-500 blur-xs' : 'duration-200'}`}
-      >
-        <div className='flex-shrink-0'>
-          <ShowIcon skill={interest.icon} size={iconSize} useWhiteText={true}/>
-        </div>
-        <div>
-          <h3 className="text-xl font-semibold">{interest.name}</h3>
-          <p className="text-secondary text-sm text-darken">{interest.description}</p>
+    <ElevateOnView  >
+      <div className='border-faint bg-frosted-glass '>
+        <div 
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+          className={`flex items-center space-x-2 md:space-x-4 
+            transition-all ${hoverIndex !== null && hoverIndex !== index ? 'duration-500 blur-xs' : 'duration-200'}`}
+        >
+          <div className='flex-shrink-0'>
+            <ShowIcon skill={interest.icon} size={iconSize} useWhiteText={true}/>
+          </div>
+          <div>
+            <h3 className="text-xl font-semibold">{interest.name}</h3>
+            <p className="text-secondary text-sm text-darken">{interest.description}</p>
+          </div>
         </div>
       </div>
     </ElevateOnView>

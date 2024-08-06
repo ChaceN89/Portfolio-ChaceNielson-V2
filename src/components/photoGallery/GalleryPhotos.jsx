@@ -3,7 +3,7 @@
  * @module GalleryPhotos
  * @desc React component that displays a library of photos and provides functionality for viewing and navigating through photos in a modal.
  * This component calls all the photo elements and includes functions to navigate through the photos within the modal.
- * aso avoid using the modal if the screen is too small/on mobile
+ * Also avoids using the modal if the screen is too small or on mobile.
  * 
  * @note This component is part of the photo gallery feature of the application.
  *
@@ -19,8 +19,6 @@
  * @see {@link https://react.dev/ | React Documentation}
  * @see {@link https://github.com/contra/react-responsive | React Responsive Documentation}
  * 
- * @param none
- * 
  * @returns {JSX.Element} The GalleryPhotos component that displays a library of photos with modal navigation.
  * 
  * @example
@@ -34,6 +32,7 @@
  * @author Chace Nielson
  * @created 2024-07-28
  * @updated 2024-07-28
+ * @since 2.1
  */
 
 import React, { useState, useEffect } from 'react';
@@ -51,6 +50,11 @@ const sectionVariants = {
   },
 };
 
+/**
+ * GalleryPhotos component
+ *
+ * @returns {JSX.Element} The GalleryPhotos component.
+ */
 export default function GalleryPhotos() {
   const [activePhotoIndex, setActivePhotoIndex] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);

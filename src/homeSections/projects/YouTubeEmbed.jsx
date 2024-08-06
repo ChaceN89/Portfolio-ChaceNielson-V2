@@ -19,8 +19,10 @@
  * 
  * <GameTrailer trailer={trailer} title={title} />
  * 
+ * @author Chace Nielson
  * @created 2024-07-12
  * @updated 2024-07-12
+ * @since 2.1
  */
 
 import React from 'react';

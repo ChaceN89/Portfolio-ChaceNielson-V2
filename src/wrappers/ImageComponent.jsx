@@ -19,9 +19,7 @@
  * @param {string} className - The class name for the image element.
  * @param {string} src - The source URL of the image.
  * @param {string} alt - The alternative text for the image.
- * @param {function} onError - Optional error handler function for the image element.
  * @param {string} blurHash - The Blurhash string for the image placeholder.
- * @param {boolean} useBlurhash - Flag to control whether Blurhash is used. Defaults to true.
  * @param {string} lowResSrc - The low-resolution image source URL.
  * 
  * @returns {JSX.Element} The rendered ImageComponent.
@@ -29,6 +27,7 @@
  * @author Chace Nielson
  * @created 2024-07-14
  * @updated 2024-07-26
+ * @since 2.1
  */
 
 import React, { useState, useEffect } from 'react';

@@ -94,7 +94,7 @@ module.exports = {
         '45': '45',
       },
       blur: {
-        xs: '1px', // Add custom blur-xs utility with a value of 2px
+        xs: '1.5px', // Add custom blur-xs utility with a value of 2px
       },
     },
   },

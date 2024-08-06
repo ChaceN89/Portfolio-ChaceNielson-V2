@@ -4,10 +4,26 @@
  * @desc Contains data for the Drillbotics project.
  * 
  * @name Drillbotics
-*
- * @ChaceN89
+ *
+ * @example
+ * // Example usage of drillbotics data in a component
+ * import { drillbotics } from './drillbotics';
+ * 
+ * function ProjectComponent() {
+ *   return (
+ *     <div>
+ *       <h2>{drillbotics.name}</h2>
+ *       <div>{drillbotics.description}</div>
+ *     </div>
+ *   );
+ * }
+ * 
+ * @exports drillbotics
+ * 
+ * @author Chace Nielson
  * @created 2024-07-28
  * @updated 2024-07-28
+ * @since 2.1
  */
 
 import IconSkills from "../iconSkills";
@@ -31,7 +47,7 @@ export const drillbotics = {
   starred: true,
   id: "drillbotics",
   name: "Drillbotics",
-  tag: "Engineerng",
+  tag: "Engineering",
   blurb: short,
   description: long,
   images: [

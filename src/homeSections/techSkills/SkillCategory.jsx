@@ -38,6 +38,7 @@
  * @author Chace Nielson
  * @created 2024-07-28
  * @updated 2024-07-29
+ * @since 2.1
  */
 import React from 'react';
 import ElevateOnView from '../../animations/ElevateOnView';
@@ -48,29 +49,31 @@ function SkillCategory({ category, index, hoverIndex, handleMouseEnter, handleMo
   const location = useLocation();
 
   return (
-    <ElevateOnView className='border-faint bg-frosted-glass'>
-      <div 
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-        className={`grid grid-cols-1 sm:grid-cols-3 gap-4 
-          transition-all ${hoverIndex !== null && hoverIndex !== index ? 'duration-500 blur-xs' : 'duration-200'}`}
-      >
-        <div className='sm:col-span-2 flex flex-col space-y-2 justify-between'>
-          <div className='flex flex-col space-y-2'>
-            <h3 className="font-bold text-2xl">{category.name}</h3>
-            <p className="text-sm text-secondary text-darken">{category.description}</p>
+    <ElevateOnView >
+      <div className='border-faint bg-frosted-glass'>
+        <div 
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+          className={`grid grid-cols-1 sm:grid-cols-3 gap-4 
+            transition-all ${hoverIndex !== null && hoverIndex !== index ? 'duration-500 blur-xs' : 'duration-200'}`}
+        >
+          <div className='sm:col-span-2 flex flex-col space-y-2 justify-between'>
+            <div className='flex flex-col space-y-2'>
+              <h3 className="font-bold text-2xl">{category.name}</h3>
+              <p className="text-sm text-secondary text-darken">{category.description}</p>
+            </div>
+            <Link 
+              to={"/skills/" + category.id}
+              className="text-accent hover:text-accent-dark hover:underline cursor-pointer text-sm"
+              state={{ background: location }}
+            >
+              {category.linkName}
+            </Link>
           </div>
-          <Link 
-            to={"/skills/" + category.id}
-            className="text-accent hover:text-accent-dark hover:underline cursor-pointer text-sm"
-            state={{ background: location }}
-          >
-            {category.linkName}
-          </Link>
-        </div>
 
-        <div className='flex justify-center items-center'>
-          <MainSkills topSkills={category.topSkills} />
+          <div className='flex justify-center items-center'>
+            <MainSkills topSkills={category.topSkills} />
+          </div>
         </div>
       </div>
     </ElevateOnView>

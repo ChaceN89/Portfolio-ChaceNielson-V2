@@ -5,7 +5,7 @@
  *
  * @component HeroImg
  * 
- * @requires react
+ * @requires React
  * @requires ImageComponent from '../../wrappers/ImageComponent'
  * 
  * @see {@link https://reactjs.org/docs/getting-started.html | React Documentation}
@@ -26,7 +26,8 @@
  * 
  * @author Chace Nielson
  * @created 2024-07-28
- * @updated 2024-07-28
+ * @updated 2024-08-06
+ * @since 2.1
  */
 
 import React from 'react';

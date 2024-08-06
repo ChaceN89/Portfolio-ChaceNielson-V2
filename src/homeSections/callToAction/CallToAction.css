@@ -14,8 +14,10 @@
  *   </div>
  * </div>
  *
+ * @author Chace Nielson
  * @created 2024-07-28
  * @updated 2024-07-28
+ * @since 2.1
  */
 
  .call-to-action-wrapper {
@@ -27,5 +29,5 @@
   w-full h-full 
   flex items-center justify-center z-10
   px-4 mx-auto
-  max-w-sm sm:max-w-md md:max-w-2xl xl:max-w-4xl 
+  max-w-sm sm:max-w-md md:max-w-2xl xl:max-w-4xl;
 }

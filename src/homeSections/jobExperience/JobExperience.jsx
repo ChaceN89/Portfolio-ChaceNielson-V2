@@ -26,7 +26,7 @@
 import React, { useState } from 'react';
 import { workExperienceList, workExperiencePageData } from '../../data/pageData/workExperienceData';
 import JobDetails from './JobDetails';
-import SectionWrapper from '../../components/uiElements/SectionWrapper';
+import SectionWrapper from '../../wrappers/SectionWrapper';
 import JobButtons from './JobButtons';
 
 

@@ -18,17 +18,44 @@
  * 
  * @returns {JSX.Element} - The rendered component.
  * 
- * @author Chace Nielson
+ * @example
+ * // Example usage of NavbarItems in a Navbar component
+ * import NavbarItems from './NavbarItems';
+ * 
+ * function Navbar() {
+ *   const toggleMenu = () => {
+ *     // Toggle menu logic
+ *   };
+ * 
+ *   return (
+ *     <nav>
+ *       <NavbarItems toggleMenu={toggleMenu} textSize="text-lg" />
+ *     </nav>
+ *   );
+ * }
+ * 
+ * @exports NavbarItems
+ * 
  * @created 2024-07-10
  * @updated 2024-08-05
+ * @since 2.1
  */
 
 import React from 'react';
 import LinkItem from './LinkItem';
 import { useLocation } from 'react-router-dom';
 
+/**
+ * NavbarItems component
+ *
+ * @param {Object} props - The component props.
+ * @param {Function} props.toggleMenu - Function to toggle the menu for the hamburger menu.
+ * @param {string} props.textSize - The size of the text for the navbar items.
+ * @returns {JSX.Element} The NavbarItems component.
+ */
 const NavbarItems = ({ toggleMenu, textSize }) => {
   const location = useLocation();
+
   return (
     <ul className={`text-secondary ${textSize} space-y-4 md:space-y-0 md:space-x-4 text-center md:text-left md:flex`}>
       {location.pathname === '/' ? (

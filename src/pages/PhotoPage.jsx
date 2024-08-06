@@ -11,6 +11,7 @@
  * @requires react
  * @requires BackgroundWrapper from '../wrappers/BackgroundWrapper'
  * @requires GalleryPhotos from '../components/photoGallery/GalleryPhotos'
+ * @requires FadeTransition from '../animations/FadeTransition'
  * 
  * @see {@link https://react.dev/ | React Documentation}
  * 
@@ -29,6 +30,7 @@
  * @author Chace Nielson
  * @created 2024-07-28
  * @updated 2024-07-28
+ * @since 2.1
  */
 
 import React from 'react';

@@ -26,13 +26,13 @@
  *     </>
  *   );
  * }
- * can also use on individual pages
  * 
  * @exports ScrollToTop
  * 
  * @created 2022-10-27
  * @updated 2022-10-27
  * @author Chace Nielson
+ * @since 2.1
  */
 
 import { useEffect } from "react";

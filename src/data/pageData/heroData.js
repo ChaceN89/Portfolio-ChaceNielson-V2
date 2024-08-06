@@ -44,6 +44,7 @@
  * @author Chace Nielson
  * @created 2024-07-28
  * @updated 2024-07-28
+ * @since 2.1
  */
 
 import React from 'react';
@@ -52,16 +53,16 @@ import { Link } from 'react-router-dom';
 export const heroData = {
   top: "Hi, my name is",
   name: "CHACE NIELSON",
-  description: 
+  description: (
     <div>
-      I am a <Link className="text-accent hover:underline" to='/skills/engineering'>Software Engineer</Link> with a passion for music and the outdoors. I have worked on a variety of projects from <Link className="text-accent hover:underline" to='/skills/web-design' >Web Design</Link> to <Link className="text-accent hover:underline" to='/skills/game-design'>Unity Games</Link>.
+      I am a <Link className="text-accent hover:underline" to='/skills/engineering'>Software Engineer</Link> with a passion for music and the outdoors. I have worked on a variety of projects from <Link className="text-accent hover:underline" to='/skills/web-design'>Web Design</Link> to <Link className="text-accent hover:underline" to='/skills/game-design'>Unity Games</Link>.
     </div>
-  ,
+  ),
   
-  // list of buttons
+  // List of buttons
   buttons: [
     {
-      pdf: "Chace Nielson - Resume.pdf", // this button opens a pdf on the home page
+      pdf: "Chace Nielson - Resume.pdf", // This button opens a PDF on the home page
       name: "Resume"
     },
     {

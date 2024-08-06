@@ -16,7 +16,7 @@
  * </div>
  *
  * @created 2024-07-28
- * @updated 2024-07-28
+ * @updated 2024-08-06
  */
 
  .hero {
@@ -25,7 +25,7 @@
   md:h-section-height md:min-h-108;
 }
 
-/* the hero img */
+/* Hero image wrapper */
 .hero-img-wrapper {
   @apply flex flex-col md:flex justify-end 
   md:absolute bottom-0 right-0 w-auto h-full;
@@ -38,7 +38,7 @@
   opacity-90 z-0;
 }
 
-/* hero text */
+/* Hero text container */
 .text-container {
   @apply mx-auto container 
   h-section-height md:h-min
@@ -49,16 +49,15 @@
   mix-blend-difference;
 }
 
-/* the actual alignment of the text */
+/* Alignment of text within the container */
 .text-container > div {
   @apply flex flex-col z-10 p-2;
 }
 
-/* buttons within the hero text */
+/* Buttons within the hero text */
 .text-buttons {
   @apply grid grid-cols-1 gap-2 
   lg:flex justify-center lg:justify-start
   text-sm md:text-base 
-
   z-50;
 }

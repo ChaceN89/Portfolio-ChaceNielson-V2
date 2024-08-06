@@ -1,3 +1,50 @@
+/**
+ * @file ScrollWheel.jsx
+ * @module ScrollWheel
+ * @desc React component that provides a scroll wheel animation to prompt users to scroll down.
+ * This component uses Framer Motion for animation and react-scroll for smooth scrolling functionality.
+ * It only renders if the screen height is greater than 400px.
+ * 
+ * @component ScrollWheel
+ * 
+ * @requires react
+ * @requires framer-motion { motion }
+ * @requires react-responsive { useMediaQuery }
+ * @requires globals from '../../data/globals'
+ * @requires react-scroll { Link as ScrollLink }
+ * @requires ImageComponent from '../../wrappers/ImageComponent'
+ * 
+ * @see {@link https://react.dev/ | React Documentation}
+ * @see {@link https://www.framer.com/docs/ | Framer Motion Documentation}
+ * @see {@link https://github.com/contra/react-responsive | React Responsive Documentation}
+ * @see {@link https://www.npmjs.com/package/react-scroll | React Scroll Documentation}
+ * 
+ * @param {Object} props - The component props.
+ * @param {string} [props.to="CallToAction"] - The target element to scroll to.
+ * 
+ * @returns {JSX.Element|null} The ScrollWheel component that prompts users to scroll down, or null if the screen height is less than 400px.
+ * 
+ * @example
+ * // Example usage of ScrollWheel component
+ * import ScrollWheel from './ScrollWheel';
+ * 
+ * function App() {
+ *   return (
+ *     <div className="App">
+ *       // Other components 
+ *       <ScrollWheel />
+ *     </div>
+ *   );
+ * }
+ * 
+ * @exports ScrollWheel
+ * 
+ * @author Chace Nielson
+ * @since 2.1
+ * @created 2024-07-28
+ * @updated 2024-07-28
+ */
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useMediaQuery } from 'react-responsive';
@@ -5,17 +52,24 @@ import { globals } from '../../data/globals';
 import { Link as ScrollLink } from 'react-scroll';
 import ImageComponent from '../../wrappers/ImageComponent';
 
+/**
+ * ScrollWheel component
+ *
+ * @param {Object} props - The component props.
+ * @param {string} [props.to="CallToAction"] - The target element to scroll to.
+ * @returns {JSX.Element|null} The ScrollWheel component or null if the screen height is less than 400px.
+ */
 function ScrollWheel({ to = "CallToAction" }) {
-  // Check if the screen height is greater than 300px
+  // Check if the screen height is greater than 400px
   const isTallEnough = useMediaQuery({ query: '(min-height: 400px)' });
 
-  // Only render the component if the screen height is greater than 300px
+  // Only render the component if the screen height is greater than 400px
   if (!isTallEnough) {
     return null;
   }
 
   const bounceProps = {
-    initial: { y: 0 }, // Initial position in the middle of the screen
+    initial: { y: 0 }, // Initial position
     animate: { y: [0, -20, 0] }, // Keyframes for the bouncing effect
     transition: {
       duration: 2, // Duration of the animation
@@ -29,7 +83,7 @@ function ScrollWheel({ to = "CallToAction" }) {
   const fadeInProps = {
     initial: { opacity: 0 },
     animate: { opacity: 1 },
-    transition: { delay: 2, duration: 1 }, // 2-second delay and 1-second fade-in duration
+    transition: { delay: 2, duration: 1 }, // Delay and duration for fade-in
   };
 
   return (

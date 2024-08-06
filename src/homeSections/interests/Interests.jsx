@@ -9,7 +9,7 @@
  * 
  * @requires react
  * @requires BackgroundWrapper from '../../wrappers/BackgroundWrapper'
- * @requires SectionWrapper from '../../components/uiElements/SectionWrapper'
+ * @requires SectionWrapper from '../../wrappers/SectionWrapper'
  * @requires InterestCategory from './InterestCategory'
  * @requires interests, interestsPageData from '../../data/pageData/interestsData'
  * 
@@ -32,12 +32,13 @@
  * @author Chace Nielson
  * @created 2024-07-29
  * @updated 2024-07-29
+ * @since 2.1
  */
 import React, {useState} from 'react';
 import { interests, interestsPageData } from '../../data/pageData/interestsData';
 import BackgroundWrapper from '../../wrappers/BackgroundWrapper';
 import InterestCategory from './InterestCategory';
-import SectionWrapper from '../../components/uiElements/SectionWrapper';
+import SectionWrapper from '../../wrappers/SectionWrapper';
 
 function Interests() {
   const [hoveredIndex, setHoveredIndex] = useState(null);

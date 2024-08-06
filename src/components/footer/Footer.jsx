@@ -12,8 +12,6 @@
  * 
  * @see {@link https://react.dev/ | React Documentation}
  * 
- * @param none
- * 
  * @returns {JSX.Element} The Footer component that appears at the bottom of the page.
  * 
  * @example
@@ -34,12 +32,18 @@
  * @author Chace Nielson
  * @created 2024-07-28
  * @updated 2024-08-05
+ * @since 2.1
  */
 
 import React from 'react';
 import LogoLink from './LogoLink';
 import MediaLinks from './MediaLinks';
 
+/**
+ * Footer component
+ *
+ * @returns {JSX.Element} The Footer component that appears at the bottom of the page.
+ */
 function Footer() {
   return (
     <footer className="bg-frosted-glass flex relative bottom-0">

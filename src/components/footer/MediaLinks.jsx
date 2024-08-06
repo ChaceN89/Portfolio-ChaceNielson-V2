@@ -15,8 +15,6 @@
  * @see {@link https://react.dev/ | React Documentation}
  * @see {@link https://github.com/contra/react-responsive | React Responsive Documentation}
  * 
- * @param none
- * 
  * @returns {JSX.Element} The MediaLinks component that displays social media icons with tooltips.
  * 
  * @example
@@ -36,6 +34,7 @@
  * @author Chace Nielson
  * @created 2024-07-28
  * @updated 2024-07-28
+ * @since 2.1
  */
 
 import React from 'react';
@@ -43,6 +42,11 @@ import Tooltip from '../uiElements/Tooltip';
 import { useMediaQuery } from 'react-responsive';
 import IconSkills from '../../data/iconSkills';
 
+/**
+ * MediaLinks component
+ *
+ * @returns {JSX.Element} The MediaLinks component.
+ */
 function MediaLinks() {
   const isMediumScreen = useMediaQuery({ query: '(min-width: 768px)' });
 

@@ -5,9 +5,25 @@
  * 
  * @name Jenga
  * 
- * @ChaceN89
+ * @example
+ * // Example usage of jenga data in a component
+ * import { jenga } from './jenga';
+ * 
+ * function ProjectComponent() {
+ *   return (
+ *     <div>
+ *       <h2>{jenga.name}</h2>
+ *       <div>{jenga.description}</div>
+ *     </div>
+ *   );
+ * }
+ * 
+ * @exports jenga
+ * 
+ * @author Chace Nielson
  * @created 2024-07-28
  * @updated 2024-07-28
+ * @since 2.1
  */
 
 import IconSkills from "../iconSkills";

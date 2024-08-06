@@ -27,6 +27,7 @@
  * @exports galleryPhotos
  * 
  * @author Chace Nielson
+ * @since 2.1
  * @created 2024-07-28
  * @updated 2024-07-28
  */

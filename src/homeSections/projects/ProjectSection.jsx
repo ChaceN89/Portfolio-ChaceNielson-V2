@@ -32,13 +32,14 @@
  * @author Chace Nielson
  * @created 2024-07-28
  * @updated 2024-08-05
+ * @since 2.1
  */
 
 import React, { useState, useEffect } from 'react';
 import { projects, projectPageData } from '../../data/pageData/projectData';
 import ProjectCard from './ProjectCard';
 import BackgroundWrapper from '../../wrappers/BackgroundWrapper';
-import SectionWrapper from '../../components/uiElements/SectionWrapper';
+import SectionWrapper from '../../wrappers/SectionWrapper';
 
 function ProjectSection() {
   // Determine the initial and additional number of cards based on screen size

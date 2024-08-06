@@ -47,9 +47,11 @@
  * @exports Tooltip
  * 
  * @author Chace Nielson
+ * @since 2.1
  * @created 2024-07-28
  * @updated 2024-08-05
  */
+
 import React, { useState, useEffect, useRef } from 'react';
 import { createPortal } from 'react-dom';
 

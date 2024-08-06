@@ -5,9 +5,25 @@
  * 
  * @name Glass Gecko Games
  * 
- * @ChaceN89
+ * @example
+ * // Example usage of glassGeckoGames data in a component
+ * import { glassGeckoGames } from './glassGeckoGames';
+ * 
+ * function ProjectComponent() {
+ *   return (
+ *     <div>
+ *       <h2>{glassGeckoGames.name}</h2>
+ *       <div>{glassGeckoGames.description}</div>
+ *     </div>
+ *   );
+ * }
+ * 
+ * @exports glassGeckoGames
+ * 
+ * @author Chace Nielson
  * @created 2024-07-28
  * @updated 2024-07-28
+ * @since 2.1
  */
 
 import IconSkills from "../iconSkills";
@@ -47,7 +63,7 @@ export const glassGeckoGames = {
     IconSkills.NETLIFY,
   ],
   externalLinks: [
-    { name: "website", link: "https://glassgeckogames.com", icon: IconSkills.WORLD.icon },
+    { name: "Website", link: "https://glassgeckogames.com", icon: IconSkills.WORLD.icon },
     // maybe add the code
   ],
 };

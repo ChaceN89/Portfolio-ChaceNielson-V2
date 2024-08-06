@@ -17,8 +17,10 @@
  * 
  * @exports DisplayList
  * 
+ * @author Chace Nielson
  * @created 2024-07-30
  * @updated 2024-07-30
+ * @since 2.1
  */
 
 import React from 'react';

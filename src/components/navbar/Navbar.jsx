@@ -12,7 +12,7 @@
  * @requires react
  * @requires useState from 'react'
  * @requires NavbarItems from './NavbarItems'
- * @requires LogoLink from '../logo/LogoLink'
+ * @requires LogoLink from '../footer/LogoLink'
  * @requires framer-motion { motion, useScroll, useSpring }
  * @requires hamburger-react { Squash as Hamburger }
  * @requires ./Navbar.css
@@ -20,8 +20,6 @@
  * @see {@link https://react.dev/ | React Documentation}
  * @see {@link https://www.framer.com/docs/ | Framer Motion Documentation}
  * @see {@link https://hamburger-react.netlify.app/ | Hamburger React Documentation}
- * 
- * @param none
  * 
  * @returns {JSX.Element} The Navbar component that provides navigation links and a responsive menu.
  * 
@@ -42,6 +40,7 @@
  * 
  * @created 2024-07-28
  * @updated 2024-08-05
+ * @since 2.1
  */
 
 import React, { useState } from 'react';
@@ -51,6 +50,11 @@ import { motion, useScroll, useSpring } from 'framer-motion';
 import { Squash as Hamburger } from 'hamburger-react';
 import "./Navbar.css";
 
+/**
+ * Navbar component
+ *
+ * @returns {JSX.Element} The Navbar component.
+ */
 function Navbar() {
   const [isHamburgerNavOpen, setIsHamburgerNavOpen] = useState(false);
   const [animateMenu, setAnimateMenu] = useState(false);

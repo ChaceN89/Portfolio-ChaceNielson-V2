@@ -2,16 +2,17 @@
  * @file glassGeckoWork.js
  * @module glassGeckoWork
  * @desc Contains data for the Glass Gecko Games work experience.
- * This data includes company name, role, dates, image, description, achievements, responsibilities, technologies, and soft skills.
+ * This data includes company name, role, dates, image, description, achievements, responsibilities, and soft skills.
  * 
  * @example
  * import { glassGeckoWork } from '../workExperience/glassGeckoWork';
  * 
  * @exports glassGeckoWork
  * 
- * @ChaceN89
+ * @author Chace Nielson
+ * @version 2.1
  * @created 2024-07-28
- * @updated 2024-07-29
+ * @updated 2024-08-05
  */
 
 import IconSkills from "../iconSkills";
@@ -19,7 +20,7 @@ import IconSkills from "../iconSkills";
 export const glassGeckoWork = {
   name: 'Glass Gecko Games',
   img: process.env.PUBLIC_URL + '/png-icons/glass-gecko-games-icon.png',
-  description: 'Developing games using Unity and C#, with a focus on website design and marketing.',
+  description: 'Developing games using Unity and C#, with a focus on website design and marketing. Engaged in a wide range of tasks from game development to marketing strategies. Collaborated with a team of designers and developers to build the company website and implement a robust multiplayer networking system in Unity.',
   role: 'Marketing, Website Development, Game Design',
   dates: ['May 2024', 'Current'],
   link: 'https://glassgeckogames.com/',

@@ -24,9 +24,10 @@
  * 
  * @exports workExperiencePageData, workExperienceList
  * 
- * @ChaceN89
+ * @author Chace Nielson
  * @created 2024-07-28
  * @updated 2024-07-29
+ * @since 2.1
  */
 
 import { glassGeckoWork } from "../workExperience/glassGeckoWork";
@@ -36,7 +37,7 @@ import { geothermalWork } from "../workExperience/geothermalWork";
 export const workExperiencePageData = {
   title: 'Work Experience',
   description: 'Technical work',
-}
+};
 
 export const workExperienceList = [
   albertaTomorrowWork,

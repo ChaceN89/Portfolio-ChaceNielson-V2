@@ -33,8 +33,10 @@
  * @property {string} card-wrapper - Wrapper for individual cards with border, shadow, and other styles.
  * @property {string} card-thin-border - Thin border style for card elements.
  * 
+ * @author Chace Nielson
  * @created 2024-07-29
  * @updated 2024-07-29
+ * @since 2.1
  */
 
 .card-grid-wrapper{

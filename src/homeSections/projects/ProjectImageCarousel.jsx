@@ -29,7 +29,10 @@
  * @see {@link https://www.npmjs.com/package/react-gallery-carousel|react-gallery-carousel}
  * @see {@link https://github.com/yifaneye/react-gallery-carousel|GitHub Repository}
  * 
+ * @author Chace Nielson
  * @created 2024-07-26
+ * @updated 2024-08-06
+ * @since 2.1
  */
 
 import React from 'react';

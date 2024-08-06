@@ -8,7 +8,7 @@
  *
  * @component HeroText
  * 
- * @requires react
+ * @requires React
  * @requires motion, useScroll, useTransform from 'framer-motion'
  * @requires useMediaQuery from 'react-responsive'
  * @requires heroData from '../../data/pageData/heroData'
@@ -35,7 +35,8 @@
  * 
  * @author Chace Nielson
  * @created 2024-07-28
- * @updated 2024-07-28
+ * @updated 2024-08-06
+ * @since 2.1
  */
 
 import React from 'react';

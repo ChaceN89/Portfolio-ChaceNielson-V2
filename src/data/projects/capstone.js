@@ -5,9 +5,25 @@
  * 
  * @name CO2 Separation
  * 
- * @ChaceN89
+ * @example
+ * // Example usage of capstone data in a component
+ * import { capstone } from './capstone';
+ * 
+ * function ProjectComponent() {
+ *   return (
+ *     <div>
+ *       <h2>{capstone.name}</h2>
+ *       <div>{capstone.description}</div>
+ *     </div>
+ *   );
+ * }
+ * 
+ * @exports capstone
+ * 
+ * @author Chace Nielson
  * @created 2024-07-28
  * @updated 2024-07-28
+ * @since 2.1
  */
 
 import IconSkills from "../iconSkills";
@@ -26,7 +42,7 @@ const long = (
 export const capstone = {
   starred: true,
   id: "capstone", // id and folder name in the projects folder
-  name: <span>C0<sub>2</sub> Separation</span>,
+  name: <span>CO<sub>2</sub> Separation</span>,
   tag: "Engineering",
   blurb: short,
   description: long,

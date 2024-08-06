@@ -7,12 +7,20 @@
  * If the project ID is invalid, the user is redirected to the home page.
  * 
  * @requires react
- * @requires react-router-dom
- * @requires react-scroll
- * @requires ProjectImageCarousel
- * @requires SectionHeader
- * @requires ExternalLinks
- * @requires SkillBoxContainer
+ * @requires useParams from 'react-router-dom'
+ * @requires useNavigate from 'react-router-dom'
+ * @requires Element, scroller from 'react-scroll'
+ * @requires projects from '../data/pageData/projectData'
+ * @requires ProjectImageCarousel from '../homeSections/projects/ProjectImageCarousel'
+ * @requires SectionHeader from '../components/uiElements/SectionHeader'
+ * @requires ExternalLinks from '../homeSections/projects/ExternalLinks'
+ * @requires SkillBoxContainer from '../components/uiElements/SkillBoxContainer'
+ * @requires YouTubeEmbed from '../homeSections/projects/YouTubeEmbed'
+ * @requires FaArrowAltCircleDown from 'react-icons/fa'
+ * 
+ * @see {@link https://reactjs.org/docs/getting-started.html | React Documentation}
+ * @see {@link https://reactrouter.com/web/guides/quick-start | React Router Documentation}
+ * @see {@link https://www.npmjs.com/package/react-scroll | React Scroll Documentation}
  * 
  * @example
  * // Example usage of ProjectModal
@@ -28,13 +36,12 @@
  *   );
  * }
  * 
- * @see {@link https://reactjs.org/docs/getting-started.html | React Documentation}
- * @see {@link https://reactrouter.com/web/guides/quick-start | React Router Documentation}
- * @see {@link https://www.npmjs.com/package/react-scroll | React Scroll Documentation}
+ * @exports ProjectModal
  * 
- * @ChaceN89
+ * @author Chace Nielson
  * @created 2024-07-28
  * @updated 2024-07-28
+ * @since 2.1
  */
 
 import React, { useEffect } from "react";
@@ -84,10 +91,10 @@ const ProjectModal = () => {
         <SectionHeader title={project.name} subtitle={project.blurb} />
       </div>
 
-      <div className="flex flex-col-reverse items-center  sm:flex-row justify-start py-2">
+      <div className="flex flex-col-reverse items-center sm:flex-row justify-start py-2">
         <div className="text-left pr-2">
           <button onClick={scrollToImages} className="button-secondary p-0.5 rounded-full">
-            <FaArrowAltCircleDown size={24}/>
+            <FaArrowAltCircleDown size={24} />
           </button>
         </div>
         <ExternalLinks externalLinks={project.externalLinks} />

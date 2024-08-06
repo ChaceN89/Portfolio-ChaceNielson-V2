@@ -32,9 +32,10 @@
  * 
  * @exports ModalLayout
  * 
- * @ChaceN89
+ * @author Chace Nielson
  * @created 2024-07-28
  * @updated 2024-07-28
+ * @since 2.1
  */
 
 import { useLocation, useNavigate, Outlet } from "react-router-dom";
@@ -43,7 +44,6 @@ import { IoMdClose } from "react-icons/io";
 import FadeTransition from "../animations/FadeTransition";
 import BackgroundWrapper from "../wrappers/BackgroundWrapper";
 import SlideTransition from "../animations/SlideTransition";
-
 
 const ModalLayout = () => {
   const navigate = useNavigate();
@@ -73,7 +73,6 @@ const ModalLayout = () => {
     };
   }, [closeModal]);
 
-
   const setReturnText = () => {
     const locationState = location.state?.background;
     const currentPath = location.pathname;
@@ -85,7 +84,7 @@ const ModalLayout = () => {
         return 'Back to Skills';
       } 
     } 
-      return 'To Home Page';
+    return 'To Home Page';
   };
   
   return (

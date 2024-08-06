@@ -5,9 +5,25 @@
  * 
  * @name GEO Predict
  * 
- * @ChaceN89
+ * @example
+ * // Example usage of geoPredict data in a component
+ * import { geoPredict } from './geoPredict';
+ * 
+ * function ProjectComponent() {
+ *   return (
+ *     <div>
+ *       <h2>{geoPredict.name}</h2>
+ *       <div>{geoPredict.description}</div>
+ *     </div>
+ *   );
+ * }
+ * 
+ * @exports geoPredict
+ * 
+ * @author Chace Nielson
  * @created 2024-07-28
  * @updated 2024-07-28
+ * @since 2.1
  */
 
 import IconSkills from "../iconSkills";

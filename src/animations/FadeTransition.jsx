@@ -6,17 +6,19 @@
  *
  * @component FadeTransition
  * 
- * @param {Object} props - The component props.
- * @param {React.ReactNode} props.children - The child elements to be rendered inside the fade transition.
- * @param {number} [props.duration=0.6] - The duration of the fade transition in seconds.
- * @param {number} [props.delay=0] - The delay before the transition starts in seconds.
- * 
  * @requires react
  * @requires motion from 'framer-motion'
  * @requires useLocation from 'react-router-dom'
  * 
  * @see {@link https://reactjs.org/docs/getting-started.html | React Documentation}
  * @see {@link https://www.framer.com/motion/ | Framer Motion Documentation}
+ * 
+ * @param {Object} props - The component props.
+ * @param {React.ReactNode} props.children - The child elements to be rendered inside the fade transition.
+ * @param {number} [props.duration=0.8] - The duration of the fade transition in seconds.
+ * @param {number} [props.delay=0] - The delay before the transition starts in seconds.
+ * 
+ * @returns {JSX.Element} The FadeTransition component that wraps its children with a fade animation.
  * 
  * @example
  * // Example usage of FadeTransition component
@@ -33,6 +35,7 @@
  * @exports FadeTransition
  * 
  * @author Chace Nielson
+ * @since 2.1
  * @created 2024-07-28
  * @updated 2024-07-28
  */
@@ -41,6 +44,15 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useLocation } from 'react-router-dom';
 
+/**
+ * FadeTransition component
+ *
+ * @param {Object} props - The component props.
+ * @param {React.ReactNode} props.children - The child elements to be rendered inside the fade transition.
+ * @param {number} [props.duration=0.8] - The duration of the fade transition in seconds.
+ * @param {number} [props.delay=0] - The delay before the transition starts in seconds.
+ * @returns {JSX.Element} The FadeTransition component.
+ */
 const FadeTransition = ({ children, duration = 0.8, delay = 0 }) => {
   // Get the current location
   const location = useLocation();

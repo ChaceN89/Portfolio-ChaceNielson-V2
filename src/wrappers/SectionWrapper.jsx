@@ -18,9 +18,12 @@
  * 
  * function App() {
  *   return (
- *     <SectionWrapper title="My Title" subtitle="My Subtitle">
- *       <p>This is the content inside the section.</p>
- *     </SectionWrapper>
+ *     <div className="App">
+ *       // Other components
+ *       <SectionWrapper title="My Title" subtitle="My Subtitle">
+ *         <p>This is the content inside the section.</p>
+ *       </SectionWrapper>
+ *     </div>
  *   );
  * }
  * 
@@ -33,14 +36,23 @@
  * 
  * @returns {JSX.Element} The rendered SectionWrapper component.
  * 
- * @author Chace Nielson
+ * @since 2.1
  * @created 2024-07-29
  * @updated 2024-07-29
  */
 import React from 'react';
-import SectionHeader from './SectionHeader';
-import SlideTransition from '../../animations/SlideTransition';
+import SectionHeader from '../components/uiElements/SectionHeader';
+import SlideTransition from '../animations/SlideTransition';
 
+/**
+ * SectionWrapper component
+ *
+ * @param {Object} props - The component props.
+ * @param {React.ReactNode} props.children - The content to be wrapped inside the section.
+ * @param {string} props.title - The title of the section.
+ * @param {string} props.subtitle - The subtitle of the section.
+ * @returns {JSX.Element} The SectionWrapper component.
+ */
 function SectionWrapper({ children, title, subtitle }) {
   return (
     <div className='container mx-auto pb-10 px-2'>

@@ -31,12 +31,21 @@
  * @exports SectionHeader
  * 
  * @author Chace Nielson
+ * @since 2.1
  * @created 2024-07-28
  * @updated 2024-07-28
  */
 
 import React from 'react';
 
+/**
+ * SectionHeader component
+ *
+ * @param {Object} props - The component props.
+ * @param {string} props.title - The title of the section.
+ * @param {string} props.subtitle - The subtitle of the section.
+ * @returns {JSX.Element} The SectionHeader component.
+ */
 function SectionHeader({ title, subtitle }) {
   return (
     <div className='space-y-1'>

@@ -12,9 +12,10 @@
  * @author Chace Nielson
  * @created 2024-07-26
  * @updated 2024-07-28
+ * @since 2.1
  */
 
-.modal {
+ .modal {
   position: fixed;
   top: 0;
   left: 0;

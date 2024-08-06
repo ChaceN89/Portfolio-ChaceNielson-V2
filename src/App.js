@@ -1,6 +1,6 @@
 /**
- * @file AppWithRouter.jsx
- * @module AppWithRouter
+ * @file App.jsx
+ * @module App
  * @desc React component that wraps the application with a Router to handle routing and animations.
  * This component imports necessary routes and styles, and sets up the Router for the application.
  *
@@ -35,25 +35,18 @@
  * @author Chace Nielson
  * @created 2024-07-26
  * @updated 2024-07-28
+ * @since 2.1
  */
 
 import React from 'react';
-
-// Import BrowserRouter as Router
-import { BrowserRouter as Router} from 'react-router-dom';
-
-// Import AppRoutes for routing and animations
+import { BrowserRouter as Router } from 'react-router-dom';
 import AppRoutes from './routing/AppRoutes';
-
-// Import Styles
+import TailwindBreakPoints from './testingComponents/TailwindBreakPoints';
+import AnalyticsTracker from './googleAnalytics/AnalyticsTracker';
 import './styles/Layout.css';
 import './styles/Modal.css';
 import './styles/Gallery.css';
 
-import TailwindBreakPoints from './testingComponents/TailwindBreakPoints';
-import AnalyticsTracker from './googleAnalytics/AnalyticsTracker';
-
-// Export App wrapped in Router
 const AppWithRouter = () => (
   <Router>
     <TailwindBreakPoints />

@@ -1,6 +1,7 @@
-.glow-on-hover {
-  @apply py-3 px-8 w-fit cursor-pointer relative z-0 rounded-lg ;
+/* Button styles */
 
+.glow-on-hover {
+  @apply py-3 px-8 w-fit cursor-pointer relative z-0 rounded-lg;
 }
 
 .glow-on-hover:before {
@@ -8,7 +9,7 @@
   background: linear-gradient(45deg, #181616, #0D0D0D, #fff, #e0e0e0, #FFA500, #CC5500, #f0f0f0);
   position: absolute;
   top: -2px;
-  left:-2px;
+  left: -2px;
   background-size: 400%;
   z-index: -1;
   filter: blur(5px);
@@ -16,7 +17,7 @@
   height: calc(100% + 5px);
   animation: glowing 20s linear infinite;
   opacity: 0;
-  transition: opacity .3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
   border-radius: 10px;
 }
 

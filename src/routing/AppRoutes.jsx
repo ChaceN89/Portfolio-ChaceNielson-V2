@@ -12,8 +12,14 @@
  * @component AppRoutes
  * 
  * @requires react
- * @requires react-router-dom
- * @requires framer-motion
+ * @requires Routes, Route, useLocation, Navigate from 'react-router-dom'
+ * @requires Layout from './Layout'
+ * @requires ModalLayout from './ModalLayout'
+ * @requires HomePage from '../pages/HomePage'
+ * @requires PhotoPage from '../pages/PhotoPage'
+ * @requires ThanksPage from '../pages/ThanksPage'
+ * @requires SkillsModal from '../pages/SkillsModal'
+ * @requires ProjectModal from '../pages/ProjectModal'
  * 
  * @see {@link https://react.dev/ | React Documentation}
  * @see {@link https://reactrouter.com/ | React Router Documentation}
@@ -37,9 +43,10 @@
  * 
  * @exports AppRoutes
  * 
- * @autor Chace Nielson
+ * @author Chace Nielson
  * @created 2024-07-26
  * @updated 2024-07-26
+ * @since 2.1
  */
 
 import React from "react";

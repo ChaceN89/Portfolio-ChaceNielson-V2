@@ -4,7 +4,6 @@
  * @desc React component that displays an icon based on the provided skill object. 
  * The component adjusts the icon color based on the useWhiteText prop and ensures both SVG and React icons have the same size.
  * Can handle both React icons and SVG images. See the example below for more details.
- * icons should remain at the same size for consistency.
  *
  * @component ShowIcon
  * 
@@ -26,6 +25,7 @@
  * function App() {
  *   return (
  *     <div className="App">
+ *       // Other components
  *       <ShowIcon skill={skill} size="3rem" useWhiteText={true} />
  *     </div>
  *   );
@@ -34,13 +34,24 @@
  * @exports ShowIcon
  * 
  * @author Chace Nielson
+ * @since 2.1
  * @created 2024-07-29
  * @updated 2024-07-29
  */
+
 import React from 'react';
 
+/**
+ * ShowIcon component
+ *
+ * @param {Object} props - The component props.
+ * @param {Object} props.skill - The skill object containing icon information.
+ * @param {string} [props.size="2rem"] - The size of the icon.
+ * @param {boolean} [props.useWhiteText=false] - Flag to determine if white text should be used.
+ * @returns {JSX.Element} The ShowIcon component.
+ */
 function ShowIcon({ skill, size = "2rem", useWhiteText = false }) {
-  // Determine the icon color based on the lightColor prop - only affect white or black icons
+  // Determine the icon color based on the useWhiteText prop
   let iconColor;
   if (useWhiteText) {
     iconColor = skill.color === 'black' ? 'white' : skill.color;
@@ -48,10 +59,10 @@ function ShowIcon({ skill, size = "2rem", useWhiteText = false }) {
     iconColor = skill.color === 'white' ? 'black' : skill.color;
   }
 
-  // if it's a react-icon use the icon component, otherwise use the svg
+  // If it's a react-icon use the icon component, otherwise use the svg
   const IconComponent = skill.icon;
 
-  // section styles for the icon and image elements
+  // Styles for the icon and image elements
   const iconStyle = { color: iconColor, fontSize: size };
   const imgStyle = { width: size, height: size };
 

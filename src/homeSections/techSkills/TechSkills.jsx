@@ -37,7 +37,7 @@ import React, { useState } from 'react';
 import { techSkills, skillPageData } from '../../data/pageData/skillsData';
 import BackgroundWrapper from '../../wrappers/BackgroundWrapper';
 import SkillCategory from './SkillCategory';
-import SectionWrapper from '../../components/uiElements/SectionWrapper';
+import SectionWrapper from '../../wrappers/SectionWrapper';
 
 function TechSkills() {
   const [hoveredIndex, setHoveredIndex] = useState(null);

@@ -5,9 +5,25 @@
  * 
  * @name Image Task Queue
  * 
- * @ChaceN89
+ * @example
+ * // Example usage of imageProcessor data in a component
+ * import { imageProcessor } from './imageProcessor';
+ * 
+ * function ProjectComponent() {
+ *   return (
+ *     <div>
+ *       <h2>{imageProcessor.name}</h2>
+ *       <div>{imageProcessor.description}</div>
+ *     </div>
+ *   );
+ * }
+ * 
+ * @exports imageProcessor
+ * 
+ * @author Chace Nielson
  * @created 2024-07-28
  * @updated 2024-07-28
+ * @since 2.1
  */
 
 import IconSkills from "../iconSkills";

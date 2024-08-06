@@ -19,6 +19,7 @@
  * @param {function} [props.onClick] - The click event handler. Used when 'to' is not provided.
  * @param {React.ReactNode} props.children - The content inside the button.
  * @param {string} [props.className] - Additional custom classes for styling.
+ * @param {string} [props.type='button'] - The type of the button, e.g., 'button', 'submit'.
  * @param {Object} [props.rest] - Additional props to be spread onto the rendered element.
  * 
  * @example
@@ -42,12 +43,27 @@
  * 
  * @created 2024-07-17
  * @updated 2024-07-31
+ * @since 2.1
+ * 
+ * @exports MyButton
  */
 
 import React from 'react';
 import handleClick from './handleClick';
 import './Button.css';
 
+/**
+ * MyButton component
+ *
+ * @param {Object} props - The props object.
+ * @param {string} [props.to] - The target element to scroll to. If provided, the component scrolls to the element.
+ * @param {function} [props.onClick] - The click event handler. Used when 'to' is not provided.
+ * @param {React.ReactNode} props.children - The content inside the button.
+ * @param {string} [props.className] - Additional custom classes for styling.
+ * @param {string} [props.type='button'] - The type of the button, e.g., 'button', 'submit'.
+ * @param {Object} [props.rest] - Additional props to be spread onto the rendered element.
+ * @returns {JSX.Element} The MyButton component.
+ */
 function MyButton({ to, onClick, aLink, children, className, type = 'button', ...rest }) {
 
   const handleButtonClick = (event) => {
@@ -62,7 +78,7 @@ function MyButton({ to, onClick, aLink, children, className, type = 'button', ..
   return (
     <button
       type={type}
-      className={`glow-on-hover min-w-32 border-faint hover:scale-95  ${className}`}
+      className={`glow-on-hover min-w-32 border-faint hover:scale-95 ${className}`}
       onClick={handleButtonClick}
       {...rest}
     >
@@ -72,4 +88,3 @@ function MyButton({ to, onClick, aLink, children, className, type = 'button', ..
 }
 
 export default MyButton;
-

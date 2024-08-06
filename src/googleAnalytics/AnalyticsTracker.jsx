@@ -29,13 +29,14 @@
  *   return (
  *     <div>
  *       <AnalyticsTracker />
- *        // other components
+ *       // Other components
  *     </div>
  *   );
  * }
  * 
  * @exports AnalyticsTracker
  * 
+ * @since 2.1
  * @created 2024-07-28
  * @updated 2024-07-28
  */
@@ -44,7 +45,11 @@ import { useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 import { recordGAPage } from './analytics';
 
-// Component to track page views when the page changes after the first page load
+/**
+ * AnalyticsTracker component to track page views
+ * 
+ * @returns {null} This component does not render any JSX.
+ */
 function AnalyticsTracker() {
   const location = useLocation();
   const isFirstLoad = useRef(true);

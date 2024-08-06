@@ -8,7 +8,8 @@
  * @component SkillsModal
  *
  * @requires react
- * @requires react-router-dom
+ * @requires useParams from 'react-router-dom'
+ * @requires useNavigate from 'react-router-dom'
  * @requires techSkills from '../data/pageData/skillsData'
  * @requires SectionHeader from '../components/uiElements/SectionHeader'
  * @requires SkillBoxContainer from '../components/uiElements/SkillBoxContainer'
@@ -32,6 +33,11 @@
  * }
  *
  * @exports SkillsModal
+ * 
+ * @author Chace Nielson
+ * @created 2024-07-28
+ * @updated 2024-07-28
+ * @since 2.1
  */
 
 import React, { useEffect } from "react";

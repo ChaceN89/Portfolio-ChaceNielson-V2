@@ -1,5 +1,3 @@
-import React, { useState, useEffect } from 'react';
-
 /**
  * @file BackgroundWrapper.jsx
  * @module BackgroundWrapper
@@ -16,7 +14,6 @@ import React, { useState, useEffect } from 'react';
  * @param {string} backgroundPosition - How the background image should be positioned. Options: center, top, right, bottom, left, top right, top left, bottom right, bottom left, initial, inherit. Defaults to "center".
  * @param {string} backgroundRepeat - How the background image should be repeated. Options: repeat, no-repeat, repeat-x, repeat-y, initial, inherit. Defaults to "no-repeat".
  * @param {string} backgroundAttachment - How the background image should scroll with the page. Options: fixed, scroll, local, initial, inherit. Defaults to "fixed".
- * @param {number} scale - Scale factor for the background image. Defaults to 1.
  * @param {number} bgOpacity - Opacity of the background image (uses Tailwind, should be a number between 0 and 100 by multiples of 5). Defaults to 100.
  * @param {JSX.Element} children - Child elements to be rendered inside the wrapper.
  *
@@ -48,9 +45,12 @@ import React, { useState, useEffect } from 'react';
  * @note The component uses a `useEffect` hook to load the high resolution background image and switch to it once it's fully loaded.
  * @note The `lowResSrc` is displayed with reduced opacity until the high resolution image is fully loaded.
  * 
+ * @author Chace Nielson
  * @created 2024-07-26
  * @updated 2024-08-01
+ * @since 2.1
  */
+import React, { useState, useEffect } from 'react';
 
 function BackgroundWrapper({
   id = '',

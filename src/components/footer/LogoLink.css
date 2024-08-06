@@ -23,12 +23,13 @@
  * @author Chace Nielson
  * @created 2024-07-28
  * @updated 2024-07-28
+ * @since 2.1
  */
 
 /* Underline Effect Styles */
 .logo-link .underline-effect {
   position: relative;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease; /* Transition for the text color */
 }
 
 .logo-link .underline-effect::after {
@@ -39,9 +40,9 @@
   width: 0;
   height: 4px; /* Adjust to change the thickness of the underline */
   @apply bg-accent-dark; /* Customize the underline color using Tailwind's bg-accent class */
-  transition: width 0.3s ease;
+  transition: width 0.3s ease; /* Transition for the underline width */
 }
 
 .logo-link:hover .underline-effect::after {
-  width: 100%;
+  width: 100%; /* Full width underline on hover */
 }

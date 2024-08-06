@@ -29,9 +29,10 @@
  * @exports skillPageData
  * @exports techSkills
  * 
- * @ChaceN89
+ * @author Chace Nielson
  * @created 2024-07-28
  * @updated 2024-07-28
+ * @since 2.1
  */
 
 import { webDesign } from '../skills/webDesign';
@@ -44,7 +45,6 @@ export const skillPageData = {
   title: "Technical Skills",
   description: "A Comprehensive Overview of My Technical Expertise",
 };
-
 
 // Data for various technical skills
 export const techSkills = [
