@@ -48,12 +48,12 @@ function SkillCategory({ category, index, hoverIndex, handleMouseEnter, handleMo
   const location = useLocation();
 
   return (
-    <ElevateOnView className='border-faint'>
+    <ElevateOnView className='border-faint bg-frosted-glass'>
       <div 
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
         className={`grid grid-cols-1 sm:grid-cols-3 gap-4 
-          transition-all ${hoverIndex !== null && hoverIndex !== index ? 'duration-500 blur-xs' : 'duration-100'}`}
+          transition-all ${hoverIndex !== null && hoverIndex !== index ? 'duration-500 blur-xs' : 'duration-200'}`}
       >
         <div className='sm:col-span-2 flex flex-col space-y-2 justify-between'>
           <div className='flex flex-col space-y-2'>

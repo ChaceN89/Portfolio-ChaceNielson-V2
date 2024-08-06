@@ -20,32 +20,24 @@
  * 
  * @ChaceN89
  * @created 2024-07-28
- * @updated 2024-07-29
+ * @updated 2024-08-05
  */
 
 import React, { useState } from 'react';
 import { workExperienceList, workExperiencePageData } from '../../data/pageData/workExperienceData';
 import JobDetails from './JobDetails';
-import BackgroundWrapper from '../../wrappers/BackgroundWrapper';
 import SectionWrapper from '../../components/uiElements/SectionWrapper';
 import JobButtons from './JobButtons';
-import LazyLoad from 'react-lazy-load';
+
 
 function JobExperience() {
   const [experienceID, setExperienceID] = useState(0);
 
   return (
-    <BackgroundWrapper 
+    <section 
       id='WorkExperience'
-      className='min-h-section-height ' 
-      src={process.env.PUBLIC_URL + "/png-backgrounds/overlays/topo-1.png"}
-      lowResSrc={process.env.PUBLIC_URL + "/png-backgrounds/detailed/range-b&w2-trim-small.png"}
-      bgOpacity={40}
-      backgroundSize = "cover"
-      backgroundAttachment="scroll"
+      className='min-h-section-height h-fit' 
     >
-      <LazyLoad>
-
       <SectionWrapper
         title={workExperiencePageData.title}
         subtitle={workExperiencePageData.description}
@@ -63,8 +55,7 @@ function JobExperience() {
           </div>
         </div>
       </SectionWrapper>  
-              </LazyLoad>
-    </BackgroundWrapper>
+    </section>
   );
 }
 

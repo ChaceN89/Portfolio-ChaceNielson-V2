@@ -11,7 +11,8 @@ function Contact() {
     <BackgroundWrapper 
       id="AboutMe" 
       className='min-h-section-height'
-      src={process.env.PUBLIC_URL + "/png-backgrounds/detailed/range-b&w3-trim.png"}
+      src={process.env.PUBLIC_URL + "/png-backgrounds/detailed/range-b&w3-mountain.png"}
+      lowResSrc={process.env.PUBLIC_URL + "/png-backgrounds/detailed/range-b&w3-mountain-small.png"}
       bgOpacity={15}
       backgroundSize = "cover"
 

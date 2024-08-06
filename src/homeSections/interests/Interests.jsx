@@ -46,7 +46,9 @@ function Interests() {
     <BackgroundWrapper 
       id="AboutMe" 
       className=''
-      src={process.env.PUBLIC_URL + "/png-backgrounds/detailed/range-b&w3-trim.png"}
+      src={process.env.PUBLIC_URL + "/png-backgrounds/detailed/range-b&w5-trim.png"}
+      lowResSrc={process.env.PUBLIC_URL + "/png-backgrounds/detailed/range-b&w5-trim-small.png"}
+      backgroundSize = "cover"
       bgOpacity={10}
     >
       <hr />
