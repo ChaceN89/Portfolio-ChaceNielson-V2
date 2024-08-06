@@ -49,7 +49,7 @@ import handleClick from './handleClick';
 import './GlowButton.css';
 
 function MyButton({ to, onClick, aLink, children, className, type = 'button', ...rest }) {
-  const buttonClass = `glow-on-hover border border-secondary border-opacity-50 ${className}`;
+  const buttonClass = `glow-on-hover min-w-32 border border-secondary border-opacity-50 ${className}`;
 
   const handleButtonClick = (event) => {
     if (type === 'submit') {

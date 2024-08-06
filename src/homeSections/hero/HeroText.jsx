@@ -87,7 +87,6 @@ function HeroText() {
           {heroData.buttons.map((button, index) => (
             <motion.div key={index} variants={textVariants}>
               <MyButton
-                className="w-full"
                 to={button.id}
                 onClick={button.pdf ? () => openPdf(button.pdf) : undefined}
               >
