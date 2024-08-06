@@ -29,7 +29,7 @@ export const gameDesign = {
   linkName: "See More Game Design", 
   description: (
     <span>
-      Game design is a personal passion that complements my technical skills. I enjoy creating immersive and interactive experiences.
+      I design and develop engaging games, blending creativity and technical skills with teamwork to create fun and immersive experiences.    
     </span>
   ),
   topSkills: [
@@ -41,5 +41,6 @@ export const gameDesign = {
   minorSkills: [
     IconSkills.GAME_DEVELOPMENT,
     IconSkills.UNITY_PHYSICS,
+    IconSkills.PLASTIC_SCM,
   ],
 };

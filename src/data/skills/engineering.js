@@ -28,7 +28,7 @@ export const engineering = {
   linkName: "My Engineering Background", 
   description: (
     <span>
-      I have a degree in Software Engineering from the University of Calgary.
+      Leveraging my Software Engineering degree, I excel in software development, data analysis, and simulation with a strong problem-solving mindset.
     </span>
   ),
   topSkills: [
@@ -42,8 +42,11 @@ export const engineering = {
     IconSkills.HADOOP,
     IconSkills.APACHE_SPARK,
     IconSkills.VS_CODE,
-    IconSkills.CI_CD,
     IconSkills.DESIGN_PRINTING,
     IconSkills.DATA_ANALYSIS,
+    IconSkills.LEADERSHIP,
+    IconSkills.AUTOMATION,
+    IconSkills.SIMULATION,
+    IconSkills.CIRCUITY,
   ],
 };

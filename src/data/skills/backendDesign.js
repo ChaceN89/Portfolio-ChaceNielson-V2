@@ -28,7 +28,7 @@ export const backendDesign = {
   linkName: "See More of My Backend Tools", 
   description: (
     <span>
-      It might not be as flashy, but the backend drives my frontend development.
+     I focus on building robust backends with RESTful APIs, databases, and server-side logic for full-stack applications.
     </span>
   ),
   topSkills: [
@@ -39,12 +39,17 @@ export const backendDesign = {
   ],
   minorSkills: [
     IconSkills.PLOTLY_DASH,
-    IconSkills.STREAMLIT,
     IconSkills.DJANGO,
     IconSkills.MONGODB,
     IconSkills.MYSQL,
     IconSkills.SQLITE,
     IconSkills.DOCKER,
     IconSkills.REST_API,
+    IconSkills.CI_CD,
+    IconSkills.CLOUD_DEPLOYMENT,
+    IconSkills.AWS,
+    IconSkills.NETLIFY,
+    IconSkills.VERCEL,
+    IconSkills.RENDER,
   ],
 };

@@ -28,7 +28,7 @@ export const webDesign = {
   linkName: "See My Web Design Toolkit", 
   description: (
     <span>
-      With 3 years of experience, I specialize in creating interactive and responsive web designs for application development.
+      With 3 years of experience, I specialize in creating interactive and responsive web designs for application development. 
     </span>
   ),
   topSkills: [
@@ -49,5 +49,8 @@ export const webDesign = {
     IconSkills.CSS,
     IconSkills.FRAMER_MOTION,
     IconSkills.BLURHASH,
+    IconSkills.RESPONSIVE_DESIGN,
+    IconSkills.STREAMLIT,
+    IconSkills.MAPBOX_GL,
   ],
 };

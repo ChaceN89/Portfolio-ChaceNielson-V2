@@ -60,6 +60,7 @@ const IconSkills = {
   JAVASCRIPT: { name: "JavaScript", svg_path: "javascript.svg" },
   TAILWINDCSS: { name: "TailwindCSS", icon: SiTailwindcss, color: "#38BDF9" },
   NODE_JS: { name: "Node.js", icon: FaNode, color: "#68A063" },
+  RESPONSIVE_DESIGN: { name: "Responsive Design", svg_path: "responsive-design.svg" },
   
   PYTHON: { name: "Python", svg_path: "python.svg" },
   EXPRESS_JS: { name: "Express.js", icon: FaNodeJs, color: "#079487" },
@@ -72,6 +73,7 @@ const IconSkills = {
   CPP: { name: "C++", svg_path: "c-plus-plus.svg" },
   WEB_DESIGN: { name: "Web Design", svg_path: "web-design.svg" },
   CODE_REVIEWS: { name: "Code Reviews", icon: GoCodeReview, color: 'black' },
+  AUTOMATION: { name: "Automation", svg_path: "automation.svg" }, 
   
   UNITY: { name: "Unity", icon: FaUnity, color: "white" },
   BLENDER: { name: "Blender", svg_path: "blender.svg" },
