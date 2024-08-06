@@ -83,7 +83,7 @@ const HomePage = () => {
         <Hero />
         <CallToAction />
       </div>
-      <div id='AboutMe'>
+      <div id='Experience'>
         <TechSkills />
         <JobExperience />
         <Interests />

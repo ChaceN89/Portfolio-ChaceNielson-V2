@@ -45,14 +45,19 @@ import ShowIcon from '../../components/uiElements/ShowIcon'
 import ElevateOnView from '../../animations/ElevateOnView'
 import { useMediaQuery } from 'react-responsive'
 
-function InterestCategory({ interest }) {
+function InterestCategory({ interest, index, hoverIndex, handleMouseEnter, handleMouseLeave }) {
   const isSmallScreen = useMediaQuery({ query: '(max-width: 400px)' });
   const isReallySmallScreen = useMediaQuery({ query: '(max-width: 300px)' });
   const iconSize = isReallySmallScreen ? '3.5rem' : isSmallScreen ? '4.5rem' : '5rem';
 
   return (
     <ElevateOnView className='border-faint' >
-      <div className="flex items-center space-x-2 md:space-x-4">
+      <div 
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        className={`flex items-center space-x-2 md:space-x-4
+          transition-all ${hoverIndex !== null && hoverIndex !== index ? 'duration-500 blur-xs' : 'duration-100'}`}
+      >
         <div className='flex-shrink-0'>
           <ShowIcon skill={interest.icon} size={iconSize} useWhiteText={true}/>
         </div>

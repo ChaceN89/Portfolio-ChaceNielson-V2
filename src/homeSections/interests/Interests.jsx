@@ -33,13 +33,15 @@
  * @created 2024-07-29
  * @updated 2024-07-29
  */
-import React from 'react';
+import React, {useState} from 'react';
 import { interests, interestsPageData } from '../../data/pageData/interestsData';
 import BackgroundWrapper from '../../wrappers/BackgroundWrapper';
 import InterestCategory from './InterestCategory';
 import SectionWrapper from '../../components/uiElements/SectionWrapper';
 
 function Interests() {
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+
   return (
     <BackgroundWrapper 
       id="AboutMe" 
@@ -54,7 +56,14 @@ function Interests() {
       >
         <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
           {interests.map((interest, index) => (
-            <InterestCategory key={index} interest={interest} />
+            <InterestCategory 
+              key={index}
+              interest={interest}
+              index={index}
+              hoverIndex={hoveredIndex}
+              handleMouseEnter={() => setHoveredIndex(index)}
+              handleMouseLeave={() => setHoveredIndex(null)} 
+            />
           ))}
         </div>
       </SectionWrapper>

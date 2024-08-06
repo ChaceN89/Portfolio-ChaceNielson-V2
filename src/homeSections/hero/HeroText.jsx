@@ -38,7 +38,7 @@
  * @updated 2024-07-28
  */
 
-import React from 'react';
+import React, {useState} from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useMediaQuery } from 'react-responsive';
 import { heroData } from '../../data/pageData/heroData';

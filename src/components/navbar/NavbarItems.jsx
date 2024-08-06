@@ -34,7 +34,7 @@ const NavbarItems = ({ toggleMenu, textSize }) => {
       {location.pathname === '/' ? (
         <>
           <LinkItem to="Home" onClick={toggleMenu}>Home</LinkItem>
-          <LinkItem to="AboutMe" onClick={toggleMenu}>About Me</LinkItem>
+          <LinkItem to="Experience" onClick={toggleMenu}>Experience</LinkItem>
           <LinkItem to="Projects" onClick={toggleMenu}>Projects</LinkItem>
           <LinkItem to="ContactMe" onClick={toggleMenu}>Contact Me</LinkItem>
         </>
