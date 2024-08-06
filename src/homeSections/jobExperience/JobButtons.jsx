@@ -41,7 +41,7 @@ import React from 'react';
 
 function JobButtons({ workExperienceList, setExperienceID, experienceID }) {
   return (
-    <div className='flex flex-col space-y-2'>
+    <div className='flex flex-col space-y-4'>
       {workExperienceList.map((experience, index) => (
         <button 
           key={index} 

@@ -67,7 +67,7 @@ function CardImg({ isInitialLoad, isClicked, isHovered, projID, imgSrc, imgBlurh
         filter: isInitialLoad || isClicked || isHovered ? 'blur(0px)' : 'blur(0.5px)',
         scale: isHovered ? 1.05 : 1 // Add this line to handle scaling
       }}
-      whileHover={{ scale: 1.15 }} // Add this line to handle hover scaling
+      whileHover={{ scale: 1.1 }} // Add this line to handle hover scaling
       transition={{ 
         delay: isInitialLoad ? 1 : 0, 
         duration: 0.5, ease: 'easeInOut' 

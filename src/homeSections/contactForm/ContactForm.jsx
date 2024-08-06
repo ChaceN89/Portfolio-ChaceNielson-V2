@@ -12,7 +12,9 @@ function Contact() {
       id="AboutMe" 
       className='min-h-section-height'
       src={process.env.PUBLIC_URL + "/png-backgrounds/detailed/range-b&w3-trim.png"}
-      bgOpacity={10}
+      bgOpacity={15}
+      backgroundSize = "cover"
+
     >
       <SectionWrapper
         title = {contactPageData.title}

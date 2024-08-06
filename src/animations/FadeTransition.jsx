@@ -41,7 +41,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useLocation } from 'react-router-dom';
 
-const FadeTransition = ({ children, duration = 0.6, delay = 0 }) => {
+const FadeTransition = ({ children, duration = 0.8, delay = 0 }) => {
   // Get the current location
   const location = useLocation();
 

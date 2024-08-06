@@ -29,6 +29,7 @@ import JobDetails from './JobDetails';
 import BackgroundWrapper from '../../wrappers/BackgroundWrapper';
 import SectionWrapper from '../../components/uiElements/SectionWrapper';
 import JobButtons from './JobButtons';
+import LazyLoad from 'react-lazy-load';
 
 function JobExperience() {
   const [experienceID, setExperienceID] = useState(0);
@@ -37,27 +38,32 @@ function JobExperience() {
     <BackgroundWrapper 
       id='WorkExperience'
       className='min-h-section-height ' 
-      src={process.env.PUBLIC_URL + "/png-backgrounds/detailed/range-b&w2-trim.png"}
+      src={process.env.PUBLIC_URL + "/png-backgrounds/overlays/topo-1.png"}
       lowResSrc={process.env.PUBLIC_URL + "/png-backgrounds/detailed/range-b&w2-trim-small.png"}
       bgOpacity={40}
+      backgroundSize = "cover"
+      backgroundAttachment="scroll"
     >
+      <LazyLoad>
+
       <SectionWrapper
         title={workExperiencePageData.title}
         subtitle={workExperiencePageData.description}
-      >
+        >
         <div className='grid grid-cols-1 md:grid-cols-4 md:gap-4 h-full'>
           <div className='pb-4 md:pb-0'>
             <JobButtons 
               setExperienceID={setExperienceID}
               experienceID={experienceID}
               workExperienceList={workExperienceList}
-            />
+              />
           </div>
           <div className='col-span-3 min-h-section-height-small h-fit bg-secondary rounded-lg overflow-auto'>
             <JobDetails job={workExperienceList[experienceID]} />
           </div>
         </div>
       </SectionWrapper>  
+              </LazyLoad>
     </BackgroundWrapper>
   );
 }

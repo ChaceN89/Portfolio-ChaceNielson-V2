@@ -34,17 +34,20 @@
 import React from 'react';
 import BackgroundWrapper from "../wrappers/BackgroundWrapper";
 import GalleryPhotos from '../components/photoGallery/GalleryPhotos';
+import FadeTransition from '../animations/FadeTransition';
 
 const PhotoPage = () => {
   return (
-    <BackgroundWrapper
-      className="min-h-screen"
-      src={process.env.PUBLIC_URL + "/png-backgrounds/overlays/scratch-1.png"}
-      backgroundRepeat="repeat"
-      backgroundAttachment="scroll"
-    >
-      <GalleryPhotos />
-    </BackgroundWrapper>
+    <FadeTransition>
+      <BackgroundWrapper
+        className="min-h-screen"
+        src={process.env.PUBLIC_URL + "/png-backgrounds/overlays/scratch-1.png"}
+        backgroundRepeat="repeat"
+        backgroundAttachment="scroll"
+      >
+        <GalleryPhotos />
+      </BackgroundWrapper>
+    </FadeTransition>
   );
 };
 

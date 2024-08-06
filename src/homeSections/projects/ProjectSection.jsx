@@ -75,9 +75,10 @@ function ProjectSection() {
   return (
     <BackgroundWrapper 
       className='relative' 
-      src={process.env.PUBLIC_URL + "/png-backgrounds/detailed/range-b&w2-trim.png"}
-      lowResSrc={process.env.PUBLIC_URL + "/png-backgrounds/detailed/range-b&w2-trim-small.png"}
+      src={process.env.PUBLIC_URL + "/png-backgrounds/overlays/scratch-2.png"}
       bgOpacity={20}
+      backgroundAttachment = "scroll" // Change to scroll for better mobile support
+      backgroundSize = "cover"
     >
       <SectionWrapper
         title={projectPageData.title}
