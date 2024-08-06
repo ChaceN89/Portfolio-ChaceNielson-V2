@@ -1,76 +1,101 @@
-https://github.com/safak/animated-portfolio/blob/completed/src/components/hero/hero.scss
-Reference repo
 
+# Chace Nielson Portfolio
 
-https://www.cleanpng.com/png-mountain-clip-art-mountain-logo-1273809/download-png.html
+Welcome to the repository for Chace Nielson's portfolio. This site showcases my skills, work experience, projects, and more.
 
-# Getting Started with Create React App
+## Table of Contents
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- [Installation](#installation)
+- [Environment Variables](#environment-variables)
+- [Running the Project](#running-the-project)
+- [Data Files](#data-files)
+  - [Home Page Data](#home-page-data)
+  - [Photos Page Data](#photos-page-data)
+  - [Thanks Page Data](#thanks-page-data)
+- [Public Folder Structure](#public-folder-structure)
+- [Pages](#pages)
+- [Components](#components)
+- [Development](#development)
+- [More Information](#more-information)
 
-## Available Scripts
+## Installation
 
-In the project directory, you can run:
+To install the necessary dependencies, run:
 
-### `npm start`
+```bash
+npm install
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Environment Variables
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Create a `.env` file in the root directory with the following content:
 
-### `npm test`
+```env
+REACT_APP_EMAILJS_SERVICE_ID=service_.......
+REACT_APP_EMAILJS_TEMPLATE_ID=template_.......
+REACT_APP_EMAILJS_USER_ID=.......
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+REACT_APP_GA_TRACKING_ID=G-........
 
-### `npm run build`
+REACT_APP_ENVIRONMENT=development // only for development environment
+```
+- The file will not be tracked by git
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Running the Project
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To run the local version of the project, run:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+npm start
+```
 
-### `npm run eject`
+## Data Files
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Application Data
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- The data folder under `src/data` contains page data and project and skills data
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Public Folder Structure
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Various image files for projects, logos, portraits and backgrounds.
+- Also contains a folder of svg icons
 
-## Learn More
+## Pages
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The site is broken up into the following pages:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **Home**: Main page containing sections like Hero, Call to Action, Technical Skills, Work Experience, Interests, Projects, and Contact.
+- **Photos**: Displays a carousel of photos and videos.
+- **Thanks**: A thank you page displayed after form submission.
 
-### Code Splitting
+## Components
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+The components for the site are located in the `src/components` folder. Each component is documented and used throughout the site to build the UI.
 
-### Analyzing the Bundle Size
+## Development
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+The `TailwindBreakPoints.jsx` component shows the breakpoints during development. You can turn this off by changing the environment variable `REACT_APP_ENVIRONMENT` to something other than `development`.
 
-### Making a Progressive Web App
+## Libraries Used
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+The application uses the following libraries:
 
-### Advanced Configuration
+- React
+- Tailwind CSS
+- Framer Motion
+- React Router
+- EmailJS
+- React Icons
+- React GA4
+- React Modal
+- Blurhash
+- And more...
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+For more information, refer to the `package.json` file.
 
-### Deployment
+## More Information
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+For more information, contact Chace Nielson:
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Website: [chacenielson.com](https://chacenielson.com)
+- Email: [chacen@shaw.ca](mailto:chacen@shaw.ca)
