@@ -35,7 +35,7 @@ const short = "Predicting music genres and creating recommendations using machin
 const long = (
   <div className='space-y-2'>
     <p>
-      This project uses machine learning to predict music genres and generate recommendations. Built with Apache Spark and Python, it involves data analysis, feature extraction, and model training. Leveraging the power of Apache Spark for big data processing, the project explores various machine learning algorithms to achieve accurate predictions.
+      This project uses machine learning to predict music genres and generate recommendations. Built with Apache Spark, Jupyter Notebook and Python, it involves data analysis, feature extraction, and model training. Leveraging the power of Apache Spark for big data processing, the project explores various machine learning algorithms to achieve accurate predictions.
     </p>
     <p>
       An interactive Jupyter notebook is provided for experimenting with different models and techniques. This setup allows users to test and refine their approaches in a flexible, hands-on environment.
@@ -49,7 +49,6 @@ export const genrePrediction = {
   tag: "Machine Learning",
   blurb: short,
   description: long,
-  blurhash: "",
   images: [
     { src: "genrePrediction.jpg", blurhash: "LIR{uws%#rkX.8bJX5ad_MW@Xknh" },
   ],
@@ -63,9 +62,7 @@ export const genrePrediction = {
   ],
   externalLinks: [
     { name: "Genre Analysis", link: "https://github.com/ChaceN89/Machine-Learning-Music-Notebooks/blob/main/MusicGenrePrediction/ENSF_544_Final_Project.ipynb", icon: IconSkills.GITHUB.icon },
-    { name: "Spark Database Setup", link: "https://github.com/ChaceN89/Machine-Learning-Music-Notebooks/blob/main/SparkSentimentAnalysis/SparkSentimentMLAnalysis.ipynb", icon: IconSkills.GITHUB.icon },
+    { name: "Spark Setup", link: "https://github.com/ChaceN89/Machine-Learning-Music-Notebooks/blob/main/SparkSentimentAnalysis/SparkSentimentMLAnalysis.ipynb", icon: IconSkills.GITHUB.icon },
+    { name: "Report", pdf: "Spark ML Genre Report.pdf", icon: IconSkills.PDF.icon },
   ],
-  pdfs: [
-    { name: "Report", link: "Spark ML Genre Report.pdf", icon: IconSkills.PDF.icon },
-  ]
 };

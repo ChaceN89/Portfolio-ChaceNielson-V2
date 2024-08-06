@@ -35,10 +35,10 @@ const short = "The website built for the Glass Gecko Games team.";
 const long = (
   <div className='space-y-2'>
     <p>
-      This website was created for the Glass Gecko Games team, of which I am a part. Built using React and Tailwind CSS, it features animations and blurhashing of images and backgrounds for a smooth and seamless experience. The site highlights the team's projects, skills, and experiences, emphasizing a clean and modern design.
+      This website was created for the Glass Gecko Games team, of which I am a part. Built using React and Tailwind CSS, it features animations and blurhashing of images and backgrounds for a smooth and seamless experience. The site highlights games and the team.
     </p>
     <p>
-      The website ensures an engaging user experience through improved organization, animations using Framer Motion, and the use of reusable components. Deployed on Vercel, it demonstrates the effective integration of modern web technologies to create a dynamic and interactive platform for showcasing our team's work.
+      The website ensures an engaging user experience through improved organization, animations using Framer Motion, and the use of reusable components. Deployed on Netlify using continual integration, it demonstrates the effective integration of modern web technologies to create a dynamic and interactive platform for showcasing our team's work.
     </p>
   </div>
 );
@@ -61,9 +61,12 @@ export const glassGeckoGames = {
     IconSkills.FRAMER_MOTION,
     IconSkills.BLURHASH,
     IconSkills.NETLIFY,
+    IconSkills.CI_CD,
+    IconSkills.TEAM_COLLABORATION,
+    IconSkills.RESPONSIVE_DESIGN
   ],
   externalLinks: [
-    { name: "Website", link: "https://glassgeckogames.com", icon: IconSkills.WORLD.icon },
-    // maybe add the code
+    { name: "Visit Site", link: "https://glassgeckogames.com", icon: IconSkills.WORLD.icon },
+    { name: "Code", link: "https://github.com/GlassGeckoGames/company-website", icon: IconSkills.GITHUB.icon },
   ],
 };

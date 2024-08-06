@@ -20,7 +20,7 @@ const short = "Full-Stack photo gallery application with user authentication.";
 const long = (
   <div className='space-y-2'>
     <p>
-      This full-stack photo gallery app enables users to upload, organize, and manage their photo collections. Built with the MERN stack (MongoDB, ExpressJS, React, and NodeJS), it offers a robust and scalable solution for photo management. Key features include user authentication, photo categorization, and sharing capabilities.
+      This full-stack photo gallery app (called Aviar) enables users to upload, organize, and manage their photo collections. Built with the MERN stack (MongoDB, ExpressJS, React, and NodeJS), it offers a robust and scalable solution for photo management. Key features include user authentication, photo categorization, and sharing capabilities.
     </p>
     <p>
       The app provides a responsive and user-friendly interface for seamless photo management. This project highlights the effective integration of the MERN stack to deliver a comprehensive photo gallery application.
@@ -42,6 +42,7 @@ export const photoApp = {
     { src: "photo3.jpg", blurhash: "LGAdcs%L00NI?wxvoJkBx]o#-;$%" },
     { src: "photo1.jpg", blurhash: "LCAKgzxu00Sjx]xu.AWC_2t8Rks+" },
   ],
+  youtubeEmbed:"https://www.youtube.com/watch?v=mktAIV4sjFQ",
   mainStack: [
     IconSkills.REACT,
     IconSkills.MONGODB,
@@ -51,6 +52,8 @@ export const photoApp = {
     IconSkills.FULL_STACK,
     IconSkills.AUTHENTICATION,
     IconSkills.NODE_JS,
+    IconSkills.CSS,
+    IconSkills.HTML
   ],
   externalLinks: [
     { name: "Overview", link: "https://www.youtube.com/watch?v=mktAIV4sjFQ", icon: IconSkills.YOUTUBE.icon },

@@ -39,7 +39,7 @@ function YouTubeEmbed({ youtubeEmbed }) {
   };
 
   return (
-    <div className="mb-6 mx-auto container w-3/4">
+    <div className="mb-6 mx-auto container w-2/3">
       <div className="aspect-w-16 aspect-h-9">
         <iframe
           src={getEmbedUrl(youtubeEmbed)}

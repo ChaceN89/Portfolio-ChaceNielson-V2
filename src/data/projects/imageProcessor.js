@@ -38,7 +38,10 @@ const long = (
       This project is an image processing task queue built with React and FastAPI. Users can upload images for processing, which are managed efficiently in a queue. The application is developed using TypeScript and showcases the seamless integration of frontend and backend technologies to handle asynchronous image processing tasks.
     </p>
     <p>
-      Deployed on Railway, the system ensures efficient task management and provides a responsive user interface for monitoring the status of image processing jobs. It demonstrates robust handling of image processing workflows, delivering an effective solution for managing and processing large volumes of images asynchronously.
+      Deployed on Railway and Render, the system ensures efficient task management and provides a responsive user interface for monitoring the status of image processing jobs. It demonstrates robust handling of image processing workflows, delivering an effective solution for managing and processing large volumes of images asynchronously. 
+    </p>
+    <p>
+      The frontend and functionality is simple as the main focus is the task queue in the backend using FastAPI. The application is designed to handle multiple users and tasks concurrently, ensuring efficient processing of images in a queue system.
     </p>
   </div>
 );
@@ -52,6 +55,8 @@ export const imageProcessor = {
   description: long,
   images: [
     { src: "imageProcessor.jpg", blurhash: "LFEseT-^{v9#LfUvK%%M2hD19[#8" },
+    { src: "imageProcessor2.jpg", blurhash: "LFEseT-^{v9#LfUvK%%M2hD19[#8" },
+    { src: "imageProcessor3.jpg", blurhash: "LFEseT-^{v9#LfUvK%%M2hD19[#8" },
   ],
   mainStack:[
     IconSkills.REACT,
@@ -61,6 +66,7 @@ export const imageProcessor = {
   extendedStack:[
     IconSkills.PYTHON,
     IconSkills.RAILWAY,
+    IconSkills.RENDER,
   ],
   externalLinks: [
     { name: "Website", link: "https://main--img-processor.netlify.app/", icon: IconSkills.WORLD.icon },

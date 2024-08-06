@@ -54,6 +54,7 @@ import { Element, scroller } from 'react-scroll';
 import SkillBoxContainer from "../components/uiElements/SkillBoxContainer";
 import { FaArrowAltCircleDown } from "react-icons/fa";
 import YouTubeEmbed from "../homeSections/projects/YouTubeEmbed";
+import Tooltip from "../components/uiElements/Tooltip";
 
 const ProjectModal = () => {
   const { id } = useParams();
@@ -92,18 +93,20 @@ const ProjectModal = () => {
       </div>
 
       <div className="flex flex-col-reverse items-center sm:flex-row justify-start py-2">
-        <div className="text-left pr-2">
-          <button onClick={scrollToImages} className="button-secondary p-0.5 rounded-full">
-            <FaArrowAltCircleDown size={24} />
-          </button>
-        </div>
+        <Tooltip text="Skills" openDuration={400} >
+          <div className="text-left pr-2">
+            <button onClick={scrollToImages} className="button-secondary p-0.5 rounded-full">
+              <FaArrowAltCircleDown size={24} />
+            </button>
+          </div>
+        </Tooltip>
         <ExternalLinks externalLinks={project.externalLinks} />
       </div>
 
       <hr className="border-primary border-opacity-60" />
 
       {/* description */}
-      <div className="pb-4">{project.description}</div>
+      <div className="py-4">{project.description}</div>
 
       <YouTubeEmbed youtubeEmbed={project.youtubeEmbed} />
 

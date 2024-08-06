@@ -23,10 +23,7 @@ const long = (
       This project is a job dashboard application designed to help users manage their job applications and interviews. It is built with Vue.js and FastAPI, and uses SQLite for data storage.
     </p>
     <p>
-      The application features a clean and intuitive interface, making it easy for users to track their job search progress. It also includes various tools for organizing and analyzing job applications.
-    </p>
-    <p>
-      The project is deployed using Netlify and Render, showcasing the integration of frontend and backend technologies for a seamless user experience.
+      The full-stack project is deployed using Netlify and Render.
     </p>
   </div>
 );
@@ -45,13 +42,14 @@ export const jobDashboard = {
     IconSkills.VUE,
     IconSkills.TAILWINDCSS,
     IconSkills.FASTAPI,
-    { name: "SQLite", svg_path: "sqlite.svg" },
+    IconSkills.SQLITE,
   ],
   extendedStack:[
     IconSkills.FULL_STACK,
     IconSkills.PYTHON,
     IconSkills.NETLIFY,
     IconSkills.RENDER,
+    IconSkills.RESPONSIVE_DESIGN
   ],
   externalLinks: [
     { name: "Website", link: "https://job-dashboard-chace.netlify.app/", icon: IconSkills.WORLD.icon },

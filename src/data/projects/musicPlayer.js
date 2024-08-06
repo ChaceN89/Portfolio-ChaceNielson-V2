@@ -20,13 +20,10 @@ const short = "A music player application built with Vue and Tailwind.";
 const long = (
   <div className='space-y-2'>
     <p>
-      This is a music player application built using Vue.js and Tailwind CSS. The application allows users to play and manage their music collections.
+      This is a music player application built using Vue.js and Tailwind CSS. The application allows users to play music online.
     </p>
     <p>
-      It features a clean and responsive UI, providing a seamless user experience for music playback. The application is deployed using Vercel.
-    </p>
-    <p>
-      The project showcases the integration of modern web technologies to build a functional and visually appealing music player.
+      It features a clean and responsive UI, and dark/light mode and volume control settings. The application is deployed using Vercel.
     </p>
   </div>
 );
@@ -49,6 +46,7 @@ export const musicPlayer = {
   ],
   extendedStack: [
     IconSkills.VERCEL,
+    IconSkills.RESPONSIVE_DESIGN
   ],
   externalLinks: [
     { name: "Website", link: "https://music-player-chace-nielsons-projects.vercel.app/", icon: IconSkills.MUSIC.icon },

@@ -58,6 +58,6 @@ export const globals = {
   },
   project: {
     slide: 0.4, // Slide value for project animations
-    initialSlide: 0.8 // Initial slide value for project animations
+    initialSlide: 0.5 // Initial slide value for project animations
   }
 };

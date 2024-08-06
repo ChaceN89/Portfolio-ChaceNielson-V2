@@ -59,6 +59,7 @@ export const drillbotics = {
     { src: "drillbotics5.jpg", blurhash: "L7GudjTH=v~D%$Io9a-:01%LR+D*" },
     { src: "drillbotics6.jpg", blurhash: "LAF=jk~p-p?a_3o#tQRjR5RkIoRi" },
   ],
+  youtubeEmbed: "https://www.youtube.com/watch?v=5Z8g44RXl2c"  ,
   mainStack: [
     IconSkills.PLOTLY_DASH,
     IconSkills.PYTHON,
@@ -66,8 +67,11 @@ export const drillbotics = {
   extendedStack: [
     IconSkills.ENGINEERING,
     IconSkills.CIRCUITY,
+    IconSkills.DATA_VISUALIZATION,
+    IconSkills.SIMULATION,
+    IconSkills.FABRICATION
   ],
   externalLinks: [
-    // Add external links if available
+    { name: "GUI Example", link: "https://www.youtube.com/watch?v=xF9heykeFU4", icon: IconSkills.YOUTUBE.icon },
   ],
 };

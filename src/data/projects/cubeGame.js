@@ -29,7 +29,7 @@
 import IconSkills from "../iconSkills";
 
 // Short description (blurb) to be displayed on the project card
-const short = "An endless runner game developed using Unity and C#.";
+const short = "An endless runner game developed using Unity Game Engine.";
 
 // Long description for the modal page, providing detailed information about the project
 const long = (
@@ -45,12 +45,16 @@ const long = (
 
 export const cubeGame = {
   id: "cube-game",
-  name: "Cube Game",
+  name: "Endless Runner Game",
   tag: "Game",
   blurb: short,
   description: long,
   images: [
     { src: "cubeGame.jpg", blurhash: "LHO:^eD%4.%M00xv%2of_Nxt-;D%" },
+    { src: "cube1.jpg", blurhash: "LHO:^eD%4.%M00xv%2of_Nxt-;D%" },
+    { src: "cube2.jpg", blurhash: "LHO:^eD%4.%M00xv%2of_Nxt-;D%" },
+    { src: "cube3.jpg", blurhash: "LHO:^eD%4.%M00xv%2of_Nxt-;D%" },
+    { src: "cube4.jpg", blurhash: "LHO:^eD%4.%M00xv%2of_Nxt-;D%" },
   ],
   mainStack: [
     IconSkills.UNITY,

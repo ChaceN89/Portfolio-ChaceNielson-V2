@@ -29,16 +29,13 @@
 import IconSkills from "../iconSkills";
 
 // Short description (blurb) to be displayed on the project card
-const short = "A Flappy Bird clone developed using Unity and C#.";
+const short = "A Flappy Bird clone developed using Unity Game Engine.";
 
 // Long description for the modal page, providing detailed information about the project
 const long = (
   <div className='space-y-2'>
     <p>
-      This project is a Flappy Bird clone developed with Unity and C#. Players control a bird navigating through pipes, avoiding collisions.
-    </p>
-    <p>
-      It showcases Unity's physics and scripting capabilities in creating an engaging game, serving as an example of recreating a popular game using modern tools.
+      This project is a Flappy Bird clone developed with Unity and C#. Players control a bird navigating through pipes and avoiding collisions.
     </p>
   </div>
 );
@@ -52,14 +49,13 @@ export const flappyBirdClone = {
   images: [
     { src: "flappyBird.jpg", blurhash: "L8CI]Vs~Ros~8[obWHkA.Uk8oYs~" },
   ],
+  youtubeEmbed: "https://www.youtube.com/watch?v=KOZBFfWv8B8"  ,
   mainStack: [
     IconSkills.UNITY,
     IconSkills.CSHARP,
   ],
-  modalInfo: {
-    description: long,
-    videos: [
-      { path: process.env.PUBLIC_URL + "/videos/FlappyBird.mp4", description: 'Gameplay' }
-    ]
-  }
+  extendedStack: [
+    IconSkills.GAME_DEVELOPMENT,
+    IconSkills.UNITY_PHYSICS,
+  ],
 };

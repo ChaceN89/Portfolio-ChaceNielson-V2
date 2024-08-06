@@ -29,7 +29,7 @@
 import IconSkills from "../iconSkills";
 
 // Short description (blurb) to be displayed on the project card
-const short = "Haptic Jenga built using Unity and C#.";
+const short = "Virtual Jenga using haptics built in Unity Game Engine.";
 
 // Long description for the modal page, providing detailed information about the project
 const long = (
@@ -45,7 +45,7 @@ const long = (
 
 export const jenga = {
   id: "jenga",
-  name: "Jenga",
+  name: "Virtual Jenga",
   tag: "Game",
   blurb: short,
   description: long,
@@ -68,6 +68,6 @@ export const jenga = {
   ],
   externalLinks: [
     { name: "Code", link: "https://github.com/ChaceN89/Haptic-Jenga", icon: IconSkills.GITHUB.icon },
-    { name: "Video", link: "https://www.youtube.com/watch?v=e-xqfE_f2uc", icon: IconSkills.YOUTUBE.icon },
+    { name: "Report", pdf: "Jenga Report.pdf", icon: IconSkills.PDF.icon }
   ],
 };

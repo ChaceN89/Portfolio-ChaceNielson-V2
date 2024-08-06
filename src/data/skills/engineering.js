@@ -42,11 +42,12 @@ export const engineering = {
     IconSkills.HADOOP,
     IconSkills.APACHE_SPARK,
     IconSkills.VS_CODE,
-    IconSkills.DESIGN_PRINTING,
+    IconSkills.DESIGN_3D,
     IconSkills.DATA_ANALYSIS,
     IconSkills.LEADERSHIP,
     IconSkills.AUTOMATION,
     IconSkills.SIMULATION,
     IconSkills.CIRCUITY,
+    IconSkills.FABRICATION,
   ],
 };

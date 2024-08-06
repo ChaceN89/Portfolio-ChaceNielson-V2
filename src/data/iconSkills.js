@@ -14,7 +14,7 @@
  *   IconSkills.GIT, IconSkills.JAVA, IconSkills.CPP, IconSkills.WEB_DESIGN, 
  *   IconSkills.CODE_REVIEWS, IconSkills.UNITY, IconSkills.BLENDER, 
  *   IconSkills.CSHARP, IconSkills.ANIMATION, IconSkills.SIMULATION, 
- *   IconSkills.ENGINEERING, IconSkills.DESIGN_PRINTING, IconSkills.CIRCUITY, 
+ *   IconSkills.ENGINEERING, IconSkills.DESIGN, IconSkills.CIRCUITY, 
  *   IconSkills.GAME_DEVELOPMENT, IconSkills.UNITY_PHYSICS, 
  *   IconSkills.PLASTIC_SCM, IconSkills.PLOTLY_DASH, IconSkills.APACHE_SPARK, 
  *   IconSkills.JUPYTER, IconSkills.MACHINE_LEARNING, IconSkills.FULL_STACK, 
@@ -82,8 +82,10 @@ const IconSkills = {
   
   SIMULATION: { name: "Simulation", svg_path: "computer.svg" },
   ENGINEERING: { name: "Engineering", svg_path: "engineering.svg" },
-  DESIGN_PRINTING: { name: "3D Design and Printing", svg_path: "3d-cube.svg" },
+  DESIGN_3D: { name: "3D Design", svg_path: "3d-cube.svg" },
   CIRCUITY: { name: "Circuity Design", svg_path: "circuit-board.svg" },
+  FABRICATION: { name: "Fabrication", svg_path: "fabrication.svg" },
+  DATA_VISUALIZATION: { name: "Data Visualization", svg_path: "data-visualization.svg" },
   
   GAME_DEVELOPMENT: { name: "Game Development", svg_path: "game-controller.svg" },
   UNITY_PHYSICS: { name: "Unity Physics System", svg_path: "physics.svg" },

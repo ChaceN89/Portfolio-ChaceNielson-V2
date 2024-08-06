@@ -20,13 +20,13 @@ const short = "My original portfolio.";
 const long = (
   <div className='space-y-2'>
     <p>
-      This is the second version of my personal portfolio website, showcasing my projects, skills, and experiences. Built using React and Tailwind CSS, it highlights significant improvements in organization, animations, and the use of reusable components over the initial version.
+      My portfolio highlight my tachnical skills and projects. It is built using React and Tailwind CSS. The portfolio features a clean and modern design, providing an overview of my work and contact information. 
     </p>
     <p>
-      Note: The original lacked some features, and the new version uses blurhashing to blur images on load and Framer Motion to create animations.
+      The project is deployed using Vercel, demonstrating the use of modern web technologies to create an effective personal branding website. Currently I am on the second version of my portfolio. 
     </p>
     <p>
-      The portfolio features a clean and modern design, providing an overview of my work and contact information. The updated version ensures a more engaging and seamless user experience. The project is deployed using Vercel, demonstrating the use of modern web technologies to create an effective personal branding website.
+      My orginal portfolio had too much extra information and lacked some features. The new version uses blurhashing to blur images on load and Framer Motion to create animations. It is more organized and has a more streamlined user experience to better showcase my work.
     </p>
   </div>
 );
@@ -40,6 +40,7 @@ export const portfolio = {
   description: long,
   images: [
     { src: "portfolio.jpg", blurhash: "L78g,54m9F_4X9V?aexv9Ft7s;I." },
+    { src: "portfolio2.jpg", blurhash: "L78g,54m9F_4X9V?aexv9Ft7s;I." },
   ],
   mainStack: [
     IconSkills.REACT,
@@ -49,8 +50,11 @@ export const portfolio = {
     IconSkills.FRAMER_MOTION,
     IconSkills.BLURHASH,
     IconSkills.VERCEL,
+    IconSkills.RESPONSIVE_DESIGN
   ],
   externalLinks: [
-    { name: "Code", link: "https://github.com/ChaceN89/Portfolio-ChaceNielson", icon: IconSkills.GITHUB.icon },
+    { name: "Version 1", link: "https://portfolio-4gesq0m1e-chace-nielsons-projects.vercel.app/#/", icon: IconSkills.WORLD.icon },
+    { name: "Version 1 Code", link: "https://github.com/ChaceN89/Portfolio-ChaceNielson", icon: IconSkills.GITHUB.icon },
+    { name: "Version 2 Code", link: "https://github.com/ChaceN89/portfolio_2", icon: IconSkills.GITHUB.icon },
   ],
 };

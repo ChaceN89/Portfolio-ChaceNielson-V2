@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="%PUBLIC_URL%/resume.ico" />
+    <link rel="icon" href="/resume.ico" />
     <title>PDF Viewer</title>
     <style>
         body, html {
@@ -20,15 +20,17 @@
     </style>
 </head>
 <body>
-    <iframe id="pdfFrame" src="" frameborder="0"></iframe>
+    <iframe id="pdfFrame" frameborder="0"></iframe>
     <script>
-        // Get the PDF name from the URL parameters
-        const urlParams = new URLSearchParams(window.location.search);
-        const pdfName = urlParams.get('pdf');
-        if (pdfName) {
-            const publicUrl = window.location.origin;
-            document.getElementById('pdfFrame').src = `${publicUrl}/pdfs/${decodeURIComponent(pdfName)}`;
-        }
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const pdfName = urlParams.get('pdf');
+            if (pdfName) {
+                const decodedName = decodeURIComponent(pdfName);
+                document.getElementById('pdfFrame').src = `/pdfs/${decodedName}`;
+                document.title = decodedName;
+            }
+        });
     </script>
 </body>
 </html>
