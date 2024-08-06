@@ -46,7 +46,7 @@ import ExternalLinks from "../homeSections/projects/ExternalLinks";
 import { Element, scroller } from 'react-scroll';
 import SkillBoxContainer from "../components/uiElements/SkillBoxContainer";
 import { FaArrowAltCircleDown } from "react-icons/fa";
-
+import YouTubeEmbed from "../homeSections/projects/YouTubeEmbed";
 
 const ProjectModal = () => {
   const { id } = useParams();
@@ -72,7 +72,7 @@ const ProjectModal = () => {
 
   // Scroll to the images section
   const scrollToImages = () => {
-    scroller.scrollTo("imagesSection", {
+    scroller.scrollTo("skillBoxContainer", {
       containerId: "project-modal-container",
       smooth: true
     });
@@ -95,20 +95,23 @@ const ProjectModal = () => {
 
       <hr className="border-primary border-opacity-60" />
 
-      {/* Skill Icons */}
-      <SkillBoxContainer stack={fullStack} />
-
       {/* description */}
       <div className="pb-4">{project.description}</div>
 
+      <YouTubeEmbed youtubeEmbed={project.youtubeEmbed} />
+
       {/* images */}
       {project.images && project.images.length > 0 && (
-        <Element name="imagesSection">
-          <div className="pt-4">
-            <ProjectImageCarousel images={project.images} id={project.id} title={project.name} />
-          </div>
-        </Element>
+        <div className="pt-4 flex w-full justify-center">
+          <ProjectImageCarousel images={project.images} id={project.id} title={project.name} />
+        </div>
       )}
+
+      {/* Skill Icons */}
+      <Element name="skillBoxContainer">
+        <SkillBoxContainer stack={fullStack} />
+      </Element>
+
     </div>
   );
 };

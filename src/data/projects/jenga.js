@@ -40,6 +40,7 @@ export const jenga = {
     { src: "jenga2.jpg", blurhash: "LNCZ@QRQ8wRj00xu-;t7~WM{OXRj" },
     { src: "jenga1.jpg", blurhash: "LaK-,:fkIuoL9haykDWB.Aof%Lof" },
   ],
+  youtubeEmbed: "https://www.youtube.com/watch?v=e-xqfE_f2uc",
   mainStack:[
     IconSkills.UNITY,
     IconSkills.CSHARP,

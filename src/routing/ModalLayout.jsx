@@ -91,9 +91,10 @@ const ModalLayout = () => {
   return (
     <FadeTransition>
       <BackgroundWrapper
-        className="modal "
+        className="modal bg-secondary bg-opacity-5"
         onClick={closeModal}
-        src={process.env.PUBLIC_URL + "/png-backgrounds/detailed/range-b&w2-trim.png"}
+        src={process.env.PUBLIC_URL + "/png-backgrounds/overlays/scratch-2.png"}
+        backgroundRepeat="repeat"
         bgOpacity={80}
       >
         <SlideTransition enter='right' exit='right' translationDist={400}>

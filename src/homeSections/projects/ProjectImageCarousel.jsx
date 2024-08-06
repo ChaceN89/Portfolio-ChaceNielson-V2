@@ -56,6 +56,8 @@ function ProjectImageCarousel({ images, id, title }) {
           hasIndexBoard={false}
           className="carousel-container"
           objectFit="contain"
+          shouldLazyLoad={true} 
+          hasSizeButton={false}
         />
       ) : (
         null
