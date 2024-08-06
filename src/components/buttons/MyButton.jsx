@@ -46,10 +46,9 @@
 
 import React from 'react';
 import handleClick from './handleClick';
-import './GlowButton.css';
+import './Button.css';
 
 function MyButton({ to, onClick, aLink, children, className, type = 'button', ...rest }) {
-  const buttonClass = `glow-on-hover min-w-32 border border-secondary border-opacity-50 ${className}`;
 
   const handleButtonClick = (event) => {
     if (type === 'submit') {
@@ -63,11 +62,11 @@ function MyButton({ to, onClick, aLink, children, className, type = 'button', ..
   return (
     <button
       type={type}
-      className={buttonClass}
+      className={`glow-on-hover min-w-32 border-faint hover:scale-95  ${className}`}
       onClick={handleButtonClick}
       {...rest}
     >
-      <span>{children}</span>
+      {children}
     </button>
   );
 }
