@@ -51,7 +51,7 @@ const LinkItem = ({ to, children, onClick, routerLink = false }) => {
         <NavLink
           to={to}
           className={({ isActive }) =>
-            `${isActive ? 'bg-primary text-secondary rounded-3xl' : 
+            `${isActive ? 'bg-secondary bg-opacity-20 text-secondary rounded-3xl' : 
             'hover:text-accent bg-none duration-300'
             } 
             px-4 py-2 transition-all `

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 import { toast, Toaster } from 'react-hot-toast';
-import ContactToast from './ContactToast';
+import { useNavigate } from 'react-router-dom';
 import MyButton from '../../components/buttons/MyButton';
 import { contactPageData } from '../../data/pageData/contactPageData';
 
@@ -9,13 +9,16 @@ function Form() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
     // Check if the EmailJS configuration is set up correctly
     if (!contactPageData.EMAILJS_USER_ID || !contactPageData.EMAILJS_SERVICE_ID || !contactPageData.EMAILJS_TEMPLATE_ID) {
-      toast.error('EmailJS configuration is missing or incorrect.');
+      toast.error('EmailJS configuration is missing or incorrect.', {
+        position: 'center',
+      });
       return;
     }
 
@@ -34,25 +37,13 @@ function Form() {
       templateParams,
       contactPageData.EMAILJS_USER_ID
     ).then(() => {
-      displaySuccessToast();
-      setName('');
-      setEmail('');
-      setMessage('');
-
+      // Navigate to the Thanks page
+      navigate('/thanks');
     }, (error) => {
-      console.log('FAILED...', error);
-      displayErrorToast();
+      toast.error('Failed to send email. Please try again later.', {
+        position: 'center',
+      });
     });
-  };
-
-  const displaySuccessToast = () => {
-    toast.custom((t) => (
-      <ContactToast t={t}/>  
-    ));
-  };
-
-  const displayErrorToast = () => {
-    toast.error('Failed to send email. Please try again later.');
   };
 
   return (
@@ -101,7 +92,7 @@ function Form() {
         <MyButton type="submit">Send Message</MyButton>
       </div>
     </form>
-  )
+  );
 }
 
-export default Form
+export default Form;

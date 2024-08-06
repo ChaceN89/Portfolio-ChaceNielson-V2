@@ -56,7 +56,7 @@ function MediaLinks() {
   const iconSize = isMediumScreen ? 28 : 20;
 
   return (
-    <div className="flex justify-center space-x-0.5 relative">
+    <div className="flex justify-center space-x-1 relative">
       {mediaLinks.map((link) => (
         <Tooltip key={link.name} text={link.name}>
           <a
@@ -66,7 +66,7 @@ function MediaLinks() {
             rel="noopener noreferrer"
           >
             <div className="flex items-center justify-center 
-              w-8 h-8 md:w-12 md:h-12 rounded-full 
+              w-8 h-8 md:w-12 md:h-12 rounded-full border 
               button-secondary"
             >
               <link.icon size={iconSize} className="" />
