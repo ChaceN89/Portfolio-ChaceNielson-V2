@@ -74,7 +74,7 @@ function LogoLink({ width = "w-20" }) {
   const innerLogo = (
     <div className={"relative  hover:scale-95 " + width} >
     <ImageComponent 
-      className="w-full h-full object-cover filter brightness-50"
+      className="w-full h-full object-cover filter brightness-50 logo-shadow"
       src={process.env.PUBLIC_URL + '/logos/chacelogoFull512.png'} 
       alt="Logo" 
     />

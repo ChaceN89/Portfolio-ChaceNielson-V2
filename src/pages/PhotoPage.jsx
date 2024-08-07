@@ -46,6 +46,7 @@ const PhotoPage = () => {
         src={process.env.PUBLIC_URL + "/png-backgrounds/overlays/scratch-1.png"}
         backgroundRepeat="repeat"
         backgroundAttachment="scroll"
+        bgOpacity={40}
       >
         <GalleryPhotos />
       </BackgroundWrapper>

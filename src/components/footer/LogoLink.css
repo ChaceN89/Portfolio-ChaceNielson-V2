@@ -46,3 +46,7 @@
 .logo-link:hover .underline-effect::after {
   width: 100%; /* Full width underline on hover */
 }
+
+.logo-shadow{
+  filter: drop-shadow(0 0 1px white);
+}
