@@ -34,7 +34,7 @@
 
 /* Hero image wrapper */
 .hero-img-wrapper {
-  @apply  p-0 h-full
+  @apply h-full
   lg:absolute lg:bottom-0 lg:right-0 lg:w-auto
   min-h-108 ;
   ;
@@ -42,7 +42,7 @@
 
 /* Hero text container */
 .text-container {
-  @apply 
+  @apply z-20 p-2
   mix-blend-difference;
 }
 
