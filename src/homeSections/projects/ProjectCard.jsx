@@ -75,7 +75,7 @@ function ProjectCard({ project }) {
   useEffect(() => {
     if (inView) {
       controls.start('visible');
-      setTimeout(() => setIsInitialLoad(false), 1000); // Set initial load to false after the delay - delay value to cause the blur effect
+      setTimeout(() => setIsInitialLoad(false), 500); // Set initial load to false after the delay - delay value to cause the blur effect
     }
   }, [controls, inView]);
 

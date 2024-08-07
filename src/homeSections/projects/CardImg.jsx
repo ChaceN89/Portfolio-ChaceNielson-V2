@@ -70,8 +70,8 @@ function CardImg({ isInitialLoad, isClicked, isHovered, projID, imgSrc, imgBlurh
       }}
       whileHover={{ scale: 1.1 }} // Add this line to handle hover scaling
       transition={{ 
-        delay: isInitialLoad ? 1 : 0, 
-        duration: 0.5, ease: 'easeInOut' 
+        delay: 0.2, 
+        duration: 0.4, ease: 'easeInOut' 
       }} 
     >
       <ImageComponent
