@@ -43,7 +43,7 @@
  * @since 2.1
  */
 
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { Link as ScrollLink } from 'react-scroll';
 import ImageComponent from '../../wrappers/ImageComponent';
