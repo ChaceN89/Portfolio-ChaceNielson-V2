@@ -34,7 +34,7 @@
  * 
  * @author Chace Nielson
  * @created 2024-07-28
- * @updated 2024-07-28
+ * @updated 2024-08-05
  * @since 2.1
  */
 
@@ -98,14 +98,14 @@ const ModalLayout = () => {
       >
         <SlideTransition enter='right' exit='right' translationDist={400}>
           <div className="modal-content relative" onClick={(e) => e.stopPropagation()}>
-            <button className="absolute top-2 right-2 md:text-2xl text-primary hover:text-accent" onClick={closeModal}>
+            <button className="absolute top-0.5 right-0.5 sm:top-2 sm:right-2 md:text-2xl text-primary hover:text-accent" onClick={closeModal}>
               <IoMdClose size={30} />
             </button>
             <div id="project-modal-container" className="overflow-y-auto max-h-section-height-small p-2">
               <Outlet />
             </div>
             <button 
-              className="button-secondary p-2 rounded-lg mt-2" 
+              className="button-secondary p-2 rounded-lg mt-2 " 
               onClick={closeModal}
             >
               {setReturnText()}     
