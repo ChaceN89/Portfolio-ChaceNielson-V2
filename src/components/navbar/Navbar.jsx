@@ -38,7 +38,7 @@
  * @exports Navbar
  * 
  * @created 2024-07-28
- * @updated 2024-08-05
+ * @updated 2024-08-07
  * @since 2.1
  */
 
@@ -47,7 +47,6 @@ import NavbarItems from './NavbarItems';
 import { motion, useScroll, useSpring } from 'framer-motion';
 import { Squash as Hamburger } from 'hamburger-react';
 import "./Navbar.css";
-import LogoLink from '../footer/LogoLink';
 
 /**
  * Navbar component
@@ -79,10 +78,6 @@ function Navbar() {
 
   return (
     <nav className="bg-frosted-glass pb-1 fixed top-0 w-full z-45">
-
-      <div className='absolute top-3 left-1'>
-        <LogoLink width="w-16" />
-      </div>
 
       {/* Scroll progress bar */}
       <motion.div 
