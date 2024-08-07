@@ -47,7 +47,7 @@ import MediaLinks from './MediaLinks';
 function Footer() {
   return (
     <footer className="bg-frosted-glass flex relative bottom-0">
-      <div className='container mx-auto flex justify-between p-1 sm:p-2'>
+      <div className='container mx-auto flex justify-between items-center p-1 sm:p-2'>
         {/* Link back to top with the logo */}
         <LogoLink />
         {/* List of social media or other resource links */}

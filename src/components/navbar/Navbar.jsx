@@ -47,6 +47,7 @@ import NavbarItems from './NavbarItems';
 import { motion, useScroll, useSpring } from 'framer-motion';
 import { Squash as Hamburger } from 'hamburger-react';
 import "./Navbar.css";
+import LogoLink from '../footer/LogoLink';
 
 /**
  * Navbar component
@@ -78,6 +79,11 @@ function Navbar() {
 
   return (
     <nav className="bg-frosted-glass pb-1 fixed top-0 w-full z-45">
+
+      <div className='absolute top-3 left-1'>
+        <LogoLink width="w-16" />
+      </div>
+
       {/* Scroll progress bar */}
       <motion.div 
         className='w-full h-1 bg-accent origin-left z-40'

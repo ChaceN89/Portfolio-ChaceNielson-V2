@@ -57,32 +57,10 @@ import './LogoLink.css';
  * @param {string} [props.size="large"] - The size of the logo link, either "large" or "small".
  * @returns {JSX.Element} The LogoLink component.
  */
-function LogoLink({ size = "large" }) {
+function LogoLink({ width = "w-20" }) {
   const location = useLocation();
   const navigate = useNavigate();
 
-  // Scroll to top if the current path is home
-  useEffect(() => {
-    if (location.pathname === '/') {
-      window.scrollTo(0, 0);
-    }
-  }, [location]);
-
-  // Size configurations for the logo link
-  const sizes = {
-    large: {
-      container: { width: '34px', height: '34px' },
-      logoClass: "max-w-12 max-h-12 md:max-w-16 md:max-h-16",
-      textClass: "text-xl"
-    },
-    small: {
-      container: { width: '22px', height: '22px' },
-      logoClass: "max-w-6 max-h-6 md:max-w-8 md:max-h-8",
-      textClass: "text-base"
-    }
-  };
-
-  const currentSize = sizes[size];
 
   // Handle logo click event
   const handleLogoClick = () => {
@@ -94,17 +72,13 @@ function LogoLink({ size = "large" }) {
   };
 
   const innerLogo = (
-    <div
-      className={`w-full h-full flex-shrink-0 ${currentSize.logoClass}`}
-      style={currentSize.container}
-    >
-      <ImageComponent
-        className="object-contain rounded-full"
-        src={process.env.PUBLIC_URL + '/png-portraits/chace-2.png'}
-        lowResSrc={process.env.PUBLIC_URL + '/png-portraits/chace-2-small-2.png'}
-        alt="Logo"
-      />
-    </div>
+    <div className={"relative  hover:scale-95 " + width} >
+    <ImageComponent 
+      className="w-full h-full object-cover filter brightness-50"
+      src={process.env.PUBLIC_URL + '/logos/chacelogoFull512.png'} 
+      alt="Logo" 
+    />
+  </div>
   );
 
   return (
