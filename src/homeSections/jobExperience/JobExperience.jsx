@@ -28,16 +28,21 @@ import { workExperienceList, workExperiencePageData } from '../../data/pageData/
 import JobDetails from './JobDetails';
 import SectionWrapper from '../../wrappers/SectionWrapper';
 import JobButtons from './JobButtons';
-
+import BackgroundWrapper from '../../wrappers/BackgroundWrapper';
 
 function JobExperience() {
   const [experienceID, setExperienceID] = useState(0);
 
   return (
-    <section 
+    <BackgroundWrapper 
       id='WorkExperience'
       className='min-h-section-height h-fit' 
-    >
+      src={process.env.PUBLIC_URL + "/png-backgrounds/detailed/range5-trim.png"}
+      lowResSrc={process.env.PUBLIC_URL + "/png-backgrounds/detailed/range5-trim-small.png"}
+      mobileSrc={process.env.PUBLIC_URL + "/png-backgrounds/detailed/range5.png"}
+      backgroundSize = "cover"
+      bgOpacity={50}
+    > 
       <SectionWrapper
         title={workExperiencePageData.title}
         subtitle={workExperiencePageData.description}
@@ -55,7 +60,7 @@ function JobExperience() {
           </div>
         </div>
       </SectionWrapper>  
-    </section>
+    </BackgroundWrapper>
   );
 }
 

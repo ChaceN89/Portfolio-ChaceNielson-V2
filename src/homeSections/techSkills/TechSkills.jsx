@@ -47,11 +47,10 @@ function TechSkills() {
     <BackgroundWrapper 
       id="AboutMe" 
       className='overflow-hidden'
-      // src={process.env.PUBLIC_URL + "/png-backgrounds/overlays/abstract.png"}
-      src={process.env.PUBLIC_URL + "/png-backgrounds/overlays/scratch-2.png"}
-      bgOpacity={50}
-      backgroundSize = "cover"
-
+      src={process.env.PUBLIC_URL + "/png-backgrounds/overlays/abstract.png"}
+      bgOpacity={20}
+      backgroundSize = "contain"
+      backgroundRepeat = "repeat"
     >
       <hr />
       <SectionWrapper

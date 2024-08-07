@@ -70,7 +70,7 @@ module.exports = {
         '170': '72rem',
       },
       height: {
-        'section-height': 'calc(dvh - 4rem)',
+        'section-height': 'calc(100dvh - 4rem)',
         'section-height-small': 'calc(100dvh - 14rem)',
         '102': '28rem',
         '108': '32rem',

@@ -47,10 +47,11 @@ function Interests() {
     <BackgroundWrapper 
       id="AboutMe" 
       className=''
-      src={process.env.PUBLIC_URL + "/png-backgrounds/detailed/range-b&w5-trim.png"}
-      lowResSrc={process.env.PUBLIC_URL + "/png-backgrounds/detailed/range-b&w5-trim-small.png"}
+      src={process.env.PUBLIC_URL + "/png-backgrounds/detailed/range3-trim-mountain.png"}
+      lowResSrc={process.env.PUBLIC_URL + "/png-backgrounds/detailed/range3-trim-mountain-small.png"}
+      mobileSrc={process.env.PUBLIC_URL + "/png-backgrounds/detailed/range3.png"}
       backgroundSize = "cover"
-      bgOpacity={10}
+      bgOpacity={20}
     >
       <hr />
       <SectionWrapper

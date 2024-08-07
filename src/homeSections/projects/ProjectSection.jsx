@@ -77,9 +77,10 @@ function ProjectSection() {
     <BackgroundWrapper 
       className='relative' 
       src={process.env.PUBLIC_URL + "/png-backgrounds/overlays/scratch-2.png"}
-      bgOpacity={20}
+      bgOpacity={40}
       backgroundAttachment = "scroll" // Change to scroll for better mobile support
-      backgroundSize = "cover"
+      backgroundSize = "contain"
+      backgroundRepeat = "repeat"
     >
       <SectionWrapper
         title={projectPageData.title}

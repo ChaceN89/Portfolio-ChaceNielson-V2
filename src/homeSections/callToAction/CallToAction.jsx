@@ -46,9 +46,11 @@ function CallToAction() {
     <BackgroundWrapper 
       id='CallToAction'
       className='py-10 min-h-section-height-small flex flex-col justify-center items-center'
-      src={process.env.PUBLIC_URL + "/png-backgrounds/detailed/range-b&w2-trim.png"}
-      lowResSrc={process.env.PUBLIC_URL + "/png-backgrounds/detailed/range-b&w2-trim-small.png"}
+      src={process.env.PUBLIC_URL + "/png-backgrounds/detailed/range2-trim.png"}
+      lowResSrc={process.env.PUBLIC_URL + "/png-backgrounds/detailed/range2-trim-small.png"}
+      mobileSrc={process.env.PUBLIC_URL + "/png-backgrounds/detailed/range2.png"}
       backgroundSize="cover"
+      bgOpacity={80}
     >
       <InnerCallToAction />
     </BackgroundWrapper>

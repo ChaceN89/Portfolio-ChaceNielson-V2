@@ -53,7 +53,7 @@ function InterestCategory({ interest, index, hoverIndex, handleMouseEnter, handl
 
   return (
     <ElevateOnView  >
-      <div className='border-faint bg-frosted-glass '>
+      <div className='border-faint bg-frosted-glass h-full '>
         <div 
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}

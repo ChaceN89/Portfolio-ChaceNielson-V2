@@ -15,6 +15,7 @@
  * @param {string} backgroundRepeat - How the background image should be repeated. Options: repeat, no-repeat, repeat-x, repeat-y, initial, inherit. Defaults to "no-repeat".
  * @param {string} backgroundAttachment - How the background image should scroll with the page. Options: fixed, scroll, local, initial, inherit. Defaults to "fixed".
  * @param {number} bgOpacity - Opacity of the background image (uses Tailwind, should be a number between 0 and 100 by multiples of 5). Defaults to 100.
+ * @param {number} blurAmount - the pixels to blur in the background img
  * @param {JSX.Element} children - Child elements to be rendered inside the wrapper.
  *
  * @returns {JSX.Element} The rendered BackgroundWrapper component.
@@ -31,6 +32,7 @@
  *   backgroundAttachment="fixed"
  *   scale={1}
  *   bgOpacity={80}
+ *    blurAmount={0}
  * >
  *   <div>Content goes here</div>
  * </BackgroundWrapper>
@@ -57,23 +59,41 @@ function BackgroundWrapper({
   className = '',
   src = '',
   lowResSrc = '',
-  backgroundSize = "contain",
+  mobileSrc = '',
+  backgroundSize = "cover",
   backgroundPosition = "center",
   backgroundRepeat = "no-repeat",
-  backgroundAttachment = "fixed", // Change to scroll for better mobile support
+  backgroundAttachment = "scroll",
   bgOpacity = 100,
+  blurAmount = 0,
   children
 }) {
   const [highResLoaded, setHighResLoaded] = useState(false);
+  const [currentSrc, setCurrentSrc] = useState(src);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 768) {
+        setCurrentSrc(mobileSrc || src);
+      } else {
+        setCurrentSrc(src);
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+    handleResize();
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, [src, mobileSrc]);
 
   useEffect(() => {
     const highResImg = new Image();
-    highResImg.src = src;
+    highResImg.src = currentSrc;
     highResImg.onload = () => setHighResLoaded(true);
-  }, [src]);
+  }, [currentSrc]);
 
   return (
-    <div 
+    <div
       id={id}
       className={`${className} relative`}
       style={{
@@ -93,6 +113,7 @@ function BackgroundWrapper({
           backgroundRepeat: backgroundRepeat,
           backgroundAttachment: backgroundAttachment,
           opacity: highResLoaded ? 0 : bgOpacity / 100,
+          filter: `blur(${blurAmount}px)`,
           zIndex: 0,
         }}
       />
@@ -100,12 +121,13 @@ function BackgroundWrapper({
       <div
         className="absolute top-0 left-0 w-full h-full transition-opacity duration-500 ease-in-out"
         style={{
-          backgroundImage: `url(${src})`,
+          backgroundImage: `url(${currentSrc})`,
           backgroundSize: backgroundSize,
           backgroundPosition: backgroundPosition,
           backgroundRepeat: backgroundRepeat,
           backgroundAttachment: backgroundAttachment,
           opacity: highResLoaded ? bgOpacity / 100 : 0,
+          filter: `blur(${blurAmount}px)`,
           zIndex: 0,
         }}
       />

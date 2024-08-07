@@ -50,8 +50,9 @@ function ContactForm() {
     <BackgroundWrapper 
       id="AboutMe" 
       className='min-h-section-height'
-      src={process.env.PUBLIC_URL + "/png-backgrounds/detailed/range-b&w3-mountain.png"}
-      lowResSrc={process.env.PUBLIC_URL + "/png-backgrounds/detailed/range-b&w3-mountain-small.png"}
+      src={process.env.PUBLIC_URL + "/png-backgrounds/detailed/range1-trim.png"}
+      lowResSrc={process.env.PUBLIC_URL + "/png-backgrounds/detailed/range1-trim-small.png"}
+      mobileSrc={process.env.PUBLIC_URL + "/png-backgrounds/detailed/range1.png"}
       bgOpacity={15}
       backgroundSize="cover"
     >
