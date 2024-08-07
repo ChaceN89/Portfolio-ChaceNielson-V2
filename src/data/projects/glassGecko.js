@@ -47,7 +47,7 @@ export const glassGeckoGames = {
   starred: true,
   id: "glass-gecko-games",
   name: "Glass Gecko Games",
-  tag: "UI/UX",
+  tag: "UX/UI",
   blurb: short,
   description: long,
   images: [
