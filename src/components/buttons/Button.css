@@ -1,7 +1,9 @@
 /* Button styles */
 
 .glow-on-hover {
-  @apply py-3 px-8 w-fit cursor-pointer relative z-0 rounded-lg;
+  @apply py-3 px-8 cursor-pointer relative z-0 rounded-lg
+  min-w-44 hover:scale-95
+  flex items-center justify-center;
 }
 
 .glow-on-hover:before {

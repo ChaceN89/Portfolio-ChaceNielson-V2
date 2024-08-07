@@ -78,7 +78,7 @@ function MyButton({ to, onClick, aLink, children, className, type = 'button', ..
   return (
     <button
       type={type}
-      className={`glow-on-hover min-w-32 border-faint hover:scale-95 ${className}`}
+      className={`glow-on-hover border-faint ${className}`}
       onClick={handleButtonClick}
       {...rest}
     >

@@ -5,6 +5,8 @@
  * Each icon is wrapped with a Tooltip component for displaying the name of the social media platform.
  * The icon size adjusts based on the screen size.
  * 
+ * includes an option for the head links using same links infomation
+ * 
  * @component MediaLinks
  * 
  * @requires react
@@ -47,9 +49,10 @@ import IconSkills from '../../data/iconSkills';
  *
  * @returns {JSX.Element} The MediaLinks component.
  */
-function MediaLinks() {
+function MediaLinks({headerLinks=false}) {
   const isMediumScreen = useMediaQuery({ query: '(min-width: 768px)' });
 
+  // links to use for both footer and header
   const mediaLinks = [
     { name: "GitHub", icon: IconSkills.GITHUB.icon, link: "https://github.com/ChaceN89" },
     { name: "YouTube", icon: IconSkills.YOUTUBE.icon, link: "https://www.youtube.com/@chacenielson5413" },
@@ -57,10 +60,37 @@ function MediaLinks() {
     { name: "LinkedIn", icon: IconSkills.LINKEDIN.icon, link: "https://www.linkedin.com/in/chace-nielson" }
   ];
 
-  const iconSize = isMediumScreen ? 28 : 20;
+  const iconSize = isMediumScreen ? 24 : 18;
 
+
+  // what to return if its the header links
+  if (headerLinks){
+    return (
+      <div className="flex justify-center space-x-1.5 relative py-0.5 w-44">
+        {mediaLinks.map((link) => (
+          <Tooltip key={link.name} text={link.name}>
+            <a
+              href={link.link}
+              aria-label={link.name}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="flex items-center justify-center 
+                w-10 h-10 rounded-xl border-2 p-1
+                button-secondary"
+              >
+                <link.icon size={20} className="" />
+              </div>
+            </a>
+          </Tooltip>
+        ))}
+      </div>
+    );
+  }
+
+  // what to return if its the footer links
   return (
-    <div className="flex justify-center space-x-1 relative">
+    <div className="flex justify-center space-x-1.5 relative py-0.5">
       {mediaLinks.map((link) => (
         <Tooltip key={link.name} text={link.name}>
           <a
@@ -70,7 +100,7 @@ function MediaLinks() {
             rel="noopener noreferrer"
           >
             <div className="flex items-center justify-center 
-              w-8 h-8 md:w-12 md:h-12 rounded-full border 
+              w-8 h-8 md:w-10 md:h-10 rounded-xl border-2 p-1
               button-secondary"
             >
               <link.icon size={iconSize} className="" />

@@ -45,6 +45,7 @@ import { useMediaQuery } from 'react-responsive';
 import { heroData } from '../../data/pageData/heroData';
 import MyButton from '../../components/buttons/MyButton';
 import { openPdf } from '../../functions/utils';
+import MediaLinks from '../../components/footer/MediaLinks';
 
 const textVariants = {
   initial: {
@@ -81,13 +82,14 @@ function HeroText() {
         <motion.h1 variants={textVariants} className="pb-2">
           {heroData.name}
         </motion.h1>
-        <motion.div variants={textVariants} className="pb-4">
+        <motion.div variants={textVariants} className="pb-2">
           {heroData.description}
         </motion.div>
         <motion.div variants={textVariants} className="text-buttons">
           {heroData.buttons.map((button, index) => (
             <motion.div key={index} variants={textVariants}>
               <MyButton
+                className='w-full md:w-auto'
                 to={button.id}
                 onClick={button.pdf ? () => openPdf(button.pdf) : undefined}
               >
@@ -96,6 +98,11 @@ function HeroText() {
             </motion.div>
           ))}
         </motion.div>
+          <motion.div variants={textVariants} className="pt-1 flex justify-start">
+            <MediaLinks headerLinks={true} />
+          </motion.div>
+
+
       </motion.div>
     </motion.div>
   );
