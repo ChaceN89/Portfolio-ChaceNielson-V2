@@ -48,7 +48,7 @@ import DownloadCV from './DownloadCV';
 function ContactForm() {
   return (
     <BackgroundWrapper 
-      id="AboutMe" 
+      id="ContactForm" 
       className='min-h-section-height'
       src={process.env.PUBLIC_URL + "/png-backgrounds/detailed/range1-trim.png"}
       lowResSrc={process.env.PUBLIC_URL + "/png-backgrounds/detailed/range1-trim-small.png"}

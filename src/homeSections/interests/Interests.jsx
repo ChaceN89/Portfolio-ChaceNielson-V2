@@ -45,7 +45,7 @@ function Interests() {
 
   return (
     <BackgroundWrapper 
-      id="AboutMe" 
+      id="Interests" 
       className=''
       src={process.env.PUBLIC_URL + "/png-backgrounds/detailed/range3-trim-mountain.png"}
       lowResSrc={process.env.PUBLIC_URL + "/png-backgrounds/detailed/range3-trim-mountain-small.png"}
