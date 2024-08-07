@@ -22,18 +22,25 @@
  .hero {
   @apply overflow-hidden relative w-full 
   flex flex-col md:flex-row items-center justify-start 
+  min-h-120
   md:h-section-height md:min-h-102 ;
 }
 
 /* Hero image wrapper */
 .hero-img-wrapper {
-  @apply  flex flex-col md:flex justify-end 
-  md:absolute bottom-0 right-0 w-auto h-full;
+  @apply  flex flex-col md:flex justify-end z-10
+  md:absolute md:bottom-0 md:right-0 md:w-auto h-full;
+}
+
+@media (max-height: 400px) {
+  .hero-img-wrapper {
+    display: none;
+  }
 }
 
 .hero-img {
   @apply object-cover 
-  h-section-height md:h-full md:min-h-120 
+  h-section-height md:h-full md:min-h-102 
   -mt-14 md:mt-0 
   opacity-90 z-0;
 }

@@ -49,9 +49,9 @@ function Hero() {
     <FadeTransition>
       <section className="hero">
         <HeroText />
+        <HeroImg />
         <ParallaxMountains />
         <ScrollWheel to="CallToAction" />
-        <HeroImg />
       </section>
     </FadeTransition>
   );
