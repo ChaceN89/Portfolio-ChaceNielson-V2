@@ -12,7 +12,6 @@
  * @requires react
  * @requires useState from 'react'
  * @requires NavbarItems from './NavbarItems'
- * @requires LogoLink from '../footer/LogoLink'
  * @requires framer-motion { motion, useScroll, useSpring }
  * @requires hamburger-react { Squash as Hamburger }
  * @requires ./Navbar.css
@@ -45,7 +44,6 @@
 
 import React, { useState } from 'react';
 import NavbarItems from './NavbarItems';
-import LogoLink from '../footer/LogoLink';
 import { motion, useScroll, useSpring } from 'framer-motion';
 import { Squash as Hamburger } from 'hamburger-react';
 import "./Navbar.css";
@@ -85,21 +83,16 @@ function Navbar() {
         className='w-full h-1 bg-accent origin-left z-40'
         style={{ scaleX: springScrollYProgress }}
       />
-      <div className="bg-frosted-container container mx-auto flex justify-between md:justify-center items-center p-0.5 md:p-2">
+      <div className="bg-frosted-container container mx-auto flex justify-end md:justify-center items-center p-0.5 md:p-2">
         
-        {/* Logo link for small screens */}
-        <div className="text-left flex justify-start md:hidden">
-          <LogoLink />
-        </div>
-  
         {/* Navigation items for large screens */}
         <div className="hidden md:flex">
           <NavbarItems textSize="text-lg" />
         </div>
   
         {/* Hamburger menu button for small screens */}
-        <button onClick={toggleMenu} className="text-secondary md:hidden z-50 hover:text-accent-dark flex gap-1">
-          <Hamburger toggled={isHamburgerNavOpen} rounded />
+        <button onClick={toggleMenu} className="text-secondary md:hidden z-50 hover:text-accent-dark flex gap-1 h-0">
+          <Hamburger size={20} toggled={isHamburgerNavOpen} rounded />
         </button>
   
         {/* Hamburger menu items */}

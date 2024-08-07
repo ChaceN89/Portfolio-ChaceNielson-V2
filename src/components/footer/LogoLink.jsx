@@ -93,6 +93,20 @@ function LogoLink({ size = "large" }) {
     }
   };
 
+  const innerLogo = (
+    <div
+      className={`w-full h-full flex-shrink-0 ${currentSize.logoClass}`}
+      style={currentSize.container}
+    >
+      <ImageComponent
+        className="object-contain rounded-full"
+        src={process.env.PUBLIC_URL + '/png-portraits/chace-2.png'}
+        lowResSrc={process.env.PUBLIC_URL + '/png-portraits/chace-2-small-2.png'}
+        alt="Logo"
+      />
+    </div>
+  );
+
   return (
     <div className='logo-link flex gap-0 items-center text-secondary hover:cursor-pointer'>
       {location.pathname === '/' ? (
@@ -104,33 +118,11 @@ function LogoLink({ size = "large" }) {
           offset={globals.ScrollLink.offset}
           className="w-full h-full flex gap-0 items-center"
         >
-          <div
-            className={`w-full h-full flex-shrink-0 ${currentSize.logoClass}`}
-            style={currentSize.container}
-          >
-            <ImageComponent
-              className="object-contain rounded-full"
-              src={process.env.PUBLIC_URL + '/png-portraits/chace-2.png'}
-              lowResSrc={process.env.PUBLIC_URL + '/png-portraits/chace-2-small-2.png'}
-              alt="Logo"
-            />
-          </div>
-          <h1 className={`text-nowrap titleFont underline-effect ${currentSize.textClass}`}> CHACE NIELSON </h1>
+          {innerLogo}
         </ScrollLink>
       ) : (
         <div onClick={handleLogoClick} className="w-full h-full flex gap-0 items-center">
-          <div
-            className={`w-full h-full flex-shrink-0 ${currentSize.logoClass}`}
-            style={currentSize.container}
-          >
-            <ImageComponent
-              className="w-12 md:w-16 object-contain rounded-full"
-              src={process.env.PUBLIC_URL + '/png-portraits/chace-2.png'}
-              lowResSrc={process.env.PUBLIC_URL + '/png-portraits/chace-2-small-2.png'}
-              alt="Logo"
-            />
-          </div>
-          <h1 className={`text-nowrap titleFont underline-effect ${currentSize.textClass}`}> CHACE NIELSON </h1>
+          {innerLogo}
         </div>
       )}
     </div>
