@@ -37,7 +37,7 @@ function HeroImg() {
   return (
     <div className="hero-img-wrapper">
       <ImageComponent 
-        className="hero-img"
+        className=""
         src={`${process.env.PUBLIC_URL}/png-portraits/chace-2.png`} 
         lowResSrc={`${process.env.PUBLIC_URL}/png-portraits/chace-2-small-2.png`} 
         alt="Hero" 

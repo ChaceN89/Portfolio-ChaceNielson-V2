@@ -62,14 +62,14 @@ const ParallaxImageLayer = ({ src, alt, yTransform, isParallaxEnabled }) => {
 
 function ParallaxMountains() {
   const { scrollY } = useScroll();
-  const y1 = useTransform(scrollY, [0, 500], [0, 240]);
-  const y2 = useTransform(scrollY, [0, 500], [0, 180]);
-  const y3 = useTransform(scrollY, [0, 500], [0, 100]);
+  const y1 = useTransform(scrollY, [0, 500], [0, 700]);
+  const y2 = useTransform(scrollY, [0, 500], [0, 500]);
+  const y3 = useTransform(scrollY, [0, 500], [0, 400]);
 
   const isMediumOrLarger = useMediaQuery({ query: '(min-width: 768px)' });
 
   return (
-    <div className="md:w-full h-full flex justify-center items-end absolute inset-0 -z-50 opacity-25">
+    <div className="md:w-full h-full flex justify-center items-end fixed inset-0 -z-50 opacity-100">
       <ParallaxImageLayer
         src={`${process.env.PUBLIC_URL}/png-backgrounds/hero-mountains/mountains-back.png`}
         alt="Mountains Back"

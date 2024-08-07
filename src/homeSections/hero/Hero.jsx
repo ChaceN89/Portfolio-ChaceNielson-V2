@@ -7,7 +7,6 @@
  * @component Hero
  * 
  * @requires React
- * @requires ParallaxMountains from './ParallaxMountains'
  * @requires ScrollWheel from '../../components/uiElements/ScrollWheel'
  * @requires HeroImg from './HeroImg'
  * @requires HeroText from './HeroText'
@@ -37,23 +36,33 @@
  */
 
 import React from 'react';
-import ParallaxMountains from './ParallaxMountains';
 import ScrollWheel from '../../components/uiElements/ScrollWheel';
 import HeroImg from './HeroImg';
 import HeroText from './HeroText';
 import FadeTransition from '../../animations/FadeTransition';
 import './Hero.css';
 
+import BackgroundWrapper from '../../wrappers/BackgroundWrapper';
+
 function Hero() {
   return (
-    <FadeTransition>
-      <section className="hero">
-        <HeroText />
-        <HeroImg />
-        <ParallaxMountains />
-        <ScrollWheel to="CallToAction" />
-      </section>
-    </FadeTransition>
+    <BackgroundWrapper 
+      id="Interests" 
+      className=''
+      src={process.env.PUBLIC_URL + "/png-backgrounds/detailed/range3-trim.png"}
+      lowResSrc={process.env.PUBLIC_URL + "/png-backgrounds/detailed/range3-trim-small.png"}
+      mobileSrc={process.env.PUBLIC_URL + "/png-backgrounds/detailed/range3.png"}
+      backgroundSize = "cover"
+      bgOpacity={20}
+    >
+      <FadeTransition>
+        <section className="hero">
+          <HeroText />
+          <HeroImg />
+          <ScrollWheel to="CallToAction" />
+        </section>
+      </FadeTransition>
+    </BackgroundWrapper>
   );
 }
 

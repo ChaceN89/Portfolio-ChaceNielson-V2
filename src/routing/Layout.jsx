@@ -55,7 +55,7 @@ const Layout = () => {
   return (
     <div className="layout z-0">
       <NavBar/>
-      <main className="pt-4 sm:pt-12">
+      <main className="pt-12">
         <Outlet />
       </main>
       <Footer/>

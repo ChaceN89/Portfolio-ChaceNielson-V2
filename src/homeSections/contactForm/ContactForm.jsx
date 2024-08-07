@@ -67,7 +67,7 @@ function ContactForm() {
           </div>
           <div className="hidden w-full md:w-2/5 md:flex justify-center items-center">
             <ImageComponent
-              src={`${process.env.PUBLIC_URL}/png-portraits/chace-1.png`}
+              src={`${process.env.PUBLIC_URL}/png-backgrounds/images/snowboard.png`}
               alt="Contact Photo"
               className='object-cover w-full'
             />
