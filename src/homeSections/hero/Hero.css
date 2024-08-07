@@ -22,7 +22,7 @@
  .hero {
   @apply overflow-hidden relative w-full 
   flex flex-col md:flex-row items-center justify-start 
-  md:h-section-height md:min-h-108;
+  min-h-section-height  md:min-h-108;
 }
 
 /* Hero image wrapper */
