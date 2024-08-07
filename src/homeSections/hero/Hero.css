@@ -22,12 +22,12 @@
  .hero {
   @apply overflow-hidden relative w-full 
   flex flex-col md:flex-row items-center justify-start 
-  min-h-section-height  md:min-h-108;
+  md:h-section-height md:min-h-102 ;
 }
 
 /* Hero image wrapper */
 .hero-img-wrapper {
-  @apply flex flex-col md:flex justify-end 
+  @apply  flex flex-col md:flex justify-end 
   md:absolute bottom-0 right-0 w-auto h-full;
 }
 
