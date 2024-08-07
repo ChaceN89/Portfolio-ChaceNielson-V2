@@ -69,7 +69,7 @@ function ParallaxMountains() {
   const isMediumOrLarger = useMediaQuery({ query: '(min-width: 768px)' });
 
   return (
-    <div className="md:w-full h-full flex justify-center items-end absolute inset-0 z-0 opacity-50">
+    <div className="md:w-full h-full flex justify-center items-end absolute inset-0 -z-50 opacity-25">
       <ParallaxImageLayer
         src={`${process.env.PUBLIC_URL}/png-backgrounds/hero-mountains/mountains-back.png`}
         alt="Mountains Back"
