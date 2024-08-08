@@ -62,7 +62,7 @@ function ReturnToTop() {
           offset={globals.ScrollLink.offset}
           duration={globals.ScrollLink.duration}
         >
-          <div className="w-7 h-7 md:w-10 md:h-10 p-2 bg-secondary rounded-full opacity-10 hover:opacity-60 flex items-center justify-center">
+          <div className="hidden sm:flex w-10 h-10 p-2 bg-secondary rounded-full opacity-15 hover:opacity-60 items-center justify-center">
             <FaArrowUp className="text-primary" />
           </div>
         </ScrollLink>
