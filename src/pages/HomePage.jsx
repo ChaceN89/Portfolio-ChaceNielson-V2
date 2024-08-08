@@ -41,13 +41,13 @@
  * 
  * @author Chace Nielson
  * @created 2024-07-28
- * @updated 2024-07-28
+ * @updated 2024-08-08
  * @since 2.1
  */
 
 import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import { animateScroll as scroll, scroller } from 'react-scroll';
+import { scroller } from 'react-scroll';
 
 import Hero from '../homeSections/hero/Hero';
 import CallToAction from '../homeSections/callToAction/CallToAction';
