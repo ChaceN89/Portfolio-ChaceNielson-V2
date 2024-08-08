@@ -73,8 +73,6 @@ const HomePage = () => {
         spy: true,
         smooth: true,
       });
-    } else {
-      scroll.scrollToTop(); // Scroll to top if no hash is present in the URL
     }
   }, [location]);
 
