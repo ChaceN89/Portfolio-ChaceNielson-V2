@@ -97,7 +97,7 @@ const ModalLayout = () => {
         bgOpacity={80}
       >
         <SlideTransition enter='right' exit='right' translationDist={400}>
-          <div className="modal-content relative" onClick={(e) => e.stopPropagation()}>
+          <div className="modal-content relative mt-2 md:mt-0" onClick={(e) => e.stopPropagation()}>
             <button className="absolute top-0.5 right-0.5 sm:top-2 sm:right-2 md:text-2xl text-primary hover:text-accent" onClick={closeModal}>
               <IoMdClose size={30} />
             </button>
