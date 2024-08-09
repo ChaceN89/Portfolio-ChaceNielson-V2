@@ -7,7 +7,6 @@
  * @requires react
  * @requires DisplaySkill from './DisplaySkill'
  * @requires DisplayList from './DisplayList'
- * @requires FaExternalLinkAlt from 'react-icons/fa'
  * 
  * @example
  * // Example usage of JobDetails in a component
@@ -34,14 +33,14 @@
  * 
  * @author Chace Nielson
  * @created 2024-07-30
- * @updated 2024-07-30
+ * @updated 2024-08-09
  * @since 2.1
  */
 
 import React from 'react';
 import DisplaySkill from './DisplaySkill';
 import DisplayList from './DisplayList';
-import { FaExternalLinkAlt } from 'react-icons/fa';
+import Tooltip from '../../components/uiElements/Tooltip'
 
 function JobDetails({ job }) {
   if (!job) return null;
@@ -65,19 +64,19 @@ function JobDetails({ job }) {
 
   return (
     <div className='text-primary p-2 px-4'>
-      <div className='flex justify-between'>
-        <div className='flex items-start space-x-4'>
-          <img src={img} alt={name} className='w-16 h-16 rounded-full object-cover' />
+      <div className='flex justify-between gap-2'>
+        <div className='flex items-start gap-2'>
+          <Tooltip openDuration={200} text="Visit">
+            <div className="aspect-w-1 aspect-h-1 w-16 h-16 md:w-20 md:h-20  rounded-full overflow-hidden cursor-pointer hover:scale-95">
+              <img onClick={goToLink} src={img} alt={name} className="object-cover w-full h-full " />
+            </div>          
+          </Tooltip>
           <div>
             <h4 className='font-bold text-lg'>{name}</h4>
             <p className='opacity-60 text-base'>{role}</p>
             <p className='opacity-60 text-base'>{dates ? dates.join(' - ') : ''}</p>
           </div>
         </div>
-        <span className='hover:text-accent pl-1 cursor-pointer space-x-1 whitespace-nowrap' onClick={goToLink}>
-          <span>Visit</span>
-          <FaExternalLinkAlt size={24} className='inline-block align-text-bottom' />
-        </span>
       </div>
 
       <p className='py-2'>{description}</p>

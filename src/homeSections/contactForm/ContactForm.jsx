@@ -32,7 +32,7 @@
  * 
  * @author Chace Nielson
  * @created 2024-07-28
- * @updated 2024-08-05
+ * @updated 2024-08-09
  * @since 2.1
  */
 
@@ -62,14 +62,15 @@ function ContactForm() {
       >
         <DownloadCV />
         <div className='flex flex-wrap md:flex-nowrap space-x-4'>
-          <div className="w-full md:w-3/5">
+          <div className="w-full lg:w-3/5">
             <Form />
           </div>
-          <div className="hidden w-full md:w-2/5 md:flex justify-center items-center">
+          <div className="hidden w-2/5 h-full lg:flex justify-center items-center">
             <ImageComponent
-              src={`${process.env.PUBLIC_URL}/png-backgrounds/images/snowboard.png`}
+              className='object-contain w-full h-full'
               alt="Contact Photo"
-              className='object-cover w-full'
+              src={`${process.env.PUBLIC_URL}/png-backgrounds/images/snowboard.png`}
+              lowResSrc={`${process.env.PUBLIC_URL}/png-backgrounds/images/snowboard-small.png`}
             />
           </div>
         </div>

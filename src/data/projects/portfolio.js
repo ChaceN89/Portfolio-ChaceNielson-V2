@@ -7,7 +7,7 @@
  * 
  * @author Chace Nielson
  * @created 2024-07-28
- * @updated 2024-07-28
+ * @updated 2024-08-09 
  * @since 2.1
  */
 
@@ -39,7 +39,7 @@ export const portfolio = {
   blurb: short,
   description: long,
   images: [
-    { src: "portfolio.jpg", blurhash: "L78g,54m9F_4X9V?aexv9Ft7s;I." },
+    { src: "portfolio.jpg", blurhash: "C78g,54m9F_4X9V?aexv" },
     { src: "portfolio2.jpg", blurhash: "L78g,54m9F_4X9V?aexv9Ft7s;I." },
   ],
   mainStack: [

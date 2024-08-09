@@ -43,7 +43,7 @@
  * 
  * @author Chace Nielson
  * @created 2024-07-28
- * @updated 2024-07-28
+ * @updated 2024-08-09
  * @since 2.1
  */
 
@@ -55,7 +55,7 @@ const Layout = () => {
   return (
     <div className="layout z-0">
       <NavBar/>
-      <main className="pt-4 md:pt-12">
+      <main className="pt-8 md:pt-12">
         <Outlet />
       </main>
       <Footer/>

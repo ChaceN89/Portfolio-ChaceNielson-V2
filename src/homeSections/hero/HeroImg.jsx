@@ -26,7 +26,7 @@
  * 
  * @author Chace Nielson
  * @created 2024-07-28
- * @updated 2024-08-06
+ * @updated 2024-08-09
  * @since 2.1
  */
 
@@ -37,7 +37,7 @@ function HeroImg() {
   return (
     <div className="hero-img-wrapper">
       <ImageComponent 
-        className=""
+        className="h-screen lg:w-full lg:h-full object-cover"
         src={`${process.env.PUBLIC_URL}/png-portraits/chace-2.png`} 
         lowResSrc={`${process.env.PUBLIC_URL}/png-portraits/chace-2-small-2.png`} 
         alt="Hero" 

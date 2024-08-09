@@ -28,7 +28,7 @@
  * 
  * @author Chace Nielson
  * @created 2024-07-28
- * @updated 2024-08-05
+ * @updated 2024-08-09
  * @since 2.1
  */
 
@@ -52,7 +52,9 @@ function CallToAction() {
       backgroundSize="cover"
       bgOpacity={80}
     >
-      <InnerCallToAction />
+      <div className='mx-4'>
+        <InnerCallToAction />
+      </div>
     </BackgroundWrapper>
   );
 }

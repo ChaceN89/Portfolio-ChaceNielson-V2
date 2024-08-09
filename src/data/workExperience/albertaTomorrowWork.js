@@ -12,7 +12,7 @@
  * @author Chace Nielson
  * @version 2.1
  * @created 2024-07-29
- * @updated 2024-08-05
+ * @updated 2024-08-09
  */
 
 import IconSkills from "../iconSkills";
@@ -31,6 +31,7 @@ export const albertaTomorrowWork = { // Alberta Tomorrow
   responsibilities: [
     'Developed features and enhancements for the web application',
     'Communicated and collaborated with stakeholders',
+    'Budgeted and managed project resources',
   ],
   skills: [
     IconSkills.AWS,

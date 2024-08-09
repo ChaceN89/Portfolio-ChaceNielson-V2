@@ -16,7 +16,7 @@
  *
  * @author Chace Nielson
  * @created 2024-07-28
- * @updated 2024-07-28
+ * @updated 2024-08-09
  * @since 2.1
  */
 
@@ -28,6 +28,6 @@
   @apply border-2 border-secondary text-secondary bg-primary bg-opacity-80 rounded-xl 
   w-full h-full 
   flex items-center justify-center z-10
-  px-4 mx-auto
+  px-0 md:px-4 mx-auto
   max-w-sm sm:max-w-md md:max-w-2xl xl:max-w-4xl;
 }
