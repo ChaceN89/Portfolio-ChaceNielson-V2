@@ -46,39 +46,17 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
-  <!-- Social Media Links -->
-
-  <!-- Instagram -->
   <url>
-    <loc>https://www.instagram.com/chacenielson/</loc>
+    <loc>https://chacenielson.com/project/music-player</loc>
     <lastmod>2024-08-08</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
-
-  <!-- GitHub -->
   <url>
-    <loc>https://github.com/chacenielson</loc>
+    <loc>https://chacenielson.com/project/image-processor</loc>
     <lastmod>2024-08-08</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <!-- LinkedIn -->
-  <url>
-    <loc>https://www.linkedin.com/in/chacenielson</loc>
-    <lastmod>2024-08-08</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <!-- YouTube -->
-  <url>
-    <loc>https://www.youtube.com/@chacenielson5413</loc>
-    <lastmod>2024-08-08</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
 </urlset>
