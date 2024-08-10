@@ -34,7 +34,7 @@
  * 
  * @author Chace Nielson
  * @created 2024-07-28
- * @updated 2024-07-
+ * @updated 2024-08-09
  * @since 2.1
  */
 
@@ -49,7 +49,11 @@ function JobButtons({ workExperienceList, setExperienceID, experienceID }) {
           onClick={() => setExperienceID(index)}
           className={`p-4 rounded-lg border-2 transition-colors duration-300 ${experienceID === index ? 'bg-accent text-primary' : 'bg-white text-primary hover:bg-primary hover:text-white'}`}
         >
-          {experience.name}
+          <span className='flex gap-1 items-center text-left'>
+
+            <img src={experience.img} alt={experience.name} className=" w-5 object-cover  h-full rounded-full " />
+            <span>{experience.name}</span>
+          </span>
         </button>
       ))}
     </div>
