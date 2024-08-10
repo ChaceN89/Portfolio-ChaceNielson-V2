@@ -22,7 +22,7 @@
  * 
  * @author Chace Nielson
  * @created 2024-07-28
- * @updated 2024-07-28
+ * @updated 2024-08-09
  * @since 2.1
  */
 
@@ -35,13 +35,13 @@ const short = <>Concept simulation and physical prototype for CO<sub>2</sub> sep
 const long = (
   <div className="space-y-2">
     <p>
-      This capstone project, titled "Energy Storage and Direct Air Capture in the Deep Ocean," was completed at the University of Calgary. The project explores innovative methods for carbon dioxide (CO<sub>2</sub>) separation from the atmosphere, leveraging the deep ocean's hydrostatic pressure. 
+      This capstone project, titled "Energy Storage and Direct Air Capture in the Deep Ocean," was conducted at the University of Calgary to explore innovative methods for atmospheric CO<sub>2</sub> separation by leveraging deep ocean hydrostatic pressure. A secondary goal was to create a Unity simulation displaying the energy storage and CO<sub>2</sub> separation systems.
     </p>
     <p>
-      Our team designed both a physical prototype and a comprehensive Unity simulation to test and demonstrate the concept. The prototype, tested in a controlled pool environment, successfully showed the feasibility of the device.
-      </p>
+      Our team designed both a physical prototype and a comprehensive Unity simulation to validate and demonstrate the concept. The prototype was tested in a controlled pool environment, showcasing the device's potential.
+    </p>
     <p>
-      The Unity simulation complements the prototype by providing an interactive visualization of the energy storage system and its real-world applications. The simulation allows users to explore the device's inner workings, including the energy storage system, CO<sub>2</sub> separation process, and the device's overall operation.
+      The Unity simulation further enhances this project by offering an interactive visualization of the energy storage system and its real-world applications. It allows users to explore the CO<sub>2</sub> separation process, the energy storage system, and the device's overall operation in detail.
     </p>
   </div>
 );

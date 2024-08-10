@@ -22,23 +22,23 @@
  * 
  * @author Chace Nielson
  * @created 2024-07-28
- * @updated 2024-07-28
+ * @updated 2024-08-09
  * @since 2.1
  */
 
 import IconSkills from "../iconSkills";
 
 // Short description (blurb) to be displayed on the project card
-const short = "Functional mini drill rig and GUI to record real-time drilling operations.";
+const short = "Functional mini drill rig and real-time GUI";
 
 // Long description for the modal page, providing detailed information about the project
 const long = (
   <div className='space-y-2'>
     <p>
-      This project involved building a functional mini drill rig with the Drillbotics team at the University of Calgary. While I contributed to all aspects of the project, my primary responsibility was creating a graphical user interface (GUI) that could plot the drilling operation in real-time and provide interactive features.
+      This project was a collaborative effort with the Drillbotics team at the University of Calgary to design and build a functional mini drill rig for the prestigious Drillbotics competition. Our rig was meticulously evaluated on its drilling performance, efficiency, and capabilities in data collection and visualization, leading our team to secure second place.
     </p>
-    <p>
-      The GUI was developed using Plotly Dash and Python, offering a comprehensive and user-friendly interface to monitor and analyze the drilling process. The project showcases the integration of engineering principles with real-time data visualization, enhancing the efficiency and effectiveness of drilling operations.
+    <p> 
+      My primary responsibility was the development of a graphical user interface (GUI) that enabled real-time plotting of the drilling operations, recorded from the sensor. This GUI, built with Plotly Dash and Python, provided an intuitive and powerful platform for monitoring and analyzing the drilling process as it unfolded.
     </p>
   </div>
 );
@@ -73,5 +73,6 @@ export const drillbotics = {
   ],
   externalLinks: [
     { name: "GUI Example", link: "https://www.youtube.com/watch?v=xF9heykeFU4", icon: IconSkills.YOUTUBE.icon },
+    { name: "The Competion", link: "https://drillbotics.com/winners/", icon: IconSkills.WORLD.icon },
   ],
 };

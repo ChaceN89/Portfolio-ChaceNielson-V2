@@ -43,7 +43,7 @@
  * 
  * @author Chace Nielson
  * @created 2024-07-28
- * @updated 2024-07-28
+ * @updated 2024-08-09
  * @since 2.1
  */
 
@@ -62,8 +62,8 @@ export const heroData = {
   // List of buttons
   buttons: [
     {
-      pdf: "Chace Nielson - Resume.pdf", // This button opens a PDF on the home page
-      name: "Resume"
+      pdf: "Chace Nielson - CV.pdf", // This button opens a PDF on the home page
+      name: "My CV"
     },
     {
       id: "Projects",

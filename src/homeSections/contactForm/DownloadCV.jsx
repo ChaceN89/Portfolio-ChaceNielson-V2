@@ -30,7 +30,7 @@
  * 
  * @author Chace Nielson
  * @created 2024-07-28
- * @updated 2024-07-28
+ * @updated 2024-08-09
  * @since 2.1
  */
 
@@ -41,13 +41,13 @@ import { FaFileDownload } from "react-icons/fa";
 
 function DownloadCV() {
   // Functions to open PDFs in a separate tab
-  const openResume = () => openPdf("Chace Nielson - Resume.pdf");
+  const openResume = () => openPdf("Chace Nielson - CV.pdf");
   const openCoverLetter = () => openPdf("Chace Nielson - Cover Letter.pdf");
 
   return (
     <div className='flex flex-col space-y-2 sm:space-y-0 sm:flex-row sm:space-x-6'>
       <MyButton onClick={openResume}>
-        <span className='flex items-center gap-1'>Resume <FaFileDownload/></span>
+        <span className='flex items-center gap-1'>My CV <FaFileDownload/></span>
       </MyButton>
       <MyButton onClick={openCoverLetter}>
         <span className='flex items-center gap-1'>Cover Letter <FaFileDownload/></span>

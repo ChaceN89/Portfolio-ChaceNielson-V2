@@ -12,7 +12,7 @@
  * @author Chace Nielson
  * @version 2.1
  * @created 2024-07-28
- * @updated 2024-08-05
+ * @updated 2024-08-09
  */
 
 import IconSkills from "../iconSkills";
@@ -22,17 +22,17 @@ export const geothermalWork = { // Geothermal
   role: 'Software Developer',
   img: process.env.PUBLIC_URL + '/png-icons/geothermal.png',
   dates: ['May 2022', 'Jan 2024'],
-  description: 'Developed a web application to simulate geothermal systems and analyze drilling data.',
+  description: 'Developed a web application to simulate geothermal systems and analyze drilling data. Managed a team of engineers and developers, ensuring the successful completion of project goals.',
   link: 'https://ucalgary.ca/labs/geothermal-energy/centre',
   achievements: [
-    'Developed a responsive web application using React',
-    'Intern of Merit Award Recipient for outstanding performance',
-    'Application was used to analyze geothermal wells in New Mexico and Germany',
+    'Led the development of a web application using React and FastAPI to analyze geothermal wells.',
+    'Awarded the Intern of Merit for exceptional performance.',
+    'The application was successfully utilized to analyze geothermal wells in New Mexico and Germany.',
   ],
   responsibilities: [
-    'Presented project progress to stakeholders',
-    'Conducted code reviews and provided feedback to team members',
-    'Interviewed candidates for new developer positions',
+    'Presented project progress and technical findings to stakeholders, ensuring alignment with project goals.',
+    'Conducted comprehensive code reviews, providing constructive feedback to enhance code quality.',
+    'Played a key role in interviewing and selecting candidates for new developer positions.',
   ],
   skills: [
     IconSkills.REACT,

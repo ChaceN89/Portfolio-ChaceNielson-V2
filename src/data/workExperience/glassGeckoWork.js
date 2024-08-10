@@ -12,7 +12,7 @@
  * @author Chace Nielson
  * @version 2.1
  * @created 2024-07-28
- * @updated 2024-08-05
+ * @updated 2024-08-09
  */
 
 import IconSkills from "../iconSkills";
@@ -20,18 +20,19 @@ import IconSkills from "../iconSkills";
 export const glassGeckoWork = {
   name: 'Glass Gecko Games',
   img: process.env.PUBLIC_URL + '/png-icons/glass-gecko-games-icon.png',
-  description: 'Developing games using Unity and C#, with a focus on website design and marketing. Engaged in a wide range of tasks from game development to marketing strategies. Collaborated with a team of designers and developers to build the company website and implement a robust multiplayer networking system in Unity.',
-  role: 'Marketing, Website Development, Game Design',
+  description: 'Contributed to game development, website design, and marketing strategies. Collaborated closely with a team of designers and developers to design and implement game features.',
+  role: 'Website Development, Game Design',
   dates: ['May 2024', 'Current'],
   link: 'https://glassgeckogames.com/',
   achievements: [
-    'Developed and launched the company website',
-    'Implemented a robust multiplayer networking system in Unity',
+    'Led the development and launch of the company website, kickstarting the company’s marketing strategy.',
+    'Collaborated on implementing a robust multiplayer networking system in Unity.',
   ],
   responsibilities: [
-    'Collaborated with multidisciplinary teams of designers and developers',
-    'Actively participated in planning and design meetings',
-    'Resolved complex game design issues and challenges',
+    'Worked closely with multidisciplinary teams of designers and developers on various projects.',
+    'Led the design and development of the company website.',
+    'Contributed to planning, marketing, and design meetings, ensuring alignment with project goals.',
+    'Collaborated on resolving complex game design issues and challenges.',
   ],
   skills: [
     IconSkills.UNITY,

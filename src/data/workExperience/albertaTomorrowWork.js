@@ -22,17 +22,17 @@ export const albertaTomorrowWork = { // Alberta Tomorrow
   role: 'Software Developer',
   img: process.env.PUBLIC_URL + '/png-icons/alberta-tomorrow.jpg',
   dates: ['Jan 2024', 'Current'],
-  description: 'Developed a web application focusing on interactive maps, data visualization, and gamification for sustainable land use in Alberta and BC.',
+  description: 'Contributed to the development of a web application that leverages interactive maps, data visualization, and gamification to promote sustainable land use in Alberta and BC.',
   link: 'https://www.albertatomorrow.ca',
   achievements: [
-    'Created a simulation tool for sustainable land use in Alberta and BC',
-    'Integrated Mapbox API to display interactive maps',
+    "Improved a simulation tool to visualize and analyze sustainable land use scenarios.",
+    "Integrated features with Mapbox API, enhancing the application's interactive mapping capabilities."
   ],
   responsibilities: [
-    'Developed features and enhancements for the web application',
-    'Communicated and collaborated with stakeholders',
-    'Budgeted and managed project resources',
-  ],
+    "Collaborated with a team to design and implement key features for the web application.",
+    "Worked closely with stakeholders to ensure project goals aligned with objectives.",
+    "Assisted in managing project resources to meet deadlines and budget constraints." 
+ ],
   skills: [
     IconSkills.AWS,
     IconSkills.VUE,

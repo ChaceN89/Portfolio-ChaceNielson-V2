@@ -44,7 +44,7 @@ const long = (
       I completed this application while working at the Energi Simulation Centre for Geothermal Systems Research at the University of Calgary. The primary objective was to develop an application for managing drilling data files for geothermal wells. The application is designed to handle security, user authentication, and the management of sensitive drilling data. Users can join organizations and share data among themselves.
     </p>
     <p>
-      I assumed the role of project manager, which presented the opportunity to oversee a small team. My responsibilities involved task assignment, code reviews, as well as screening resumes, conducting interviews, and delivering presentations. The application has been utilized in drilling wells located in Germany, New Mexico, and Sweden.
+      I assumed the role of project manager, which presented the opportunity to oversee a small team. My responsibilities involved task assignment, code reviews, as well as screening CVs, conducting interviews, and delivering presentations. The application has been utilized in drilling wells located in Germany, New Mexico, and Sweden.
     </p>
   </div>
 );
