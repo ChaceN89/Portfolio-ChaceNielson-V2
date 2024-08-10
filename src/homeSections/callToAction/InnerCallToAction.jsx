@@ -46,7 +46,7 @@ function InnerCallToAction() {
         <ImageComponent
           src={callToActionData.img}
           lowResSrc={callToActionData.lowResImg}
-          alt="Call to Action Logo"
+          alt="Chace Hiking"
           className="object-contain w-40 h-56 md:w-56 md:h-72" // Adjust width and height as needed
         />
       </div>

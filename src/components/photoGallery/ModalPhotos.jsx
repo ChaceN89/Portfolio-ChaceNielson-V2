@@ -130,7 +130,7 @@ function ModalPhotos({ isModalOpen, closeModal, activePhotoIndex, nextPhoto, pre
             >
               <ImageComponent
                 src={`${process.env.PUBLIC_URL}/gallery-photos/${galleryPhotos[activePhotoIndex].photo}`}
-                alt={`Photo ${activePhotoIndex + 1}`}
+                alt={`Chace Nielson Photo ${activePhotoIndex + 1}`}
                 className='object-cover w-full rounded-sm'
                 blurHash={galleryPhotos[activePhotoIndex].blurhash}
               />

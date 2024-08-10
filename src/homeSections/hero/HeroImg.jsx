@@ -40,7 +40,7 @@ function HeroImg() {
         className="h-screen lg:w-full lg:h-full object-cover"
         src={`${process.env.PUBLIC_URL}/png-portraits/chace-2.png`} 
         lowResSrc={`${process.env.PUBLIC_URL}/png-portraits/chace-2-small-2.png`} 
-        alt="Hero" 
+        alt="Hero Chace Nielson" 
       />
     </div>
   );

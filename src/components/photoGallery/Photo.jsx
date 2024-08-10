@@ -68,7 +68,7 @@ function Photo({ item, index, openModal }) {
           >
             <ImageComponent
               src={`${process.env.PUBLIC_URL}/gallery-photos/${item.photo}`}
-              alt={`Photo ${index + 1}`}
+              alt={`Chace Nielson Photo ${index + 1}`}
               className='object-cover w-full h-full rounded-md sm:cursor-pointer'
               blurHash={item.blurhash}
             />

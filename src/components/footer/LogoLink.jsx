@@ -76,7 +76,7 @@ function LogoLink({ width = "w-20" }) {
     <ImageComponent 
       className="w-full h-full object-cover filter brightness-50 logo-shadow"
       src={process.env.PUBLIC_URL + '/logos/chacelogoFull512-tight.png'} 
-      alt="Logo" 
+      alt="Chace Nielson Logo" 
     />
   </div>
   );
