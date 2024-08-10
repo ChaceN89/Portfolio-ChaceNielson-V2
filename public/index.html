@@ -2,58 +2,83 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/logos/chacelogoCN512.png" />
+    
+    <!-- Favicon: This is the icon that appears in the browser tab -->
+    <link rel="icon" href="%PUBLIC_URL%/logos/chacelogoFull-whiteoutline192.png" />
+    
+    <!-- Google Fonts: Montserrat and Lato are imported for use in the website's typography -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 
+    <!-- Viewport: Ensures the website is responsive and scales properly on different devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <!-- Theme Color: Defines the color of the browser toolbar on supported mobile devices -->
     <meta name="theme-color" content="#2A2828" />
+    
+    <!-- Description: A brief description of the website for search engines and social media sharing -->
     <meta name="description" content="Chace Nielson's professional portfolio showcasing projects and skills in software development and design." />
-    <meta name="keywords" content="Chace Nielson, portfolio, software development, design, React, projects, engineering, unity, python, blender" />
+    
+    <!-- Keywords: Keywords relevant to the content of the website to improve SEO -->
+    <meta name="keywords" content="Chace Nielson, portfolio, software development, design, React, projects, engineering, unity, python, blender, java, c++, aws" />
+    
+    <!-- Author: Specifies the author of the website -->
     <meta name="author" content="Chace Nielson" />
 
-    <!-- Open Graph / Facebook -->
+    <!-- Open Graph / Facebook: Metadata for Facebook sharing -->
+    <!-- Specifies the type of content, the URL, the title, description, and the image that will show when the link is shared on Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://chacenielson.com" />
     <meta property="og:title" content="Chace Nielson Portfolio" />
     <meta property="og:description" content="Chace Nielson's professional portfolio showcasing projects and skills in software development and design." />
-    <meta property="og:image" content="%PUBLIC_URL%/logos/chacelogoFull512.png" />
+    <meta property="og:image" content="%PUBLIC_URL%/logos/chacelogoFull562.jpg" />
 
-    <!-- Twitter -->
+    <!-- Twitter: Metadata for Twitter sharing -->
+    <!-- Similar to Open Graph, but specifically formatted for Twitter cards -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://chacenielson.com" />
     <meta property="twitter:title" content="Chace Nielson Portfolio" />
     <meta property="twitter:description" content="Chace Nielson's professional portfolio showcasing projects and skills in software development and design." />
-    <meta property="twitter:image" content="%PUBLIC_URL%/logos/chacelogoFull512.png" />
+    <meta property="twitter:image" content="%PUBLIC_URL%/logos/chacelogoFull562.jpg" />
 
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logos/chacelogoFull512.png" />
+    <!-- Apple Touch Icon: Icon used when the website is saved to the home screen on Apple devices -->
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logos/chacelogoCN-whiteoutline562.png" />
+    
+    <!-- Manifest: Link to the manifest file that provides metadata about the web application -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
-    <!-- Schema.org markup for Google -->
+    <!-- Schema.org: Structured data for Google and other search engines to understand the content -->
+    <!-- This data helps search engines display rich results, such as your name, job title, and profile links -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Chace Nielson",
-      "url": "https://chacenielson.com",
-      "image": "https://chacenielson.com/logos/chacelogoFull512.png",
-      "sameAs": [
-        "https://www.linkedin.com/in/chacenielson",
-        "https://github.com/chacenielson"
-      ],
-      "jobTitle": "Software Developer",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Chace Nielson Portfolio"
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Chace Nielson",
+        "url": "https://chacenielson.com",
+        "image": "https://chacenielson.com/logos/chacelogoFull-whiteoutline562.png",
+        "sameAs": [
+          "https://www.linkedin.com/in/chacenielson",
+          "https://github.com/chacenielson"
+        ],
+        "jobTitle": "Software Developer",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Chace Nielson Portfolio"
+        }
       }
-    }
     </script>
 
+    <!-- Title: The title of the webpage that appears in the browser tab and search engine results -->
     <title>Chace Nielson</title>
   </head>
   <body>
+    <!-- Noscript: Message displayed if the user has JavaScript disabled -->
     <noscript>You need to enable JavaScript to run this app.</noscript>
+    
+    <!-- Root Div: This is where your React app will be rendered -->
     <div id="root"></div>
-    <div id="tooltip-root"></div> <!-- Add this line for a tooltip using portals in React DOM -->
+    
+    <!-- Tooltip Root: Additional div for rendering tooltips using React portals -->
+    <div id="tooltip-root"></div>
   </body>
 </html>
