@@ -42,9 +42,34 @@ import BackgroundWrapper from '../../wrappers/BackgroundWrapper';
 import SectionWrapper from '../../wrappers/SectionWrapper';
 
 function ProjectSection() {
-  // Determine the initial and additional number of cards based on screen size
-  const getInitialCards = () => (window.innerWidth >= 1024 ? 6 : 3); // Initial cards for large screens and small screens
-  const getAdditionalCards = () => (window.innerWidth >= 1024 ? 3 : 2); // Additional cards to add for large screens and small screens
+
+  // the initial number of cards to display based on screen width
+  const getInitialCards = () => {
+    const screenWidth = window.innerWidth;
+  
+    if (screenWidth > 1534) {
+      return 8; // Greater than 1534px, show 8 projects initially
+    } else if (screenWidth > 1024) {
+      return 6; // Between 1024px and 1534px, show 6 projects initially
+    } else if (screenWidth > 768) {
+      return 3; // Between 768px and 1024px, show 3 projects initially
+    } else {
+      return 3; // 768px or less, show 3 projects initially
+    }
+  }
+  
+  // the number of additional cards to add when learn more is clicked based on screen width
+  const getAdditionalCards =()=> {
+    const screenWidth = window.innerWidth;
+  
+    if (screenWidth > 1534) {
+      return 4; // Greater than 1534px, add 4 projects at a time
+    } else if (screenWidth > 1024) {
+      return 3; // Between 1024px and 1534px, add 3 projects at a time
+    } else {
+      return 3; // 1024px or less, add 3 projects at a time
+    }
+  }
 
   // Retrieve initial state from sessionStorage
   const getInitialVisibleCards = () => {
