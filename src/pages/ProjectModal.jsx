@@ -91,7 +91,7 @@ const ProjectModal = () => {
         <SectionHeader title={project.name} subtitle={project.blurb} />
       </div>
 
-      <div className="flex flex-wrap flex-col-reverse items-center sm:flex-row justify-start py-2">
+      <div className=" flex flex-wrap flex-col-reverse items-start sm:items-center sm:flex-row justify-start py-2">
         <div className="text-left pr-2">
           <button onClick={scrollToImages} className="button-secondary p-0.5 rounded-full flex items-top gap-1 pr-1.5">
             <FaArrowAltCircleDown size={24} />
