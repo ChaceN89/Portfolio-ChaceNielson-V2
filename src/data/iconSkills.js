@@ -39,7 +39,7 @@
  * 
  * @ChaceN89
  * @created 2024-07-28
- * @updated 2024-07-29
+ * @updated 2024-08-14
  */
 
 import { FaReact, FaNodeJs, FaUnity, FaNode, FaDocker, FaMusic, FaSnowboarding, FaBasketballBall, FaGuitar, FaHiking, FaBiking, FaSwimmer } from "react-icons/fa";
@@ -160,6 +160,10 @@ const IconSkills = {
   CRITICAL_THINKING: { name: "Critical Thinking", svg_path: "critical-thinking.svg" },
   CREATIVITY: { name: "Creativity", svg_path: "creativity.svg" },
   SELF_MOTIVATION: { name: "Self Motivation", svg_path: "self-motivation.svg" },
+
+  SEO: { name: "SEO", svg_path: "seo.svg" },
+  PWA: { name: "Progressive Web Apps", svg_path: "pwa.svg" },
+  EMAILJS: { name: "Email.js", svg_path: "emailjs.svg" },
 };
 
 export default IconSkills;

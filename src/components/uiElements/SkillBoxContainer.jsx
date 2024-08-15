@@ -38,7 +38,7 @@
  * @author Chace Nielson
  * @since 2.1
  * @created 2024-07-28
- * @updated 2024-07-29
+ * @updated 2024-08-14
  */
 
 import React from 'react';
@@ -48,7 +48,7 @@ function SkillBoxContainer({ stack }) {
   return (
     <div className="p-4">
       {stack && stack.length > 0 && (
-        <div className="grid text-sm md:text-base grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-4">
+        <div className="grid text-sm md:text-base grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 mb-4">
           {stack.map((skill, index) => (
             <SkillBox key={index} skill={skill} />
           ))}

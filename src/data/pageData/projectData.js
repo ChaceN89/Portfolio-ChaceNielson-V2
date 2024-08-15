@@ -44,7 +44,7 @@
  * 
  * @author Chace Nielson
  * @created 2024-07-28
- * @updated 2024-07-28
+ * @updated 2024-08-14
  * @since 2.1
  */
 
@@ -66,7 +66,7 @@ import { drillbotics } from "../projects/drillbotics";
 
 export const projectPageData = {
   title: "My Projects",
-  description: "A collection of projects I have worked on showcasing a variety of skills and technologies.",
+  description: "A collection of my projects showcasing a variety of skills and technologies.",
 };
 
 export const projects = [

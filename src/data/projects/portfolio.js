@@ -7,7 +7,7 @@
  * 
  * @author Chace Nielson
  * @created 2024-07-28
- * @updated 2024-08-09 
+ * @updated 2024-08-14 
  * @since 2.1
  */
 
@@ -50,7 +50,10 @@ export const portfolio = {
     IconSkills.FRAMER_MOTION,
     IconSkills.BLURHASH,
     IconSkills.VERCEL,
-    IconSkills.RESPONSIVE_DESIGN
+    IconSkills.RESPONSIVE_DESIGN,
+    IconSkills.SEO,
+    IconSkills.PWA,
+    IconSkills.EMAILJS
   ],
   externalLinks: [
     { name: "Version 1", link: "https://portfolio-chace-nielson.vercel.app/", icon: IconSkills.WORLD.icon },

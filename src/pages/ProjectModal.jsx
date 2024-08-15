@@ -40,7 +40,7 @@
  * 
  * @author Chace Nielson
  * @created 2024-07-28
- * @updated 2024-07-28
+ * @updated 2024-08-14
  * @since 2.1
  */
 
@@ -54,7 +54,6 @@ import { Element, scroller } from 'react-scroll';
 import SkillBoxContainer from "../components/uiElements/SkillBoxContainer";
 import { FaArrowAltCircleDown } from "react-icons/fa";
 import YouTubeEmbed from "../homeSections/projects/YouTubeEmbed";
-import Tooltip from "../components/uiElements/Tooltip";
 
 const ProjectModal = () => {
   const { id } = useParams();
@@ -81,7 +80,7 @@ const ProjectModal = () => {
   // Scroll to the images section
   const scrollToImages = () => {
     scroller.scrollTo("skillBoxContainer", {
-      containerId: "project-modal-container",
+      containerId: "project-modal-container", // reference to id in parent container
       smooth: true
     });
   };
@@ -92,14 +91,13 @@ const ProjectModal = () => {
         <SectionHeader title={project.name} subtitle={project.blurb} />
       </div>
 
-      <div className="flex flex-col-reverse items-center sm:flex-row justify-start py-2">
-        <Tooltip text="Skills" openDuration={400} >
-          <div className="text-left pr-2">
-            <button onClick={scrollToImages} className="button-secondary p-0.5 rounded-full">
-              <FaArrowAltCircleDown size={24} />
-            </button>
-          </div>
-        </Tooltip>
+      <div className="flex flex-wrap flex-col-reverse items-center sm:flex-row justify-start py-2">
+        <div className="text-left pr-2">
+          <button onClick={scrollToImages} className="button-secondary p-0.5 rounded-full flex items-top gap-1 pr-1.5">
+            <FaArrowAltCircleDown size={24} />
+            <span>Skills</span>
+          </button>
+        </div>
         <ExternalLinks externalLinks={project.externalLinks} />
       </div>
 

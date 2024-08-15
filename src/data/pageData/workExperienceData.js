@@ -26,7 +26,7 @@
  * 
  * @author Chace Nielson
  * @created 2024-07-28
- * @updated 2024-07-29
+ * @updated 2024-08-14
  * @since 2.1
  */
 
@@ -36,7 +36,7 @@ import { geothermalWork } from "../workExperience/geothermalWork";
 
 export const workExperiencePageData = {
   title: 'Work Experience',
-  description: 'Technical work',
+  description: 'Technical work.',
 };
 
 export const workExperienceList = [

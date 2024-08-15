@@ -22,7 +22,7 @@
  * 
  * @author Chace Nielson
  * @created 2024-07-28
- * @updated 2024-07-28
+ * @updated 2024-08-14
  * @since 2.1
  */
 
@@ -63,7 +63,10 @@ export const glassGeckoGames = {
     IconSkills.NETLIFY,
     IconSkills.CI_CD,
     IconSkills.TEAM_COLLABORATION,
-    IconSkills.RESPONSIVE_DESIGN
+    IconSkills.RESPONSIVE_DESIGN,
+    IconSkills.SEO,
+    IconSkills.PWA,
+    IconSkills.EMAILJS
   ],
   externalLinks: [
     { name: "Visit Site", link: "https://glassgeckogames.com", icon: IconSkills.WORLD.icon },

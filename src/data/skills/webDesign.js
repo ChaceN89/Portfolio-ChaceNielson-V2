@@ -7,7 +7,7 @@
  * @since 2.1
  * @author Chace Nielson
  * @created 2024-07-28
- * @updated 2024-07-28
+ * @updated 2024-08-14
  */
 
 import IconSkills from "../iconSkills";
@@ -52,5 +52,8 @@ export const webDesign = {
     IconSkills.RESPONSIVE_DESIGN,
     IconSkills.STREAMLIT,
     IconSkills.MAPBOX_GL,
+    IconSkills.SEO,
+    IconSkills.PWA,
+    IconSkills.EMAILJS,
   ],
 };
