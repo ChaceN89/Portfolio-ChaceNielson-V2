@@ -3,6 +3,8 @@
  * @module Magnetic
  * @desc React component that creates a magnetic effect on its children elements, making them move slightly based on the mouse position within a defined padding area.
  * This component is designed to add a subtle interactive effect to UI elements, enhancing the user experience.
+ * 
+ * effect is disabled on small screens (width < 640px) to prevent performance issues and improve usability.
  *
  * @component Magnetic
  * 
@@ -35,17 +37,19 @@
  * @updated 2024-08-14
  * @since 2.1
  */
-
 import React, { useState, useRef, useEffect } from "react";
+import { useMediaQuery } from 'react-responsive';
 
 function Magnetic({ children, padding = 10, disabled = false }) {
   const [isActive, setIsActive] = useState(false);
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const magnetRef = useRef(null);
 
+  const isSmallScreen = useMediaQuery({ maxWidth: '639px' }); // Tailwind's 'sm' breakpoint
+
   useEffect(() => {
-    if (disabled) {
-      // Reset position when disabled
+    if (disabled || isSmallScreen) {
+      // Reset position when disabled or on small screens
       setPosition({ x: 0, y: 0 });
       return;
     }
@@ -79,8 +83,11 @@ function Magnetic({ children, padding = 10, disabled = false }) {
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
     };
-  }, [padding, disabled]);
+  }, [padding, disabled, isSmallScreen]);
 
+  if (isSmallScreen || disabled) {
+    return <>{children}</>;
+  }
 
   return (
     <div ref={magnetRef} style={{ position: "relative", display: "inline-block" }}>
@@ -97,4 +104,4 @@ function Magnetic({ children, padding = 10, disabled = false }) {
   );
 }
 
-export default Magnetic
+export default Magnetic;
