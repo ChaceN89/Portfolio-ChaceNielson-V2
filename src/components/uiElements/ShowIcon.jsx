@@ -40,6 +40,7 @@
  */
 
 import React from 'react';
+import Magnetic from '../../animations/Magnetic';
 
 /**
  * ShowIcon component
@@ -50,7 +51,7 @@ import React from 'react';
  * @param {boolean} [props.useWhiteText=false] - Flag to determine if white text should be used.
  * @returns {JSX.Element} The ShowIcon component.
  */
-function ShowIcon({ skill, size = "2rem", useWhiteText = false }) {
+function ShowIcon({ skill, size = "2rem", useWhiteText = false, diableMag=false }) {
   // Determine the icon color based on the useWhiteText prop
   let iconColor;
   if (useWhiteText) {
@@ -67,13 +68,15 @@ function ShowIcon({ skill, size = "2rem", useWhiteText = false }) {
   const imgStyle = { width: size, height: size };
 
   return (
-    <div className='hover:scale-90 transition-all' style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: size, height: size }}>
-      {IconComponent ? (
-        <IconComponent style={iconStyle} />
-      ) : (
-        <img src={process.env.PUBLIC_URL + "/svg-icons/" + skill.svg_path} alt={skill.name} style={imgStyle} />
-      )}
-    </div>
+    <Magnetic padding={5} disabled={diableMag}>
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: size, height: size }}>
+        {IconComponent ? (
+          <IconComponent style={iconStyle} />
+        ) : (
+          <img src={process.env.PUBLIC_URL + "/svg-icons/" + skill.svg_path} alt={skill.name} style={imgStyle} />
+        )}
+      </div>
+    </Magnetic>
   );
 }
 

@@ -53,6 +53,7 @@ function DisplaySkill({ skillList }) {
           <ShowIcon 
             skill={skill}
             size={iconSize}
+            diableMag={true}
           />
           <div className='text-xs sm:text-sm lg:text-base'>{skill.name}</div>
         </div>

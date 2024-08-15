@@ -91,11 +91,12 @@ function CardText({ project, isInitialLoad, inView }) {
             <div className='flex space-x-2 justify-end items-center'>
               {project.mainStack.map((skill, index) => (
                 <React.Fragment key={index}>
-                  <Tooltip text={skill.name}>
+                  <Tooltip text={skill.name} openDuration={500}>
                     <ShowIcon 
                       skill={skill}
                       size="2.5rem"
                       useWhiteText={true}
+                      diableMag={true}
                     />
                   </Tooltip>
                   {index < project.mainStack.length - 1 && (

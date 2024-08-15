@@ -53,7 +53,7 @@ function MainSkills({ topSkills }) {
       {topSkills.map((topSkill, idx) => (
         <Tooltip 
           key={idx}
-          openDuration={600} 
+          openDuration={300} 
           className="max-w-xs"
           text={topSkill.name}
         >

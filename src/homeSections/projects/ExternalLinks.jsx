@@ -66,7 +66,7 @@ function ExternalLinks({ externalLinks }) {
                 </a>
               )}
               {index < externalLinks.length - 1 && (
-                <span className="text-accent mx-1">•</span>
+                <span className="text-accent text-2xl mx-1">/</span>
               )}
             </React.Fragment>
           ))}
