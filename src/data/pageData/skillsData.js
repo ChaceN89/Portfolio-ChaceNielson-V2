@@ -50,6 +50,6 @@ export const skillPageData = {
 export const techSkills = [
   webDesign,
   backendDesign,
-  engineering,
-  gameDesign
+  gameDesign,
+  engineering
 ];

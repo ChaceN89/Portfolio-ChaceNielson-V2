@@ -119,7 +119,7 @@ function ProjectSection() {
         {visibleProjects.length < projects.length && (
           <button 
             onClick={handleViewMore} 
-            className='w-full border-2 bg-frosted-glass text-secondary rounded-lg p-1.5 mt-6 hover:bg-opacity-70 hover:backdrop-blur-none hover:bg-secondary'
+            className='w-full border-2 bg-frosted-glass text-secondary rounded-lg p-1.5 mt-6 hover:bg-opacity-70 hover:backdrop-blur-none hover:bg-secondary hover:text-primary'
           >
             View More...
           </button>

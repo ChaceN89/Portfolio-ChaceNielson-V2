@@ -32,10 +32,10 @@ export const engineering = {
     </span>
   ),
   topSkills: [
-    IconSkills.GIT,
     IconSkills.GITHUB,
-    IconSkills.JAVA,
+    IconSkills.GIT,
     IconSkills.CPP,
+    IconSkills.JAVA,
   ],
   minorSkills: [
     IconSkills.JUPYTER,
