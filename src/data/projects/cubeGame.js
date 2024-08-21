@@ -50,7 +50,7 @@ export const cubeGame = {
   blurb: short,
   description: long,
   images: [
-    { src: "cubeGame.jpg", blurhash: "LHO:^eD%4.%M00xv%2of_Nxt-;D%" },
+    { src: "cubegame.jpg", blurhash: "LHO:^eD%4.%M00xv%2of_Nxt-;D%" },
     { src: "cube1.jpg", blurhash: "LHO:^eD%4.%M00xv%2of_Nxt-;D%" },
     { src: "cube2.jpg", blurhash: "LHO:^eD%4.%M00xv%2of_Nxt-;D%" },
     { src: "cube3.jpg", blurhash: "LHO:^eD%4.%M00xv%2of_Nxt-;D%" },
