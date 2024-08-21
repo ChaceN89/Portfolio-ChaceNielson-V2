@@ -42,7 +42,7 @@
  * @updated 2024-08-14
  */
 
-import { FaReact, FaNodeJs, FaUnity, FaNode, FaDocker, FaMusic, FaSnowboarding, FaBasketballBall, FaGuitar, FaHiking, FaBiking, FaSwimmer } from "react-icons/fa";
+import { FaReact, FaNodeJs, FaUnity, FaNode, FaDocker, FaMusic, FaSnowboarding, FaBasketballBall, FaGuitar, FaHiking, FaBiking, FaSwimmer, FaItchIo } from "react-icons/fa";
 import { DiPostgresql } from "react-icons/di";
 import { ImGit } from "react-icons/im";
 import { SiFastapi, SiTailwindcss, SiMongodb, SiApachespark, SiJupyter, SiTypescript, SiRender, SiVercel, SiRailway, SiStreamlit, SiDjango, SiChartdotjs, SiRedux, SiMapbox } from "react-icons/si";
@@ -121,6 +121,7 @@ const IconSkills = {
   YOUTUBE: { name: "YouTube", icon: BsYoutube, color: "red" },
   INSTAGRAM: { name: "Instagram", icon: BsInstagram, color: "white" },
   LINKEDIN: { name: "LinkedIn", icon: BsLinkedin, color: "white" },
+  ITCHIO: { name: "Itch.io", icon: FaItchIo, color: "black" },
   
   STREAMLIT: { name: "Streamlit", icon: SiStreamlit, color: "#FF4B4B" },
   DJANGO: { name: "Django", icon: SiDjango, color: "#FF4B4B" },

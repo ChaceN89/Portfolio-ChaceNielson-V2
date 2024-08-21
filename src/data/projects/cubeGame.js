@@ -65,6 +65,6 @@ export const cubeGame = {
     IconSkills.UNITY_PHYSICS,
   ],
   externalLinks: [
-    { name: "Play Game", link: "https://chacen89.github.io/CubeGame/", icon: IconSkills.UNITY.icon },
+    { name: "Play Game", link: "https://kar2fast.itch.io/cube-game", icon: IconSkills.ITCHIO.icon },
   ],
 };
