@@ -31,7 +31,7 @@
  * 
  * @author Chace Nielson
  * @created 2024-07-29
- * @updated 2024-07-29
+ * @updated 2024-08-21
  * @since 2.1
  */
 import React, {useState} from 'react';
@@ -51,6 +51,7 @@ function Interests() {
       lowResSrc={process.env.PUBLIC_URL + "/png-backgrounds/detailed/range3-trim-mountain-small.png"}
       mobileSrc={process.env.PUBLIC_URL + "/png-backgrounds/detailed/range3.png"}
       backgroundSize = "cover"
+      backgroundAttachment='fixed'
       bgOpacity={20}
     >
       <hr />

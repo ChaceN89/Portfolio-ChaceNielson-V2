@@ -35,7 +35,7 @@
  * 
  * @author Chace Nielson
  * @created 2024-07-29
- * @updated 2024-07-29
+ * @updated 2024-08-21
  * @since 2.1
  */
 
@@ -54,5 +54,5 @@
 }
 
 .card-thin-border{
-  @apply border-2 border-secondary border-opacity-30
+  @apply border-t-2  border-secondary border-opacity-35
 }

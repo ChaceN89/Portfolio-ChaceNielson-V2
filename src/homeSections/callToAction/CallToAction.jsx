@@ -34,7 +34,7 @@
  * 
  * @author Chace Nielson
  * @created 2024-07-28
- * @updated 2024-08-09
+ * @updated 2024-08-21
  * @since 2.1
  * 
  * @changelog
@@ -88,6 +88,7 @@ function CallToAction() {
       lowResSrc={process.env.PUBLIC_URL + "/png-backgrounds/detailed/range2-trim-small.png"}
       mobileSrc={process.env.PUBLIC_URL + "/png-backgrounds/detailed/range2.png"}
       backgroundSize="cover"
+      backgroundAttachment='fixed'
       bgOpacity={80}
     >
       {/* Apply parallax effect if the screen is large enough */}

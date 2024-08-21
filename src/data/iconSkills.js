@@ -39,7 +39,7 @@
  * 
  * @ChaceN89
  * @created 2024-07-28
- * @updated 2024-08-14
+ * @updated 2024-08-21
  */
 
 import { FaReact, FaNodeJs, FaUnity, FaNode, FaDocker, FaMusic, FaSnowboarding, FaBasketballBall, FaGuitar, FaHiking, FaBiking, FaSwimmer, FaItchIo } from "react-icons/fa";
@@ -61,6 +61,7 @@ const IconSkills = {
   TAILWINDCSS: { name: "TailwindCSS", icon: SiTailwindcss, color: "#38BDF9" },
   NODE_JS: { name: "Node.js", icon: FaNode, color: "#68A063" },
   RESPONSIVE_DESIGN: { name: "Responsive Design", svg_path: "responsive-design.svg" },
+  STATEMANAGEMENT: { name: "State Management", svg_path: "state-management.svg" },
   
   PYTHON: { name: "Python", svg_path: "python.svg" },
   EXPRESS_JS: { name: "Express.js", icon: FaNodeJs, color: "#079487" },
@@ -90,6 +91,9 @@ const IconSkills = {
   GAME_DEVELOPMENT: { name: "Game Development", svg_path: "game-controller.svg" },
   UNITY_PHYSICS: { name: "Unity Physics System", svg_path: "physics.svg" },
   PLASTIC_SCM: { name: "Plastic SCM", svg_path: "plastic-scm.svg" },
+  OPEN_HAPTICS: { name: "Open Haptics", svg_path: "haptics.svg" },
+  HAPTIC_STYLUS: { name: "Haptic Stylus", svg_path: "stylus.svg" },
+
   
   PLOTLY_DASH: { name: "Plotly Dash", svg_path: "plotly-dash.svg" },
   APACHE_SPARK: { name: "Apache Spark", icon: SiApachespark, color: "#E25A1B" },

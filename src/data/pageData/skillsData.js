@@ -31,7 +31,7 @@
  * 
  * @author Chace Nielson
  * @created 2024-07-28
- * @updated 2024-08-14
+ * @updated 2024-08-21
  * @since 2.1
  */
 
@@ -43,7 +43,7 @@ import { gameDesign } from '../skills/gameDesign';
 // Data for the skill page header
 export const skillPageData = {
   title: "Technical Skills",
-  description: "A Comprehensive Overview of My Technical Expertise.",
+  description: "A comprehensive overview of my technical expertise.",
 };
 
 // Data for various technical skills

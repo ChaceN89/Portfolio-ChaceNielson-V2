@@ -40,7 +40,7 @@
  * 
  * @author Chace Nielson
  * @created 2024-07-28
- * @updated 2024-08-14
+ * @updated 2024-08-21
  * @since 2.1
  */
 
@@ -93,7 +93,7 @@ const ProjectModal = () => {
 
       <div className=" flex flex-wrap flex-col-reverse items-start sm:items-center sm:flex-row justify-start py-2">
         <div className="text-left pr-2">
-          <button onClick={scrollToImages} className="button-secondary p-0.5 rounded-full flex items-top gap-1 pr-1.5">
+          <button onClick={scrollToImages} className="button-secondary p-0.5 rounded-full flex items-top gap-1 pr-2">
             <FaArrowAltCircleDown size={24} />
             <span>Skills</span>
           </button>

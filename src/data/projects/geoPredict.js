@@ -22,7 +22,7 @@
  * 
  * @author Chace Nielson
  * @created 2024-07-28
- * @updated 2024-08-09
+ * @updated 2024-08-21
  * @since 2.1
  */
 
@@ -62,6 +62,7 @@ export const geoPredict = {
     { src: "homePage.jpg", blurhash: "qANAxJD*9Z%LNGxvRixu00t7?bV@-;R*%LWB~WaxD%bIIUt6M|WCIVt6adR+Rjn~WYR+00WBxtogs;j=j]a#IAj[RjjFWBWqV@of" },
     { src: "login.jpg", blurhash: "q7Mtjn8^xU-oVrxsn#t6xtRia_odj?a_axj[9a?wNyIpo$R.bcWC-=x^a%RnWFj^j]WV^kDinN%2nOnhjExaxWMwsjxWs*n#jYoJ" },
   ],
+  youtubeEmbed: "https://www.youtube.com/watch?v=oTU0C_8-dSw",
   mainStack: [
     IconSkills.REACT,
     IconSkills.FASTAPI,
@@ -72,6 +73,7 @@ export const geoPredict = {
     IconSkills.FULL_STACK,
     IconSkills.PYTHON,
     IconSkills.DOCKER,
+    IconSkills.REDUX,
     IconSkills.DATA_ANALYSIS,
     IconSkills.CLOUD_DEPLOYMENT,
     IconSkills.MACHINE_LEARNING,
@@ -81,7 +83,6 @@ export const geoPredict = {
     IconSkills.DATA_VISUALIZATION,
   ],
   externalLinks: [
-    { name: "Overview", link: "https://www.youtube.com/watch?v=oTU0C_8-dSw", icon: IconSkills.YOUTUBE.icon },
     { name: "Website", link: "http://136.159.140.62/", icon: IconSkills.WORLD.icon },
   ],
 };

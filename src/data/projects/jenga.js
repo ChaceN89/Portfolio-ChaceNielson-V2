@@ -22,7 +22,7 @@
  * 
  * @author Chace Nielson
  * @created 2024-07-28
- * @updated 2024-07-28
+ * @updated 2024-08-21
  * @since 2.1
  */
 
@@ -62,9 +62,10 @@ export const jenga = {
     IconSkills.CSHARP,
   ],
   extendedStack:[
-    { name: "Unity Physics System", svg_path: "physics.svg" },
-    { name: "Open Haptics", svg_path: "haptics.svg" },
-    { name: "Haptic Stylus", svg_path: "stylus.svg" },
+    IconSkills.GIT,
+    IconSkills.UNITY_PHYSICS,
+    IconSkills.OPEN_HAPTICS,
+    IconSkills.HAPTIC_STYLUS,
   ],
   externalLinks: [
     { name: "Code", link: "https://github.com/ChaceN89/Haptic-Jenga", icon: IconSkills.GITHUB.icon },

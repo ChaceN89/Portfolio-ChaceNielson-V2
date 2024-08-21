@@ -44,7 +44,7 @@
  * 
  * @author Chace Nielson
  * @created 2024-07-28
- * @updated 2024-08-14
+ * @updated 2024-08-21
  * @since 2.1
  */
 
@@ -63,6 +63,8 @@ import { flappyBirdClone } from "../projects/flappyBirdClone";
 import { spaceSurvive } from "../projects/spaceSurvive";
 import { glassGeckoGames } from "../projects/glassGecko";
 import { drillbotics } from "../projects/drillbotics";
+import { cardGenerator } from "../projects/CardGenerator";
+import { scaleTheDepths } from "../projects/ScaleTheDepths";
 
 export const projectPageData = {
   title: "My Projects",
@@ -70,21 +72,23 @@ export const projectPageData = {
 };
 
 export const projects = [
+  scaleTheDepths,
   glassGeckoGames,
   geoPredict,
   capstone,
   drillbotics,
   voiceIdentification,
   photoApp,
-  musicPlayer,
+  genrePrediction,
+  imageProcessor,
+  portfolio,
+  cardGenerator,
+  cubeGame,
   jenga,
   spaceSurvive,
-  cubeGame,
+  musicPlayer,
   flappyBirdClone,
-  portfolio,
-  imageProcessor,
   jobDashboard,
-  genrePrediction,
 ];
 
 
