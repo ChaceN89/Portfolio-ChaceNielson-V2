@@ -55,9 +55,10 @@ function MediaLinks({headerLinks=false}) {
   // links to use for both footer and header
   const mediaLinks = [
     { name: "GitHub", icon: IconSkills.GITHUB.icon, link: "https://github.com/ChaceN89" },
+    { name: "LinkedIn", icon: IconSkills.LINKEDIN.icon, link: "https://www.linkedin.com/in/chace-nielson" },
     { name: "YouTube", icon: IconSkills.YOUTUBE.icon, link: "https://www.youtube.com/@chacenielson5413" },
     { name: "Instagram", icon: IconSkills.INSTAGRAM.icon, link: "https://www.instagram.com/chacenielson" },
-    { name: "LinkedIn", icon: IconSkills.LINKEDIN.icon, link: "https://www.linkedin.com/in/chace-nielson" }
+    { name: "Itch.io", icon: IconSkills.ITCHIO.icon, link: "https://kar2fast.itch.io/" }
   ];
 
   const iconSize = isMediumScreen ? 24 : 18;
@@ -66,8 +67,8 @@ function MediaLinks({headerLinks=false}) {
   // what to return if its the header links
   if (headerLinks){
     return (
-      <div className="flex justify-center space-x-1.5 relative py-0.5 w-44">
-        {mediaLinks.map((link) => (
+      <div className="grid grid-cols-4 xl:grid-cols-6 gap-1.5 relative py-0.5 ">
+        {mediaLinks.reverse().map((link) => (
           <Tooltip key={link.name} text={link.name}>
             <a
               href={link.link}
