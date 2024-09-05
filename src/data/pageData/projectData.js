@@ -64,7 +64,7 @@ import { spaceSurvive } from "../projects/spaceSurvive";
 import { glassGeckoGames } from "../projects/glassGecko";
 import { drillbotics } from "../projects/drillbotics";
 import { cardGenerator } from "../projects/CardGenerator";
-import { scaleTheDepths } from "../projects/scaleTheDepths";
+import { scaleTheDepths } from "../projects/ScaleTheDepths";
 
 export const projectPageData = {
   title: "My Projects",
