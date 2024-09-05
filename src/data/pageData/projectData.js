@@ -44,7 +44,7 @@
  * 
  * @author Chace Nielson
  * @created 2024-07-28
- * @updated 2024-08-21
+ * @updated 2024-09-05
  * @since 2.1
  */
 
@@ -64,7 +64,7 @@ import { spaceSurvive } from "../projects/spaceSurvive";
 import { glassGeckoGames } from "../projects/glassGecko";
 import { drillbotics } from "../projects/drillbotics";
 import { cardGenerator } from "../projects/CardGenerator";
-import { scaleTheDepths } from "../projects/ScaleTheDepths";
+import { scaleTheDepths } from "../projects/scaleTheDepths";
 
 export const projectPageData = {
   title: "My Projects",

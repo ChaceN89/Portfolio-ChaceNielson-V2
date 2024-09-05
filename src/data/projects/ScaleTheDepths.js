@@ -9,21 +9,21 @@
  * 
  * @author Chace Nielson
  * @created 2024-08-21
- * @updated 2024-08-21
+ * @updated 2024-09-05
  * @since 2.1
  */
 
 import IconSkills from "../iconSkills";
 
 // Short description (blurb) to be displayed on the project card
-const short = "A fishing game built for GMTK 2024 Game Jam.";
+const short = "Fishing game and winner of the 2024 GMTK Game Jam.";
 
 // Long description for the modal page, providing detailed information about the project
 const long = (
   <div className='space-y-2'>
     <p>
-      A game made for the 2024 GMTK Game Jam. The Game Jam theme was "Built to Scale". We decided to take a more literal approach to the theme, with the player being a robot that scales fish.
-    </p>
+      Scale the Depths was created for the 2024 GMTK Game Jam, where the theme was "Built to Scale." We took a literal approach, putting the player in control of a robot tasked with scaling fish to feed hungry aquatic customers. The game stood out among over 7,000 submissions and was selected as a <strong>Winner of the jam</strong>.
+    </p> 
   </div>
 );
 
@@ -51,6 +51,8 @@ export const scaleTheDepths = {
     IconSkills.TEAM_COLLABORATION,
   ],
   externalLinks: [
-    { name: "Play", link: "https://serpexnessie.itch.io/scale-the-depths", icon: IconSkills.ITCHIO.icon },
+    { name: "Play the Game", link: "https://serpexnessie.itch.io/scale-the-depths", icon: IconSkills.ITCHIO.icon },
+    { name: "GMTK Game Jam 2024", link: "https://itch.io/jam/gmtk-2024", icon: IconSkills.WORLD.icon },
+    { name: "Top 20 Results Video", link: "https://youtu.be/gqCAeFjB8Uo?si=Wxp0ATxZGN4vtOGH&t=1133", icon: IconSkills.YOUTUBE.icon },
   ],
 };
