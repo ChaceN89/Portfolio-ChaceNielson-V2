@@ -29,7 +29,7 @@
 import IconSkills from "../iconSkills";
 
 // Short description (blurb) to be displayed on the project card
-const short = "Functional mini drill rig and real-time GUI";
+const short = "Functional mini drill rig and real-time GUI.";
 
 // Long description for the modal page, providing detailed information about the project
 const long = (
