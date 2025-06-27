@@ -16,7 +16,7 @@ import { BoldSpan } from "../../components/uiElements/InLineText";
 import { FaSteam } from "react-icons/fa";
 
 // Short description (blurb) to be displayed on the project card
-const short = <>A relaxing fishing game from the 2024 GMTK Game Jam — now with a playable Steam demo, 200K+ plays, and 35K+ wishlists.</>;
+const short = <>A relaxing fishing game from the 2024 GMTK Game Jam with 200K+ plays — now available as a Steam demo with 45K+ followers.</>;
 
 // Long description for the modal page, providing detailed information about the project
 const long = (
