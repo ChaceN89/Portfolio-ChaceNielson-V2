@@ -40,8 +40,8 @@ export default function Footer() {
 
   return (
     <motion.footer {...animationProps}>
-      <footer className="w-full bg-secondary-alt text-primary overflow-hidden rounded-t-[50px] border-t-2 border-secondary dark:border-primary">
-        <BackgroundWrapper noise backgroundSm="/overlays/dots-1.png" backgroundClass="bg-accent/40 rounded-t-[50px]">
+      <footer className="w-full bg-secondary-alt text-primary overflow-hidden rounded-t-[30px] border-t-4 border-secondary dark:border-primary">
+        <BackgroundWrapper noise backgroundSm="/overlays/dots-1.png" backgroundClass="bg-accent/40 rounded-t-[34px]">
           <div className="px-6 lg:px-16 py-12">
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
               <FooterContact />

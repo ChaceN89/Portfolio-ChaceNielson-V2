@@ -5,7 +5,7 @@
  * 
  * @author Chace Nielson
  * @created May 12, 2025
- * @updated May 22, 2025
+ * @updated Aug 6, 2025
  */
 
 import React, { useEffect, useMemo, useRef, useState } from 'react'
@@ -168,14 +168,15 @@ export default function AboutMe() {
       >
         <h3 className="text-2xl font-semibold">Let's Build Something Together</h3>
         <p className="mt-2 text-sm opacity-80">
-          I’m always excited to meet new collaborators. If you’ve got a project or an idea — let’s talk!
+          I’m always excited to meet new collaborators. If you’ve got a project or an idea, let’s talk!
         </p>
 
         <div className="mt-8 flex justify-center">
+
           <MyBtn 
             callBack={() => navigate('/contact')} 
             GA_label="About Page Contact Me Button"
-          >
+            >
             Contact Me
           </MyBtn>
         </div>

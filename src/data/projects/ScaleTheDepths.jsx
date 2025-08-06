@@ -16,7 +16,7 @@ import { BoldSpan } from "../../components/uiElements/InLineText";
 import { FaSteam } from "react-icons/fa";
 
 // Short description (blurb) to be displayed on the project card
-const short = <>A relaxing fishing game from the 2024 GMTK Game Jam with 200K+ plays — now available as a Steam demo with 45K+ followers.</>;
+const short = <>A relaxing fishing game from the 2024 GMTK Game Jam with 200K+ plays. Now available as a Steam demo with 80K+ Players.</>;
 
 // Long description for the modal page, providing detailed information about the project
 const long = (
@@ -25,14 +25,13 @@ const long = (
       <BoldSpan>Scale The Depths</BoldSpan> is a relaxing, award-winning fish-scaling game that began as a <BoldSpan>2024 GMTK Game Jam</BoldSpan> entry. Built around the theme “Built to Scale,” you play as a robot chef scaling fish to feed hungry underwater customers. The game took <BoldSpan>1st place out of 7,000+ submissions</BoldSpan> and was praised for its originality, charm, and polish.
     </p>
     <p>
-      The original version reached <BoldSpan>200,000+ plays on Itch.io</BoldSpan> and holds a <BoldSpan>4.6-star rating</BoldSpan>. Thanks to overwhelming support, we’ve expanded it into a full game — now in development with a demo available on <BoldSpan>Steam</BoldSpan>. Over <BoldSpan>35,000 players</BoldSpan> have wishlisted the game ahead of its planned 2026 release.
+      The original version reached <BoldSpan>200,000+ plays on Itch.io</BoldSpan> and holds a <BoldSpan>4.6-star rating</BoldSpan>. Thanks to overwhelming support, we’ve expanded it into a full game now in development with a demo available on <BoldSpan>Steam</BoldSpan>. Over <BoldSpan>60,000 players</BoldSpan> have wishlisted the game ahead of its planned 2026 release.
     </p>
     <p>
       As one of the developers, I contributed to the core gameplay systems, visual polish using shader graphs, and performance optimization for loading and other systems. I’ve continued working on the full version’s expanded content, shader effects, and UX enhancements as part of our ongoing development.
     </p>
   </div>
 );
-
 
 export const scaleTheDepths = {
   id: "scale-the-depths",

@@ -7,16 +7,15 @@
  * @exports techSkills
  * @author Chace Nielson
  * @created July 28, 2024
- * @updated Aug 21, 2024
+ * @updated Sept 05, 2024
  */
 
-
 import { gameDesign } from '../techStacks/game-design';
-import { fullstack } from '../techStacks/full-stack';
+import { webDev } from '../techStacks/web-dev';
 
 // Data for various technical skills
 export const techSkills = [
   gameDesign,
-  fullstack,
+  webDev,
 ];
 

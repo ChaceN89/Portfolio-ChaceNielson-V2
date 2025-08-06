@@ -14,7 +14,6 @@ import { BoldSpan } from "../../components/uiElements/InLineText";
 // Short description (blurb) to be displayed on the project card
 const short = <>A full-stack library app with Google Sign-In, cloud storage, and a custom admin dashboard for managing digital books.</>
 
-
 // Long description for the modal page, providing detailed information about the project
 const long = (
   <div className="space-y-2">
@@ -28,9 +27,8 @@ const long = (
       Features include <BoldSpan>Google Sign-In</BoldSpan>, a custom <BoldSpan>Admin Portal</BoldSpan>, <BoldSpan>responsive design</BoldSpan>, <BoldSpan>light/dark mode</BoldSpan>, and cloud storage via <BoldSpan>S3</BoldSpan> and <BoldSpan>PostgreSQL (RDS)</BoldSpan>.
     </p>
     <p>
-      Originally deployed using AWS RDS, the project now runs on <BoldSpan>Supabase</BoldSpan> for simpler management and free-tier hosting. The backend is hosted on <BoldSpan>Render</BoldSpan>, which may experience brief delays after periods of inactivity due to cold starts — a tradeoff made to keep the app cost-effective while still fully functional.
+      Originally deployed using AWS RDS, the project now runs on <BoldSpan>Supabase</BoldSpan> for simpler management and free-tier hosting. The backend is hosted on <BoldSpan>Render</BoldSpan>, which may experience brief delays after periods of inactivity due to cold starts. This is a tradeoff made to keep the app cost-effective while still fully functional.
     </p>
-
   </div>
 );
 

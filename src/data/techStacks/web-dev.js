@@ -10,14 +10,14 @@
 
 import IconLibrary from "../iconLibrary";
 
-export const fullstack = {
-  id: "fullstack-development",
-  name: "Full Stack Development",
-  linkName: "Explore Full Stack Projects & Tools",
+export const webDev = {
+  id: "web-development",
+  name: "Web Development",
+  linkName: "Explore Web Development Projects & Tools",
 
-  description: "I build full stack applications from frontend to backend — fast, functional, and custom tailored for performance and usability.",
+  description: "I build web applications with a focus on user experience, from simple sites to complex platforms using modern tools and best practices.",
 
-  modalDescription: "This section showcases the frontend libraries, backend frameworks, cloud infrastructure, and DevOps tools I use to build full stack applications. From responsive UIs and API integrations to authentication, deployment, and analytics — each tool contributes to building scalable, production-ready systems.",
+  modalDescription: "This section showcases the frontend libraries, backend frameworks, cloud infrastructure, and DevOps tools I use to build web applications. From responsive UIs and API integrations to authentication, deployment, and analytics, each tool contributes to building scalable, production-ready systems.",
 
   commonTools: [
     IconLibrary.REACT,

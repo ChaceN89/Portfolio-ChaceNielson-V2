@@ -14,7 +14,7 @@
  *
  * @author Chace Nielson
  * @created Jan 26, 2025
- * @updated May 23, 2025
+ * @updated Aug 6, 2025
  */
 import React, { useState } from 'react'
 
@@ -23,7 +23,7 @@ import TechStackSection from './TechStackSection'
 import BackgroundWrapper from '@/components/uiElements/images/BackgroundWrapper'
 
 // data
-import { fullstack } from '@/data/techStacks/full-stack'
+import { webDev } from '@/data/techStacks/web-dev'
 import { gameDesign } from '@/data/techStacks/game-design'
 
 export default function TechStacks() {
@@ -31,7 +31,7 @@ export default function TechStacks() {
   // Organized list of sections
   const sectionList = [
     {
-      teachStack: fullstack,
+      teachStack: webDev,
       background: "/backgrounds/controller-6.jpg",
       index: 1,
       translation: "translate-y-[40%] translate-x-[40%]"

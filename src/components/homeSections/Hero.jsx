@@ -16,7 +16,7 @@
  *
  * @author Chace Nielson
  * @created Jan 26, 2025
- * @updated May 23, 2025
+ * @updated Aug 6, 2025
  */
 
 // components 
@@ -25,7 +25,13 @@ import ScrollWheelBtn from '../uiElements/ScrollWheelBtn';
 
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { FaCode, FaServer, FaGamepad } from 'react-icons/fa';
+
+// icons
+import { FaComputer } from "react-icons/fa6";
+import { IoLogoGameControllerB } from "react-icons/io";
+import { FaCogs } from "react-icons/fa";
+
+// context
 import { useInitialLoading } from '../routing/InitialLoadingContext';
 import { useAnimationSettings } from '@/components/animations/AnimationContext'; // for disabling animations on small screens if this component is too much computationally expensive on mobile devices
 
@@ -80,16 +86,16 @@ export default function Hero() {
         </motion.h1>
 
         {/* Bullet points */}
-        <BulletPoint animationInfo={animationInfo} delay={delays[1]} icon={<FaCode />} text="Software Engineer" />
-        <BulletPoint animationInfo={animationInfo} delay={delays[2]} icon={<FaServer />} text="Full-Stack Developer" />
-        <BulletPoint animationInfo={animationInfo} delay={delays[3]} icon={<FaGamepad />} text="Game Developer" />
+        <BulletPoint animationInfo={animationInfo} delay={delays[1]} icon={<FaCogs />} text="Software Engineer" />
+        <BulletPoint animationInfo={animationInfo} delay={delays[2]} icon={<FaComputer />} text="Web Developer" />
+        <BulletPoint animationInfo={animationInfo} delay={delays[3]} icon={<IoLogoGameControllerB />} text="Game Developer" />
 
         <motion.div
           {...animationInfo(delays[4])}
           className="opacity-90 italic space-y-1"
         >
           <p>“Custom software. Creative solutions.</p>
-          <p>Whether it's web or games—I’ve got you covered.”</p>
+          <p>Whether it's web or games, I’ve got you covered.”</p>
         </motion.div>
 
         <motion.div

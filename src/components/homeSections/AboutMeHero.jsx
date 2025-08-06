@@ -7,7 +7,7 @@
  * 
  * @author Chace Nielson
  * @created May 12, 2025
- * @updated May 20, 2025
+ * @updated Aug 6, 2025
  */
 import React, { useMemo, useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
@@ -60,14 +60,14 @@ export default function AboutMeHero() {
       <div className="max-w-xl text-center md:text-left space-y-2">
         <h2 className="text-3xl font-bold">A Little About Me</h2>
         <p className="text-lg leading-relaxed">
-          Hey, I'm <strong>Chace Nielson</strong> — a software engineer with a passion for building intuitive websites and immersive games.
+          Hey, I'm <strong>Chace Nielson</strong>, a software engineer with a passion for building intuitive websites and immersive games.
           Whether I'm crafting smooth user interfaces or designing engaging game mechanics, I love turning ideas into interactive experiences.
         </p>
         <p className="text-lg leading-relaxed">
-          I care deeply about accessibility and inclusivity, and I build with everyone in mind — creating experiences that are intuitive, enjoyable, and usable for all.
+          I care deeply about accessibility and inclusivity, and I build with everyone in mind, creating experiences that are intuitive, enjoyable, and usable for all.
         </p>
         <p className="text-lg leading-relaxed">
-          Coding is how I express creativity — it's where logic meets imagination.
+          Coding is how I express creativity, it's where logic meets imagination.
         </p>
 
         <MyBtn sm callBack={() => ScrollToID("tech-stacks")}

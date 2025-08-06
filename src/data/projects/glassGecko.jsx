@@ -24,7 +24,7 @@ const long = (
       I designed and developed this homepage for the <BoldSpan>Glass Gecko Games</BoldSpan> team, using <BoldSpan>React</BoldSpan> and <BoldSpan>Tailwind CSS</BoldSpan>. It features <BoldSpan>Framer Motion</BoldSpan> animations and <BoldSpan>blurhash</BoldSpan>-based image loading for a smooth, visually polished experience that highlights both our <BoldSpan>games</BoldSpan> and <BoldSpan>team</BoldSpan>.
     </p>
     <p>
-      The project combines clean component architecture with a <BoldSpan>bright, playful design</BoldSpan>, delivering a modern UI that feels both polished and approachable. Built with <BoldSpan>reusable components</BoldSpan> and <BoldSpan>responsive layouts</BoldSpan>, and deployed via <BoldSpan>Netlify</BoldSpan> with <BoldSpan>continuous integration</BoldSpan>, it reflects my focus on user experience, maintainability, and performance—all while capturing the creative spirit of the studio.
+      The project combines clean component architecture with a <BoldSpan>bright, playful design</BoldSpan>, delivering a modern UI that feels both polished and approachable. Built with <BoldSpan>reusable components</BoldSpan> and <BoldSpan>responsive layouts</BoldSpan>, and deployed via <BoldSpan>Netlify</BoldSpan> with <BoldSpan>continuous integration</BoldSpan>, it reflects my focus on user experience, maintainability, and performance, all while capturing the creative spirit of the studio.
     </p>
   </div>
 );
