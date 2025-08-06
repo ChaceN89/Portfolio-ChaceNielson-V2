@@ -31,6 +31,7 @@ import { scaleTheDepths } from "../projects/ScaleTheDepths";
 import { dicom3dPrint } from "../projects/DICOM3dPrints";
 import { energyTomorrow } from "../projects/EnergyTomorrow";
 import { library } from "../projects/library";
+import { fruitJar } from "../projects/fruitJar";
 
 export const featuredProjects = [
   albertaTomorrowHomepage,
@@ -60,6 +61,7 @@ export const projects = [
   drillbotics,
   imageProcessor,
   voiceIdentification,
+  fruitJar,
   photoApp,
   genrePrediction,
   portfolio,

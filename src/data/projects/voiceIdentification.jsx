@@ -32,7 +32,6 @@ const long = (
   </div>
 );
 
-
 export const voiceIdentification = {
   id: "voice-identification",
   name: "Voice Identification",
