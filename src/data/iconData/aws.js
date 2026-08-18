@@ -5,13 +5,13 @@
  * @created Jan 22, 2025
  * @updated Jan 22, 2025
  */
-import { SiAwsamplify } from "react-icons/si";
+import { IoLogoAmplify } from "react-icons/io5";
 
 const folder = "aws";
 
 const awsIcons = {
   AWS: { name: "AWS", svg_path: `${folder}/aws.svg` },
-  AMPLIFY: { name: "Amplify", icon: SiAwsamplify, color: "#FF9900" },
+  AMPLIFY: { name: "Amplify", icon: IoLogoAmplify, color: "#FF9900" },
   RDS: { name: "RDS", svg_path: `${folder}/RDS.svg` },
   S3: { name: "S3", svg_path: `${folder}/S3.svg` },
   TERRAFORM: { name: "Terraform", svg_path: `${folder}/terraform.svg` },
