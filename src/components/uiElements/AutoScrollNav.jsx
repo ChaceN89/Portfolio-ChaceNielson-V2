@@ -19,7 +19,7 @@
  *
  * @author Chace Nielson
  * @created Jan 26, 2025
- * @updated May 23, 2025
+ * @updated Aug 19, 2026
  */
 
 import React, { useEffect } from 'react';
@@ -52,27 +52,26 @@ export default function AutoScrollNav({ shouldScroll, setShouldScroll, scrollSpe
   // if (typeof window === 'undefined' || window.innerWidth < 1020) return null;
 
   return createPortal(
-  <motion.div
-    initial={false}
-    animate={{ x: isOpen ? 0 : -(panelWidth - 6) }}
-    transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-    className="fixed bottom-4 left-0 z-[30] items-stretch h-auto md:flex hidden"
-    style={{ width: panelWidth }}
-  >
+    <motion.div
+      initial={false}
+      animate={{ x: isOpen ? 0 : -(panelWidth - 6) }}
+      transition={{ type: 'spring', stiffness: 300, damping: 30 }}
+      className="fixed bottom-4 left-0 z-[30] items-stretch h-auto md:flex hidden"
+      style={{ width: panelWidth }}
+    >
       {/* Panel content */}
       <div className="flex gap-4 bg-primary/30 dark:bg-secondary/30 border border-secondary/80 dark:border-primary/50 backdrop-blur-sm border-l-0 p-4 rounded-l-none rounded-r-lg shadow-md items-center flex-1">
-        
+
         {/* Scroll to Top and Stop */}
         <button
           onClick={() => {
             scrollToTop();
             setShouldScroll(false);
           }}
-  className="cursor-pointer flex items-center group"
+          className="cursor-pointer flex items-center group"
         >
-          
-          <FaArrowUpWideShort size={18}     className="mr-1 group-hover:scale-x-85 origin-left transition-transform duration-200 ease-in-out"
- />
+          <FaArrowUpWideShort size={18} className="mr-1 group-hover:scale-x-85 origin-left transition-transform duration-200 ease-in-out"
+          />
 
         </button>
 
@@ -92,21 +91,21 @@ export default function AutoScrollNav({ shouldScroll, setShouldScroll, scrollSpe
           step="0.5"
           value={scrollSpeed}
           onChange={(e) => setScrollSpeed(parseFloat(e.target.value))}
-          className="w-24 accent-secondary dark:accent-primary cursor-pointer" 
+          className="w-24 accent-secondary dark:accent-primary cursor-pointer"
         />
       </div>
 
       {/* Tab */}
 
-        <button
-          onClick={() => setIsOpen(prev => !prev)}
-          className="bg-secondary/60 dark:bg-primary/60 text-primary dark:text-secondary my-2 flex flex-col items-center justify-center px-1 rounded-r-lg cursor-pointer border border-l-0 dark:border-secondary/50 border-primary/80"
-          title="Toggle Auto Scroll Panel"
-        >
-          <Tooltip text={isOpen ? 'Close' : 'Open Auto Scroll Panel'}>
-            <FiMoreVertical size={18} />
-          </Tooltip>
-        </button>
+      <button
+        onClick={() => setIsOpen(prev => !prev)}
+        className="bg-secondary/60 dark:bg-primary/60 text-primary dark:text-secondary my-2 flex flex-col items-center justify-center px-1 rounded-r-lg cursor-pointer border border-l-0 dark:border-secondary/50 border-primary/80"
+        title="Toggle Auto Scroll Panel"
+      >
+        <Tooltip text={isOpen ? 'Close' : 'Open Auto Scroll Panel'}>
+          <FiMoreVertical size={18} />
+        </Tooltip>
+      </button>
     </motion.div>,
     document.body
   );

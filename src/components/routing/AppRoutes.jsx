@@ -10,7 +10,7 @@
  * @created 2024-07-26
  * @updated May 12th, 2025
  */
-import React, {useEffect, useRef, useState} from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Routes, Route, useLocation, useNavigationType } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 
@@ -21,7 +21,7 @@ import ContactPage from '@/pages/ContactPage';
 import ThanksPage from '@/pages/ThanksPage';
 import ProjectsPage from '@/pages/ProjectsPage';
 import NotFoundPage from '@/pages/NotFoundPage';
- 
+
 //Layout and  Modal Components
 import Layout from './Layout';                                  // Main Layout Component - nav, footer, outlet for main content
 import MyModal from './MyModal';                              // Global Modal Component 
@@ -35,7 +35,7 @@ import { techStackParam, projectParam } from '@/data/globals';  // Modal Param n
 import { useAnimationSettings } from '@/components/animations/AnimationContext';
 
 // Page Transition Duration Global
-const pageTransitionDuration = 0.6; // Duration of the page transition animation
+const pageTransitionDuration = 0.4; // Duration of the page transition animation
 
 export default function AppRoutes() {
   const location = useLocation(); // Current location
@@ -51,19 +51,19 @@ export default function AppRoutes() {
 
   // Scroll Position UseEffect
   useEffect(() => { // Call useEffect every time the pathname (location) changes
-    
+
     let timeout;
     // Only If the navigation type is  not POP (back/forward button) - back/forward saves scroll position
-    if (navigationType !== "POP") { 
+    if (navigationType !== "POP") {
       timeout = setTimeout(() => {
         window.scrollTo(0, 0);
       }, pageTransitionDuration * 1000); // Page transition duration in milliseconds to sync with animation
     }
 
     return () => clearTimeout(timeout); // Clear the timeout on unmount
-    
+
   }, [pathname]); // Activated when pathname changes
-  
+
 
   // Handle the modal state
   const [showProjectModal, setShowProjectModal] = useState(false);
@@ -76,7 +76,7 @@ export default function AppRoutes() {
 
     if (techStackID) setShowTechStackModal(true); // If i have a tech stack id then show the tech stack modal
     if (!techStackID && showTechStackModal) setShowTechStackModal(false)   // if tech stack id is removed and the modal is open, close the modal imme
-  
+
   }, [projectID, techStackID]); // Activated when projectID or techStackID changes
 
   // mobile friendly - if the screen is smaller than 768px, set the mobile flag to true
@@ -106,13 +106,13 @@ export default function AppRoutes() {
             <Route index element={<PageTransition><HomePage /></PageTransition>} />
 
             <Route path="/projects" element={<PageTransition><ProjectsPage /></PageTransition>} />
-            <Route path="/about" element={<PageTransition><AboutPage/></PageTransition>} />
-            <Route path="/contact" element={<PageTransition><ContactPage/></PageTransition>} />
-            <Route path="/thanks" element={<PageTransition><ThanksPage/></PageTransition>} />
-            <Route path="*" element={<PageTransition><NotFoundPage/></PageTransition>} />
+            <Route path="/about" element={<PageTransition><AboutPage /></PageTransition>} />
+            <Route path="/contact" element={<PageTransition><ContactPage /></PageTransition>} />
+            <Route path="/thanks" element={<PageTransition><ThanksPage /></PageTransition>} />
+            <Route path="*" element={<PageTransition><NotFoundPage /></PageTransition>} />
           </Route>
         </Routes>
-      </AnimatePresence>     
+      </AnimatePresence>
     </div>
   );
 }
@@ -149,7 +149,7 @@ const PageTransition = ({ children }) => {
         animate={{ opacity: fadeOut ? 0 : 0.5 }}
         exit={{ opacity: 0.5 }}
         transition={{
-          opacity: { duration: fadeOut ? 0.4 : 0, delay:fadeOut ? 0 : 0.2, ease: "easeInOut" }
+          opacity: { duration: fadeOut ? 0.4 : 0, delay: fadeOut ? 0 : 0.2, ease: "easeInOut" }
         }}
         onAnimationComplete={() => {
           if (!fadeOut) setFadeOut(true); // start fade out after initial animation

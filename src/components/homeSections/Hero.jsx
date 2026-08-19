@@ -16,14 +16,12 @@
  *
  * @author Chace Nielson
  * @created Jan 26, 2025
- * @updated Aug 6, 2025
+ * @updated Aug 19, 2026
  */
 
 // components 
-import MyBtn from '@/components/buttons/MyBtn';
 import ScrollWheelBtn from '../uiElements/ScrollWheelBtn';
 
-import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 // icons
@@ -39,8 +37,7 @@ export default function Hero() {
 
   const { prefersReducedMotion } = useAnimationSettings(); // Get animation settings from context
 
-  // Hook to get the current location and navigate
-  const navigate = useNavigate();
+
 
   // SHould the animation be shown or not based on the loading state of the app
   const { InitialLoadingDone } = useInitialLoading();
@@ -51,17 +48,17 @@ export default function Hero() {
 
   // list of all delays
   const delays = [
-    splashScreenDelay+0, 
-    splashScreenDelay+0.2, 
-    splashScreenDelay+0.4, 
-    splashScreenDelay+0.6, 
-    splashScreenDelay+0.8, 
-    splashScreenDelay+1.0,
+    splashScreenDelay + 0,
+    splashScreenDelay + 0.2,
+    splashScreenDelay + 0.4,
+    splashScreenDelay + 0.6,
+    splashScreenDelay + 0.8,
+    splashScreenDelay + 1.0,
   ];
 
 
   // The specific animation info for each element with a delay as a prop so they can be staggered
-  const animationInfo =(delay) => {
+  const animationInfo = (delay) => {
 
     if (prefersReducedMotion) return {}; // Disable animations if on small screens
 
@@ -87,27 +84,17 @@ export default function Hero() {
 
         {/* Bullet points */}
         <BulletPoint animationInfo={animationInfo} delay={delays[1]} icon={<FaCogs />} text="Software Engineer" />
-        <BulletPoint animationInfo={animationInfo} delay={delays[2]} icon={<FaComputer />} text="Web Developer" />
-        <BulletPoint animationInfo={animationInfo} delay={delays[3]} icon={<IoLogoGameControllerB />} text="Game Developer" />
+        <BulletPoint animationInfo={animationInfo} delay={delays[2]} icon={<IoLogoGameControllerB />} text="Game Developer" />
+        <BulletPoint animationInfo={animationInfo} delay={delays[3]} icon={<FaComputer />} text="Web Developer" />
 
         <motion.div
           {...animationInfo(delays[4])}
           className="opacity-90 italic space-y-1"
         >
-          <p>“Custom software. Creative solutions.</p>
-          <p>Whether it's web or games, I’ve got you covered.”</p>
+          <p>“Making games, telling stories, and building systems.</p>
+          <p>Turning ideas into experiences.”</p>
         </motion.div>
 
-        <motion.div
-          {...animationInfo(delays[5])}
-        >
-          <MyBtn 
-            callBack={() => navigate('/contact')}
-            GA_label="Hero Button"
-          >
-            Let's Talk
-          </MyBtn>
-        </motion.div>
       </div>
 
       {/* Right Side Visual */}
@@ -115,7 +102,7 @@ export default function Hero() {
         {...animationInfo(delays[0])}
         className="max-w-sm md:max-w-md flex-[1_1_300px] z-0 hidden  lg:flex justify-center  "
       >
-        <img 
+        <img
           src="/logos/my-logos/logo562x562.png"
           alt="Chace working"
           width="562"
@@ -139,7 +126,7 @@ function BulletPoint({ animationInfo, delay, icon, text }) {
       {icon}
       <span className='hero-gradient-text'>
 
-      {text}
+        {text}
       </span>
     </motion.h4>
   );

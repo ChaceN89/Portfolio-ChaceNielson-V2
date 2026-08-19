@@ -20,7 +20,7 @@
 /* import tailwind */
 @import "tailwindcss";
 
-@theme{
+@theme {
   --ripple-color: var(--color-primary);
 }
 
@@ -28,8 +28,8 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 5rem;
-  height: 5rem;
+  width: 4rem;
+  height: 4rem;
   background-color: var(--ripple-color);
   border-radius: 9999px;
   pointer-events: none;
@@ -38,16 +38,17 @@
 }
 
 .group:hover .ripple-hover {
-  animation: ripple-hover 0.8s ease-out forwards;
+  animation: ripple-hover 1.5s ease-out forwards;
 }
 
 @keyframes ripple-hover {
   0% {
     transform: translate(-50%, -50%) scale(0);
-    opacity: 0.6;
+    opacity: 0.35;
   }
+
   100% {
-    transform: translate(-50%, -50%) scale(10);
+    transform: translate(-50%, -50%) scale(7);
     opacity: 0;
   }
 }

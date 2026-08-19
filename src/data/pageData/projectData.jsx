@@ -32,46 +32,47 @@ import { dicom3dPrint } from "../projects/DICOM3dPrints";
 import { energyTomorrow } from "../projects/EnergyTomorrow";
 import { library } from "../projects/library";
 import { fruitJar } from "../projects/fruitJar";
+import { theCountIsDown } from "../projects/theCountIsDown";
 
 export const featuredProjects = [
+  scaleTheDepths,
   albertaTomorrowHomepage,
   glassGeckoGames,
-  scaleTheDepths,
-  library,
 ]
 
 export const carouselProjects = [
   geoPredict,
-  dicom3dPrint,
+  theCountIsDown,
+  energyTomorrow,
   voiceIdentification,
   jenga,
-  capstone
+  capstone,
 ]
 
-
 export const projects = [
-  albertaTomorrowHomepage,
-  library,
   scaleTheDepths,
+  theCountIsDown,
+  jenga,
   energyTomorrow,
-  capstone,
-  dicom3dPrint,
+  albertaTomorrowHomepage,
   glassGeckoGames,
+  spaceSurvive,
+  cubeGame,
+  flappyBirdClone,
+  capstone,
+  library,
+  dicom3dPrint,
+  cardGenerator,
   geoPredict,
   drillbotics,
+  portfolio,
   imageProcessor,
   voiceIdentification,
-  fruitJar,
   photoApp,
   genrePrediction,
-  portfolio,
-  cardGenerator,
-  cubeGame,
-  jenga,
-  spaceSurvive,
   musicPlayer,
-  flappyBirdClone,
   jobDashboard,
+  fruitJar,
 ];
 
 

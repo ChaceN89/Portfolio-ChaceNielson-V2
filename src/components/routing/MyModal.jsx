@@ -9,7 +9,7 @@
  * @updated May 16, 2025
  */
 
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { IoMdClose } from 'react-icons/io';
 import { motion } from 'framer-motion';
@@ -36,6 +36,20 @@ export default function MyModal({ children }) {
     };
     window.addEventListener('keydown', handleEsc);
     return () => window.removeEventListener('keydown', handleEsc);
+  }, []);
+
+  // Lock page scroll while modal is open
+  useEffect(() => {
+    const previousBodyOverflow = document.body.style.overflow;
+    const previousHtmlOverflow = document.documentElement.style.overflow;
+
+    document.body.style.overflow = 'hidden';
+    document.documentElement.style.overflow = 'hidden';
+
+    return () => {
+      document.body.style.overflow = previousBodyOverflow;
+      document.documentElement.style.overflow = previousHtmlOverflow;
+    };
   }, []);
 
   // Close on backdrop click
@@ -77,14 +91,14 @@ export default function MyModal({ children }) {
               delay={0.2}
               className='bg-secondary rounded-3xl' // behind darker solid to dull the bg of the 
             >
-              <BackgroundWrapper 
+              <BackgroundWrapper
                 backgroundClass="relative rounded-3xl border-2 border-primary/80 bg-accent/40 "
                 noise
               >
                 {/* Close button */}
-                <button 
+                <button
                   onClick={handleClose}
-                  className="absolute top-1.5 right-1.5 hover:cursor-pointer hover:text-tertiary z-10" 
+                  className="absolute top-1.5 right-1.5 hover:cursor-pointer hover:text-tertiary z-10"
                 >
                   <IoMdClose size={34} />
                 </button>

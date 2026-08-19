@@ -22,7 +22,7 @@ const dataProcessingIcons = {
   JUPYTER: { name: "Jupyter", icon: SiJupyter, color: "#F37626" },
 
   STREAMLIT: { name: "Streamlit", icon: SiStreamlit, color: "#FF4B4B" },
-  
+
 };
 
 export default dataProcessingIcons;

@@ -47,7 +47,7 @@ export default function TechStacks() {
   // For which of the categories is currently hovered
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
-  return(
+  return (
     <div className='flex flex-col lg:flex-row w-screen '>
       {sectionList.map((section, index) => (
         <BackgroundWrapper

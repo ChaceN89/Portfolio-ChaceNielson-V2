@@ -1,59 +1,65 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <!-- <html lang="en" class="dark">  -->
-  <!-- Can use the class dark for setting dark mode initially -->
-  <head>
-    <meta charset="utf-8" />
+<!-- Can use the class dark for setting dark mode initially -->
 
-    <!-- Preload Logo for splash Page -->
-    <link rel="preload" as="image" href="/logos/my-logos/logoFull-outline.png" />
+<head>
+  <meta charset="utf-8" />
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <!-- Preload Logo for splash Page -->
+  <link rel="preload" as="image" href="/logos/my-logos/logoFull-outline.png" />
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
-    <!-- Viewport -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <!-- Theme Color -->
-    <meta name="theme-color" content="#2A2828" />
-    
-    <!-- Description -->
-    <meta name="description" content="Explore Chace Nielson's professional portfolio to learn about my background in software development, the technologies I work with, and the projects I've created. This portfolio offers a detailed look at my tech stack and showcases the skills I've developed through real-world applications and hands-on experience." />
-    
-    <!-- Keywords -->
-    <meta name="keywords" content="Chace Nielson, Chacenielson, portfolio, software development, projects, React, engineering, unity, python, blender, java, c++, aws" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 
-    <!-- Author -->
-    <meta name="author" content="Chace Nielson" />
+  <!-- Viewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://chacenielson.com" />
-    <meta property="og:title" content="Chace Nielson Portfolio" />
-    <meta property="og:description" content="Explore Chace Nielson's professional portfolio to learn about my background in software development, the technologies I work with, and the projects I've created. This portfolio offers a detailed look at my tech stack and showcases the skills I've developed through real-world applications and hands-on experience." />
-    <meta property="og:image" content="/logos/my-logos/logoFull.jpg" />
+  <!-- Theme Color -->
+  <meta name="theme-color" content="#2A2828" />
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://chacenielson.com" />
-    <meta property="twitter:title" content="Chace Nielson Portfolio" />
-    <meta property="twitter:description" content="Explore Chace Nielson's professional portfolio to learn about my background in software development, the technologies I work with, and the projects I've created. This portfolio offers a detailed look at my tech stack and showcases the skills I've developed through real-world applications and hands-on experience." />
-    <meta property="twitter:image" content="/logos/my-logos/logoFull.jpg" />
+  <!-- Description -->
+  <meta name="description"
+    content="Explore Chace Nielson's professional portfolio to learn about my background in software development, the technologies I work with, and the projects I've created. This portfolio offers a detailed look at my tech stack and showcases the skills I've developed through real-world applications and hands-on experience." />
 
-    <!-- Apple Touch Icon -->
-    <link rel="apple-touch-icon" href="/logos/my-logos/logo192x192.png" />
-    
-    <!-- Manifest -->
-    <link rel="manifest" href="/manifest.json" crossorigin="use-credentials" />
+  <!-- Keywords -->
+  <meta name="keywords"
+    content="Chace Nielson, Chacenielson, portfolio, software development, projects, React, engineering, unity, python, blender, java, c++, aws" />
 
-    <link rel="canonical" href="https://chacenielson.com" />
+  <!-- Author -->
+  <meta name="author" content="Chace Nielson" />
 
-    <!-- Schema.org -->
-    <script type="application/ld+json">
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://chacenielson.com" />
+  <meta property="og:title" content="Chace Nielson Portfolio" />
+  <meta property="og:description"
+    content="Explore Chace Nielson's professional portfolio to learn about my background in software development, the technologies I work with, and the projects I've created. This portfolio offers a detailed look at my tech stack and showcases the skills I've developed through real-world applications and hands-on experience." />
+  <meta property="og:image" content="/logos/my-logos/logoFull.jpg" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://chacenielson.com" />
+  <meta property="twitter:title" content="Chace Nielson Portfolio" />
+  <meta property="twitter:description"
+    content="Explore Chace Nielson's professional portfolio to learn about my background in software development, the technologies I work with, and the projects I've created. This portfolio offers a detailed look at my tech stack and showcases the skills I've developed through real-world applications and hands-on experience." />
+  <meta property="twitter:image" content="/logos/my-logos/logoFull.jpg" />
+
+  <!-- Apple Touch Icon -->
+  <link rel="apple-touch-icon" href="/logos/my-logos/logo192x192.png" />
+
+  <!-- Manifest -->
+  <link rel="manifest" href="/manifest.json" crossorigin="use-credentials" />
+
+  <link rel="canonical" href="https://chacenielson.com" />
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Person",
@@ -74,32 +80,35 @@
       }
     </script>
 
-  
-    <title>Chace Nielson</title>
-  </head>
-  <body>
-    <!-- Noscript -->
-    <noscript>You need to enable JavaScript to run this app.</noscript>
 
-    <!-- GlobalNoise Styl -->
-    <svg xmlns="http://www.w3.org/2000/svg" style="display: none; z-index: 99999;" >
-      <filter id="noiseFilter">
-        <feTurbulence id="turbulence" type="fractalNoise" baseFrequency="0.8" numOctaves="5" stitchTiles="stitch" seed="0" />
-        <feColorMatrix type="saturate" values="0" />
-        <feBlend mode="multiply" in2="SourceGraphic" />
-      </filter>
-    </svg>
-    
+  <title>Chace Nielson</title>
+</head>
 
-    
-    
-    <!-- Root Div -->
-    <div id="root"></div>
-    
-    <!-- Tooltip Root -->
-    <div id="tooltip-root"></div>
+<body>
+  <!-- Noscript -->
+  <noscript>You need to enable JavaScript to run this app.</noscript>
 
-    <!-- Vite's Entry Script -->
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+  <!-- GlobalNoise Styl -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none; z-index: 99999;">
+    <filter id="noiseFilter">
+      <feTurbulence id="turbulence" type="fractalNoise" baseFrequency="0.8" numOctaves="5" stitchTiles="stitch"
+        seed="0" />
+      <feColorMatrix type="saturate" values="0" />
+      <feBlend mode="multiply" in2="SourceGraphic" />
+    </filter>
+  </svg>
+
+
+
+
+  <!-- Root Div -->
+  <div id="root"></div>
+
+  <!-- Tooltip Root -->
+  <div id="tooltip-root"></div>
+
+  <!-- Vite's Entry Script -->
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
 </html>

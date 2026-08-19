@@ -1,30 +1,56 @@
 /**
  * @file glassGeckoGames.js
  * @module glassGeckoGames
- * @desc Contains data for the Glass Gecko Games website project.
- * 
- * @name Glass Gecko Games
- * 
+ * @desc Contains portfolio data for the Glass Gecko Games studio website.
+ *
+ * @name Glass Gecko Games Website
+ *
  * @author Chace Nielson
  * @created 2024-07-28
- * @updated 2024-08-14
+ * @updated 2026-08-18
  * @since 2.1
+ *
+ * @notes
+ * - Official website for Glass Gecko Games.
+ * - Built with React and Tailwind CSS.
+ * - Reaches 2,000+ monthly visitors.
  */
 
 import IconLibrary from "../iconLibrary";
 import { BoldSpan } from "../../components/uiElements/InLineText";
 
-// Short description (blurb) to be displayed on the project card
-const short = <>A homepage built to showcase our studio, games, and creative identity through polished, responsive web design.</>;
+const short = (
+  <>
+    Official Glass Gecko Games website built with React and Tailwind CSS,
+    reaching <strong>2,000+ monthly visitors</strong>.
+  </>
+);
 
-// Long description for the modal page, providing detailed information about the project
 const long = (
-  <div className='space-y-2'>
+  <div className="space-y-2">
     <p>
-      I designed and developed this homepage for the <BoldSpan>Glass Gecko Games</BoldSpan> team, using <BoldSpan>React</BoldSpan> and <BoldSpan>Tailwind CSS</BoldSpan>. It features <BoldSpan>Framer Motion</BoldSpan> animations and <BoldSpan>blurhash</BoldSpan>-based image loading for a smooth, visually polished experience that highlights both our <BoldSpan>games</BoldSpan> and <BoldSpan>team</BoldSpan>.
+      I designed and developed the official{" "}
+      <BoldSpan>Glass Gecko Games</BoldSpan> website using{" "}
+      <BoldSpan>React</BoldSpan> and <BoldSpan>Tailwind CSS</BoldSpan>. The site
+      serves as the studio's main web presence, showcasing our games, team,
+      company information, and ongoing development work.
     </p>
+
     <p>
-      The project combines clean component architecture with a <BoldSpan>bright, playful design</BoldSpan>, delivering a modern UI that feels both polished and approachable. Built with <BoldSpan>reusable components</BoldSpan> and <BoldSpan>responsive layouts</BoldSpan>, and deployed via <BoldSpan>Netlify</BoldSpan> with <BoldSpan>continuous integration</BoldSpan>, it reflects my focus on user experience, maintainability, and performance, all while capturing the creative spirit of the studio.
+      The application is built around{" "}
+      <BoldSpan>reusable React components</BoldSpan> and responsive layouts,
+      allowing content to adapt cleanly across desktop and mobile devices.
+      Framer Motion provides interactive transitions and animations, while
+      BlurHash-based image loading improves the experience when displaying
+      image-heavy game content.
+    </p>
+
+    <p>
+      I also implemented supporting web features including{" "}
+      <BoldSpan>SEO, responsive design, EmailJS integration, PWA support</BoldSpan>,
+      and continuous deployment. The site currently reaches more than{" "}
+      <BoldSpan>2,000 monthly visitors</BoldSpan> and continues to evolve
+      alongside the studio and its games.
     </p>
   </div>
 );
@@ -32,14 +58,16 @@ const long = (
 export const glassGeckoGames = {
   id: "glass-gecko-games",
   name: "Glass Gecko Games Homepage",
-  tags: ["Web App", "React", "Tailwind", "CSS", "JavaScript","Game"],
-  badge: "Animated Landing Page",
+  tags: ["Web App", "React", "Tailwind", "JavaScript", "Responsive Design"],
+  badge: "",
   blurb: short,
   description: long,
-  thumbnail:{
+
+  thumbnail: {
     src: "glassGecko5.jpg",
     blurhash: "LBCjFmd7MM9FsK55xH%M4,=zR$RP",
   },
+
   images: [
     { src: "glassGecko1.jpg", blurhash: "LBCjFmd7MM9FsK55xH%M4,=zR$RP" },
     { src: "glassGecko2.jpg", blurhash: "LBCjFmd7MM9FsK55xH%M4,=zR$RP" },
@@ -48,23 +76,31 @@ export const glassGeckoGames = {
     { src: "glassGecko5.jpg", blurhash: "LBCjFmd7MM9FsK55xH%M4,=zR$RP" },
     { src: "glassGecko6.jpg", blurhash: "LBCjFmd7MM9FsK55xH%M4,=zR$RP" },
   ],
+
   mainStack: [
     IconLibrary.REACT,
     IconLibrary.TAILWIND,
-  ],
-  extendedStack: [
     IconLibrary.FRAMER_MOTION,
-    IconLibrary.BLURHASH,
-    IconLibrary.NETLIFY,
-    IconLibrary.CI_CD,
-    IconLibrary.TEAM_COLLABORATION,
+  ],
+
+  extendedStack: [
     IconLibrary.RESPONSIVE_DESIGN,
     IconLibrary.SEO,
-    IconLibrary.PWA,
-    IconLibrary.EMAIL_JS
+    IconLibrary.CI_CD,
+    IconLibrary.BLURHASH,
+    IconLibrary.EMAIL_JS,
   ],
+
   externalLinks: [
-    { name: "Visit Site", link: "https://glassgeckogames.com", icon: IconLibrary.WORLD.icon },
-    { name: "Code", link: "https://github.com/GlassGeckoGames/company-website", icon: IconLibrary.GITHUB.icon },
+    {
+      name: "Visit Site",
+      link: "https://glassgeckogames.com",
+      icon: IconLibrary.WORLD.icon,
+    },
+    {
+      name: "Code",
+      link: "https://github.com/GlassGeckoGames/company-website",
+      icon: IconLibrary.GITHUB.icon,
+    },
   ],
 };

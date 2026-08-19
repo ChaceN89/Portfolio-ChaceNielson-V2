@@ -14,10 +14,30 @@ export default function FeaturedProjects() {
 
   // Light - for 4 featured projects
   const backgrounds = [
-    {src: "/backgrounds/light-accent.jpg",    rippleColor:"var(--color-accent)",    textColor: "text-primary outlined-text",  borderColor: "border-primary"},
-    {src: "/backgrounds/light-primary.jpg",   rippleColor:"var(--color-primary)",   textColor: "text-secondary",              borderColor: "border-secondary"},
-    {src: "/backgrounds/light-secondary.jpg", rippleColor:"var(--color-secondary)", textColor: "text-primary outlined-text",  borderColor: "border-primary"},
-    {src: "/backgrounds/light-tertiary.jpg",  rippleColor:"var(--color-tertiary)",  textColor: "text-secondary",              borderColor: "border-secondary"},
+    {
+      src: "/backgrounds/light-accent.jpg",
+      rippleColor: "var(--color-accent)",
+      textColor: "text-primary outlined-text",
+      borderColor: "border-primary"
+    },
+    {
+      src: "/backgrounds/light-primary.jpg",
+      rippleColor: "var(--color-primary)",
+      textColor: "text-secondary",
+      borderColor: "border-secondary"
+    },
+    {
+      src: "/backgrounds/light-secondary.jpg",
+      rippleColor: "var(--color-secondary)",
+      textColor: "text-primary outlined-text",
+      borderColor: "border-primary"
+    },
+    {
+      src: "/backgrounds/light-tertiary.jpg",
+      rippleColor: "var(--color-tertiary)",
+      textColor: "text-secondary",
+      borderColor: "border-secondary"
+    },
   ]
 
   return (

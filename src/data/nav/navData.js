@@ -41,9 +41,9 @@ export const navLinks = [
   { label: "Showcase", scrollTo: "featured-projects", router: "/", icon: MdFeaturedPlayList },
   { label: "Expertise", scrollTo: "tech-stacks", router: "/", icon: FaTools },
   { label: "About Me", scrollTo: "about-me", router: "/", icon: FaUser },
-  
+
   // Pages
-  // { label: "About", router: "/about", icon: FaUser },
+  // { label: "About", router: "/about", icon: FaUser }, // photos page
   { label: "Projects", router: "/projects", icon: FaCodeBranch },
   { label: "Contact", router: "/contact", icon: FaEnvelopeOpenText },
 ];

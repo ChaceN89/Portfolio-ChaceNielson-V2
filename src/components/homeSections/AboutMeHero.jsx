@@ -7,19 +7,21 @@
  * 
  * @author Chace Nielson
  * @created May 12, 2025
- * @updated Aug 6, 2025
+ * @updated Aug 19, 2026
  */
 import React, { useMemo, useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import ImageComponent from '@/components/uiElements/images/ImageComponent';
 import MyBtn from '@/components/buttons/MyBtn';
-import { ScrollToID } from '@/utils/utils';
+import { useNavigate } from 'react-router-dom';
 import { useAnimationSettings } from '@/components/animations/AnimationContext';
-
 
 export default function AboutMeHero() {
 
   const { animationsEnabled } = useAnimationSettings(); // Get animation settings from context
+
+  // Hook to get the current location and navigate
+  const navigate = useNavigate();
 
   const sectionRef = useRef();
 
@@ -59,20 +61,27 @@ export default function AboutMeHero() {
       {/* Text */}
       <div className="max-w-xl text-center md:text-left space-y-2">
         <h2 className="text-3xl font-bold">A Little About Me</h2>
+
         <p className="text-lg leading-relaxed">
-          Hey, I'm <strong>Chace Nielson</strong>, a software engineer with a passion for building intuitive websites and immersive games.
-          Whether I'm crafting smooth user interfaces or designing engaging game mechanics, I love turning ideas into interactive experiences.
-        </p>
-        <p className="text-lg leading-relaxed">
-          I care deeply about accessibility and inclusivity, and I build with everyone in mind, creating experiences that are intuitive, enjoyable, and usable for all.
-        </p>
-        <p className="text-lg leading-relaxed">
-          Coding is how I express creativity, it's where logic meets imagination.
+          Hey, I'm <strong>Chace Nielson</strong>, a software engineer and game developer focused on <strong>gameplay programming, game design, and narrative</strong>. While I also have a background in web development, my passion is building games worth playing.
         </p>
 
-        <MyBtn sm callBack={() => ScrollToID("tech-stacks")}
-          GA_label='About Me Hero Button'
-          >Learn More</MyBtn>
+        <p className="text-lg leading-relaxed">
+          I love digging into <strong>research and worldbuilding</strong>, then turning those details into stronger stories, settings, and gameplay. Just as important is the polish that takes a game beyond a good idea, refining systems, details, and presentation until it feels complete.
+        </p>
+
+        <p className="text-lg leading-relaxed">
+          I'm always looking for opportunities to collaborate on thoughtful, creative projects and work with people who care about making something great.
+        </p>
+
+        <MyBtn
+          sm
+          callBack={() => navigate('/contact')}
+          GA_label="Hero Button"
+        >
+          Let's Talk
+        </MyBtn>
+
       </div>
     </motion.div>
   );

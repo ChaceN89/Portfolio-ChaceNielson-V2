@@ -1,74 +1,147 @@
 /**
  * @file scaleTheDepths.js
  * @module scaleTheDepths
- * @desc Contains data for the Scale The Depths Game project.
- * 
- * @name scaleTheDepths
- * 
+ * @desc Contains portfolio data for the Scale the Depths commercial game project.
+ *
+ * @name Scale the Depths
+ *
  * @author Chace Nielson
  * @created 2024-08-21
- * @updated 2024-09-05
+ * @updated 2026-08-18
  * @since 2.1
+ *
+ * @notes
+ * - Originally created for GMTK Game Jam 2024.
+ * - Expanded into a commercially released title with 200,000+ units sold worldwide.
  */
 
 import IconLibrary from "../iconLibrary";
 import { BoldSpan } from "../../components/uiElements/InLineText";
 import { FaSteam } from "react-icons/fa";
 
-// Short description (blurb) to be displayed on the project card
-const short = <>A relaxing fishing game from the 2024 GMTK Game Jam with 200K+ plays. Now available as a Steam demo with 80K+ Players.</>;
+const short = (
+  <>
+    Winner of the 2024 GMTK Game Jam, now a full commercial release with <strong>200,000+ units sold worldwide</strong>.
+  </>
+);
 
-// Long description for the modal page, providing detailed information about the project
 const long = (
   <div className="space-y-2">
     <p>
-      <BoldSpan>Scale The Depths</BoldSpan> is a relaxing, award-winning fish-scaling game that began as a <BoldSpan>2024 GMTK Game Jam</BoldSpan> entry. Built around the theme “Built to Scale,” you play as a robot chef scaling fish to feed hungry underwater customers. The game took <BoldSpan>1st place out of 7,000+ submissions</BoldSpan> and was praised for its originality, charm, and polish.
+      <BoldSpan>Scale the Depths</BoldSpan> is a relaxing fish-scaling game that
+      began as our entry for the <BoldSpan>2024 GMTK Game Jam</BoldSpan>. Built
+      around the theme <BoldSpan>Built to Scale</BoldSpan>, the game places the
+      player in the role of a robot chef catching and scaling unusual fish for
+      underwater customers. The original jam version placed{" "}
+      <BoldSpan>1st out of 7,000+ submissions</BoldSpan>.
     </p>
+
     <p>
-      The original version reached <BoldSpan>200,000+ plays on Itch.io</BoldSpan> and holds a <BoldSpan>4.6-star rating</BoldSpan>. Thanks to overwhelming support, we’ve expanded it into a full game now in development with a demo available on <BoldSpan>Steam</BoldSpan>. Over <BoldSpan>60,000 players</BoldSpan> have wishlisted the game ahead of its planned 2026 release.
+      Following the game jam, our team expanded the project into a full
+      commercial release. <BoldSpan>Scale the Depths</BoldSpan> has since sold
+      more than <BoldSpan>200,000 units worldwide</BoldSpan>, with continued
+      development supporting upcoming releases on{" "}
+      <BoldSpan>Nintendo Switch, Xbox, PlayStation, and mobile</BoldSpan>.
     </p>
+
     <p>
-      As one of the developers, I contributed to the core gameplay systems, visual polish using shader graphs, and performance optimization for loading and other systems. I’ve continued working on the full version’s expanded content, shader effects, and UX enhancements as part of our ongoing development.
+      As a software engineer and game developer on the project, I designed and
+      implemented <BoldSpan>procedural fish-generation systems</BoldSpan>,{" "}
+      <BoldSpan>save and persistence systems</BoldSpan>, and gameplay systems
+      supporting progression and game-state management. I also contributed to{" "}
+      <BoldSpan>game design, level design, narrative design, worldbuilding</BoldSpan>,
+      and environmental storytelling.
+    </p>
+
+    <p>
+      Narrative work included researching and writing{" "}
+      <BoldSpan>fish facts and location-based content</BoldSpan> used throughout
+      the game. I continue to work alongside artists, designers, and developers
+      on new content, platform releases, balancing, optimization, and
+      post-launch development.
     </p>
   </div>
 );
 
 export const scaleTheDepths = {
   id: "scale-the-depths",
-  name: "Scale The Depths",
-  tags: ["Game", "Unity", "C#"],
-  badge: "GMTK Game Jam Winner",
+  name: "Scale the Depths",
+  tags: ["Game", "Unity", "C#", "Game Design", "Narrative Design", "Writting"],
+  badge: "Commercial Release",
   blurb: short,
   description: long,
-  thumbnail:{
+
+  thumbnail: {
     src: "scaleTheDepths-0.jpg",
     blurhash: "LfHz9MVaShM{_4RkbIazRQWCoJtR",
   },
-  images: [
-    { src: "scaleTheDepths-1.jpg", blurhash: "LaFt1Uo#M{t5~qWFM|ocnSM|aLoI" },
-    { src: "scaleTheDepths-2.jpg", blurhash: "LFG]Bmt800ad9IWX_1oe00Rj~ooe" },
-    { src: "scaleTheDepths-3.jpg", blurhash: "LH8i*4*JVso#%#%~QnM0nOa0VYnj" },
-    { src: "scaleTheDepths-4.jpg", blurhash: "LaFs_Fo#M|t3~qWYM|obnTRQV@oI" },
-    { src: "scaleTheDepths-5.jpg", blurhash: "LaF%h{o#M{t3~qWEM|ocnSRQaLoI" },
-    { src: "scaleTheDepths-6.jpg", blurhash: "LaFs}Nt8M|t3~qWFM|obnTM|aKsm" },
-    { src: "scaleTheDepths-7.jpg", blurhash: "LRJ[0CRj_NV@Mxsm%0t5%gaKIAWB" },
-    { src: "scaleTheDepths-8.jpg", blurhash: "L35~F5m.D6_M.mx^%MM#mn%gpJn5" },
-  ],
-  youtubeID: "OOywPGm2zCw",
 
-  mainStack:[
+  images: [
+    { src: "scaleTheDepths-20.jpg", blurhash: "LMCkDKR.cDtQ~CR.g3skSCW?n5rq" },
+    { src: "scaleTheDepths-21.jpg", blurhash: "L77yIdn4HXVEMIo4tSt9L}n,yXo~" },
+    { src: "scaleTheDepths-22.jpg", blurhash: "LHJkP}yWtm$gwh-;RNob0=VZMbXR" },
+    { src: "scaleTheDepths-23.jpg", blurhash: "LUF$nkoz01bH-;azRjfR9FWB%2a#" },
+    { src: "scaleTheDepths-24.jpg", blurhash: "LFCPxB%2MxMx~BjFoJoe9EIU%M%g" },
+    { src: "scaleTheDepths-25.jpg", blurhash: "LWEzfntRIVW.~XkDMyjEVvNHVts8" },
+    { src: "scaleTheDepths-26.jpg", blurhash: "LVJa.gt8_NozadRjxtoJWraKMxV@" },
+
+    { src: "scaleTheDepths-18.jpg", blurhash: "L14L:ryGU|%h?^%ixwtm8~Sk%$kX" },
+    { src: "scaleTheDepths-9.jpg", blurhash: "LNB=FrBsFh%M~nIVMxwaQkn3nhkX" },
+    { src: "scaleTheDepths-7.jpg", blurhash: "L8Ac[B=yic9Z~Ar=%MNa4TIU.8%N" },
+    { src: "scaleTheDepths-3.jpg", blurhash: "LCC?l-~q9GRj,,rqIotRDOVXxtS$" },
+    { src: "scaleTheDepths-4.jpg", blurhash: "LHB:T-?a9Z9GVrr=xuT001IV%M%L" },
+    { src: "scaleTheDepths-17.jpg", blurhash: "LLDTFr0LxDxuM_xtogRkIA-oWBWA" },
+    { src: "scaleTheDepths-12.jpg", blurhash: "LVIhW]oz_NozV@RjxtoJkDemIUV@" },
+    { src: "scaleTheDepths-11.jpg", blurhash: "LTI#cKtR_MkVaiRjxos,R:i_MwV@" },
+    { src: "scaleTheDepths-15.jpg", blurhash: "LSIEw#%f_No#M{n$t6t6R.aKIAaK" },
+    { src: "scaleTheDepths-5.jpg", blurhash: "LF3KmirSrUnLpynLn2fotPp1nMnM" },
+    { src: "scaleTheDepths-10.jpg", blurhash: "LP3K]YobkCi]oXkZo#nhm$kYkEkD" },
+    { src: "scaleTheDepths-14.jpg", blurhash: "LjJRU3WA00xus.jaa#fi9Ft7xuRj" },
+    { src: "scaleTheDepths-16.jpg", blurhash: "LnJ[Fsoc00a$s:WBa}of8{j[%Max" },
+    { src: "scaleTheDepths-19.jpg", blurhash: "LzJ7:Uj[0Lj[Rkayofj[E2j[xtay" },
+    { src: "scaleTheDepths-1.jpg", blurhash: "LmJ*huof00aeofaef8of8{fkx]f6" },
+    { src: "scaleTheDepths-2.jpg", blurhash: "LpKK+pae00t7oeayfRkB9FoM%MWB" },
+    { src: "scaleTheDepths-6.jpg", blurhash: "L56u6b-1ESo$%jt7WEWFMaby%Osk" },
+    { src: "scaleTheDepths-8.jpg", blurhash: "LE9@L?V?4no#00of?vRjxuf*M{jZ" },
+    { src: "scaleTheDepths-13.jpg", blurhash: "LL3vaon#m~kYoboJj^kEocofkEj]" },
+
+  ],
+
+  youtubeID: "wM1fmFgYscU",
+
+  mainStack: [
     IconLibrary.UNITY,
     IconLibrary.CSHARP,
+    IconLibrary.NARRATIVE_DESIGN,
+    IconLibrary.GAME_DESIGN,
   ],
-  extendedStack:[
-    IconLibrary.PLASTIC_SCM,
-    IconLibrary.TEAM_COLLABORATION,
+
+  extendedStack: [
+    IconLibrary.GAMEPLAY_PROGRAMMING,
+    IconLibrary.LEVEL_DESIGN,
+    IconLibrary.SAVE_SYSTEMS,
+    IconLibrary.FMOD,
     IconLibrary.SHADER_GRAPH,
     IconLibrary.INSPECTOR_TOOLS,
+    IconLibrary.PLASTIC_SCM,
+    IconLibrary.TEAM_COLLABORATION,
   ],
+
   externalLinks: [
-    { name: "Steam Page and Demo", link: "https://store.steampowered.com/app/3198890/Scale_the_Depths/", icon: FaSteam },
-    { name: "Itch.io Game Jam Version", link: "https://serpexnessie.itch.io/scale-the-depths", icon:IconLibrary.ITCHIO.icon },
-    { name: "Top 20 Results Video", link: "https://youtu.be/gqCAeFjB8Uo?si=Wxp0ATxZGN4vtOGH&t=1133", icon: IconLibrary.YOUTUBE.icon },
+    {
+      name: "Play on Steam",
+      link: "https://store.steampowered.com/app/3198890/Scale_the_Depths/",
+      icon: FaSteam,
+    },
+    {
+      name: "Game Jam Version",
+      link: "https://serpexnessie.itch.io/scale-the-depths",
+      icon: IconLibrary.ITCHIO.icon,
+    },
+    {
+      name: "GMTK Results",
+      link: "https://youtu.be/gqCAeFjB8Uo?si=Wxp0ATxZGN4vtOGH&t=1133",
+      icon: IconLibrary.YOUTUBE.icon,
+    },
   ],
 };

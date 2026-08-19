@@ -13,13 +13,14 @@
  * 
  * @author Chace Nielson
  * @created May 22, 2025
- * @updated May 22, 2025
+ * @updated Aug 19, 2026
  */
 // data - list of projects to display in the carousel
 import { carouselProjects } from '@/data/pageData/projectData';
 
 // utils
 import { useNavigate } from 'react-router-dom';
+import { useInView } from 'react-intersection-observer';
 
 // components
 import MyBtn from '@/components/buttons/MyBtn';
@@ -31,21 +32,25 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
 const responsive = {
-  desktop: { breakpoint: { max: 3000, min: 1024 }, items: 3, partialVisibilityGutter: 40 },
-  tablet:  { breakpoint: { max: 1024, min: 464 }, items: 2, partialVisibilityGutter: 30 },
-  mobile:  { breakpoint: { max: 464, min: 0 },    items: 1, partialVisibilityGutter: 30 }
+  desktop: { breakpoint: { max: 3000, min: 1280 }, items: 4, partialVisibilityGutter: 40 },
+  laptop: { breakpoint: { max: 1280, min: 768 }, items: 3, partialVisibilityGutter: 30 },
+  tablet: { breakpoint: { max: 768, min: 464 }, items: 2, partialVisibilityGutter: 30 },
+  mobile: { breakpoint: { max: 464, min: 0 }, items: 1, partialVisibilityGutter: 30 }
 };
 
 export default function ProjectCarousel() {
   const navigate = useNavigate();
+  const { ref, inView } = useInView({
+    threshold: 0.35,
+  });
 
   return (
-    <div className='flex flex-col items-center justify-center gap-4 py-8 '>
+    <div ref={ref} className='flex flex-col items-center justify-center gap-4 py-8 '>
       <Carousel
         responsive={responsive}
         infinite
         arrows
-        autoPlay
+        autoPlay={inView}
         autoPlaySpeed={2000}
         keyBoardControl
         pauseOnHover
@@ -57,8 +62,8 @@ export default function ProjectCarousel() {
         itemClass="px-5 py-1"
       >
         {carouselProjects.map((project) => {
-          const image = project.images?.[0];
-          if (!image?.src) return null;
+          const hasDisplayImage = Boolean(project.thumbnail?.src || project.images?.[0]?.src);
+          if (!hasDisplayImage) return null;
 
           return (
             <ProjectCard project={project} key={project.id} />
@@ -66,8 +71,8 @@ export default function ProjectCarousel() {
         })}
       </Carousel>
 
-      <MyBtn 
-        sm 
+      <MyBtn
+        sm
         callBack={() => navigate('/projects')}
         GA_label='Project Carousel See All Button'
       >

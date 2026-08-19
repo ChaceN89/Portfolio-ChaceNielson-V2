@@ -23,7 +23,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import BackgroundWrapper from '@/components/uiElements/images/BackgroundWrapper';
 import ImageComponent from '@/components/uiElements/images/ImageComponent';
 import ScrollWheelBtn from '@/components/uiElements/ScrollWheelBtn';
-import MyBtn from '@/components/buttons/MyBtn';
+// import MyBtn from '@/components/buttons/MyBtn';
 import { openModal } from '@/utils/utils';
 import ShowIcon from '@/components/uiElements/skillBox/ShowIcon';
 import Tooltip from '@/components/uiElements/Tooltip';
@@ -43,7 +43,7 @@ export default function ProjectShowcase({ project, background, nextId }) {
 
   // for tracking GA events
   const trackEvent = useAnalyticsEvent();
- 
+
   const handleProjectClick = (id) => {
     trackEvent('UI Interaction', 'Button Click', "Showcase Image Click", 1);  // track the event
     openModal({
@@ -169,7 +169,8 @@ export default function ProjectShowcase({ project, background, nextId }) {
               ))}
             </div>
 
-            <div className='hidden lg:block'>
+            {/* /redundant button */}
+            {/* <div className='hidden lg:block'>
               <MyBtn 
                 sm 
                 callBack={() => handleProjectClick(project.id)}
@@ -177,7 +178,7 @@ export default function ProjectShowcase({ project, background, nextId }) {
                 >
                 Learn More
               </MyBtn>
-            </div>
+            </div> */}
           </div>
 
         </motion.div>
@@ -185,15 +186,14 @@ export default function ProjectShowcase({ project, background, nextId }) {
         <motion.div
           className="relative w-full lg:w-1/2 flex justify-center "
           style={imageStyle}
-          
         >
           <Tooltip text="View Case">
-            <div 
+            <div
               className="relative inline-block overflow-hidden rounded-3xl max-w-[90vw] group cursor-pointer"
               onClick={() => handleProjectClick(project.id)}
             >
               {/* Ripple Layer */}
-              <span 
+              <span
                 className="absolute inset-0 z-10 pointer-events-none ripple-hover"
                 style={{ '--ripple-color': rippleColor }}
               />

@@ -31,41 +31,45 @@ const long = (
 );
 
 export const albertaTomorrowHomepage = {
-  id:"alberta-tomorrow-homepage",
+  id: "alberta-tomorrow-homepage",
   name: "Alberta Tomorrow Learning Hub",
   tags: ["Web App", "Educational", "Next", "Tailwind", "CSS", "Express", "AWS", "Mapbox", "JavaScript"],
-  badge: "Full-Stack Learning Hub",
+  badge: "EdTech Application",
   blurb: short,
   description: long,
-  
-  thumbnail:{
+
+  thumbnail: {
     src: "abTomorrow-0.jpg",
     blurhash: "L%J@{^-.slkC.T-oWVj[EUa$WCj[",
   },
-  
+
   // youtube video - thumbnail is used as a placeholder while loading the video
-  youtubeID: "MHDH_m0agFM", 
-  
+  youtubeID: "MHDH_m0agFM",
+
   // list of images to display in the modal carousel
   images: [
-    { src: "abTomorrow-1.jpg", blurhash: "LmJa_z$_xuV?_4%Ms,R-5GWGWAa$" }, // Replace or add more images as needed
-    { src: "abTomorrow-2.jpg", blurhash: "LKA_-Q0K~W4.EMbbaKkDv0r=Shnh" }, // Replace or add more images as needed
-    { src: "abTomorrow-3.jpg", blurhash: "L5OD^9L100.m00=b~W=x009t0xE1" }, // Replace or add more images as needed
-    { src: "abTomorrow-4.jpg", blurhash: "L9OW$-~pD+t6009Zxt%MENtQD%t7" }, // Replace or add more images as needed
+    { src: "abTomorrow-5.jpg", blurhash: "L9OW$-~pD+t6009Zxt%MENtQD%t7" },
+    { src: "abTomorrow-6.jpg", blurhash: "L9OW$-~pD+t6009Zxt%MENtQD%t7" },
+    { src: "abTomorrow-1.jpg", blurhash: "LmJa_z$_xuV?_4%Ms,R-5GWGWAa$" },
+    { src: "abTomorrow-2.jpg", blurhash: "LKA_-Q0K~W4.EMbbaKkDv0r=Shnh" },
+    { src: "abTomorrow-3.jpg", blurhash: "L5OD^9L100.m00=b~W=x009t0xE1" },
+    { src: "abTomorrow-4.jpg", blurhash: "L9OW$-~pD+t6009Zxt%MENtQD%t7" },
   ],
   mainStack: [
     IconLibrary.NEXT,
     IconLibrary.TAILWIND,
+    IconLibrary.MAPBOX,
     IconLibrary.AWS,
   ],
   extendedStack: [
-    IconLibrary.FRAMER_MOTION,
-    IconLibrary.MAPBOX,
-    IconLibrary.REACT,
+    IconLibrary.TAILWIND,
+    IconLibrary.RESPONSIVE_DESIGN,
     IconLibrary.SEO,
+    IconLibrary.FULL_STACK,
+    IconLibrary.SIMULATION,
   ],
   externalLinks: [
-    { name: "Homepage", link: "https://albertatomorrow.ca/", icon: FaHome  },
-    { name: "Land-Use Simulator", link: "https://www.simulator.albertatomorrow.ca/", icon: FaMapMarkedAlt},
+    { name: "Homepage", link: "https://albertatomorrow.ca/", icon: FaHome },
+    { name: "Land-Use Simulator", link: "https://www.simulator.albertatomorrow.ca/", icon: FaMapMarkedAlt },
   ],
 };
